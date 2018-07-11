@@ -176,7 +176,7 @@ OnInit:
 	set .instance_zeny, 0;
 	set .instance_delay, 259200;
 	set $sf_timer_delay, 3600; //1 hour to clean the instance
-	set .instance_name$, "Sky Fortress";
+	set .instance_name$, "Sky Fortress Invasion";
 	end;
 }
 
@@ -216,7 +216,7 @@ prt_q,243,74,3	script	Dimensional Device::alasfdd	PORTAL,{
 	end;
 
 OnInit:
-	set .instance_name$, "Sky Fortress";
+	set .instance_name$, "Sky Fortress Invasion";
 	setarray .map$[0],"1@sthb", "1@sthd", "1@sthc";
 	end;
 }
@@ -550,14 +550,14 @@ function	summon_guardian	{
 		if('instance_sf_level == .max_sf_level)
 		{
 			//RATHENA
-			monster(.@map$,.@coordinate[0],.@coordinate[1],"Stefan J.E Wolf",.@monster[.@i],1,.@label$);
+			areamonster(.@map$,.@coordinate[0],.@coordinate[1],.@coordinate[2],.@coordinate[3],"--ja--",.@monster[.@i],1,.@label$);
 			set 'stefanId, $@mobId[0];
 			//HERCULES
-			//set 'stefanId, monster(.@map$,.@coordinate[0],.@coordinate[1],Stefan J.E Wolf,.@monster[.@i],1,.@label$);
+			//set 'stefanId, monster(.@map$,.@coordinate[0],.@coordinate[1],"--ja--",.@monster[.@i],1,.@label$);
 		}
 		else
 		{
-			monster .@map$,.@coordinate[0],.@coordinate[1],"Stefan J.E Wolf",.@monster[.@i],1,.@label$;
+			areamonster .@map$,.@coordinate[0],.@coordinate[1],.@coordinate[2],.@coordinate[3],"--ja--",.@monster[.@i],1,.@label$;
 		}
 	}
 	return;
@@ -625,18 +625,17 @@ OnGuardianDied:
 		else if ('instance_sf_level == .max_sf_level)
 		{
 			instance_announce instance_id(), "[ Stefan J.E Wolf ] : Dead...I was...I won't be dead...", bc_map, 0x0000FF;
-			sleep2 3000;
+			sleep2 1500;
 			instance_announce instance_id(), "[ Stefan J.E Wolf ] : Come back...the power of Bijou...Eternal body...again!", bc_map, 0x0000FF;
-			sleep2 3000;
+			sleep2 1500;
 
 			set .randomPop, 0;
-			getitem 6919, 30;
 			killmonster instance_mapname( "1@sthd" ), "All";
 			
 			//enable portal
 			enablenpc instance_npcname( "alasfdeo", instance_id() );
 		
-			sleep2 60000;
+			sleep2 15000;
 			getpartymember getcharid(1),2;
 			for( set .@i, 0; .@i < $@partymembercount; set .@i, .@i+1 )
 				if( attachrid( $@partymemberaid[.@i] ) && SF_INSTANCE_ID > 0){
@@ -785,16 +784,16 @@ OnTouch:
 		set .talking, 1;
 		if('instance_sf_level == 0)
 		{
-			charcommand "#me " + strcharinfo(0) + " : Is this what caused the invasion into Prontera? Inside the Sky Fortress?";
+			charcommand "#me " + strcharinfo(0) + " Is this what caused the invasion into Prontera? Inside the Sky Fortress?";
 			
 			cutin "stephan_j_e_w", 2;
-			sleep2 3000;
+			sleep2 1500;
 			npctalk "Intruders...Inside the Sky Fortress";
 			instance_announce instance_id(), "Intruders...Inside the Sky Fortress", bc_map, 0x0000FF;
-			sleep2 3000;
+			sleep2 1500;
 			npctalk "Bijou...Told me to destroy the intruders!";
 			instance_announce instance_id(), "Bijou...Told me to destroy the intruders!", bc_map, 0x0000FF;
-			sleep2 3000;
+			sleep2 1500;
 			npctalk "Little...human...Greenhorn...Away!";
 			instance_announce instance_id(), "Little...human...Greenhorn...Away!", bc_map, 0x0000FF;
 			
@@ -807,18 +806,18 @@ OnTouch:
 			npctalk "Grunts!";
 			cutin "stephan_j_e_w", 2;
 			instance_announce instance_id(), "Grunts", bc_map, 0x0000FF;
-			sleep2 3000;
+			sleep2 1500;
 			
 			npctalk "What a bunch of...Annoying worms!";
 			instance_announce instance_id(), "What a bunch of...Annoying worms!", bc_map, 0x0000FF;
-			sleep2 3000;
+			sleep2 1500;
 						
 			attachrid 'sfTalking;
-			charcommand "#me " + strcharinfo(0) + " : I believe that huge golem play an important role here...";
+			charcommand "#me " + strcharinfo(0) + " I believe that huge golem play an important role here...";
 			
 			npctalk "Subordinates of the Sky Fortress...Stop them...Bijou's order!";
 			instance_announce instance_id(), "Subordinates of the Sky Fortress...Stop them...Bijou's order!", bc_map, 0x0000FF;
-			sleep2 3000;
+			sleep2 1500;
 			
 			cutin "", 255;
 			
@@ -854,19 +853,19 @@ OnTouch:
 		set .talking, 1;
 		npctalk "Grunts";
 		instance_announce instance_id(), "Grunts", bc_map, 0x0000FF;
-		sleep2 3000;
+		sleep2 1500;
 		
 		npctalk "Filthy humans! Stop them! Guard...The Holy Fortress!";
 		instance_announce instance_id(), "Filthy humans! Stop them! Guard...The Holy Fortress!", bc_map, 0x0000FF;
-		sleep2 3000;
+		sleep2 1500;
 		
 		attachrid 'sfTalking;
-		charcommand "#me " + strcharinfo(0) + " : It's extremly vigilante...";
-		sleep2 3000;
-		charcommand "#me " + strcharinfo(0) + " : I thinks there must be something";
-		sleep2 3000;
-		charcommand "#me " + strcharinfo(0) + " : if we follow those Golem's traces.";
-		sleep2 3000;
+		charcommand "#me " + strcharinfo(0) + " It's extremly vigilante...";
+		sleep2 1500;
+		charcommand "#me " + strcharinfo(0) + " I thinks there must be something";
+		sleep2 1500;
+		charcommand "#me " + strcharinfo(0) + " if we follow those Golem's traces.";
+		sleep2 1500;
 
 		disablenpc strnpcinfo(3);
 		donpcevent instance_npcname( "sky_fortress", instance_id() ) + "::OnThirdFloorOn";
@@ -997,35 +996,35 @@ OnTouch:
 	{
 		set 'sfTalking, getcharid(3);
 		set .talking, 1;
-		charcommand "#me " + strcharinfo(0) + " : So this is finally the last...I suppose he must be the cause of Prontera invasion isn't he?";
-		sleep2 3000;
+		charcommand "#me " + strcharinfo(0) + " So this is finally the last...I suppose he must be the cause of Prontera invasion isn't he?";
+		sleep2 1500;
 		
 		cutin "stephan_j_e_w", 2;
 		npctalk "Adventurers...A bunch of foolish greenhorns!";
 		instance_announce instance_id(), "[Wolf] Adventurers...A bunch of foolish greenhorns!", bc_map, 0x0000FF;
-		sleep2 3000;
+		sleep2 1500;
 
 		npctalk "I must follow orders...From Bijou!";
 		instance_announce instance_id(), "[Jack] I must follow orders...From Bijou!", bc_map, 0x0000FF;
-		sleep2 3000;
+		sleep2 1500;
 
-		charcommand "#me " + strcharinfo(0) + " : Bijou? So was the golem the mere guardian around here? Is that it?";
-		sleep2 3000;
+		charcommand "#me " + strcharinfo(0) + " Bijou? So was the golem the mere guardian around here? Is that it?";
+		sleep2 1500;
 
 		npctalk "Growl!";
 		instance_announce instance_id(), "[Stefan] Growl!", bc_map, 0x0000FF;
-		sleep2 3000;
+		sleep2 1500;
 
 		npctalk "Filthy worms...Can't lead life as intended. Immortal power...My body...";
 		instance_announce instance_id(), "[Earnest] Filthy worms...Can't lead life as intended. Immortal power...My body...", bc_map, 0x0000FF;
-		sleep2 3000;
+		sleep2 1500;
 
-		charcommand "#me " + strcharinfo(0) + " : I'd better defeat it first.";
-		sleep2 3000;
+		charcommand "#me " + strcharinfo(0) + " I'd better defeat it first.";
+		sleep2 1500;
 
 		npctalk "Soldiers...Bijou's Fortress...Cut them all...I'll step up...I'll kill them...All.";
 		instance_announce instance_id(), "[Stefan J.E Wolf] Soldiers...Bijou's Fortress...Cut them all...I'll step up...I'll kill them...All", bc_map, 0x0000FF;
-		sleep2 3000;
+		sleep2 1500;
 
 		disablenpc strnpcinfo(3);
 		cutin "", 255;
@@ -1075,7 +1074,7 @@ OnInstanceInit:
 	mes "Do you want to leave?";
 	if(select("Yes","No") == 1)
 	{
-		warp prt_q,243,80;
+		warp "SavePoint", 0, 0;
 	}
 	close;
 
