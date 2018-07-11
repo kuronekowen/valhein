@@ -13,7 +13,7 @@
 	/// Do NOT edit this line! To set your client version, please do this instead:
 	/// In Windows: Add this line in your src\custom\defines_pre.hpp file: #define PACKETVER YYYYMMDD
 	/// In Linux: The same as above or run the following command: ./configure --enable-packetver=YYYYMMDD
-	#define PACKETVER 20151104
+	#define PACKETVER 20170614
 #endif
 
 #ifndef PACKETVER_RE
@@ -30,9 +30,9 @@
 		#define PACKET_OBFUSCATION
 
 		// Define these inside src/custom/defines_pre.hpp or src/custom/defines_post.hpp
-		//#define PACKET_OBFUSCATION_KEY1 <key1>
-		//#define PACKET_OBFUSCATION_KEY2 <key2>
-		//#define PACKET_OBFUSCATION_KEY3 <key3>
+		#define PACKET_OBFUSCATION_KEY1 0x5ED10A48
+		#define PACKET_OBFUSCATION_KEY2 0x667F4301
+		#define PACKET_OBFUSCATION_KEY3 0x2E5D761F
 
 		/// Comment this to disable warnings for missing client side encryption
 		#define PACKET_OBFUSCATION_WARN
