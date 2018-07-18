@@ -226,7 +226,7 @@ OnInit:
 	set .map_size, getarraysize( .map$ );
 	set .min_party_member, 1;
 	set .instance_zeny, 0;
-	set .instance_delay, 7200;
+	set .instance_delay, 82800;
 	set .instance_name$, "Infinite Space";
 	set $is_timer_delay, 3600;
 	end;
