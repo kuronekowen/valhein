@@ -3,8 +3,8 @@ Header:
   Version: 1
   
 Attendance:
-  - Start: 20180502
-    End: 20180529
+  - Start: 20180707
+    End: 20180727
     Rewards:
       - Day: 1
         ItemId: 22979
