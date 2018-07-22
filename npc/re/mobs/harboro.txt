@@ -1,0 +1,43 @@
+// Rock Ridge Mine
+
+rockmi1,0,0	monster	Thief Bug	1051,30,5000
+rockmi1,0,0	monster	Gaster	3740,30,5000
+rockmi1,0,0	monster	Desert Plant	3743,10,10000
+rockmi1,0,0	monster	Purple Ore	3742,20,36000
+rockmi1,0,0	monster	Elite Buffalo Bandit	3747,20,5000
+rockmi1,0,0	monster	Elite Buffalo Bandit	3748,20,5000
+rockmi1,0,0	monster	Elite Buffalo Bandit	3749,20,5000
+rockmi1,0,0,0,0	boss_monster	Spider Chariot	3741,1,3600000,600000,1
+
+
+// Rock Ridge Fild01
+rockrdg1,0,0	monster	Green Plant	1080,8,60000,30000
+rockrdg1,0,0	monster	Yellow Plant	1081,4,60000,30000
+rockrdg1,0,0	monster	Black Mushroom	1084,8,60000,30000
+rockrdg1,0,0	monster	Thief Bug	1051,10,5000
+rockrdg1,0,0	monster	Desert Plant	3743,10,10000
+rockrdg1,0,0	monster	Coyote	3739,30,5000
+rockrdg1,0,0	monster	Buffalo Bandit Duelist	3737,20,5000
+rockrdg1,0,0	monster	Buffalo Bandit Sharpsho	3736,30,5000
+
+
+// Rock Ridge Fild02
+rockrdg2,0,0	monster	Green Plant	1080,5,60000,30000
+rockrdg2,0,0	monster	Yellow Plant	1081,4,60000,30000
+rockrdg2,0,0	monster	Thief Bug	1051,8,5000
+rockrdg2,0,0	monster	Desert Plant	3743,10,10000
+rockrdg2,0,0	monster	Coyote	3739,8,5000
+rockrdg2,0,0	monster	Buffalo Bandit Duelist	3737,17,5000
+rockrdg2,0,0	monster	Buffalo Bandit Sharpsho	3736,20,5000
+rockrdg2,0,0	monster	Bowie Buffalo Bandit	3738,30,5000
+
+//Rock ridge culvert
+harboro2,0,0	monster	Swamp Arclouse	3787,30,5000
+harboro2,0,0	monster	Brown Rat	3788,30,5000
+
+rockrdg1,33,246,0	warp	harboro1	1,1,harboro1,357,207
+harboro1,362,207,0	warp	harboro1-1	1,1,rockrdg1,38,246
+rockrdg1,371,204,0	warp	rockrdg2	1,1,rockrdg2,31,208
+rockrdg2,27,208,0	warp	rockrdg2-1	1,1,rockrdg1,367,204
+rockrdg2,303,350,0	warp	rockrdg2-2	1,1,rockmi1,248,20
+rockmi1,248,16,0	warp	rockrdg2-3	1,1,rockrdg2,303,345

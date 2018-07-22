@@ -3897,6 +3897,8 @@
 25148,499,100	// Cute_Starved_Demon_Doll
 25149,499,100	// Doll_With_Warm_Scarf
 25150,499,100	// Hugging_Alice_Pilow
+25247,467,100	// Purple_Ore
+25250,467,100	// Rock_Ridge_Coin
 26100,435,100	// Paradise_Foxtail_Staff_II
 26101,435,100	// Paradise_Foxtail_Staff_III
 28105,467,100	// Infinity_Axe

@@ -244,6 +244,11 @@
 27013:27012,{ bonus bNoMadoFuel; }
 27015:27016,{ bonus bCritAtkRate,10; }
 27018:27019,{ autobonus "{ bonus bAspd,5; }",30,5000; }
+27170:27171,{ bonus bStr,3; bonus bAtkRate,3; }
+27170:27172,{ bonus2 bAddSize,Size_Small,15; bonus2 bMagicAddSize,Size_Small,15; }
+27170:27173,{ bonus2 bSkillAtk,"GS_SPREADATTACK",50; }
+27174:27171,{ bonus2 bSkillAtk,"GS_RAPIDSHOWER",50; }
+27175:27172,{ bonus2 bAddSize,Size_Small,10; bonus2 bMagicAddSize,Size_Small,10; }
 2720:2772,{ bonus2 bAddClass,Class_All,5; bonus bMatkRate,3; bonus bHealPower,5; }
 2720:2773,{ bonus2 bAddClass,Class_All,5; bonus bMatkRate,3; bonus bHealPower,5; }
 2720:2774,{ bonus2 bAddClass,Class_All,5; bonus bMatkRate,3; bonus bHealPower,5; }
@@ -702,6 +707,13 @@
 24249:24254,{ bonus2 bMagicAddRace,RC_All,1; bonus bMaxSPrate,1; if (getequiprefinerycnt(EQI_SHADOW_ACC_R)+getequiprefinerycnt(EQI_SHADOW_ACC_L)>=10) { bonus2 bMagicAddRace,RC_All,2; bonus bMaxSPrate,2; } }
 24253:28391,{ bonus2 bAddRace,RC_All,1; bonus bMaxHPrate,1; if (getequiprefinerycnt(EQI_SHADOW_ACC_R)+getequiprefinerycnt(EQI_SHADOW_ACC_L)>=10) { bonus2 bAddRace,RC_All,2; bonus bMaxHPrate,2; } }
 24255:28392,{ bonus2 bAddRace,RC_All,1; bonus bMaxHPrate,1; if (getequiprefinerycnt(EQI_SHADOW_ACC_R)+getequiprefinerycnt(EQI_SHADOW_ACC_L)>=10) { bonus2 bAddRace,RC_All,2; bonus bMaxHPrate,2; } }
+27081:4131,{ autobonus "{ bonus bflee2,10; }",70,5000,BF_SHORT,"{ specialeffect2 EF_ENCHANCE; }"; }
+27082:4159,{ autobonus "{ bonus bflee,10; }",20,5000,BF_SHORT,"{ specialeffect2 EF_ENCHANCE; }"; }
+27083:4212,{ autobonus "{ bonus2 bAddDefMonster,1026,-100; bonus2 bAddMDefMonster,1026,-100; }",20,5000,BF_SHORT,"{ specialeffect2 EF_ENCHANCE; }"; }
+27084:4100,{ autobonus "{ bonus bSPrecovRate,100; }",20,5000,BF_SHORT,"{ specialeffect2 EF_ENCHANCE; }"; }
+27085:1558,{ bonus bBaseAtk,100; bonus bMatk,100; }
+27085:4090,{ autobonus "{ bonus2 bAddEff,Eff_Stun,5000; }",20,5000,BF_SHORT,"{ specialeffect2 EF_ENCHANCE; }"; }
+27086:4094,{ autobonus "{ bonus bAspd,1; }",20,5000,BF_WEAPON,"{ specialeffect2 EF_ENCHANCE; }"; }
 27107:27108,{ bonus2 bSkillAtk,"WM_METALICSOUND",50; bonus2 bSkillAtk,"WM_REVERBERATION",50; }
 27108:27107:27109,{ autobonus "{ bonus2 bAddEle,Ele_Neutral,200; bonus2 bMagicAddEle,Ele_Neutral,200; heal 2000,0; }",30,6000,BG_MAGIC|BF_WEAPON|BF_MISC,"{ active_transform 3073,6000; }"; }
 27147:27148,{ bonus bDelayrate,-3; }

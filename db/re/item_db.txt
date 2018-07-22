@@ -11233,6 +11233,7 @@
 23193,Crimson_Rock_Scroll_1_5,Level 5 Crimson Rock,11,10,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ itemskill "WL_CRIMSONROCK",5; },{},{}
 23194,Sienna_Execrate_Scroll_1_5,Level 5 Sienna Execrate,11,10,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ itemskill "WL_SIENNAEXECRATE",5,true; },{},{}
 23196,Agust_Lucky_Scroll,Shining Blue Lucky Egg,18,10,,10,,,,0,0xFFFFFFFF,63,2,,,1,,,{ getgroupitem(IG_Agust_Lucky_Scroll); },{},{}
+23228,Hazy_Mooncake,Hazy Mooncake,0,768,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ itemheal rand(45,65),0; },{},{}
 23277,Mado_Box,Emergency Magic Gear,2,10000,,3000,,,,,0x00000400,56,2,,,100,,,{ setmadogear 1; },{},{}
 23307,S_Shining_Def_Scroll,[Sale] Shining Defense Scroll,2,,,10,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
 23340,S_Megaphone,[Sale] Megaphone,2,,,10,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
@@ -11528,6 +11529,23 @@
 //===================================================================
 // New Staves
 //===================================================================
+25247,Purple_Ore,Purple Ore,3,20,,0,,,,,,,,,,,,,{},{},{}
+25250,Rock_Ridge_Coin,Rock Ridge Coin,3,0,,0,,,,,,,,,,,,,{},{},{}
+25256,Hazy_Dream_Fragment,Hazy Dream Fragment,3,0,,10,,,,,,,,,,,,,{},{},{}
+25257,Bloody_Love_Letter,Bloody Love Letter,3,780,,10,,,,,,,,,,,,,{},{},{}
+25258,Broken_Arrow,Broken Arrow,3,550,,10,,,,,,,,,,,,,{},{},{}
+25259,Recruitment_Leaflet,Recruitment Leaflet,3,778,,10,,,,,,,,,,,,,{},{},{}
+25271,Illusion_Stone,Illusion Stone,3,10,,10,,,,,,,,,,,,,{},{},{}
+25272,Illusion_Gemstone,Illusion Gemstone,3,0,,10,,,,,,,,,,,,,{},{},{}
+25276,Clean_Bone,Clean Bone,3,348,,10,,,,,,,,,,,,,{},{},{}
+25278,Bandit's_Scarf,Bandit's Scarf,3,330,165,10,,,,,,,,,,,,,{},{},{}
+25279,Crude_Ammo,Crude Ammo,3,300,,10,,,,,,,,,,,,,{},{},{}
+25280,Broken_Shotgun,Broken Shotgun,3,0,,10,,,,,,,,,,,,,{},{},{}
+25281,Crude_Scimitar,Crude Scimitar,3,0,,10,,,,,,,,,,,,,{},{},{}
+25282,Worn_Revolver,Worn Revolver,3,0,0,10,,,,,,,,,,,,,{},{},{}
+25283,Brown_Muffler,Brown Muffler,3,420,210,10,,,,,,,,,,,,,{},{},{}
+25284,Bark_of_Marsh_Worm,Bark of Marsh Worm,3,430,210,10,,,,,,,,,,,,,{},{},{}
+25285,Tail_of_Brown_Rat,Tail of Brown Rat,3,600,300,10,,,,,,,,,,,,,{},{},{}
 26100,Paradise_Foxtail_Staff_II,Eden Group Foxtail Staff II,5,20,,0,135:165,,1,0,0x80000000,7,2,2,2,40,0,10,{ bonus bDex,4; bonus bInt,4; bonus bLongAtkRate,6; },{},{}
 26101,Paradise_Foxtail_Staff_III,Eden Group Foxtail Staff III,5,20,,0,150:195,,1,0,0x80000000,7,2,2,3,60,0,10,{ bonus bDex,5; bonus bInt,5; bonus bLongAtkRate,7; },{},{}
 26110,CandyCaneRod,Candy Cane Rod,5,20,,500,10:140,,1,2,0x00818315,63,2,2,4,99,1,10,{ bonus bInt,2; bonus bFlee,2*getrefine(); if(getrefine()>= 10) { bonus bFlee2,10; } },{},{}
@@ -11549,6 +11567,14 @@
 27028,Fire_Frilldora_Card,Fire Frilldora Card,6,20,,10,,,,,0xFFFFFFFF,63,2,2,,,,,{ .@r = getrefine(); bonus2 bMagicAddEle,Ele_Earth,3+((.@r>=7)*5)+((.@r>=9)*7); },{},{}
 27029,Fire_Golem_Card,Fire Golem Card,6,20,,10,,,,,0xFFFFFFFF,63,2,32,,,,,{ bonus2 bSubEle,Ele_Fire,20; bonus2 bAddEle,Ele_Fire,5; },{},{}
 27030,Fulbuk_Card,Fulbuk Card,6,20,,10,,,,,0xFFFFFFFF,63,2,769,,,,,{ bonus3 bAddEff,Eff_Burning,700,ATF_WEAPON|ATF_MAGIC; },{},{}
+27081,Angry_Moonlight_Flower_Card,Angry Moonlight Flower Card,6,20,,10,,,,,,,,16,,,,,{ skill "PA_PRESSURE",4; },{},{}
+27082,Angry_Nine_Tail_Card,Angry Nine Tail Card,6,20,,10,,,,,,,,16,,,,,{ .@r = getrefine(); bonus bCritAtkRate,10; bonus bCritical,5; if (.@r>=10) bonus bCritical,10; },{},{}
+27083,Resentful_Bongun_Card,Resentful Bongun Card,6,20,,10,,,,,,,,16,,,,,{ bonus bBaseAtk,20; bonus bMatk,20; },{},{}
+27084,Resentful_Sohee_Card,Resentful Sohee Card,6,20,,10,,,,,,,,16,,,,,{ .@r = getrefine(); bonus bMatk,10; if (.@r>=10) bonus bMatkRate,2; },{},{}
+27085,Resentful Munak Card,Resentful Munak Card,6,20,,10,,,,,,,,2,,,,,{ bonus bBaseAtk,15; bonus bMatk,15; },{},{}
+27086,Resentful_Soldier_Card,Resentful Soldier Card,6,20,,10,,,,,,,,2,,,,,{ if(getiteminfo(getequipid(EQI_HAND_R),11) == W_BOW) { bonus3 bAutoSpell,"AC_DOUBLE",5,30; .@r = getrefine(); if (.@r>=10) bonus2 bAddClass,Class_All,20; } },{},{}
+27087,Truthful_Wizard_Card,Truthful Wizard Card,6,20,,10,,,,,,,,2,,,,,{ bonus bMatk,25; autobonus "{ bonus bNoCastCancel; }",5,5000,BF_MAGIC,"{ specialeffect2 EF_ENCHANCE; }"; },{},{}
+27088,Fury_Hero_Card,Fury Hero Card,6,20,,10,,,,,,,,769,,,1,,{ bonus bAtkRate,2; autobonus "{}",5,5000,BF_SHORT,"{ sc_start4 SC_ENDURE,5000,1,0,0,0; specialeffect2 11; }"; },{},{}
 27106,Grand_Pere_Card,Grand Pere Card,6,20,,10,,,,,,,,16,,,,,{ if(BaseJob == Job_Minstrel || BaseJob == Job_Wanderer) bonus bMatk,15*getrefine(); },{},{}
 27107,Playing_Pere_Card,Playing Pere Card,6,20,,10,,,,,,,,8,,,,,{ bonus2 bAddEle,Ele_Neutral,20; },{},{}
 27108,Singing_Pere_Card,Singing Pere Card,6,20,,10,,,,,,,,128,,,,,{ bonus2 bMagicAddEle,Ele_Neutral,20; },{},{}
@@ -11579,6 +11605,17 @@
 27167,Faceworm_Larva_Card,Faceworm Larva Card,6,20,,10,,,,,,,,4,,,,,{ bonus2 bSubEle,Ele_Neutral,15; bonus2 bMagicAddSize,Size_All,getrefine()*3; },{},{}
 27168,Irene_High_Elder_Card,Irene High Elder Card,6,20,,10,,,,,,,,4,,,,,{ bonus bHit,10 + 5 * (getrefine()/3); },{},{}
 27169,Payon_Soldier_Card,Payon Soldier Card,6,20,,10,,,,,,,,2,,,,,{ .@atk = 5; .@r = getrefine(); if(getiteminfo(getequipid(EQI_HAND_R),11) == W_SPEAR && .@r >= 10){ .@atk += 20; if(.@r >= 14){ .@atk += 20; } } bonus bAtk,.@atk; bonus bMatk,.@atk; },{},{}
+27170,Shotgun_Buffalo_Bandit_Card,Shotgun Buffalo Bandit Card,6,20,,10,,,,,,,,128,,,,,{ bonus bAgi,7; bonus bHit,7; },{},{}
+27171,Revolver_Buffalo_Bandit_Card,Revolver Buffalo Bandit Card,6,20,,10,,,,,,,,8,,,,,{ bonus bStr,4; bonus bAtkRate,4; },{},{}
+27172,Scimitar_Buffalo_Bandit_Card,Scimitar Buffalo Bandit Card,6,20,,10,,,,,,,,2,,,,,{ bonus bBaseAtk,5; bonus bMatk,5; if(getiteminfo(getequipid(EQI_HAND_R),11) == W_DAGGER) { .@r = getrefine(); if(.@r>=10) { bonus bBaseAtk,20; bonus bMatk,20; } if(.@r>=14) { bonus bBaseAtk,20; bonus bMatk,20; } } },{},{}
+27173,Elite_Shotgun_Buffalo_Bandit_Card,Elite Shotgun Buffalo Bandit Card,6,20,,10,,,,,,,,2,,,,,{ bonus2 bSkillAtk,"GS_SPREADATTACK",10; .@r = getrefine(); if(.@r>=10) bonus2 bSkillAtk,"GS_SPREADATTACK",20; if(.@r>=14) bonus2 bSkillAtk,"GS_SPREADATTACK",20; },{},{}
+27174,Elite_Revolver_Buffalo_Bandit_Card,Elite Revolver Buffalo Bandit Card,6,20,,10,,,,,,,,2,,,,,{ bonus2 bSkillAtk,"GS_RAPIDSHOWER",10; .@r = getrefine(); if(.@r>=10) bonus2 bSkillAtk,"GS_RAPIDSHOWER",20; if(.@r>=14) bonus2 bSkillAtk,"GS_RAPIDSHOWER",20; },{},{}
+27175,Elite_Scimitar_Buffalo_Bandit_Card,Elite Scimitar Buffalo Bandit Card,6,20,,10,,,,,,,,2,,,,,{ bonus2 bAddSize,Size_Small,10; bonus2 bMagicAddSize,Size_Small,10; },{},{}
+27176,Brown_Rat_Card,Brown Rat Card,6,20,,10,,,,,,,,4,,,,,{ .@a = readparam(bstr); bonus bBaseAtk,3*(.@a/10); bonus bAspdRate,3*(.@a/10); if (.@a>=120) bonus bBaseAtk,40; },{},{}
+27177,Marsh_Arclouse_Card,Marsh Arclouse Card,6,20,,10,,,,,,,,4,,,,,{ .@a = readparam(bInt); bonus bMatk,3*(.@a/10); bonus bAspdRate,3*(.@a/10); if (.@a>=120) bonus bMatk,40; },{},{}
+27178,Gaster_Card,Gaster Card,6,20,,10,,,,,,,,32,,,,,{ bonus2 bSubClass,Class_Normal,25; bonus2 bSubClass,Class_Boss,-25; },{},{}
+27179,Coyote_Card,Coyote Card,6,20,,10,,,,,,,,64,,,,,{ .@r = getrefine(); bonus bNoCastCancel; bonus bMaxHPrate,-12; bonus bMaxSPrate,-6; if (.@r>=6) { bonus bMaxHPrate,6; bonus bMaxSPrate,3; } },{},{}
+27180,Spider_Chariot_Card,Spider Chariot Card,6,20,,10,,,,,,,,128,,,,,{ bonus bBreakWeaponRate,500; bonus bBreakArmorRate,500; },{},{}
 27181,Airship_Raid_Card,Airship Raid Card,6,20,,10,,,,,,,,2,,,,,{ .@r = getrefine(); bonus bLongAtkRate,1 + .@r/2; bonus bCritical,.@r/2; },{},{}
 27182,Captain_Felock_Card,Captain Felock Card,6,20,,10,,,,,,,,2,,,,,{ bonus bAtk,30; .@r = getrefine(); bonus2 bSkillAtk,"RL_AM_BLAST",.@r >= 10 ? 60 : 30; bonus2 bSkillAtk,"RL_HAMMER_OF_GOD",.@r >= 10 ? 60 : 30; },{},{}
 27183,Gigantes_Card,Gigantes Card,6,20,,10,,,,,,,,128,,,,,{ bonus bAtk,20; if(readparam(bStr) >= 120) { bonus bAtk,20; bonus bAspdRate,-3; } },{},{}

@@ -133,7 +133,7 @@ menu	"Prontera",T1, "Alberta",T2, "Aldebaran",T3, "Amatsu",T4, "Ayothaya",T5,
     	"Izlude",T16, "Jawaii",T17, "Lasagna",T18, "Lighthalzen",T19, "Louyang",T20,
 		"Lutie",T21, "Malangdo",T22, "Malaya",T23, "Manuk",T24,
 		"Midgarts Expedition Camp",T25, "Mora",T26, "Morroc",T27, "Moscovia",T28,
-		"Nameless Island",T29, "Niflheim",T30, "Payon",T31, "Rachel",T32, "Splendide",T33,
+		"Nameless Island",T29, "Niflheim",T30, "Payon",T31, "Rachel",T32, "Rock Ridge",T39, "Splendide",T33,
 		"Thor Camp",T34, "Umbala",T35, "Veins",T36, "Verus",T38, "Yuno",T37;
 
 T1: Go("prontera",155,183);
@@ -182,6 +182,7 @@ T35: Go("umbala",97,153);
 T36: Go("veins",216,123);
 T37: Go("yuno",157,51);
 T38: Go("verus04",149,188);
+T39: Go("harboro1",284,192);
 
 // --------------------------------------------------
 	Fields:
@@ -194,7 +195,7 @@ menu	"Amatsu Fields",F1, "Ayothaya Fields",F2, "Bifrost Fields", F3,
 		"Lasagna Fields",F13, "Lighthalzen Fields",F14, "Louyang Field",F15, 
 		"Lutie Field",F16, "Malaya Fields",F17, "Manuk Fields",F18, 
 		"Mjolnir Fields",F19, "Moscovia Fields",F20, "Niflheim Fields",F21, 
-		"Payon Forests",F22, "Prontera Fields",F23, "Rachel Fields",F24, 
+		"Payon Forests",F22, "Prontera Fields",F23, "Rachel Fields",F24, "Rock Ridge Fields",F30, 
 		"Sograt Deserts",F25, "Splendide Fields",F26, "Umbala Fields",F27, 
 		"Veins Fields",F28, "Yuno Fields",F29;
 
@@ -277,6 +278,9 @@ F28: Restrict("Pre-RE",5);
 F29: Restrict("Pre-RE",5,10);
 	 setarray @c[2],189,224,192,207,221,157,226,199,223,177,187,232,231,174,196,203,183,214,200,124,195,226,210,304;
 	 Disp("Yuno Field",1,12); Pick("yuno_fild");
+F30: setarray @c[2],202,155,188,174;
+	 Disp("Rock Ridge Field1:Rock Ridge Field2");
+	 Pick("","rockrdg1","rockrdg2");
 
 // --------------------------------------------------
 	Dungeons:
@@ -291,7 +295,7 @@ menu	"Abyss Lakes",D1, "Amatsu Dungeon",D2, "Anthell",D3,
     	"Ice Dungeon",D20, "Juperos",D21, "Kiel Dungeon",D22, "Lasagna Dungeon",D23,
 		"Louyang Dungeon",D24, "Magma Dungeon",D25, "Malangdo Dungeon",D26,
 		"Moscovia Dungeon",D27, "Nidhogg's Dungeon",D28, "Odin Temple",D29,
-		"Orc Dungeon",D30, "Payon Dungeon",D31, "Prontera Invasion",D45, "Pyramids",D32, "Rachel Sanctuary",D33,
+		"Orc Dungeon",D30, "Payon Dungeon",D31, "Prontera Invasion",D45, "Pyramids",D32, "Rachel Sanctuary",D33, "Rock Ridge",D46, 
     	"Scaraba Hole",D34, "Sphinx",D35, "Sunken Ship",D36, "Thanatos Tower",D37,
     	"Thor Volcano",D38, "Toy Factory",D39, "Turtle Dungeon",D40, "Umbala Dungeon",D41, "Verus's Area",D43;
 
@@ -364,8 +368,9 @@ D29: setarray @c[2],298,167,224,149,266,280;
 	 Disp("Odin Temple",1,3); Pick("odin_tem");
 D30: setarray @c[2],32,170,21,185;
 	 Disp("Orc Dungeon",1,2); Pick("orcsdun");
-D31: setarray @c[0],21,183,19,33,19,63,155,159,201,204;
-	 Disp("Payon Dungeon",1,5); Pick("pay_dun",1);
+D31: setarray @c[2],21,183,19,33,19,63,155,159,201,204,87,196;
+	 Disp("Payon Dungeon1:Payon Dungeon2:Payon Dungeon3:Payon Dungeon4:Payon Dungeon5:Illusion Payon Dungeon");
+	 Pick("","pay_dun00","pay_dun01","pay_dun02","pay_dun03","pay_dun04","pay_d03_i");
 D32: Restrict("RE",7,8);
 	 setarray @c[2],192,9,10,192,100,92,181,11,94,96,192,8,94,96,192,8;
 	 Disp("Pyramids 1:Pyramids 2:Pyramids 3:Pyramids 4:Basement 1:Basement 2:Basement 1 - Nightmare Mode:Basement 2 - Nightmare Mode");
@@ -402,6 +407,9 @@ D44: Restrict("RE");
 D45: setarray @c[2],149,133,156,189;
 	 Disp("Prontera Prison:Prontera Invasion");
 	 Pick("","prt_prison","prt_q");
+D46: setarray @c[2],248,23,190,94;
+	 Disp("Rock Ridge Mine:Underground Culvert");
+	 Pick("","rockmi1","harboro2");
 // --------------------------------------------------
 	Castles:
 // --------------------------------------------------

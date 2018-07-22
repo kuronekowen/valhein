@@ -1955,3 +1955,37 @@
 11023	//Increase_Stamina_Study
 11024	//Vital_Drink_CB
 //--- 2010 / 03 / 12
+25256  // Hazy_Dream_Fragment
+25257  // Bloody_Love_Letter
+25258  // Broken_Arrow
+25259  // Recruitment_Leaflet
+25271  // Illusion_Stone
+25272  // Illusion_Gemstone
+25276  // Clean_Bone
+25278  // Bandit's_Scarf
+25279  // Crude_Ammo
+25280  // Broken_Shotgun
+25281  // Crude_Scimitar
+25282  // Worn_Revolver
+25283  // Brown_Muffler
+25284  // Bark_of_Marsh_Worm
+25285  // Tail_of_Brown_Rat
+27081  // Angry_Moonlight_Flower_Card
+27082  // Angry_Nine_Tail_Card
+27083  // Resentful_Bongun_Card
+27084  // Resentful_Sohee_Card
+27085  // Resentful Munak Card
+27086  // Resentful_Soldier_Card
+27087  // Truthful_Wizard_Card
+27088  // Fury_Hero_Card
+27170  // Shotgun_Buffalo_Bandit_Card
+27171  // Revolver_Buffalo_Bandit_Card
+27172  // Scimitar_Buffalo_Bandit_Card
+27173  // Elite_Shotgun_Buffalo_Bandit_Card
+27174  // Elite_Revolver_Buffalo_Bandit_Card
+27175  // Elite_Scimitar_Buffalo_Bandit_Card
+27176  // Brown_Rat_Card
+27177  // Marsh_Arclouse_Card
+27178  // Gaster_Card
+27179  // Coyote_Card
+27180  // Spider_Chariot_Card

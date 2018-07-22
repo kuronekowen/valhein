@@ -908,16 +908,16 @@ OnTimer28500:
 		"Thanatos Sword", "Thanatos Great Sword", "Thanatos Spear", "Thanatos Long Spear", "Thanatos Staff",
 		"Thanatos Two-handed Staff", "Thanatos Bow", "Thanatos Dagger", "Thanatos Katar", "Thanatos Knuckle",
 		"Thanatos Hammer", "Thanatos Axe", "Thanatos Violin", "Thanatos Whip",
-		"Gray Shield", "Gray Armor", "Gray Robe", "Gray Cloak", "Gray Shoes", "Gray Helmet";
-	setarray .@items_list[0],13441,21009,1438,1496,1669,2023,18119,13093,28000,1836,16028,28100,1933,1988,2187,15090,15091,20721,22033,18820;
+		"Gray Shield", "Gray Armor", "Gray Robe", "Gray Cloak", "Gray Shoes", "Gray Helmet", "Knight Sakray Card";
+	setarray .@items_list[0],13441,21009,1438,1496,1669,2023,18119,13093,28000,1836,16028,28100,1933,1988,2187,15090,15091,20721,22033,18820,27184;
 
-	for ( .@i = 0; .@i < 20; .@i++ )
+	for ( .@i = 0; .@i < 21; .@i++ )
 		.@menu$ += .@item_name$[.@i] + ":";
 	.@menu$ += "Cancel";
 
 	while(true) {
 		.@s = select(.@menu$) - 1;
-		if (.@s == 20) {
+		if (.@s == 21) {
 			mes "[King]";
 			mes "Someday, Sakray will";
 			mes "get out of this curse for sure.";
@@ -927,6 +927,7 @@ OnTimer28500:
 			close;
 		}
 		.@cost = ( .@s > 13 ? 100 : 200 );
+		if (.@s == 20) .@cost = 10000;
 		mes "[King]";
 		mes "To make a ^FF0000" + .@item_name$[.@s] + "^000000";
 		mes "I need " + .@cost + " ^006400Gray Shard^000000.";

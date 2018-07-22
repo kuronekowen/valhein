@@ -25,3 +25,5 @@ malangdo	mapflag	town
 malaya	mapflag	town
 mora	mapflag	town
 lasagna	mapflag	town
+harboro1	mapflag	town
+verus04	mapflag	town
