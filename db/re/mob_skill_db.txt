@@ -12126,5 +12126,4 @@
 3765,Illusion Hero@KN_SPEARBOOMERANG,chase,59,5,10000,0,0,yes,target,skillused,18,,,,,,6,
 3765,Illusion Hero@KN_SPEARBOOMERANG,follow,59,5,10000,0,10000,yes,target,always,0,,,,,,6,
 3765,Illusion Hero@NPC_FIREATTACK,attack,186,5,2000,0,5000,yes,target,always,0,,,,,,9,
-3765,Illusion Hero@LK_SPIRALPIERCE,attack,397,3,1000,0,20000,yes,target,always,0,,,,,,,
 3765,Illusion Hero@SM_MAGNUM,attack,7,25,1000,0,0,yes,self,attackpcge,2,,,,,,,

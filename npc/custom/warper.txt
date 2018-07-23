@@ -369,7 +369,7 @@ D29: setarray @c[2],298,167,224,149,266,280;
 D30: setarray @c[2],32,170,21,185;
 	 Disp("Orc Dungeon",1,2); Pick("orcsdun");
 D31: setarray @c[2],21,183,19,33,19,63,155,159,201,204,87,196;
-	 Disp("Payon Dungeon1:Payon Dungeon2:Payon Dungeon3:Payon Dungeon4:Payon Dungeon5:Illusion Payon Dungeon");
+	 Disp("Payon Dungeon1:Payon Dungeon2:Payon Dungeon3:Payon Dungeon4:Payon Dungeon5:Illusion of Moonlight");
 	 Pick("","pay_dun00","pay_dun01","pay_dun02","pay_dun03","pay_dun04","pay_d03_i");
 D32: Restrict("RE",7,8);
 	 setarray @c[2],192,9,10,192,100,92,181,11,94,96,192,8,94,96,192,8;
