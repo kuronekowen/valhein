@@ -5050,15 +5050,13 @@ int pc_useitem(struct map_session_data *sd,int n)
 			clif_progressbar_abort(sd);
 			return 0; // First item use attempt cancels the progress bar
 		}
+
+		if( pc_hasprogress( sd, WIP_DISABLE_SKILLITEM ) || !sd->npc_item_flag ){
 #ifdef RENEWAL
-		if (pc_hasprogress(sd, WIP_DISABLE_SKILLITEM)) {
-			clif_msg(sd, WORK_IN_PROGRESS);
+			clif_msg( sd, WORK_IN_PROGRESS );
+#endif
 			return 0;
 		}
-#else
-		if (!sd->npc_item_flag)
-			return 0;
-#endif
 	}
 	item = sd->inventory.u.items_inventory[n];
 	id = sd->inventory_data[n];
@@ -7811,6 +7809,8 @@ int pc_dead(struct map_session_data *sd,struct block_list *src)
 	}
 
 	pc_setdead(sd);
+
+	clif_party_dead( sd );
 
 	pc_setglobalreg(sd, add_str(PCDIECOUNTER_VAR), sd->die_counter+1);
 	pc_setparam(sd, SP_KILLERRID, src?src->id:0);
@@ -10651,7 +10651,12 @@ bool pc_setstand(struct map_session_data *sd, bool force){
 	clif_standing(&sd->bl); //Inform area PC is standing
 	//Reset sitting tick.
 	sd->ssregen.tick.hp = sd->ssregen.tick.sp = 0;
-	sd->state.dead_sit = sd->vd.dead_sit = 0;
+	if( pc_isdead( sd ) ){
+		sd->state.dead_sit = sd->vd.dead_sit = 0;
+		clif_party_dead( sd );
+	}else{
+		sd->state.dead_sit = sd->vd.dead_sit = 0;
+	}
 	return true;
 }
 
