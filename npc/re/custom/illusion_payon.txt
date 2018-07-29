@@ -1,0 +1,124 @@
+//===== rAthena Script =======================================
+//= Euphy's Quest Shop
+//===== By: ==================================================
+//= Euphy
+//===== Current Version: =====================================
+//= 1.6c
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= A dynamic quest shop based on Lunar's, with easier config.
+//= Includes support for multiple shops & cashpoints.
+//= Item Preview script by ToastOfDoom.
+//===== Additional Comments: =================================
+//= 1.0 Initial script.
+//= 1.2 Added category support.
+//= 1.3 More options and fixes.
+//= 1.4 Added debug settings.
+//= 1.5 Replaced categories with shop IDs.
+//= 1.6 Added support for purchasing stackables.
+//= 1.6a Added support for previewing costumes and robes.
+//= 1.6b Added 'disable_items' command.
+//= 1.6c Replaced function 'A_An' with "F_InsertArticle".
+//============================================================
+
+// Shop NPCs -- supplying no argument displays entire menu.
+//	callfunc "rrshop"{,<shop ID>{,<shop ID>{,...}}};
+//  ADD YOUR NPC HERE
+//============================================================
+prontera,148,172,6	script	Illusion Officer#1	10084,{
+	mes "[Moonlight's Disciple]","Have you ever heard this ?","Everyone is a moon, and has a dark side which they never shows to anybody.";
+	next;
+	mes "[Moonlight's Disciple]","Greeting adventurer!, I'm a Moonlight's Disciple.","What can I help for you?";
+	next;
+	menu "Ask about Illusion's equipment",pick1, "Just chilling around",pick2;
+		pick2: {
+			next;
+			mes "[Moonlight's Disciple]","Good luck. I hope we will meet again, soon.";
+			close;
+		}
+		pick1: {
+		next;
+		mes "[Moonlight's Disciple]","Illusion equipments are the new choice to upgrade your weapon","it can endow +9 or higher equipments by absorb an energy from the special place.","just like Payon dungeon that have too powerful energy.";
+		next;
+		mes "[Moonlight's Disciple]","Would you like to try ?","I can endow your weapon with your special ingredients";
+		next;
+		menu "Yes,of course",ask1, "See you next time",ask2;
+		ask2: {
+			next;
+			mes "[Moonlight's Disciple]","Good luck. I hope we will meet again, soon.";
+			close;
+		}
+		ask1:	menu "Illusion Puente Robe [1]",firm1, "Illusion Long Mace [2]",firm2, "Illusion Nurse Cap [1]",firm3, "Illusion Apple of Archer [1]",firm4, 
+					"Illusion Muffler [1]",firm5, "Illusion Shoes [1]",firm6, "Illusion Spectral Spear [1]",firm7, "Illusion Staff of Bordeaux [2]",firm8, "Illusion Moonlight Dagger [1]",firm9;
+				firm1: {
+				mes "<ITEM>Illusion Puente Robe[1]<INFO>15195</INFO></ITEM>","  - +9 Puente Robe [1]","  - 10 Illusion Stone","  - 100 Hazy Dream Fragment"," ","Do you want to Comfirm?";
+				if (select("Yes:No" ) == 1) {
+					getinventorylist;
+					for (; .@i < @inventorylist_count; .@i++) {
+						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 10) .@true[1] = 1;
+						if(@inventorylist_id[.@i] == 25256 && @inventorylist_amount[.@i] >= 100) .@true[2] = 1;
+						if(@inventorylist_id[.@i] == 15012 && @inventorylist_refine[.@i] >= 9 && .@true[1] == 1 && .@true[2] == 1){
+							//.@items[.@count] = @inventorylist_id[.@i];
+							//.@menu$ = .@menu$ + getitemname(@inventorylist_id[.@i]) + ":";
+							//.@count++;
+							next;
+							mes "Weww It's looking good equipment!";
+							delitem 15012,1;
+							delitem 25271,10;
+							delitem 25256,100;
+							getitem 15195,1;
+							specialeffect2 567;
+							close;
+						}
+					}
+					next;
+					mes "You didn't have required items";
+					close;
+				}			
+				else {
+					next;
+					mes "[Moonlight's Disciple]","Good luck. I hope we will meet again, soon.";
+					close;
+				}
+				}
+				firm2: {
+				mes "<ITEM>Illusion Long Mace[2]<INFO>16063</INFO></ITEM>","  - +9 Long Mace","  - 10 Illusion Stone","  - 20 Hazy Dream Fragment"," ","Do you want to Comfirm?";
+				if (select("Yes:No" ) == 1) {
+					getinventorylist;
+					for (; .@i < @inventorylist_count; .@i++) {
+						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 10) .@true[3] = 1;
+						if(@inventorylist_id[.@i] == 25256 && @inventorylist_amount[.@i] >= 20) .@true[4] = 1;
+						if(@inventorylist_id[.@i] == 1525 && @inventorylist_refine[.@i] >= 9 && .@true[3] == 1 && .@true[4] == 1){
+							//.@items[.@count] = @inventorylist_id[.@i];
+							//.@menu$ = .@menu$ + getitemname(@inventorylist_id[.@i]) + ":";
+							//.@count++;
+							next;
+							mes "Weww It's looking good equipment!";
+							delitem 1525,1;
+							delitem 25271,10;
+							delitem 25256,20;
+							getitem 16063,1;
+							specialeffect2 567;
+							close;
+						}
+					}
+					next;
+					mes "You didn't have required items";
+					close;
+				}			
+				else {
+					next;
+					mes "[Moonlight's Disciple]","Good luck. I hope we will meet again, soon.";
+					close;
+				}
+				}
+				firm3: close;
+				firm4: close;
+				firm5: close;
+				firm6: close;
+				firm7: close;
+				firm8: close;
+				firm9: close;
+		}
+}
