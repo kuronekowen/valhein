@@ -2646,7 +2646,7 @@ OnDisable:
 //NPC EQUIP (SEMI-CUSTOM)
 //==========================
 
-verus04,64,112,4	script	Charleston Nx#verus1	4_F_CHARLESTON01,{
+verus04,64,112,4	script	Mass Charleston#verus1	4_F_CHARLESTON01,{
 	cutin "dalle03.bmp",2;
 	mes "[Charleston's Clone]";
 	mes "After defeating Charleston you can create very powerful objects.";
@@ -2689,7 +2689,9 @@ verus04,64,112,4	script	Charleston Nx#verus1	4_F_CHARLESTON01,{
 						mes "[Charleston's Clone]";
 						mes "Thanks";
 						getitem 15111,1; //Reinforced Parts - Gloves
-						close;
+						close2;
+						cutin "dalle03.bmp",255;
+						end;
 					} else {
 						mes "[Charleston's Clone]";
 						mes "You don't have the requirements.";
@@ -2716,7 +2718,9 @@ verus04,64,112,4	script	Charleston Nx#verus1	4_F_CHARLESTON01,{
 						mes "[Charleston's Clone]";
 						mes "Thanks";
 						getitem 15110,1; //Strength Supplement Equipment
-						close;
+						close2;
+						cutin "dalle03.bmp",255;
+						end; 
 					} else {
 						mes "[Charleston's Clone]";
 						mes "You don't have the requirements.";
