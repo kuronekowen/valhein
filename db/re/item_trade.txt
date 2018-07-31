@@ -848,12 +848,6 @@
 6787,507,100	// Good_Firewood
 6788,507,100	// Rose_Knife
 6789,507,100	// Custom_Pan
-6814,475,100	// Swordman_Soul
-6815,475,100	// Merchant_Soul
-6816,475,100	// Thief_Soul
-6817,475,100	// Mage_Soul
-6818,475,100	// Archer_Soul
-6819,475,100	// Acolyte_Soul
 6820,475,100	// Energy_Debris
 6821,467,100	// Solo_Troops_Badge
 6824,507,100	// Experimental_Dong_Memory_Record
