@@ -646,6 +646,7 @@ struct Battle_Config
 	int homunculus_autofeed_always;
 	int feature_attendance;
 	int feature_privateairship;
+	int homunculus_exp_gain;
 
 #include "../custom/battle_config_struct.inc"
 };
