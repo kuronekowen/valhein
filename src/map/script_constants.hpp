@@ -1516,6 +1516,7 @@
 	export_constant(SC_LHZ_DUN_N2);
 	export_constant(SC_LHZ_DUN_N3);
 	export_constant(SC_LHZ_DUN_N4);
+	export_constant(SC_ANCILLA);
 #ifdef RENEWAL
 	export_constant(SC_EXTREMITYFIST2);
 #endif

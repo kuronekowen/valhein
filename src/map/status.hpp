@@ -852,6 +852,8 @@ enum sc_type : int16 {
 	SC_GLASTHEIM_STATE,
 	SC_GLASTHEIM_ITEMDEF,
 	SC_GLASTHEIM_HPSP,
+	
+	SC_ANCILLA,
 
 	// Nightmare Biolab Buffs
 	SC_LHZ_DUN_N1,
