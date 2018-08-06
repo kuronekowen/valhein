@@ -72,8 +72,8 @@ ecl_hub01	mapflag	noteleport
 1@gl_k	mapflag	monster_noteleport
 2@gl_k	mapflag	noteleport
 2@gl_k	mapflag	monster_noteleport
-gl_chyard_	mapflag	noteleport
-gl_cas02_	mapflag	noteleport
+//gl_chyard_	mapflag	noteleport
+// gl_cas02_	mapflag	noteleport
 
 // Wave Mode Memorial Dungeon ====
 1@def01	mapflag	noteleport

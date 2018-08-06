@@ -54,6 +54,7 @@ pay_d03_i,160,45,4	script	Moonlight's Disciple	708,{
 				firm1: {
 				mes "<ITEM>Illusion Puente Robe[1]<INFO>15195</INFO></ITEM>","  - +9 Puente Robe [1]","  - 10 Illusion Stone","  - 100 Hazy Dream Fragment"," ","Do you want to Comfirm?";
 				if (select("Yes:No" ) == 1) {
+					if (checkweight(15195,1)) {
 					getinventorylist;
 					for (; .@i < @inventorylist_count; .@i++) {
 						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 10) .@true[1] = 1;
@@ -77,12 +78,15 @@ pay_d03_i,160,45,4	script	Moonlight's Disciple	708,{
 						}
 					}
 					callfunc "required1";
+					}
+					else callfunc "illu_weight";
 				}			
 				else callfunc "required2";
 				}
 				firm2: {
 				mes "<ITEM>Illusion Long Mace[2]<INFO>16063</INFO></ITEM>","  - +9 Long Mace","  - 10 Illusion Stone","  - 20 Hazy Dream Fragment"," ","Do you want to Comfirm?";
 				if (select("Yes:No" ) == 1) {
+					if (checkweight(16063,1)) {
 					getinventorylist;
 					for (; .@i < @inventorylist_count; .@i++) {
 						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 10) .@true[3] = 1;
@@ -106,12 +110,15 @@ pay_d03_i,160,45,4	script	Moonlight's Disciple	708,{
 						}
 					}
 					callfunc "required1";
+					}
+					else callfunc "illu_weight";
 				}			
 				else callfunc "required2";
 				}
 				firm3: {
 				mes "<ITEM>Illusion Nurse Cap[1]<INFO>19209</INFO></ITEM>","  - +9 Nurse Cap","  - 10 Illusion Stone","  - 100 Bloody Love Letter"," ","Do you want to Comfirm?";
 				if (select("Yes:No" ) == 1) {
+					if (checkweight(19209,1)) {
 					getinventorylist;
 					for (; .@i < @inventorylist_count; .@i++) {
 						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 10) .@true[5] = 1;
@@ -135,12 +142,15 @@ pay_d03_i,160,45,4	script	Moonlight's Disciple	708,{
 						}
 					}
 					callfunc "required1";
+					}
+					else callfunc "illu_weight";
 				}			
 				else callfunc "required2";
 				}
 				firm4: {
 				mes "<ITEM>Illusion Apple of Archer[1]<INFO>19210</INFO></ITEM>","  - +9 Apple of Archer","  - 10 Illusion Stone","  - 100 Bro﻿ken Arrow"," ","Do you want to Comfirm?";
 				if (select("Yes:No" ) == 1) {
+					if (checkweight(19210,1)) {
 					getinventorylist;
 					for (; .@i < @inventorylist_count; .@i++) {
 						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 10) .@true[7] = 1;
@@ -164,12 +174,15 @@ pay_d03_i,160,45,4	script	Moonlight's Disciple	708,{
 						}
 					}
 					callfunc "required1";
+					}
+					else callfunc "illu_weight";
 				}			
 				else callfunc "required2";
 				}
 				firm5: {
 				mes "<ITEM>Illusion Muffler[1]<INFO>20838</INFO></ITEM>","  - +9 Muffler[1]","  - 10 Illusion Stone","  - 100 Hazy Moon Cake"," ","Do you want to Comfirm?";
 				if (select("Yes:No" ) == 1) {
+					if (checkweight(20838,1)) {
 					getinventorylist;
 					for (; .@i < @inventorylist_count; .@i++) {
 						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 10) .@true[9] = 1;
@@ -193,12 +206,15 @@ pay_d03_i,160,45,4	script	Moonlight's Disciple	708,{
 						}
 					}
 					callfunc "required1";
+					}
+					else callfunc "illu_weight";
 				}			
 				else callfunc "required2";
 				}
 				firm6: {
 				mes "<ITEM>Illusion Shoes[1]<INFO>22133</INFO></ITEM>","  - +9 Shoes[1]","  - 10 Illusion Stone","  - 100 Hazy Moon Cake"," ","Do you want to Comfirm?";
 				if (select("Yes:No" ) == 1) {
+					if (checkweight(22133,1)) {
 					getinventorylist;
 					for (; .@i < @inventorylist_count; .@i++) {
 						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 10) .@true[11] = 1;
@@ -222,12 +238,15 @@ pay_d03_i,160,45,4	script	Moonlight's Disciple	708,{
 						}
 					}
 					callfunc "required1";
+					}
+					else callfunc "illu_weight";
 				}			
 				else callfunc "required2";
 				}
 				firm7: {
 				mes "<ITEM>Illusion Spectral Spear[1]<INFO>26007</INFO></ITEM>","  - +9 Spectral Spear","  - 30 Illusion Stone","  - 100 Hazy Dream Fragment"," ","Do you want to Comfirm?";
 				if (select("Yes:No" ) == 1) {
+					if (checkweight(26007,1)) {
 					getinventorylist;
 					for (; .@i < @inventorylist_count; .@i++) {
 						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 30) .@true[13] = 1;
@@ -251,12 +270,15 @@ pay_d03_i,160,45,4	script	Moonlight's Disciple	708,{
 						}
 					}
 					callfunc "required1";
+					}
+					else callfunc "illu_weight";
 				}			
 				else callfunc "required2";
 				}
 				firm8: {
 				mes "<ITEM>Illusion Staff of Bordeaux[2]<INFO>26109</INFO></ITEM>","  - +9 Staff of Bordeaux","  - 30 Illusion Stone","  - 100 Hazy Dream Fragment"," ","Do you want to Comfirm?";
 				if (select("Yes:No" ) == 1) {
+					if (checkweight(26109,1)) {
 					getinventorylist;
 					for (; .@i < @inventorylist_count; .@i++) {
 						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 30) .@true[15] = 1;
@@ -280,12 +302,15 @@ pay_d03_i,160,45,4	script	Moonlight's Disciple	708,{
 						}
 					}
 					callfunc "required1";
+					}
+					else callfunc "illu_weight";
 				}			
 				else callfunc "required2";
 				}
 				firm9: {
 				mes "<ITEM>Illusion Moonlight Dagger[1]<INFO>28725</INFO></ITEM>","  - +9 Moonlight Dagger","  - 30 Illusion Stone","  - 100 Hazy Dream Fragment"," ","Do you want to Comfirm?";
 				if (select("Yes:No" ) == 1) {
+					if (checkweight(28725,1)) {
 					getinventorylist;
 					for (; .@i < @inventorylist_count; .@i++) {
 						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 30) .@true[17] = 1;
@@ -309,6 +334,8 @@ pay_d03_i,160,45,4	script	Moonlight's Disciple	708,{
 						}
 					}
 					callfunc "required1";
+					}
+					else callfunc "illu_weight";
 				}			
 				else callfunc "required2";
 				}
@@ -323,6 +350,11 @@ function	script	required1	{
 function	script	required2	{
 	next;
 	mes "[Moonlight's Disciple]","Good luck. I hope we will meet again, soon.";
+	close;
+}
+function	script	illu_weight	{
+	next;
+	mes "Sorry, Your inventory is full.";
 	close;
 }
 

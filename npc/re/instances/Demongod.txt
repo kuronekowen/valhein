@@ -148,7 +148,7 @@ OnStart:
 	//	mes "This tree is lookalike Yggdrasil tree";
 	//	close;
 	//}
-	else set .@party_id, getcharid(1);
+	//else set .@party_id, getcharid(1);
 	set .@party_id, getcharid(1);
 	set .@tdg_leader, ( getcharid(0) == getpartyleader(.@party_id,2) );
 

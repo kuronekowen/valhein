@@ -20,7 +20,8 @@ verus04,69,109,4	script	Mass Charleston#1	4_F_CHARLESTON01,{
 			next;
 			mes "Are you ready to create?";
 			switch(select("Yes","No")) {
-				case 1: 
+				case 1:
+				if (checkweight(20732,1)) {
 					if (countitem(6752) >= 10) {
 						next;
 						mes "[Charleston's Clone]";
@@ -37,8 +38,10 @@ verus04,69,109,4	script	Mass Charleston#1	4_F_CHARLESTON01,{
 					mes "You don't have sufficient item";
 					close2;
 					cutin "dalle03.bmp",255;
-					end; 
+					end;
 					}
+				}
+				else callfunc "charles_weight";
 				case 2:
 					next;
 					mes "[Charleston's Clone]";
@@ -53,7 +56,8 @@ verus04,69,109,4	script	Mass Charleston#1	4_F_CHARLESTON01,{
 			next;
 			mes "Are you ready to create?";
 			switch(select("Yes","No")) {
-				case 1: 
+				case 1:
+					if (checkweight(20732,1)) {
 					if (countitem(6752) >= 10) {
 						next;
 						mes "[Charleston's Clone]";
@@ -72,6 +76,8 @@ verus04,69,109,4	script	Mass Charleston#1	4_F_CHARLESTON01,{
 					cutin "dalle03.bmp",255;
 					end; 
 					}
+				}
+				else callfunc "charles_weight";
 				case 2:
 					next;
 					mes "[Charleston's Clone]";
@@ -87,6 +93,7 @@ verus04,69,109,4	script	Mass Charleston#1	4_F_CHARLESTON01,{
 			mes "Are you ready to create?";
 			switch(select("Yes","No")) {
 				case 1: 
+				if (checkweight(20732,1)) {
 					if (countitem(6752) >= 10) {
 						next;
 						mes "[Charleston's Clone]";
@@ -105,6 +112,8 @@ verus04,69,109,4	script	Mass Charleston#1	4_F_CHARLESTON01,{
 					cutin "dalle03.bmp",255;
 					end; 
 					}
+				}
+				else callfunc "charles_weight";
 				case 2:
 					next;
 					mes "[Charleston's Clone]";
@@ -120,6 +129,7 @@ verus04,69,109,4	script	Mass Charleston#1	4_F_CHARLESTON01,{
 			mes "Are you ready to create?";
 			switch(select("Yes","No")) {
 				case 1: 
+				if (checkweight(20732,1)) {
 					if (countitem(6752) >= 10) {
 						next;
 						mes "[Charleston's Clone]";
@@ -138,6 +148,8 @@ verus04,69,109,4	script	Mass Charleston#1	4_F_CHARLESTON01,{
 					cutin "dalle03.bmp",255;
 					end; 
 					}
+				}
+				else callfunc "charles_weight";
 				case 2:
 					next;
 					mes "[Charleston's Clone]";
@@ -153,6 +165,7 @@ verus04,69,109,4	script	Mass Charleston#1	4_F_CHARLESTON01,{
 			mes "Are you ready to create?";
 			switch(select("Yes","No")) {
 				case 1: 
+				if (checkweight(20732,1)) {
 					if (countitem(6752) >= 10) {
 						next;
 						mes "[Charleston's Clone]";
@@ -171,6 +184,8 @@ verus04,69,109,4	script	Mass Charleston#1	4_F_CHARLESTON01,{
 					cutin "dalle03.bmp",255;
 					end; 
 					}
+				}
+				else callfunc "charles_weight";	
 				case 2:
 					next;
 					mes "[Charleston's Clone]";
@@ -186,6 +201,7 @@ verus04,69,109,4	script	Mass Charleston#1	4_F_CHARLESTON01,{
 			mes "Are you ready to create?";
 			switch(select("Yes","No")) {
 				case 1: 
+				if (checkweight(20732,1)) {
 					if (countitem(6752) >= 10) {
 						next;
 						mes "[Charleston's Clone]";
@@ -204,6 +220,8 @@ verus04,69,109,4	script	Mass Charleston#1	4_F_CHARLESTON01,{
 					cutin "dalle03.bmp",255;
 					end; 
 					}
+				}
+				else callfunc "charles_weight";
 				case 2:
 					next;
 					mes "[Charleston's Clone]";
@@ -219,4 +237,10 @@ verus04,69,109,4	script	Mass Charleston#1	4_F_CHARLESTON01,{
 			cutin "dalle03.bmp",255;
 			end;
 	}
+}
+
+function	script	charles_weight	{
+	next;
+	mes "Sorry, Your inventory is full.";
+	close;
 }

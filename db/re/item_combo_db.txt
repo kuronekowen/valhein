@@ -728,6 +728,7 @@
 28321:28322,{ bonus bUseSPrate,-(getskilllv("HT_BEASTBANE") * 2); }
 28326:28327,{ bonus bInt,8; bonus bStr,8; }
 28358:18521,{ skill "AS_CLOAKING",1; }
+28423:28423,{ bonus2 bSkillCooldown,"SU_TUNAPARTY",-14000; }
 28499:28920,{ bonus bFlee2,10; }
 28906:2998,{ bonus bLongAtkRate,10; }
 28907:2998,{ bonus bSpeedRate,25; }

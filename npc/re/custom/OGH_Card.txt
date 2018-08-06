@@ -1,0 +1,138 @@
+glast_01,197,347,6	script	Portrait Collector#1	715,{
+	mes "[Portrait Collector]";
+	mes "Hello Adventurer. I am Portrait Collector that like to collect the good picture of legendary person.";
+	next;
+	mes "[Portrait Collector]";
+	mes "Do you want to trade some ^0000ffCoagulated Spell^000000 or ^ff0000Contaminated Magic^000000 with my portrait picture in gallery?";
+	if (select("Yes:No" ) == 1) {
+		next;
+		mes "[Portrait Collector]";
+		mes "Which picture do you want?";
+		switch(select("White Knight Card","Khalitzburg Knightage Card","No,Thank you.")) {
+			case 1:
+				next;
+				mes "[Portrait Collector]";
+				mes "<ITEM>White Knight Card<INFO>4608</INFO></ITEM>","trade with ^0000ff6000 Coagulated Spell^000000 ~","or ^ff0000700 Contaminated Magic^000000 ~";
+				switch(select("6000 Coagulated Spell","700 Contaminated Magic","No,Thank you.")) {
+					case 1:
+						next;
+						mes "[Portrait Collector]";
+						mes "Are you sure to trade 6000 ^0000ffCoagulated Spell^000000 with ^777777White Knight Card^000000?";
+						next;
+						if (select("Yes:No" ) == 1) {
+							if (checkweight(4608,1)) {
+								if (countitem(6608) >= 6000) {
+									mes "[Portrait Collector]";
+									mes "Thank you for business";
+									delitem 6608,6000;
+									getitem 4608,1;
+									close;
+								}
+								mes "[Portrait Collector]","Sorry. You didn't have sufficient ^0000ffCoagulated Spell^000000";
+								close;
+							}
+							else { 
+								mes "[Portrait Collector]","Sorry. Your inventory are full.";
+								close; }
+						}
+						else {
+							mes "[Portrait Collector]","I hope to see you again next time.";
+							close; }
+					case 2:
+						next;
+						mes "[Portrait Collector]";
+						mes "Are you sure to trade 700 ^ff0000Contaminated Magic^000000 with ^777777White Knight Card^000000?";
+						next;
+						if (select("Yes:No" ) == 1) {
+							if (checkweight(4608,1)) {
+								if (countitem(6755) >= 700) {
+									mes "[Portrait Collector]";
+									mes "Thank you for business";
+									delitem 6755,700;
+									getitem 4608,1;
+									close;
+								}
+								mes "[Portrait Collector]","Sorry. You didn't have sufficient ^ff0000Contaminated Magic^000000";
+								close;
+							}
+							else { 
+								mes "[Portrait Collector]","Sorry. Your inventory are full.";
+								close; }
+						}
+						else {
+							mes "[Portrait Collector]","I hope to see you again next time.";
+							close; }
+					case 3:
+						next;
+						mes "[Portrait Collector]","I hope to see you again next time.";
+						close;
+				}
+			case 2:
+				next;
+				mes "[Portrait Collector]";
+				mes "<ITEM>Khalitzburg Knight Card<INFO>4609</INFO></ITEM>","trade with ^0000ff6000 Coagulated Spell^000000 ~","or ^ff0000700 Contaminated Magic^000000 ~";
+				switch(select("6000 Coagulated Spell","700 Contaminated Magic","No,Thank you.")) {
+					case 1:
+						next;
+						mes "[Portrait Collector]";
+						mes "Are you sure to trade 6000 ^0000ffCoagulated Spell^000000 with ^777777Khalitzburg Knight Card^000000?";
+						next;
+						if (select("Yes:No" ) == 1) {
+							if (checkweight(4609,1)) {
+								if (countitem(6608) >= 6000) {
+									mes "[Portrait Collector]";
+									mes "Thank you for business";
+									delitem 6608,6000;
+									getitem 4609,1;
+									close;
+								}
+								mes "[Portrait Collector]","Sorry. You didn't have sufficient ^0000ffCoagulated Spell^000000";
+								close;
+							}
+							else { 
+								mes "[Portrait Collector]","Sorry. Your inventory are full.";
+								close; }
+						}
+						else {
+							mes "[Portrait Collector]","I hope to see you again next time.";
+							close; }
+					case 2:
+						next;
+						mes "[Portrait Collector]";
+						mes "Are you sure to trade 700 ^ff0000Contaminated Magic^000000 with ^777777Khalitzburg Knight Card^000000?";
+						next;
+						if (select("Yes:No" ) == 1) {
+							if (checkweight(4609,1)) {
+								if (countitem(6755) >= 700) {
+									mes "[Portrait Collector]";
+									mes "Thank you for business";
+									delitem 6755,700;
+									getitem 4609,1;
+									close;
+								}
+								mes "[Portrait Collector]","Sorry. You didn't have sufficient ^ff0000Contaminated Magic^000000";
+								close;
+							}
+							else { 
+								mes "[Portrait Collector]","Sorry. Your inventory are full.";
+								close; }
+						}
+						else {
+							mes "[Portrait Collector]","I hope to see you again next time.";
+							close; }
+					case 3:
+						next;
+						mes "[Portrait Collector]","I hope to see you again next time.";
+						close;	
+				}
+			case 3:
+				next;
+				mes "[Portrait Collector]","I hope to see you again next time.";
+				close;
+		}
+	}
+	else {
+		next;
+		mes "[Portrait Collector]","I hope to see you again next time.";
+		close; }
+}
