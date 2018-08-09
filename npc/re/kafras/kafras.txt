@@ -25,6 +25,7 @@
 //= 1.3a Moved Rune Knight Kafra from job file. [Euphy]
 //= 1.4 Added Izlude duplicates. [Euphy]
 //= 1.5 Added Glastheim Kafra [Ridley8819]
+//= 1.6 Added Rock Ridge Kafra. [Capuche]
 //============================================================ 
 
 // Brasilis
@@ -97,16 +98,18 @@ job3_rune01,92,62,3	script	Kafra Employee::kaf_rune	114,{
 
 // Verus
 //============================================================
-//verus04,122,243,4	script	Kafra Employee::kaf_verus	117,{
-//	cutin "kafra_01",2;
-//	callfunc "F_Kafra",0,3,0,80,700;
-//	savepoint "verus04",121,249,1,1;
-//	callfunc "F_KafEnd",0,1,"in the Verus city";
-//}
-
 verus04,122,243,4	script	Cool Event Corp. Staff::CoolEventCorpStaffVerus	874,{
 	callfunc "F_CoolEventCorp",
 		"Save:Use Storage::Rent a Pushcart:Storage Password Service:Cancel",
 		"in the Verus City","verus04",121,249;
 	end;
+}
+
+// Rockridge
+//============================================================
+harboro1,291,207,5	script	Kafra Employee::rockridg	4_F_KAFRA1,{
+	cutin "kafra_01.bmp",2;
+	callfunc "F_Kafra",0,8,2,500,0;
+	savepoint "harboro1",283,191,1,1;	// fix me: unknown savepoint xy
+	callfunc "F_KafEnd",0,1,"in Rock Ridge";
 }
