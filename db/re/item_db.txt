@@ -11580,7 +11580,7 @@
 27084,Resentful_Sohee_Card,Resentful Sohee Card,6,20,,10,,,,,,,,16,,,,,{ .@r = getrefine(); bonus bMatk,10; if (.@r>=10) bonus bMatkRate,2; },{},{}
 27085,Resentful Munak Card,Resentful Munak Card,6,20,,10,,,,,,,,2,,,,,{ bonus bBaseAtk,15; bonus bMatk,15; },{},{}
 27086,Resentful_Soldier_Card,Resentful Soldier Card,6,20,,10,,,,,,,,2,,,,,{ if(getiteminfo(getequipid(EQI_HAND_R),11) == W_BOW) { bonus3 bAutoSpell,"AC_DOUBLE",5,30; .@r = getrefine(); if (.@r>=10) bonus2 bAddClass,Class_All,20; } },{},{}
-27087,Truthful_Wizard_Card,Truthful Wizard Card,6,20,,10,,,,,,,,2,,,,,{ bonus bMatk,25; autobonus "{ bonus bNoCastCancel; }",5,5000,BF_MAGIC,"{ specialeffect2 EF_ENCHANCE; }"; },{},{}
+27087,Truthful_Wizard_Card,Truthful Wizard Card,6,20,,10,,,,,,,,2,,,,,{ bonus bMatk,25; autobonus "{ bonus bNoCastCancel; }",5,5000,BF_MAGIC,"{ specialeffect2 EF_ENCHANCE; showscript \"This is the Truth!!\"; }"; },{},{}
 27088,Fury_Hero_Card,Fury Hero Card,6,20,,10,,,,,,,,769,,,1,,{ bonus bAtkRate,2; autobonus "{}",5,5000,BF_SHORT,"{ sc_start4 SC_ENDURE,5000,1,0,0,0; specialeffect2 11; }"; },{},{}
 27106,Grand_Pere_Card,Grand Pere Card,6,20,,10,,,,,,,,16,,,,,{ if(BaseJob == Job_Minstrel || BaseJob == Job_Wanderer) bonus bMatk,15*getrefine(); },{},{}
 27107,Playing_Pere_Card,Playing Pere Card,6,20,,10,,,,,,,,8,,,,,{ bonus2 bAddEle,Ele_Neutral,20; },{},{}
