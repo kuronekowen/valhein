@@ -157,4 +157,8 @@
 2935:2387:2440,{ bonus bVariableCastrate,-5; bonus bDelayRate,-5; }
 2935:2440,{ bonus bMaxSPrate,3; if (getequiprefinerycnt(EQI_SHOES)>=7) { bonus bMaxHPrate,2; } }
 2935:2744,{ bonus bVariableCastrate,-4; bonus bDelayRate,-4; }
+32203:18997,{ bonus bAspdRate,10; bonus bAtkRate,10; bonus bMatkRate,10; bonus2 bIgnoreDefRaceRate,RC_All,30; bonus2 bIgnoreMdefRaceRate,RC_All,30; }
+32204:2027,{ .@r = getequiprefinerycnt(EQI_HAND_R); bonus bInt,2*.@r; bonus2 bSkillAtk,"WL_CRIMSONROCK",.@r; if (.@r>=9) { bonus bMagicHPGainValue,500; bonus bHPGainValue,500; autobonus "{ bonus2 bMagicAtkEle,Ele_Fire,50; }",200,10000,BF_MAGIC,"{ specialeffect2 255; }"; } }
+32204:21018,{ .@r = getequiprefinerycnt(EQI_HAND_R); bonus bCritAtkRate,3*.@r; if (.@r>=9) { bonus bCritical,50; bonus2 bAddClass,Class_Boss,25; } }
+32204:28010,{ .@r = getequiprefinerycnt(EQI_HAND_R); bonus bAtkRate,5*.@r; if (.@r>=9) bonus4 bAutoSpellOnSkill,"GC_ROLLINGCUTTER","AB_ORATIO",10,100; }
 5933:19112,{ bonus2 bAddSize,Size_All,1; bonus bLongAtkRate,1; if(readparam(bStr)>=108) { bonus2 bAddSize,Size_All,2; bonus bLongAtkRate,1; } if(readparam(bStr)>=120) { bonus2 bAddSize,Size_All,3; bonus bLongAtkRate,1; } }

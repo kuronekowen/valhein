@@ -6185,6 +6185,8 @@ harboro1,356,211,5	script	Guide#rockridge01	4_F_ANYA,{
 	}
 }
 
+harboro1,80,211,3	duplicate(Guide#rockridge01)	Guide#rockridge02	4_F_ANYA
+
 harboro1,278,195,5	script	Carola Firth#rockn17	4_F_CAPEGIRL,{
 	mes "[Carola Firth]";
 	mes "Did you hear that? The basement is haunted!";
