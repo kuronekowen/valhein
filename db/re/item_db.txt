@@ -7046,7 +7046,7 @@
 12814,Slapping_Herb,Slapping Herb,11,0,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ itemskill "ECL_SADAGUI",1; },{},{}
 12815,Yggdrasil_Dust,Yggdrasil Dust,11,0,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ itemskill "ECL_SEQUOIADUST",1; },{},{}
 12816,Old_Ore_Box_,Old Ore Box,2,0,,0,,,,,0xFFFFFFFF,63,2,,,60,,,{},{},{}
-12817,Old_Card_Album_,Old Card Album,2,0,,0,,,,,0xFFFFFFFF,63,2,,,80,,,{},{},{}
+12817,Old_Card_Album_,Old Card Album,2,0,,0,,,,,0xFFFFFFFF,63,2,,,80,,,{ getrandgroupitem(IG_CardAlbum,1); },{},{}
 12818,High_Weapon_Box_,High Weapon Box,2,0,,0,,,,,0xFFFFFFFF,63,2,,,100,,,{ getrandgroupitem(IG_Advanced_Weapons_Box,1); },{},{}
 12819,Zherlthsh_Tck_Box_,Zherlthsh Tck Box,2,0,,0,,,,,0xFFFFFFFF,63,2,,,150,,,{ getitem 6184,1; },{},{}
 12820,Mao_Guai_Scroll,Mao Guai Scroll,2,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ mercenary_create 2348,1800000; },{},{}
@@ -8756,6 +8756,7 @@
 //===================================================================
 // More Maces
 //===================================================================
+15350,Elephangel,Elephangel,4,20,,10,,0,,0,0xFFFFFFFF,63,2,1,,0,0,1745,{ bonus bMaxHP,500; bonus bMaxSP,10; bonus2 bSubRace,RC_DemiHuman,3; },{},{}
 16000,Erde,Erde,5,20,,500,130,,1,2,0x0004C5B2,18,2,2,3,50,1,8,{ bonus2 bSkillAtk,"AM_ACIDTERROR",20; bonus2 bSkillAtk,"AM_DEMONSTRATION",20; bonus bMaxSP,50; bonus bHealPower,10; },{},{}
 16001,Red_Square_Bag,Red Square Bag,5,20,,500,130,,1,2,0x0004C5B2,18,2,2,3,50,1,8,{ bonus bMaxHP,200; bonus2 bSkillAtk,"AM_ACIDTERROR",20; bonus2 bSkillAtk,"AM_DEMONSTRATION",20; bonus2 bAddMonsterDropItem,501,50; bonus2 bAddMonsterDropItem,502,20; bonus2 bAddMonsterDropItem,503,20; bonus2 bAddMonsterDropItem,504,20; bonus2 bAddMonsterDropItem,505,10; if(readparam(bStr)>=95) bonus2 bAddEff,Eff_Stun,500; },{},{}
 16002,Stunner_C,Stunner,5,0,,0,175,,1,0,0x00008110,63,2,2,3,1,0,8,{ bonus2 bAddEff,Eff_Stun,1000; bonus2 bAddSize,Size_All,40; },{},{}
@@ -10005,6 +10006,7 @@
 19181,New_Wave_Sunglasses_,New Wave Sunglasses,4,20,,100,,1,,1,0xFFFFFFFF,63,2,512,,30,0,856,{ bonus bDelayRate,-5; },{},{}
 //
 19246,Royal_Guard_Necklace,Royal Guard Necklace,4,20,,300,,0,,0,0xFFFFFFFF,63,2,1,,80,0,1629,{ bonus bAspd,1; },{},{}
+19291,Costume_Shiba_Inu,Costume Shiba Inu,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,1,1669,{},{},{}
 19306,Gambler_Card,Heart Card in Mouth,4,20,,300,,0,,0,0xFFFFFFFF,63,2,1,,80,0,1679,{ bonus bCritAtkRate,5; },{},{}
 //===================================================================
 // Costume System
@@ -12162,6 +12164,7 @@
 31254,C_Red_Hare_Hat,C Red Hare Hat,4,0,,0,,0,,0,0xFFFFFFFF,63,2,7168,,1,0,1631,{},{},{}
 31255,C_Sweet_Helmet,C Sweet Helmet,4,0,,0,,0,,0,0xFFFFFFFF,63,2,3072,,1,0,1374,{},{},{}
 31256,C_Jaguar_Mask,C Jaguar Mask,4,0,,0,,0,,0,0xFFFFFFFF,63,2,6144,,1,0,530,{},{},{}
+31257,Costume_Poring_Jars_Of_Clay,Costume Poring Jars Of Clay,4,0,,10,,,,0,0xFFFFFFFF,63,2,4096,,1,1,1634,{},{},{}
 31260,C_Observer_J,C Observer,4,0,,0,,0,,0,0xFFFFFFFF,63,2,2048,,1,0,1639,{},{},{}
 31261,C_Soda_in_Mouth,C Soda in Mouth,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,1643,{},{},{}
 31262,C_Disposable_3D_Glasses,C Disposable 3D Glasses,4,0,,0,,0,,0,0xFFFFFFFF,63,2,2048,,1,0,661,{},{},{}
@@ -12313,3 +12316,4 @@
 31476,C_Cherry_Blossom_Hat_YL,C Yellow Cherry Blossom Hat,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,1727,{},{},{}
 31478,C_Eleanor_Wig_,C Eleanors Wig Lower,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,1502,{},{},{}
 31479,Costume_Group_of_Star,Costume Group of Star,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,1,1729,{ hateffect(81,true); },{},{ hateffect(81,false); }
+31498,Costume_Elephangel,Costume Elephangel,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,1,1745,{},{},{}

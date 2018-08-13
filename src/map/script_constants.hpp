@@ -3640,6 +3640,9 @@
 	export_constant(RC2_MANUK);
 	export_constant(RC2_SPLENDIDE);
 	export_constant(RC2_SCARABA);
+	export_constant(RC2_CLOCKTOWER);
+	export_constant(RC2_THANATOS);
+	export_constant(RC2_FACEWORM);
 	export_constant(RC2_OGH_ATK_DEF);
 	export_constant(RC2_OGH_HIDDEN);
 	export_constant(RC2_BIO5_SWORDMAN_THIEF);
