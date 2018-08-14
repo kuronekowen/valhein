@@ -88,6 +88,10 @@
 20856:15212,{ .@r = getequiprefinerycnt(EQI_GARMENT); bonus bDelayRate,-1*(.@r); }
 20856:15212:22141,{ .@a = getequiprefinerycnt(EQI_GARMENT); .@b = getequiprefinerycnt(EQI_ARMOR); .@c = getequiprefinerycnt(EQI_SHOES); if ((.@a+.@b+.@c)>=39) autobonus "{bonus bIgnoreDefClass,Class_All;}",50,5000,BF_WEAPON,"{ specialeffect2 220; showscript \"Penetration !\"; }"; }
 20859:4121,{ bonus bPerfectHitAddRate,50; bonus2 bResEff,Eff_Stone,10000; }
+20931:1752,{ bonus2 bSubEle,Ele_Fire,75; }
+20931:1754,{ bonus2 bSubEle,Ele_Water,75; }
+20931:1755,{ bonus2 bSubEle,Ele_Wind,75; }
+20931:1756,{ bonus2 bSubEle,Ele_Earth,75; }
 2158:22051,{ .@r = getequiprefinerycnt(EQI_HAND_L); bonus2 bSubDefEle,Ele_Undead,5; bonus2 bSubEle,Ele_Undead,2*.@r; }
 2191:2782,{ bonus bUseSPrate,-5; }
 2192:2743,{ bonus2 bSkillHeal,2043,10; bonus2 bSkillHeal,28,10; bonus2 bSkillHeal,2051,10; bonus2 bSkillHeal,70,10; bonus2 bSkillHeal,231,10; bonus2 bSkillHeal,478,10; }
@@ -161,4 +165,5 @@
 32204:2027,{ .@r = getequiprefinerycnt(EQI_HAND_R); bonus bInt,2*.@r; bonus2 bSkillAtk,"WL_CRIMSONROCK",.@r; if (.@r>=9) { bonus bMagicHPGainValue,500; bonus bHPGainValue,500; autobonus "{ bonus2 bMagicAtkEle,Ele_Fire,50; }",10,10000,BF_MAGIC,"{ specialeffect2 255; }"; } }
 32204:21018,{ .@r = getequiprefinerycnt(EQI_HAND_R); bonus bCritAtkRate,3*.@r; if (.@r>=9) { bonus bCritical,50; bonus2 bAddClass,Class_Boss,25; } }
 32204:28010,{ .@r = getequiprefinerycnt(EQI_HAND_R); bonus bAtkRate,5*.@r; if (.@r>=9) bonus4 bAutoSpellOnSkill,"GC_ROLLINGCUTTER","AB_ORATIO",10,100; }
+4144:20932,{ bonus bMaxHPrate,15; bonus2 bSubEle,Ele_Dark,100; bonus2 bSubEle,Ele_Fire,50; bonus2 bResEff,Eff_Curse,10000; }
 5933:19112,{ bonus2 bAddSize,Size_All,1; bonus bLongAtkRate,1; if(readparam(bStr)>=108) { bonus2 bAddSize,Size_All,2; bonus bLongAtkRate,1; } if(readparam(bStr)>=120) { bonus2 bAddSize,Size_All,3; bonus bLongAtkRate,1; } }
