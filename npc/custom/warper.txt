@@ -293,7 +293,7 @@ menu	"Abyss Lakes",D1, "Amatsu Dungeon",D2, "Anthell",D3,
     	"Coal Mines",D10, "Culvert",D11, "Cursed Abbey",D12, "Dewata Dungeon",D13,
     	"Einbroch Dungeon",D14, "Flame Basin Camp",D44, "Gefenia",D15, "Geffen Dungeon",D16,
     	"Glast Heim",D17, "Gonryun Dungeon",D18, "Hidden Dungeon",D19,
-    	"Ice Dungeon",D20, "Juperos",D21, "Kiel Dungeon",D22, "Lasagna Dungeon",D23,
+    	"Ice Dungeon",D20, "Illusion Dungeon",D47, "Juperos",D21, "Kiel Dungeon",D22, "Lasagna Dungeon",D23,
 		"Louyang Dungeon",D24, "Magma Dungeon",D25, "Malangdo Dungeon",D26,
 		"Moscovia Dungeon",D27, "Nidhogg's Dungeon",D28, "Odin Temple",D29,
 		"Orc Dungeon",D30, "Payon Dungeon",D31, "Prontera Invasion",D45, "Pyramids",D32, "Rachel Sanctuary",D33, "Rock Ridge Dungeon",D46, 
@@ -369,9 +369,9 @@ D29: setarray @c[2],298,167,224,149,266,280;
 	 Disp("Odin Temple",1,3); Pick("odin_tem");
 D30: setarray @c[2],32,170,21,185;
 	 Disp("Orc Dungeon",1,2); Pick("orcsdun");
-D31: setarray @c[2],21,183,19,33,19,63,155,159,201,204,158,38;
-	 Disp("Payon Dungeon1:Payon Dungeon2:Payon Dungeon3:Payon Dungeon4:Payon Dungeon5:Illusion of Moonlight");
-	 Pick("","pay_dun00","pay_dun01","pay_dun02","pay_dun03","pay_dun04","pay_d03_i");
+D31: setarray @c[2],21,183,19,33,19,63,155,159,201,204;
+	 Disp("Payon Dungeon1:Payon Dungeon2:Payon Dungeon3:Payon Dungeon4:Payon Dungeon5");
+	 Pick("","pay_dun00","pay_dun01","pay_dun02","pay_dun03","pay_dun04");
 D32: Restrict("RE",7,8);
 	 setarray @c[2],192,9,10,192,100,92,181,11,94,96,192,8,94,96,192,8;
 	 Disp("Pyramids 1:Pyramids 2:Pyramids 3:Pyramids 4:Basement 1:Basement 2:Basement 1 - Nightmare Mode:Basement 2 - Nightmare Mode");
@@ -411,6 +411,9 @@ D45: setarray @c[2],149,133,156,189;
 D46: setarray @c[2],248,23,190,94;
 	 Disp("Rock Ridge Mine:Underground Culvert");
 	 Pick("","rockmi1","harboro2");
+D47: setarray @c[2],158,38,0,0;
+	 Disp("Illusion of Moonlight:Illusion of Vampire");
+	 Pick("","pay_d03_i","gef_d01_i");
 // --------------------------------------------------
 	Castles:
 // --------------------------------------------------

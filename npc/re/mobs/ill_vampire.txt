@@ -1,6 +1,5 @@
 // Mapflags
 gef_d01_i	mapflag	nomemo
-gef_d01_i	mapflag	nosave
 
 
 // Mob Spanw

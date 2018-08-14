@@ -3897,6 +3897,9 @@
 25249,403,100	// Buffalo_Bandit_Mane
 25250,467,100	// Rock_Ridge_Coin
 25260,435,100	// Fragment_of_Purple_Ore
+25268,471,100	// Sticky_Blood
+25269,471,100	// Mushroom_Sap
+25270,471,100	// Fluttering_Fur
 26100,435,100	// Paradise_Foxtail_Staff_II
 26101,435,100	// Paradise_Foxtail_Staff_III
 28105,467,100	// Infinity_Axe

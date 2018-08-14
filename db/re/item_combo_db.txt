@@ -715,6 +715,12 @@
 27085:1558,{ bonus bBaseAtk,100; bonus bMatk,100; }
 27085:4090,{ autobonus "{ bonus2 bAddEff,Eff_Stun,5000; }",20,5000,BF_SHORT,"{ specialeffect2 EF_ENCHANCE; }"; }
 27086:4094,{ autobonus "{ bonus bAspd,1; }",20,5000,BF_WEAPON,"{ specialeffect2 EF_ENCHANCE; }"; }
+27101:28510,{ .@r = getequiprefinerycnt(EQI_ARMOR); bonus bMatkRate,(.@r/3); }
+27102:28510,{ bonus bFlee2,5; }
+27103:28510,{ .@r = getequiprefinerycnt(EQI_ARMOR); bonus bAtkRate,(.@r/3); }
+27104:27105,{ .@r = getequiprefinerycnt(EQI_GARMENT); bonus bMaxHP,1000; bonus bMaxSP,50; if (.@r>=9) { bonus bMaxHP,1000; bonus bMaxSP,50; } }
+27104:28510,{ bonus2 bHPRegenRate,30,3000; bonus2 bSPRegenRate,1,3000; }
+27105:28510,{ bonus bMatk,30; }
 27107:27108,{ bonus2 bSkillAtk,"WM_METALICSOUND",50; bonus2 bSkillAtk,"WM_REVERBERATION",50; }
 27108:27107:27109,{ autobonus "{ bonus2 bAddEle,Ele_Neutral,200; bonus2 bMagicAddEle,Ele_Neutral,200; heal 2000,0; }",30,6000,BG_MAGIC|BF_WEAPON|BF_MISC,"{ active_transform 3073,6000; }"; }
 27147:27148,{ bonus bDelayrate,-3; }
