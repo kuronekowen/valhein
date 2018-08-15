@@ -6398,13 +6398,13 @@ BUILDIN_FUNC(inarray)
 		for (i = 0; i <= array_size; ++i)
 		{
 			temp = (char*)get_val2(st, reference_uid(id, i), ref);
-			script_removetop(st, -1, 0);
 			if (!strcmp(temp, value))
 			{
+				script_removetop(st, -1, 0);
 				script_pushint(st, i);
 				return SCRIPT_CMD_SUCCESS;
 			}
-			
+			script_removetop(st, -1, 0);
 		}
 	}
 	else
@@ -13324,6 +13324,14 @@ BUILDIN_FUNC(delwall)
 		return SCRIPT_CMD_FAILURE;
 	}
 
+	return SCRIPT_CMD_SUCCESS;
+}
+
+BUILDIN_FUNC(checkwall)
+{
+	const char *wall_name = script_getstr(st, 2);
+
+	script_pushint(st, map_iwall_exist(wall_name));
 	return SCRIPT_CMD_SUCCESS;
 }
 
@@ -24323,6 +24331,7 @@ struct script_function buildin_func[] = {
 	BUILDIN_DEF(getfreecell,"srr?????"),
 	BUILDIN_DEF(setwall,"siiiiis"),
 	BUILDIN_DEF(delwall,"s"),
+	BUILDIN_DEF(checkwall,"s"),
 	BUILDIN_DEF(searchitem,"rs"),
 	BUILDIN_DEF(mercenary_create,"ii"),
 	BUILDIN_DEF(mercenary_heal,"ii"),
