@@ -11033,7 +11033,13 @@
 20519,Costume_Full_Bloom_Cherry_Tree,Costume Full Bloom Cherry Tree,4,0,,0,,0,,0,0xFFFFFFFF,63,2,8192,,1,0,0,{ hateffect(79,true); },{},{ hateffect(79,false); }
 20521,Costume_Black_Cat_Bag,Costume Black Cat Bag,4,0,,0,,0,,0,0xFFFFFFFF,63,2,8192,,1,0,26,{},{},{}
 20522,Costume_Blessings_Of_Soul,Costume Blessings Of Soul,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,0,{},{ hateffect(80,true); },{ hateffect(80,false); }
-20524,Costume_Shining_Angel_Wing,Costume Shining Angel Wing,4,0,,0,,0,,0,0xFFFFFFFF,63,2,8192,,1,0,0,{},{ hateffect(85,true); },{ hateffect(85,false); }
+20523,Costume_2018_RWC_Cape_Taiwan,Costume 2018 RWC Cape Taiwan,4,0,,0,,0,,0,0xFFFFFFFF,63,2,8192,,1,0,28,{},{},{}
+20524,Costume_Shining_Angel_Wings,Costume Shining Angel Wings,4,0,,0,,0,,0,0xFFFFFFFF,63,2,8192,,1,0,0,{},{ hateffect(85,true); },{ hateffect(85,false); }
+20525,Costume_Bloody_Wings,Costume Bloody Wings,4,0,,0,,0,,0,0xFFFFFFFF,63,2,8192,,1,0,33,{},{},{}
+20526,Costume_Blue_Angel_Wings,Costume Blue Angel Wings,4,0,,0,,0,,0,0xFFFFFFFF,63,2,8192,,1,0,34,{},{},{}
+20527,Costume_Pink_Butterfly_Wings,Costume Pink Butterfly Wings,4,0,,0,,0,,0,0xFFFFFFFF,63,2,8192,,1,0,35,{},{},{}
+20528,Costume_Gold_Butterfly_Wings,Costume Gold Butterfly Wings,4,0,,0,,0,,0,0xFFFFFFFF,63,2,8192,,1,0,36,{},{},{}
+20530,Costume_Wings_of_Gabriel,Costume Wings of Gabriel,4,0,,0,,0,,0,0xFFFFFFFF,63,2,8192,,1,0,37,{},{},{}
 20600,Fantastic_Aura,Fantastic Aura,4,0,,0,,0,,0,0xFFFFFFFF,63,2,8192,,1,0,0,{ /*TODO: View ID*/ bonus bUnbreakableHelm; },{},{}
 20700,Egir_Manteau,Egir Manteau,4,200000,,300,,10,,1,0xFFFFFFFF,63,2,4,,110,1,0,{ bonus bUnbreakableGarment; .@r = getrefine(); if (.@r > 10) .@r = 10; if (BaseClass == Job_Mage || BaseClass == Job_Archer || BaseClass == Job_Acolyte) { bonus bFlee2,5+(.@r*2); } else if (BaseClass == Job_Swordman || BaseClass == Job_Merchant || BaseClass == Job_Thief) { bonus bShortWeaponDamageReturn,5+(.@r*2); } },{},{}
 20702,TE_Woe_Muffler,TE Woe Muffler,4,0,,0,,5,,0,0xFFFFFFFF,63,2,4,,40,1,,{ bonus bMdef,5; bonus2 bAddRace,RC_Player,5; bonus2 bMagicAddRace,RC_Player,5; bonus2 bResEff,Eff_Freeze,25; },{},{}
