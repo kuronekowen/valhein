@@ -7237,8 +7237,6 @@
 	export_constant(HAT_EF_SUBJECT_AURA_WHITE);
 	export_constant(HAT_EF_SUBJECT_AURA_RED);
 	export_constant(HAT_EF_C_SHINING_ANGEL_WING);
-	export_constant(HAT_EF_MAGIC_STAR_TW);
-	export_constant(HAT_DIGITAL_SPACE);
 
 	/* pet catch */
 	export_constant(PET_CATCH_UNIVERSAL);
