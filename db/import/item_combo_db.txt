@@ -96,6 +96,7 @@
 20931:1754,{ bonus2 bSubEle,Ele_Water,75; }
 20931:1755,{ bonus2 bSubEle,Ele_Wind,75; }
 20931:1756,{ bonus2 bSubEle,Ele_Earth,75; }
+20940:18720,{ bonus bVariableCastrate,-30; }
 2158:22051,{ .@r = getequiprefinerycnt(EQI_HAND_L); bonus2 bSubDefEle,Ele_Undead,5; bonus2 bSubEle,Ele_Undead,2*.@r; }
 2191:2782,{ bonus bUseSPrate,-5; }
 2192:2743,{ bonus2 bSkillHeal,2043,10; bonus2 bSkillHeal,28,10; bonus2 bSkillHeal,2051,10; bonus2 bSkillHeal,70,10; bonus2 bSkillHeal,231,10; bonus2 bSkillHeal,478,10; }
