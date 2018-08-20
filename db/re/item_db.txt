@@ -12582,7 +12582,7 @@
 31539,Costume_Bulgogi_Hat,Costume Bulgogi Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1773,{},{},{}
 31540,Gemini_RedEyes,Gemini_RedEyes,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,1654,{},{},{}
 31541,Costume_Insectivorous_Plant_H,Costume Insectivorous Plant Hairpin,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,850,{},{},{}
-31543,Costume_Insectivorous_Plant_H,C_Eru_Rava_Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1774,{},{},{}
+31543,Costume_Eru_Rava_Hat,Costume Eru Rava Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1774,{},{},{}
 31544,Costume_Piamette_Roll_Hair,Costume Piamette Roll Hair,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1775,{},{},{}
 31545,Costume_Eremes_Scarf_Bl,Costume Eremes Scarf Blue,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1776,{},{},{}
 31546,Costume_Clock_Casket_Red,Costume Clock Casket Red,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1777,{},{},{}
@@ -12594,3 +12594,4 @@
 31573,Costume_Mecha_Cat_Ears,Costume Mecha Cat Ears,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1789,{},{},{}
 31574,Costume_Cyber_Income,Costume Cyber Income,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,1790,{},{},{}
 31575,Costume_Electro_Two_Side_Up,Costume Electro Two Side Up,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1791,{},{},{}
+31580,Costume_Violet_Halo,Costume Violet Halo,4,0,,0,,,,0,0xFFFFFFFF,63,2,8192,,1,0,39,{},{},{}
