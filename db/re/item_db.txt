@@ -11040,6 +11040,7 @@
 20527,Costume_Pink_Butterfly_Wings,Costume Pink Butterfly Wings,4,0,,0,,0,,0,0xFFFFFFFF,63,2,8192,,1,0,35,{},{},{}
 20528,Costume_Gold_Butterfly_Wings,Costume Gold Butterfly Wings,4,0,,0,,0,,0,0xFFFFFFFF,63,2,8192,,1,0,36,{},{},{}
 20530,Costume_Wings_of_Gabriel,Costume Wings of Gabriel,4,0,,0,,0,,0,0xFFFFFFFF,63,2,8192,,1,0,37,{},{},{}
+20535,Costume_Digital_Space,Costume Digital Space,4,0,,0,,0,,0,0xFFFFFFFF,63,2,8192,,1,0,0,{ hateffect(87,true); },{},{ hateffect(87,false); }
 20600,Fantastic_Aura,Fantastic Aura,4,0,,0,,0,,0,0xFFFFFFFF,63,2,8192,,1,0,0,{ /*TODO: View ID*/ bonus bUnbreakableHelm; },{},{}
 20700,Egir_Manteau,Egir Manteau,4,200000,,300,,10,,1,0xFFFFFFFF,63,2,4,,110,1,0,{ bonus bUnbreakableGarment; .@r = getrefine(); if (.@r > 10) .@r = 10; if (BaseClass == Job_Mage || BaseClass == Job_Archer || BaseClass == Job_Acolyte) { bonus bFlee2,5+(.@r*2); } else if (BaseClass == Job_Swordman || BaseClass == Job_Merchant || BaseClass == Job_Thief) { bonus bShortWeaponDamageReturn,5+(.@r*2); } },{},{}
 20702,TE_Woe_Muffler,TE Woe Muffler,4,0,,0,,5,,0,0xFFFFFFFF,63,2,4,,40,1,,{ bonus bMdef,5; bonus2 bAddRace,RC_Player,5; bonus2 bMagicAddRace,RC_Player,5; bonus2 bResEff,Eff_Freeze,25; },{},{}
