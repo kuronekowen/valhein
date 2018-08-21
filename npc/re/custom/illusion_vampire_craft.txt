@@ -29,7 +29,7 @@
 gef_d01_i,98,40,4	script	Vampire's Disciple	705,{
 	mes "[Vampire's Servant]","Have you ever heard this ?","The moon is my sun, the night is my day, blood is my life, and you are my prey.";
 	next;
-	mes "[Vampire's Servant]","Greeting adventurer!, I'm a disciple of Vampire Lord.","What can I help for you?";
+	mes "[Vampire's Servant]","Greeting adventurer!, I'm a disciple of Vampire Lord.","What can I do for you?";
 	next;
 	menu "Ask about Illusion's equipment",pick1, "Just chilling around",pick2;
 		pick2: {
@@ -49,8 +49,8 @@ gef_d01_i,98,40,4	script	Vampire's Disciple	705,{
 			mes "[Vampire's Servant]","Good luck. I hope we will meet again, soon.";
 			close;
 		}
-		ask1:	menu "Illusion Infiltrator[2]",firm1, "Illusion Sharpen Leg bone of Ghoul[2]",firm2, "Illusion Wizardry Staff[2]",firm3, "Illusion Ballista[2]",firm4, 
-					"Illusion Apocalypse[2]",firm5, "Illusion Ancient Cape[1]",firm6, "Illusion Skull Ring[1]",firm7, "Illusion Ring[1]",firm8;
+		ask1:	menu "Illusion Infiltrator [2]",firm1, "Illusion Sharpen Leg bone of Ghoul[2]",firm2, "Illusion Wizardry Staff [2]",firm3, "Illusion Ballista [2]",firm4, 
+					"Illusion Apocalypse [2]",firm5, "Illusion Ancient Cape [1]",firm6, "Illusion Skull Ring [1]",firm7, "Illusion Ring [1]",firm8;
 				firm1: {
 				mes "<ITEM>Illusion Infiltrator[2]<INFO>28022</INFO></ITEM>","  - +9 Infiltrator [1] ","  - 80 Illusion Stone","  - 20 Piece of Ripped Paper"," ","Do you want to Comfirm?";
 				if (select("Yes:No" ) == 1) {

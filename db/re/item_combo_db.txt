@@ -724,6 +724,10 @@
 27105:28510,{ bonus bMatk,30; }
 27107:27108,{ bonus2 bSkillAtk,"WM_METALICSOUND",50; bonus2 bSkillAtk,"WM_REVERBERATION",50; }
 27108:27107:27109,{ autobonus "{ bonus2 bAddEle,Ele_Neutral,200; bonus2 bMagicAddEle,Ele_Neutral,200; heal 2000,0; }",30,6000,BG_MAGIC|BF_WEAPON|BF_MISC,"{ active_transform 3073,6000; }"; }
+27110:27111,{ bonus2 bSubSize,Size_Small,20; }
+27112:27111,{ bonus2 bSubSize,Size_Medium,20; }
+27113:2346,{ bonus5 bAutoSpellWhenHit,"",5,50,BF_WEAPON,1; }
+27113:2347,{ bonus5 bAutoSpellWhenHit,"WZ_WATERBALL",5,50,BF_WEAPON,1; }
 27147:27148,{ bonus bDelayrate,-3; }
 27163:27165,{ bonus bDelayrate,-3; bonus bVit,2; bonus bInt,2; bonus bAgi,2; bonus bDex,2; }
 27166:27167,{ bonus2 bSubEle,Ele_Neutral,5; bonus2 bMagicAddSize,Size_All,10; }

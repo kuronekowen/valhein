@@ -29,7 +29,7 @@
 pay_d03_i,160,45,4	script	Moonlight's Disciple	708,{
 	mes "[Moonlight's Disciple]","Have you ever heard this ?","Everyone is a moon, and has a dark side which they never shows to anybody.";
 	next;
-	mes "[Moonlight's Disciple]","Greeting adventurer!, I'm a Moonlight's Disciple.","What can I help for you?";
+	mes "[Moonlight's Disciple]","Greeting adventurer!, I'm a Moonlight's Disciple.","What can I do for you?";
 	next;
 	menu "Ask about Illusion's equipment",pick1, "Just chilling around",pick2;
 		pick2: {

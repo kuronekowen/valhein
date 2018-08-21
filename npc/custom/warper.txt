@@ -411,9 +411,9 @@ D45: setarray @c[2],149,133,156,189;
 D46: setarray @c[2],248,23,190,94;
 	 Disp("Rock Ridge Mine:Underground Culvert");
 	 Pick("","rockmi1","harboro2");
-D47: setarray @c[2],158,38,0,0;
-	 Disp("Illusion of Moonlight:Illusion of Vampire");
-	 Pick("","pay_d03_i","gef_d01_i");
+D47: setarray @c[2],158,38,96,35,192,42;
+	 Disp("Illusion of Moonlight:Illusion of Vampire:Illusion of Frozen");
+	 Pick("","pay_d03_i","gef_d01_i","ice_d03_i");
 // --------------------------------------------------
 	Castles:
 // --------------------------------------------------

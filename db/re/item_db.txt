@@ -7500,7 +7500,7 @@
 13311,Huuma_Shadow,Sword Huuma Shuriken,5,5000,,1500,170,,1,0,0x02000000,63,2,34,3,99,1,22,{ bonus bStr,3; },{},{}
 13312,Huuma_Job_Test,Prototype Huuma Shuriken,5,0,,3000,0,,1,0,0x02000000,63,2,34,4,99,1,22,{},{},{}
 13313,Huuma_Swirling_Petal,Flower Huuma Shuriken,5,100000,,1500,150:50,,1,2,0x02000000,63,2,34,3,110,1,22,{ bonus2 bSkillAtk,"KO_HUUMARANKA",20; },{},{}
-13314,Huuma_Fluttering_Snow,Wave Huuma Shuriken,5,100000,,1500,200:50,,1,0,0x02000000,63,2,34,4,110,1,22,{ bonus bAtkEle,Ele_Water; bonus3 bAutoSpell,"NJ_HYOUSYOURAKU",max(getskilllv("NJ_HYOUSYOURAKU"),1),30; },{},{}
+13314,Huuma_Fluttering_Snow,Huuma Fluttering Snow,5,100000,,1500,200:50,,1,0,0x02000000,63,2,34,4,110,1,22,{ bonus bAtkEle,Ele_Water; bonus3 bAutoSpell,"NJ_HYOUSYOURAKU",max(getskilllv("NJ_HYOUSYOURAKU"),1),30; },{},{}
 13315,Huuma_Thunderstorm,Thunderstorm Huuma Shuriken,5,100000,,1500,200:50,,1,0,0x02000000,63,2,34,4,110,1,22,{ bonus bAtkEle,Ele_Wind; bonus3 bAutoSpell,"NJ_RAIGEKISAI",max(getskilllv("NJ_RAIGEKISAI"),1),30; },{},{}
 13316,Upg_Huuma_Shuriken,Upg Huuma Shuriken,5,20,,1500,55,,1,1,0x02000000,63,2,34,3,1,1,22,{ .@r = getrefine(); bonus bBaseAtk,(.@r*10); bonus bMatk,(.@r*5); bonus bLongAtkRate,(.@r); if(BaseLevel>70) bonus bBaseAtk,(((BaseLevel-70)/10)*5); },{},{}
 13317,TE_Woe_Huuma,TE Woe Huuma,5,0,,0,80:100,,1,0,0x22000000,63,2,2,3,40,1,22,{ bonus2 bAddRace,RC_Player,40; bonus2 bAddEff,Eff_Bleeding,3000; },{},{}
@@ -11754,6 +11754,10 @@
 25284,Swamp_Bug_Shell,Swamp Bug Shell,3,0,,10,,,,,,,,,,,,,{},{},{}
 25285,Brown_Rat_Tail,Brown Rat Tail,3,0,,10,,,,,,,,,,,,,{},{},{}
 //
+25297,Frozen_Stone,Frozen Stone,3,20,,10,,,,,,,,,,,,,{},{},{}
+25298,Soul-contained_Gemstone,Soul-contained Gemstone,3,20,,10,,,,,,,,,,,,,{},{},{}
+25299,Snowball,Snowball,3,20,,10,,,,,,,,,,,,,{},{},{}
+25300,Ktullanux_Eye,Ktullanux Eye,3,20,,10,,,,,,,,,,,,,{},{},{}
 25464,World_Moving_Rights,World Moving Rights,3,20,,0,,,,,,,,,,,,,{},{},{}
 //===================================================================
 // New Staves
@@ -11815,6 +11819,10 @@
 27107,Playing_Pere_Card,Playing Pere Card,6,20,,10,,,,,,,,8,,,,,{ bonus2 bAddEle,Ele_Neutral,20; },{},{}
 27108,Singing_Pere_Card,Singing Pere Card,6,20,,10,,,,,,,,128,,,,,{ bonus2 bMagicAddEle,Ele_Neutral,20; },{},{}
 27109,Jitterbug_Card,Jitterbug Card,6,20,,10,,,,,,,,769,,,,,{ bonus2 bSubEle,Ele_Neutral,20; bonus bMaxHP,500; },{},{}
+27110,Furious_Gazeti_Card,Furious Gazeti Card,6,20,,10,,,,,,,,16,,,,,{ bonus bLongAtkDef,20; },{},{}
+27111,Furious_Snowier_Card,Furious Snowier Card,6,20,,10,,,,,,,,136,,,,,{ bonus2 bAddItemHealRate,11522,50; bonus2 bAddItemHealRate,11523,50; bonus2 bAddItemHealRate,11524,50; },{},{}
+27112,Furious_Ice_Titan_Card,Furious Ice Titan Card,6,20,,10,,,,,,,,16,,,,,{ .@r = getrefine; bonus bDef,5+5*.@r; },{},{}
+27113,Awaken_Ktullanux_Card,Awaken Ktullanux Card,6,20,,10,,,,,,,,16,,,,,{ .@r = getrefine; bonus2 bMagicAtkEle,Ele_Water,20+3*.@r; },{},{}
 27120,Iara_Card,Iara Card,6,20,,10,,,,,,,,136,,,,,{ skill "PR_STRECOVERY",1; },{},{}
 27121,Piranha_Card,Piranha Card,6,20,,10,,,,,,,,64,,,,,{ .@val = 10; if (getrefine() >= 9) { .@val += 5; } bonus2 bAddRace,RC_Fish,.@val; bonus2 bMagicAddRace,RC_Fish,.@val; },{},{}
 27122,Curupira_Card,Curupira Card,6,20,,10,,,,,,,,2,,,,,{ .@val = 3; .@r = getrefine(); if (.@r>=7) { .@val += 5; } if (.@r>=9) { .@val += 7; } bonus2 bMagicAddEle,Ele_Water,.@val; },{},{}
