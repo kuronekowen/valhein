@@ -148,7 +148,7 @@ close;
 }
 }
 
-prontera,148,172,6	script	Class3 Shop	10061,{
+prontera,148,172,6	script	Class3 Shop	10192,{
 switch(select("Rune Knight:Guillotine Cross:Ranger:Warlock:Mechanic:Shadow Chaser:Bishop & DIVA:Geneticist:Nothing")) {
 	case 1:
 	callshop "RKshops", 0;
