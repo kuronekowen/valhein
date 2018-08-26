@@ -2345,7 +2345,7 @@ lasagna,140,250,3	script	The skittish fourth#wea	4_DR_F_01,{
 	}
 	mes "[Dandi Chara]";
 	mes "Do you mind if I search you to see the items you have with you?";
-	mes "If I find an item suitable for Jogi, I'll pay <INFO>25142</INFO><ITEM>Doram Token </ITEM>....";
+	mes "If I find an item suitable for Jogi, I'll pay <ITEM>Doram Token<INFO>25142</INFO></ITEM>....";
 	next;
 	if (select( "Search", "Cancel" ) == 1) {
 		setarray .@item_data[0],	// keep the order
