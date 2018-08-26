@@ -24,14 +24,14 @@ function Go; function Disp; function Pick; function Restrict;
 // --------------------------------------------------
 
 menu	"Last Warp ^777777["+lastwarp$+"]^000000",-,
-    	" ~ Towns",Towns,
-    	" ~ Fields",Fields,
-    	" ~ Dungeons",Dungeons,
-    	" ~ Guild Castles",Castles,
-    	" ~ Guild Dungeons",Guild_Dungeons,
-    	" ~ Instances",Instances,
-    	" ~ Special Areas",Special,
-	" ~ Damage Test",Test;
+    	" ~ เมือง",Towns,
+    	" ~ ฟิลด์",Fields,
+    	" ~ ดันเจี้ยน",Dungeons,
+    	" ~ ปราสาทกิลด์",Castles,
+    	" ~ กิลด์ดันเจี้ยน",Guild_Dungeons,
+    	" ~ ดันส่วนตัว",Instances,
+    	" ~ พื้นที่พิเศษ",Special,
+	" ~ ^ff0000ทดสอบดาเมจ^000000",Test;
 
 	if (lastwarp$ == "")
 		message strcharinfo(0),"You haven't warped anywhere yet.";
