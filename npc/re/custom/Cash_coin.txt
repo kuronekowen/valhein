@@ -13,3 +13,35 @@ if( .@countitem )
 	}
 close;
 }
+
+function	script	Cash_coins_1	{
+.@item = 31582;
+.@rate = 10;
+
+.@countitem = countitem( .@item );
+mes "Exchange "+.@countitem+" x "+getitemname( .@item )+" to "+( .@countitem * .@rate )+" Point ?";
+
+if( .@countitem )
+	if( select( "YES","Cancel" ) == 1 ){
+		delitem .@item,.@countitem;
+		#CASHPOINTS = #CASHPOINTS + ( .@countitem * .@rate );
+		mes "Done";
+	}
+close;
+}
+
+function	script	Cash_coins_2	{
+.@item = 31583;
+.@rate = 1;
+
+.@countitem = countitem( .@item );
+mes "Exchange "+.@countitem+" x "+getitemname( .@item )+" to "+( .@countitem * .@rate )+" Point ?";
+
+if( .@countitem )
+	if( select( "YES","Cancel" ) == 1 ){
+		delitem .@item,.@countitem;
+		#CASHPOINTS = #CASHPOINTS + ( .@countitem * .@rate );
+		mes "Done";
+	}
+close;
+}
