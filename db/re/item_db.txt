@@ -12605,3 +12605,5 @@
 31575,Costume_Electro_Two_Side_Up,Costume Electro Two Side Up,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1791,{},{},{}
 31580,Costume_Violet_Halo,Costume Violet Halo,4,0,,0,,,,0,0xFFFFFFFF,63,2,8192,,1,0,39,{},{},{}
 31581,100_Cash_Coin,100 Cash Coin,11,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{ callfunc "Cash_coins"; },{},{}
+31582,10_Cash_Coin,10 Cash Coin,11,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{ callfunc "Cash_coins_1"; },{},{}
+31583,1_Cash_Coin,1 Cash Coin,11,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{ callfunc "Cash_coins_2"; },{},{}
