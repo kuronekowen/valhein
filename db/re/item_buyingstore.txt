@@ -2012,3 +2012,4 @@
 27178  // Gaster_Card
 27179  // Coyote_Card
 27180  // Spider_Chariot_Card
+31581  // 100_Cash_Coin

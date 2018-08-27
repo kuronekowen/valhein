@@ -1,0 +1,15 @@
+function	script	Cash_coins	{
+.@item = 31581;
+.@rate = 100;
+
+.@countitem = countitem( .@item );
+mes "Exchange "+.@countitem+" x "+getitemname( .@item )+" to "+( .@countitem * .@rate )+" Point ?";
+
+if( .@countitem )
+	if( select( "YES","Cancel" ) == 1 ){
+		delitem .@item,.@countitem;
+		#CASHPOINTS = #CASHPOINTS + ( .@countitem * .@rate );
+		mes "Done";
+	}
+close;
+}
