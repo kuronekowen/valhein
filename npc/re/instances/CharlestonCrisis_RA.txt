@@ -1890,7 +1890,8 @@ OnEnable:
 				next;
 				mes "[Shalosh]";
 				mes "I see you collected some junk, have a spare.";
-				getitem 6752,3; //Charleston Parts
+				getitem 6752,10; //Charleston Parts
+				getitem 31582,5;// 50 cash coin
 				erasequest 13184;
 				setquest 13186;
 				close2;

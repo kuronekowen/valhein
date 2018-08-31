@@ -19,7 +19,7 @@
 //    Item cost, in cash points (#CASHPOINTS).
 
 //Hot
-0,15204,100  //,Abyss Dress
+0,15204,250  //,Abyss Dress
 0,32203,100  //,Accelerator Chip
 0,2576,100  //,Adventurer's Backpack
 0,20831,100  //,Adventurer's Spirit
@@ -72,7 +72,7 @@
 0,20726,100  //,Fire Dragon's Coat
 0,15175,100  //,Flame Dragon Armor
 0,5937,100  //,Flying Helmet
-0,5918,100  //,gambler seal
+0,5918,150  //,gambler seal
 0,28521,100  //,Giant's Protection
 0,18787,100  //,Goal Tender Mask
 0,5475,100  //,Gozarian hat
@@ -112,7 +112,7 @@
 0,15283,100  //,Mighty Black Threaded Armor
 0,15112,100  //,Military Mail
 0,18591,100  //,Mini Glasses
-0,28502,100  //,Mob Scarf
+0,28502,250  //,Mob Scarf
 0,5921,100  //,Monster Fish Gills
 0,15140,100  //,Natural Clothes
 0,15072,100  //,Nectar Suit
@@ -122,7 +122,7 @@
 0,20932,100  //,Old Morroc Shawl
 0,15142,100  //,Orca Clothes
 0,19102,100  //,Pale Moon Hat
-0,28565,100  //,Perverse Demon Mask
+0,28565,250  //,Perverse Demon Mask
 0,20859,100  //,Phreeoni Wings
 0,18908,100  //,Piamette's red ear
 0,22189,100  //,Pilgrim Shoes
@@ -164,7 +164,7 @@
 0,22170,100  //,Survivor's Shoes
 0,22042,100  //,Talaria Shoes
 0,20846,100  //,Temporal Manteau
-0,28594,100  //,Temporal Ring
+0,28594,250  //,Temporal Ring
 0,19112,100  //,Tengu Scroll
 0,28492,100  //,Thieve's Guide Vol.1
 0,5978,100  //,Toy Syringe
@@ -186,7 +186,7 @@
 0,20728,100  //,Water Dragon Coat
 0,5945,100  //,Well-Chewed Pencil
 0,2196,100  //,White gold shield
-0,18856,100  //,White king tiger
+0,18856,60  //,White king tiger
 0,18656,100  //,Witch Pumpkin
 
 // Consumable
@@ -208,6 +208,7 @@
 6,14075,15
 
 // Hot
+1,31584,100
 1,12208,2
 1,14156,18
 1,12210,2
@@ -215,19 +216,23 @@
 1,14165,5
 1,14178,20
 1,17106,100
+1,12922,50
+1,7621,6
 
 //Other
-7,12920,85
-7,12921,85
+7,12920,140
+7,12921,140
 7,16396,40
 7,16394,40
-7,7620,10
-7,7619,10
-7,6226,5
-7,6225,5
+7,7620,15
+7,7619,15
+7,16260,90
+7,16261,90
+7,6226,10
+7,6225,10
 7,6240,5
 7,6241,5
-7,6635,5
+7,6635,1
 
 //Equipment
 4,5388,50
@@ -1232,7 +1237,6 @@
 2,20527,50
 2,20528,50
 2,20530,50
-2,20535,50
 2,20761,50
 2,20762,50
 2,20763,50

@@ -588,7 +588,7 @@ einbroch,69,202,4	duplicate(Warper)	Warper#einbr	10007
 gef_fild10,71,339,4	duplicate(Warper)	Warper#orc	10007
 geffen,124,72,4	duplicate(Warper)	Warper#gef	10007
 glast_01,372,308,4	duplicate(Warper)	Warper#glh	10007
-gonryun,162,122,4	duplicate(Warper)	Warper#gon	10007
+gonryun,165,122,4	duplicate(Warper)	Warper#gon	10007
 hugel,101,151,4	duplicate(Warper)	Warper#hug	10007
 izlu2dun,110,92,4	duplicate(Warper)	Warper#izd	10007
 izlude,134,150,4	duplicate(Warper)	Warper#izl	10007	//Pre-RE: (132,120)

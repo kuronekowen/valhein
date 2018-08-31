@@ -1,0 +1,35 @@
+-	script	EquipmentSwap	-1,{
+OnEquipmentSet1:
+	for( .@i = 0; .@i < 21; .@i++ ){
+		if(getequipid(.@i)!=-1)
+		swapEquipmentKak[.@i] = getequipid(.@i);
+	}
+	end;
+OnEquipmentSet2:
+	for( .@i = 0; .@i < 21; .@i++ ){
+		if(getequipid(.@i)!=-1)
+		swapEquipmentKak2[.@i] = getequipid(.@i);
+	}
+	end;
+OnEquipmentSwap:
+	nude;
+	if(swapEquipMentKakSet==0){
+		swapEquipMentKakSet = 1;
+		for( .@i = 0; .@i < 21; .@i++ ){
+			if(swapEquipmentKak[.@i]>0)
+			equip swapEquipmentKak[.@i];
+		}
+	}else{
+		swapEquipMentKakSet = 0;
+		for( .@i = 0; .@i < 21; .@i++ ){
+			if(swapEquipmentKak2[.@i]>0)
+			equip swapEquipmentKak2[.@i];
+		}
+	}
+	end;
+OnInit:
+	bindatcmd "sset1",strnpcinfo(3) + "::OnEquipmentSet1";
+	bindatcmd "sset2",strnpcinfo(3) + "::OnEquipmentSet2";
+	bindatcmd "s",strnpcinfo(3) + "::OnEquipmentSwap";
+	end;
+}

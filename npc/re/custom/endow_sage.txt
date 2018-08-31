@@ -42,10 +42,10 @@ prontera,169,183,4	script	Well Endowed Sage	742,{
 	}
 
 OnInit:
-	.Price = 20000;			// Price for endowment.
+	.Price = 1000;			// Price for endowment.
 	.Ticks = 1800000;		// Time in ticks for duration of buff.
 	.ReqType = 1;			// Requirements. 0 = None | 1 = Elemental Stones | 2 = Greater Elemental Stones
-	.ConvPrice = 10000;		// Price for Elemental Converters
+	.ConvPrice = 2000;		// Price for Elemental Converters
 	for (.@ConvID = 12114;.@ConvID <= 12117;.@ConvID++) {
 		npcshopadditem "conv_shop",.@ConvID,.ConvPrice;
 	}

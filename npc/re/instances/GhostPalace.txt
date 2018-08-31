@@ -975,12 +975,14 @@ OnTouch_:
 	mes "และจะเลือนหายไป..";
 	close2;
 	if (isbegin_quest(1263) == 2)
-		getitem 6672,1;// Gray Shard
+		getitem 6672,10;// Gray Shard
+		getitem 31582,5;// 50 cash coin
 	else {
 		setquest 1263;// Cursed Swordman
 		completequest 1263;
 		getexp 900000,500000;
-		getitem 6672,2;// Gray Shard
+		getitem 6672,20;// Gray Shard
+		getitem 31582,5;// 50 cash coin
 	}
 	warp "dali02",46,129;
 	end;

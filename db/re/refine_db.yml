@@ -112,7 +112,7 @@ Armor:
       - Type: REFINE_COST_NORMAL
         Rate: 60
       - Type: REFINE_COST_ENRICHED
-        Rate: 90
+        Rate: 100
       - Type: REFINE_COST_EVT_ENRICHED
         Rate: 95
       Bonus: 200
@@ -121,7 +121,7 @@ Armor:
       - Type: REFINE_COST_NORMAL
         Rate: 40
       - Type: REFINE_COST_ENRICHED
-        Rate: 70
+        Rate: 100
       - Type: REFINE_COST_EVT_ENRICHED
         Rate: 80
       Bonus: 200
@@ -130,7 +130,7 @@ Armor:
       - Type: REFINE_COST_NORMAL
         Rate: 40
       - Type: REFINE_COST_ENRICHED
-        Rate: 70
+        Rate: 100
       - Type: REFINE_COST_BLESSED
         Rate: 40
       - Type: REFINE_COST_EVT_ENRICHED
@@ -189,7 +189,7 @@ Armor:
       - Type: REFINE_COST_OVER10
         Rate: 8
       - Type: REFINE_COST_OVER10_HD
-        Rate: 8
+        Rate: 20
       - Type: REFINE_COST_BLESSED
         Rate: 8
       - Type: REFINE_COST_EVT_OVER10_HD
@@ -197,13 +197,13 @@ Armor:
       Bonus: 300
       BlacksmithBlessing:
         ItemID: 6635
-        Count: 7
+        Count: 5
     - Level: 12
       Chances:
       - Type: REFINE_COST_OVER10
         Rate: 8
       - Type: REFINE_COST_OVER10_HD
-        Rate: 8
+        Rate: 20
       - Type: REFINE_COST_BLESSED
         Rate: 8
       - Type: REFINE_COST_EVT_OVER10_HD
@@ -211,13 +211,13 @@ Armor:
       Bonus: 300
       BlacksmithBlessing:
         ItemID: 6635
-        Count: 11
+        Count: 5
     - Level: 13
       Chances:
       - Type: REFINE_COST_OVER10
         Rate: 8
       - Type: REFINE_COST_OVER10_HD
-        Rate: 8
+        Rate: 16
       - Type: REFINE_COST_BLESSED
         Rate: 8
       - Type: REFINE_COST_EVT_OVER10_HD
@@ -228,7 +228,7 @@ Armor:
       - Type: REFINE_COST_OVER10
         Rate: 8
       - Type: REFINE_COST_OVER10_HD
-        Rate: 8
+        Rate: 16
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 16
       Bonus: 400
@@ -237,7 +237,7 @@ Armor:
       - Type: REFINE_COST_OVER10
         Rate: 7
       - Type: REFINE_COST_OVER10_HD
-        Rate: 7
+        Rate: 15
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 15
       Bonus: 400
@@ -246,7 +246,7 @@ Armor:
       - Type: REFINE_COST_OVER10
         Rate: 7
       - Type: REFINE_COST_OVER10_HD
-        Rate: 7
+        Rate: 15
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 15
       Bonus: 400
@@ -255,7 +255,7 @@ Armor:
       - Type: REFINE_COST_OVER10
         Rate: 7
       - Type: REFINE_COST_OVER10_HD
-        Rate: 7
+        Rate: 14
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 14
       Bonus: 500
@@ -264,7 +264,7 @@ Armor:
       - Type: REFINE_COST_OVER10
         Rate: 7
       - Type: REFINE_COST_OVER10_HD
-        Rate: 7
+        Rate: 14
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 14
       Bonus: 500
@@ -273,7 +273,7 @@ Armor:
       - Type: REFINE_COST_OVER10
         Rate: 5
       - Type: REFINE_COST_OVER10_HD
-        Rate: 5
+        Rate: 10
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 10
       Bonus: 500
@@ -282,7 +282,7 @@ Armor:
       - Type: REFINE_COST_OVER10
         Rate: 5
       - Type: REFINE_COST_OVER10_HD
-        Rate: 5
+        Rate: 10
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 10
       Bonus: 500
@@ -455,33 +455,33 @@ WeaponLv1:
       - Type: REFINE_COST_OVER10
         Rate: 18
       - Type: REFINE_COST_OVER10_HD
-        Rate: 18
+        Rate: 25
       - Type: REFINE_COST_BLESSED
         Rate: 18
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 40
       BlacksmithBlessing:
         ItemID: 6635
-        Count: 7
+        Count: 5
     - Level: 12
       Chances:
       - Type: REFINE_COST_OVER10
         Rate: 18
       - Type: REFINE_COST_OVER10_HD
-        Rate: 18
+        Rate: 25
       - Type: REFINE_COST_BLESSED
         Rate: 18
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 40
       BlacksmithBlessing:
         ItemID: 6635
-        Count: 11
+        Count: 5
     - Level: 13
       Chances:
       - Type: REFINE_COST_OVER10
         Rate: 18
       - Type: REFINE_COST_OVER10_HD
-        Rate: 18
+        Rate: 25
       - Type: REFINE_COST_BLESSED
         Rate: 18
       - Type: REFINE_COST_EVT_OVER10_HD
@@ -491,7 +491,7 @@ WeaponLv1:
       - Type: REFINE_COST_OVER10
         Rate: 18
       - Type: REFINE_COST_OVER10_HD
-        Rate: 18
+        Rate: 25
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 35
     - Level: 15
@@ -499,7 +499,7 @@ WeaponLv1:
       - Type: REFINE_COST_OVER10
         Rate: 18
       - Type: REFINE_COST_OVER10_HD
-        Rate: 18
+        Rate: 25
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 30
     - Level: 16
@@ -507,7 +507,7 @@ WeaponLv1:
       - Type: REFINE_COST_OVER10
         Rate: 17
       - Type: REFINE_COST_OVER10_HD
-        Rate: 17
+        Rate: 25
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 30
       Bonus: 300
@@ -516,7 +516,7 @@ WeaponLv1:
       - Type: REFINE_COST_OVER10
         Rate: 17
       - Type: REFINE_COST_OVER10_HD
-        Rate: 17
+        Rate: 20
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 20
       Bonus: 300
@@ -525,7 +525,7 @@ WeaponLv1:
       - Type: REFINE_COST_OVER10
         Rate: 17
       - Type: REFINE_COST_OVER10_HD
-        Rate: 17
+        Rate: 20
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 20
       Bonus: 300
@@ -663,7 +663,7 @@ WeaponLv2:
       - Type: REFINE_COST_BLESSED
         Rate: 60
       - Type: REFINE_COST_ENRICHED
-        Rate: 90
+        Rate: 100
       - Type: REFINE_COST_EVT_ENRICHED
         Rate: 95
     - Level: 8
@@ -716,33 +716,33 @@ WeaponLv2:
       - Type: REFINE_COST_OVER10
         Rate: 18
       - Type: REFINE_COST_OVER10_HD
-        Rate: 18
+        Rate: 30
       - Type: REFINE_COST_BLESSED
-        Rate: 18
+        Rate: 20
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 40
       BlacksmithBlessing:
         ItemID: 6635
-        Count: 7
+        Count: 5
     - Level: 12
       Chances:
       - Type: REFINE_COST_OVER10
         Rate: 18
       - Type: REFINE_COST_OVER10_HD
-        Rate: 18
+        Rate: 30
       - Type: REFINE_COST_BLESSED
         Rate: 18
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 40
       BlacksmithBlessing:
         ItemID: 6635
-        Count: 11
+        Count: 5
     - Level: 13
       Chances:
       - Type: REFINE_COST_OVER10
         Rate: 18
       - Type: REFINE_COST_OVER10_HD
-        Rate: 18
+        Rate: 25
       - Type: REFINE_COST_BLESSED
         Rate: 18
       - Type: REFINE_COST_EVT_OVER10_HD
@@ -752,7 +752,7 @@ WeaponLv2:
       - Type: REFINE_COST_OVER10
         Rate: 18
       - Type: REFINE_COST_OVER10_HD
-        Rate: 18
+        Rate: 25
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 35
     - Level: 15
@@ -760,7 +760,7 @@ WeaponLv2:
       - Type: REFINE_COST_OVER10
         Rate: 18
       - Type: REFINE_COST_OVER10_HD
-        Rate: 18
+        Rate: 20
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 30
     - Level: 16
@@ -768,7 +768,7 @@ WeaponLv2:
       - Type: REFINE_COST_OVER10
         Rate: 17
       - Type: REFINE_COST_OVER10_HD
-        Rate: 17
+        Rate: 20
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 30
       Bonus: 600
@@ -777,7 +777,7 @@ WeaponLv2:
       - Type: REFINE_COST_OVER10
         Rate: 17
       - Type: REFINE_COST_OVER10_HD
-        Rate: 17
+        Rate: 18
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 20
       Bonus: 600
@@ -786,7 +786,7 @@ WeaponLv2:
       - Type: REFINE_COST_OVER10
         Rate: 17
       - Type: REFINE_COST_OVER10_HD
-        Rate: 17
+        Rate: 18
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 20
       Bonus: 600
@@ -914,7 +914,7 @@ WeaponLv3:
       - Type: REFINE_COST_NORMAL
         Rate: 60
       - Type: REFINE_COST_ENRICHED
-        Rate: 90
+        Rate: 100
       - Type: REFINE_COST_EVT_ENRICHED
         Rate: 95
     - Level: 7
@@ -924,7 +924,7 @@ WeaponLv3:
       - Type: REFINE_COST_BLESSED
         Rate: 50
       - Type: REFINE_COST_ENRICHED
-        Rate: 80
+        Rate: 100
       - Type: REFINE_COST_EVT_ENRICHED
         Rate: 90
     - Level: 8
@@ -977,33 +977,33 @@ WeaponLv3:
       - Type: REFINE_COST_OVER10
         Rate: 18
       - Type: REFINE_COST_OVER10_HD
-        Rate: 18
+        Rate: 30
       - Type: REFINE_COST_BLESSED
         Rate: 18
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 40
       BlacksmithBlessing:
         ItemID: 6635
-        Count: 7
+        Count: 5
     - Level: 12
       Chances:
       - Type: REFINE_COST_OVER10
         Rate: 18
       - Type: REFINE_COST_OVER10_HD
-        Rate: 18
+        Rate: 30
       - Type: REFINE_COST_BLESSED
         Rate: 18
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 40
       BlacksmithBlessing:
         ItemID: 6635
-        Count: 11
+        Count: 5
     - Level: 13
       Chances:
       - Type: REFINE_COST_OVER10
         Rate: 18
       - Type: REFINE_COST_OVER10_HD
-        Rate: 18
+        Rate: 25
       - Type: REFINE_COST_BLESSED
         Rate: 18
       - Type: REFINE_COST_EVT_OVER10_HD
@@ -1013,7 +1013,7 @@ WeaponLv3:
       - Type: REFINE_COST_OVER10
         Rate: 18
       - Type: REFINE_COST_OVER10_HD
-        Rate: 18
+        Rate: 25
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 35
     - Level: 15
@@ -1021,7 +1021,7 @@ WeaponLv3:
       - Type: REFINE_COST_OVER10
         Rate: 18
       - Type: REFINE_COST_OVER10_HD
-        Rate: 18
+        Rate: 20
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 30
     - Level: 16
@@ -1029,7 +1029,7 @@ WeaponLv3:
       - Type: REFINE_COST_OVER10
         Rate: 17
       - Type: REFINE_COST_OVER10_HD
-        Rate: 17
+        Rate: 20
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 30
       Bonus: 900
@@ -1038,7 +1038,7 @@ WeaponLv3:
       - Type: REFINE_COST_OVER10
         Rate: 17
       - Type: REFINE_COST_OVER10_HD
-        Rate: 17
+        Rate: 15
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 20
       Bonus: 900
@@ -1047,7 +1047,7 @@ WeaponLv3:
       - Type: REFINE_COST_OVER10
         Rate: 17
       - Type: REFINE_COST_OVER10_HD
-        Rate: 17
+        Rate: 15
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 20
       Bonus: 900
@@ -1056,7 +1056,7 @@ WeaponLv3:
       - Type: REFINE_COST_OVER10
         Rate: 15
       - Type: REFINE_COST_OVER10_HD
-        Rate: 15
+        Rate: 12
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 15
       Bonus: 900
@@ -1065,7 +1065,7 @@ WeaponLv3:
       - Type: REFINE_COST_OVER10
         Rate: 15
       - Type: REFINE_COST_OVER10_HD
-        Rate: 15
+        Rate: 12
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 15
       Bonus: 900
@@ -1167,7 +1167,7 @@ WeaponLv4:
       - Type: REFINE_COST_NORMAL
         Rate: 60
       - Type: REFINE_COST_ENRICHED
-        Rate: 90
+        Rate: 100
       - Type: REFINE_COST_EVT_ENRICHED
         Rate: 95
     - Level: 6
@@ -1175,7 +1175,7 @@ WeaponLv4:
       - Type: REFINE_COST_NORMAL
         Rate: 40
       - Type: REFINE_COST_ENRICHED
-        Rate: 70
+        Rate: 100
       - Type: REFINE_COST_EVT_ENRICHED
         Rate: 80
     - Level: 7
@@ -1183,7 +1183,7 @@ WeaponLv4:
       - Type: REFINE_COST_NORMAL
         Rate: 40
       - Type: REFINE_COST_ENRICHED
-        Rate: 70
+        Rate: 100
       - Type: REFINE_COST_BLESSED
         Rate: 40
       - Type: REFINE_COST_EVT_ENRICHED
@@ -1238,33 +1238,33 @@ WeaponLv4:
       - Type: REFINE_COST_OVER10
         Rate: 8
       - Type: REFINE_COST_OVER10_HD
-        Rate: 8
+        Rate: 20
       - Type: REFINE_COST_BLESSED
         Rate: 8
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 20
       BlacksmithBlessing:
         ItemID: 6635
-        Count: 7
+        Count: 5
     - Level: 12
       Chances:
       - Type: REFINE_COST_OVER10
         Rate: 8
       - Type: REFINE_COST_OVER10_HD
-        Rate: 8
+        Rate: 20
       - Type: REFINE_COST_BLESSED
         Rate: 8
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 20
       BlacksmithBlessing:
         ItemID: 6635
-        Count: 11
+        Count: 5
     - Level: 13
       Chances:
       - Type: REFINE_COST_OVER10
         Rate: 8
       - Type: REFINE_COST_OVER10_HD
-        Rate: 8
+        Rate: 16
       - Type: REFINE_COST_BLESSED
         Rate: 8
       - Type: REFINE_COST_EVT_OVER10_HD
@@ -1274,7 +1274,7 @@ WeaponLv4:
       - Type: REFINE_COST_OVER10
         Rate: 8
       - Type: REFINE_COST_OVER10_HD
-        Rate: 8
+        Rate: 16
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 16
     - Level: 15
@@ -1282,7 +1282,7 @@ WeaponLv4:
       - Type: REFINE_COST_OVER10
         Rate: 7
       - Type: REFINE_COST_OVER10_HD
-        Rate: 7
+        Rate: 15
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 15
     - Level: 16
@@ -1290,7 +1290,7 @@ WeaponLv4:
       - Type: REFINE_COST_OVER10
         Rate: 7
       - Type: REFINE_COST_OVER10_HD
-        Rate: 7
+        Rate: 15
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 15
       Bonus: 1200
@@ -1299,7 +1299,7 @@ WeaponLv4:
       - Type: REFINE_COST_OVER10
         Rate: 7
       - Type: REFINE_COST_OVER10_HD
-        Rate: 7
+        Rate: 14
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 14
       Bonus: 1200
@@ -1308,7 +1308,7 @@ WeaponLv4:
       - Type: REFINE_COST_OVER10
         Rate: 7
       - Type: REFINE_COST_OVER10_HD
-        Rate: 7
+        Rate: 14
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 14
       Bonus: 1200
@@ -1317,7 +1317,7 @@ WeaponLv4:
       - Type: REFINE_COST_OVER10
         Rate: 5
       - Type: REFINE_COST_OVER10_HD
-        Rate: 5
+        Rate: 10
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 10
       Bonus: 1200
@@ -1326,7 +1326,7 @@ WeaponLv4:
       - Type: REFINE_COST_OVER10
         Rate: 5
       - Type: REFINE_COST_OVER10_HD
-        Rate: 5
+        Rate: 10
       - Type: REFINE_COST_EVT_OVER10_HD
         Rate: 10
       Bonus: 1200
