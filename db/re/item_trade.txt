@@ -3916,6 +3916,3 @@
 31140,403,100	// C_Cowboy_Hat_
 31141,403,100	// C_Rose_Corsage_
 31143,403,100	// Costume_Krathong_Crown
-31581,393,100	// 100_Cash_Coin
-31582,393,100	// 10_Cash_Coin
-31583,393,100	// 1_Cash_Coin

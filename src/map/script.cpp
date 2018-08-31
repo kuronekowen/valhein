@@ -23932,6 +23932,32 @@ BUILDIN_FUNC(refineui){
 
 	return SCRIPT_CMD_SUCCESS;
 #endif
+
+/*==========================================
+ * identifyall({<type>{,<account_id>}})
+ * <type>:
+ *	true: identify the items and returns the count of unidentified items (default)
+ *	false: returns the count of unidentified items only
+ *------------------------------------------*/
+BUILDIN_FUNC(identifyall) {
+	TBL_PC *sd;
+	bool identify_item = true;
+
+	if (script_hasdata(st, 2))
+		identify_item = script_getnum(st, 2) != 0;
+
+	if( !script_hasdata(st, 3) )
+		script_rid2sd(sd);
+	else
+		sd = map_id2sd( script_getnum(st, 3) );
+
+	if (sd == NULL) {
+		script_pushint(st, -1);
+		return SCRIPT_CMD_SUCCESS;
+	}
+	script_pushint(st, pc_identifyall(sd, identify_item));
+
+	return SCRIPT_CMD_SUCCESS;
 }
 
 #include "../custom/script.inc"
@@ -24593,6 +24619,7 @@ struct script_function buildin_func[] = {
 	BUILDIN_DEF(getequiptradability, "i?"),
 	BUILDIN_DEF(mail, "isss*"),
 	BUILDIN_DEF(open_roulette,"?"),
+	BUILDIN_DEF(identifyall,"??"),
 #include "../custom/script_def.inc"
 
 	{NULL,NULL,NULL},
