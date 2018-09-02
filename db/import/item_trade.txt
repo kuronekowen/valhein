@@ -34,3 +34,4 @@
 31583,393,100	// 1_Cash_Coin
 31584,392,100	// OCA_Pack
 31585,479,100	// Old_Card_Album
+31586,479,100	// Support_Card

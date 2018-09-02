@@ -25,7 +25,7 @@
 0,20831,100  //,Adventurer's Spirit
 0,2349,100  //,Aebecee's Raging Typhoon Armor
 0,15144,100  //,Agriculture Clothes
-0,28921,100  //,Anemos Shield
+0,28921,60  //,Anemos Shield
 0,15249,100  //,Antonio's Coat
 0,28430,100  //,Arch Bishop Ring
 0,28429,100  //,Arquien's Necklace
@@ -36,7 +36,7 @@
 0,5464,100  //,Bacsojin Hat
 0,20860,100  //,Battle Surcoat
 0,18603,100  //,Black Devil mask
-0,5899,100  //,Black Ribbon
+0,5899,60  //,Black Ribbon
 0,28531,100  //,Blacksmith's Gloves
 0,19326,100  //,Book of Soyga
 0,28618,100  //,Book of the Sun God
@@ -46,7 +46,9 @@
 0,18862,100  //,Chiu Armor
 0,2351,100  //,Claytos Cracking Earth Armor
 0,20813,100  //,Cloak of Survival
-0,5933,100  //,Crow Tengu Mask
+0,5933,60  //,Crow Tengu Mask
+0,28901,100 // Curse Mad bunny
+0,28902,100 // Mad bunny
 0,19125,100  //,Cylinder Hairband
 0,22138,100  //,Devil Worshipper Shoes
 0,19329,100  //,Devil's Hand
@@ -61,7 +63,7 @@
 0,22134,100  //,Enforcer Shoes
 0,15106,100  //,Engineer Mail
 0,20797,100  //,Etran Shirt
-0,15145,100  //,Evil dragon Armor
+0,15145,60  //,Evil dragon Armor
 0,28941,100  //,Excelion Shield
 0,5916,100  //,Exorcist Glasses
 0,19081,100  //,Faceworm Egg Shell
@@ -79,7 +81,7 @@
 0,22172,100  //,Gray Wing Boots
 0,19269,100  //,Happy Flapping Angel Wings
 0,28929,100  //,Happy Shield
-0,19306,100  //,heart card
+0,19306,60  //,heart card
 0,18563,100  //,heart wing hairband
 0,20783,100  //,Hero Cape
 0,18676,100  //,Hexagon Spectacles
@@ -105,7 +107,7 @@
 0,19156,100  //,Lunar Rainbow
 0,18720,100  //,Magical Booster
 0,28377,100  //,Magical Ring
-0,19171,100  //,Magician Knit Hat
+0,19171,60  //,Magician Knit Hat
 0,28507,100  //,Magician's Gloves
 0,20845,100  //,Malach's Skin
 0,18933,100  //,Mechanical Plant Hat
@@ -124,7 +126,7 @@
 0,19102,100  //,Pale Moon Hat
 0,28565,250  //,Perverse Demon Mask
 0,20859,100  //,Phreeoni Wings
-0,18908,100  //,Piamette's red ear
+0,18908,60  //,Piamette's red ear
 0,22189,100  //,Pilgrim Shoes
 0,22104,100  //,Pororoca Shoes
 0,20931,100  //,Prism Rangers Scarf 
@@ -138,10 +140,11 @@
 0,19115,100  //,Republic Hat
 0,15166,100  //,Rosary Necklace
 0,2192,100  //,Rose of Eden
-0,28900,100  //,Royal Guard Shield
+0,19246,60	// Royal guard kneclace
+0,28900,60  //,Royal Guard Shield
 0,2347,100  //,Saphien's Armor of Ocean
 0,28410,100  //,Sapphire Wrist
-0,5907,100  //,Sea Captain Hat
+0,5907,60  //,Sea Captain Hat
 0,19138,100  //,Seraphim Coronet
 0,19327,100  //,Seraphim Feather
 0,28379,100  //,Shadow Ring
@@ -154,7 +157,7 @@
 0,20837,100  //,Skin of Gwiber
 0,20836,100  //,Skin of Lindwyrm
 0,2191,100  //,Solomon's Key
-0,18793,100  //,Sorcerer's Night Cap
+0,18793,60  //,Sorcerer's Night Cap
 0,2935,100  //,Sprint Gloves
 0,19114,100  //,Sting Silk Ribbon
 0,28506,100  //,Storm Stone
@@ -165,7 +168,7 @@
 0,22042,100  //,Talaria Shoes
 0,20846,100  //,Temporal Manteau
 0,28594,250  //,Temporal Ring
-0,19112,100  //,Tengu Scroll
+0,19112,60  //,Tengu Scroll
 0,28492,100  //,Thieve's Guide Vol.1
 0,5978,100  //,Toy Syringe
 0,19299,100  //,Tree Sprout
@@ -174,7 +177,7 @@
 0,28564,100  //,Valkyrie Drop
 0,16051,100  //,Valkyrie Hammer
 0,28717,100  //,Valkyrie Knife
-0,18652,100  //,Vanagrand
+0,18652,60  //,Vanagrand
 0,15108,100  //,Venomous Insect Armor
 0,15143,100  //,Vermin Cloth
 0,28575,100  //,Verus Core
@@ -208,6 +211,7 @@
 6,14075,15
 
 // Hot
+1,31583,1
 1,31584,100
 1,12208,2
 1,14156,18

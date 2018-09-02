@@ -23932,6 +23932,7 @@ BUILDIN_FUNC(refineui){
 
 	return SCRIPT_CMD_SUCCESS;
 #endif
+}
 
 /*==========================================
  * identifyall({<type>{,<account_id>}})

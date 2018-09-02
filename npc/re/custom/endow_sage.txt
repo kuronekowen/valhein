@@ -31,6 +31,7 @@ prontera,169,183,4	script	Well Endowed Sage	742,{
 		close2;
 		@End_Ele = .@Choice;
 		sc_start .EndowSC[@End_Ele],.Ticks,0;
+		specialeffect2 .EffectSC[@End_Ele];
 		Zeny = Zeny - .Price;
 		if (.ReqType) delitem .StoneReq[.@Choice],1;
 		end;
@@ -52,6 +53,7 @@ OnInit:
 	npcshopdelitem "conv_shop",909;
 	setarray .Element$[1],"Water","Wind","Fire","Earth";
 	setarray .EndowSC[1],SC_WATERWEAPON,SC_WINDWEAPON,SC_FIREWEAPON,SC_EARTHWEAPON;
+	setarray .EffectSC[1],256,257,255,258;
 	switch (.ReqType) {
 		case 1: setarray .StoneReq[1],991,992,990,993; end;
 		case 2: setarray .StoneReq[1],995,996,994,997; end;

@@ -2183,6 +2183,7 @@ L_Reward:
 	for(.@i = 5113; .@i <= 5125; .@i++) {
 		erasequest .@i;
 	}
+	getitem 31583,100;// 200 cash coin
 	.@r = rand(1, 1000);
 	if      (.@r < 84)  getitem 2582,  1; //Salvage_Cape
 	else if (.@r < 167) getitem 18570, 1; //Ancient_Gold_Deco

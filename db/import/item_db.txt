@@ -119,7 +119,7 @@
 18129,Ixion_Wing_,Ixion Wings,5,20,,300,135,,5,3,0x00000800,18,2,34,4,70,1,11,{ autobonus "{ bonus bAspdRate,7; }",10+(getrefine()*2),7000,BF_WEAPON,"{ specialeffect2 EF_HASTEUP; }"; bonus2 bAddSkillBlow,"AC_CHARGEARROW",3; },{},{}
 18720,Magical_Booster,Magical Booster,4,10,,300,,,,0,0xFFFFFFFF,63,2,512,,30,1,873,{ bonus bMatkRate,3; },{},{}
 18787,Goal_Tender_Mask,Goal Tender Mask,4,20,,200,,5,,0,0xFFFFFFFF,63,2,513,,50,0,336,{ bonus2 bAddRace,RC_DemiHuman,8; bonus2 bAddRace,RC_Player,8; },{},{}
-18791,Shrine_Maiden_Hat_,Shrine Maiden Hat,4,20,,200,,30,,1,0xFFFFFFFF,63,2,256,,,,908,{ bonus2 bVariableCastrate,"PR_MAGNUS",-100; bonus2 bFixedCastrate,"PR_MAGNUS",-100; .@r = getskilllv("AL_HEAL"); .@a = getrefine(); bonus5 bAutoSpellWhenHit,"AL_HEAL",max(1,.@r),50,BF_WEAPON|BF_MAGIC,0; if (.@a>=9) bonus2 bSkillAtk,"PR_MAGNUS",120; },{},{}
+18791,Shrine_Maiden_Hat_,Shrine Maiden Hat,4,20,,200,,30,,1,0xFFFFFFFF,63,2,256,,100,1,908,{ bonus2 bVariableCastrate,"PR_MAGNUS",-100; bonus2 bFixedCastrate,"PR_MAGNUS",-100; .@r = getskilllv("AL_HEAL"); .@a = getrefine(); bonus5 bAutoSpellWhenHit,"AL_HEAL",max(1,.@r),50,BF_WEAPON|BF_MAGIC,0; if (.@a>=9) bonus2 bSkillAtk,"PR_MAGNUS",120; },{},{}
 18793,Sorc_Night_Cap_,Sorcerer's Night Cap,4,20,,200,,25,,1,0x00010000,56,2,256,,100,1,911,{ .@r = getrefine(); .@a = getskilllv("SA_FREECAST"); bonus bMatk,2*(readparam(bINT)/5); bonus bAspd,5; skill "TF_DOUBLE",max(5,.@a); if(.@r>=9) { bonus2 bSkillAtk,"MG_LIGHTNINGBOLT",3*(Baselevel/5); bonus2 bSkillAtk,"MG_FIREBOLT",3*(Baselevel/5); bonus2 bSkillAtk,"MG_COLDBOLT",3*(Baselevel/5); } },{},{}
 18799,Nero_Mask,Nero Mask,4,20,,200,,0,,0,0xFFFFFFFF,63,2,512,,10,0,917,{ bonus2 bMagicAtkEle,Ele_Water,4; },{},{}
 18862,Chiu_Armor,Chiu Armor,4,20,,500,,55,,1,0xFFFFFFFF,63,2,16,,70,1,0,{ bonus bDefEle,Ele_Dark; bonus bMdef,5; },{},{}
@@ -238,6 +238,21 @@
 31583,1_Cash_Coin,1 Cash Coin,11,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{ callfunc "Cash_coins_2"; },{},{}
 31584,OCA_Pack,OCA Pack,18,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 31585,10; },{},{}
 31585,Old_Card_Album,Old Card Album,2,10000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ getrandgroupitem(IG_CardAlbum,1); },{},{}
+31586,Support_Card,Support Card,2,20000,,0,,,,,0xFFFFFFFF,63,2,,,,,,{ callfunc "heal_card"; },{},{}
+31587,Spirit_of_Alchemist,Spirit of Alchemist,2,20000,,10,,,,,0x00040000,63,2,,,,,,{ skilleffect "SL_ALCHEMIST",0; sc_start4 SC_SPIRIT,350000,5,445,0,0; },{},{}
+31588,Spirit_of_Monk,Spirit of Monk,2,20000,,10,,,,,0x00008000,63,2,,,,,,{ skilleffect "SL_MONK",0; sc_start4 SC_SPIRIT,350000,5,447,0,0; },{},{}
+31589,Spirit_of_Star_Gladiator,Spirit of Star Gladiator,2,20000,,10,,,,,0x00400000,63,2,,,,,,{ skilleffect "SL_STAR",0; sc_start4 SC_SPIRIT,350000,5,448,0,0; },{},{}
+31590,Spirit_of_Sage,Spirit of Sage,2,20000,,10,,,,,0x00010000,63,2,,,,,,{ skilleffect "SL_SAGE",0; sc_start4 SC_SPIRIT,350000,5,449,0,0; },{},{}
+31591,Spirit_of_Crusader,Spirit of Crusader,2,20000,,10,,,,,0x00004000,63,2,,,,,,{ skilleffect "SL_CRUSADER",0; sc_start4 SC_SPIRIT,350000,5,450,0,0; },{},{}
+31592,Spirit_of_Super_Novice,Spirit of Super Novice,2,20000,,10,,,,,0x00000001,63,2,,,,,,{ skilleffect "SL_SUPERNOVICE",0; sc_start4 SC_SPIRIT,350000,5,451,0,0; },{},{}
+31593,Spirit_of_Knight,Spirit of Knight,2,20000,,10,,,,,0x00000080,63,2,,,,,,{ skilleffect "SL_KNIGHT",0; sc_start4 SC_SPIRIT,350000,5,452,0,0; },{},{}
+31594,Spirit_of_Wizard,Spirit of Wizard,2,20000,,10,,,,,0x00000200,63,2,,,,,,{ skilleffect "SL_WIZARD",0; sc_start4 SC_SPIRIT,350000,5,453,0,0; },{},{}
+31595,Spirit_of_Priest,Spirit of Priest,2,20000,,10,,,,,0x00000100,63,2,,,,,,{ skilleffect "SL_PRIEST",0; sc_start4 SC_SPIRIT,350000,5,454,0,0; },{},{}
+31596,Spirit_of_Rogue,Spirit of Rogue,2,20000,,10,,,,,0x00020000,63,2,,,,,,{ skilleffect "SL_ROGUE",0; sc_start4 SC_SPIRIT,350000,5,456,0,0; },{},{}
+31597,Spirit_of_Assassin,Spirit of Assassin,2,20000,,10,,,,,0x00001000,63,2,,,,,,{ skilleffect "SL_ASSASIN",0; sc_start4 SC_SPIRIT,350000,5,457,0,0; },{},{}
+31598,Spirit_of_Blacksmith,Spirit of Blacksmith,2,20000,,10,,,,,0x00000400,63,2,,,,,,{ skilleffect "SL_BLACKSMITH",0; sc_start4 SC_SPIRIT,350000,5,458,0,0; },{},{}
+31599,Spirit_of_Hunter,Spirit of Hunter,2,20000,,10,,,,,0x00000800,63,2,,,,,,{ skilleffect "SL_HUNTER",0; sc_start4 SC_SPIRIT,350000,5,460,0,0; },{},{}
+31600,Spirit_of_Soul_Linker,Spirit of Soul Linker,2,20000,,10,,,,,0x00800000,63,2,,,,,,{ skilleffect "SL_SOULLINKER",0; sc_start4 SC_SPIRIT,350000,5,461,0,0; },{},{}
 32013,Metal_Stick,Metal Stick,5,20,,2000,180,,3,3,0x00004082,56,2,2,4,150,1,4,{ .@r = getrefine(); bonus2 bSkillAtk,"LG_CANNONSPEAR",10; if (.@r>=7) bonus2 bSkillAtk,"LG_OVERBRAND",10; if (.@r>=9) bonus2 bSkillAtk,"LG_OVERBRAND",15; if (.@r>=12) bonus bDelayrate,-15; },{},{}
 32203,Accelerator_Chip,Accelerator Chip,4,20,,100,,0,,1,0xFFFFFFFF,63,2,136,,100,0,0,{ bonus bAtkRate,5; bonus bMatkRate,5; },{},{}
 32204,Immortal_Dog_Tag,Immortal Dog Tag,4,20,,100,,0,,1,0xFFFFFFFF,63,2,136,,100,0,0,{ bonus bBaseAtk,50; bonus bMatk,50; bonus2 bSubRace,RC_Undead,4; },{},{}

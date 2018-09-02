@@ -41,7 +41,7 @@ OnStart:
 	case 1:
 		if( .@instance_delay > 0 )
 		{
-			mes "^FF0000Sky fortress^000000 will reopen in the next 3 days";
+			mes "^FF0000Sky fortress^000000 will reopen in the next 1 days";
 			mes "You have to wait : ^FF0000"+.@instance_delay+" Seconds.^000000";
 			close;
 		}

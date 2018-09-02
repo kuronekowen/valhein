@@ -36,3 +36,4 @@ ice_dun03,0,0	monster	Ice Titan	1777,70,5000
 ice_dun03,0,0	monster	Gazeti	1778,42,5000
 ice_dun03,0,0	monster	Iceicle	1789,32,5000
 ice_dun03,0,0	monster	Snowier	1775,15,5000
+ice_dun03,0,0,0,0	boss_monster	Ktullanux	1779,1,7200000
