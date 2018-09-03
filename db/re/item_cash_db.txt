@@ -43,6 +43,7 @@
 0,18666,100  //,CD in mouth
 0,19079,100  //,Celestial Woman's Flower
 0,28513,100  //,Celine's Brooch
+0,18849,100	//,Celine's Ribbon
 0,18862,100  //,Chiu Armor
 0,2351,100  //,Claytos Cracking Earth Armor
 0,20813,100  //,Cloak of Survival
@@ -64,7 +65,10 @@
 0,15106,100  //,Engineer Mail
 0,20797,100  //,Etran Shirt
 0,15145,60  //,Evil dragon Armor
-0,28941,100  //,Excelion Shield
+0,22103,60	// Excelion Leg
+0,15128,60	// Excelion Suit
+0,20773,60	// Excelion Wing
+0,28941,60  //,Excelion Shield
 0,5916,100  //,Exorcist Glasses
 0,19081,100  //,Faceworm Egg Shell
 0,28438,100  //,Fairy Leaf Powder
@@ -75,6 +79,8 @@
 0,15175,100  //,Flame Dragon Armor
 0,5937,100  //,Flying Helmet
 0,5918,150  //,gambler seal
+0,28916,100  //,Gaia Shield
+0,1449,100  //,Gelerdia
 0,28521,100  //,Giant's Protection
 0,18787,100  //,Goal Tender Mask
 0,5475,100  //,Gozarian hat
@@ -188,7 +194,7 @@
 0,20814,100  //,Wakwak Manteau
 0,20728,100  //,Water Dragon Coat
 0,5945,100  //,Well-Chewed Pencil
-0,2196,100  //,White gold shield
+0,2196,50  //,White gold shield
 0,18856,60  //,White king tiger
 0,18656,100  //,Witch Pumpkin
 
@@ -239,26 +245,26 @@
 7,6635,1
 
 //Equipment
-4,5388,50
-4,5286,50
-4,5592,50
-4,5470,50
-4,5389,50
-4,5403,30
-4,5254,50
-4,5564,50
-4,5367,30
-4,5325,40
+4,5388,20
+4,5286,20
+4,5592,20
+4,5470,20
+4,5389,20
+4,5403,20
+4,5254,20
+4,5564,20
+4,5367,20
+4,5325,20
 4,2202,100
 4,2204,100
-4,5305,50
-4,5137,60
-4,5359,50
-4,5211,50
-4,5539,50
-4,5503,50
-4,5468,50
-4,5361,50
+4,5305,20
+4,5137,40
+4,5359,20
+4,5211,20
+4,5539,20
+4,5503,20
+4,5468,20
+4,5361,20
 
 
 //Costume
