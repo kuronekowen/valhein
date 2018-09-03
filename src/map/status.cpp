@@ -1177,6 +1177,8 @@ void initChangeTables(void)
 	StatusIconChangeTable[SC_LHZ_DUN_N4] = EFST_LHZ_DUN_N4;
 
 
+	StatusIconChangeTable[SC_ANCILLA] = EFST_ANCILLA;
+
 	/* Other SC which are not necessarily associated to skills */
 	StatusChangeFlagTable[SC_ASPDPOTION0] |= SCB_ASPD;
 	StatusChangeFlagTable[SC_ASPDPOTION1] |= SCB_ASPD;
