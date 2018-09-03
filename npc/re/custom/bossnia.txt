@@ -17,7 +17,7 @@
 
 // Entrance NPCs
 //============================================================
-prontera,132,125,4	script	Bossnia Staff#1	908,{
+prontera,167,198,4	script	Bossnia Staff#1	10194,{
 	mes "[Riss]";
 	mes "Hello?";
 	mes "I found some beautiful places";
@@ -101,9 +101,9 @@ prontera,132,125,4	script	Bossnia Staff#1	908,{
 		warp "bossnia_0"+.@i,.@x,.@y;
 		close;
 	} else {
-		mes "a grudge against me. Also it costs 25 Cash Coin.";
+		mes "a grudge against me. Also it costs 20 Cash Coin.";
 		next;
-		if (countitem(31583) < 25) {
+		if (countitem(31583) > 24) {
 			mes "[Riss]";
 			mes "Would you really like to take the challenge?";
 			mes "Ok, just choose the course.";
@@ -113,29 +113,22 @@ prontera,132,125,4	script	Bossnia Staff#1	908,{
 			mes "Take care, boy~";
 			mes "Don't hold a grudge against me.";
 			close2;
-			delitem 31583,25;
+			delitem 31583,20;
 			warp "bossnia_0"+.@i,rand(202,204),rand(202,204);
 			end;
 		} else {
 			mes "[Riss]";
 			mes "You don't have enough Cash...";
-			mes "Come back when you have at least 25 Cash Coin.";
+			mes "Come back when you have at least 20 Cash Coin.";
 			close;
 		}
 	}
 }
-geffen,124,169,4	duplicate(Bossnia Staff#1)	Bossnia Staff#2	908
-payon,165,150,4	duplicate(Bossnia Staff#1)	Bossnia Staff#3	908
-morocc,142,100,4	duplicate(Bossnia Staff#1)	Bossnia Staff#4	908
-lighthalzen,203,140,4	duplicate(Bossnia Staff#1)	Bossnia Staff#5	908
-rachel,132,144,4	duplicate(Bossnia Staff#1)	Bossnia Staff#6	908
-
-// Warp Portals
-//============================================================
-bossnia_01,204,204,0	warp	bossnia01	1,1,prontera,155,180
-bossnia_02,204,204,0	warp	bossnia02	1,1,prontera,155,180
-bossnia_03,204,204,0	warp	bossnia03	1,1,prontera,155,180
-bossnia_04,204,204,0	warp	bossnia04	1,1,prontera,155,180
+geffen,124,169,4	duplicate(Bossnia Staff#1)	Bossnia Staff#2	10194
+payon,165,150,4	duplicate(Bossnia Staff#1)	Bossnia Staff#3	10194
+morocc,142,100,4	duplicate(Bossnia Staff#1)	Bossnia Staff#4	10194
+lighthalzen,203,140,4	duplicate(Bossnia Staff#1)	Bossnia Staff#5	10194
+rachel,132,144,4	duplicate(Bossnia Staff#1)	Bossnia Staff#6	10194
 
 // Monster Spawns
 //============================================================
