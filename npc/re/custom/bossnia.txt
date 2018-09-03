@@ -127,9 +127,9 @@ bossnia_02,0,0	boss_monster	Detale	1719,2,300000
 bossnia_02,0,0	boss_monster	Ktullanux	1779,2,300000
 bossnia_02,0,0	boss_monster	Hardrock Mammoth	1990,2,300000
 bossnia_02,0,0	boss_monster	Valkyrie Randgris	1751,1,300000
-bossnia_01,0,0	boss_monster	Dark Guardian Kades	2255,1,300000
-bossnia_01,0,0	monster	Arc Angeling	1388,3,300000
-bossnia_01,0,0	monster	Samurai Soheon	2254,2,300000
+bossnia_02,0,0	boss_monster	Dark Guardian Kades	2255,1,300000
+bossnia_02,0,0	monster	Arc Angeling	1388,3,300000
+bossnia_02,0,0	monster	Samurai Soheon	2254,2,300000
 
 //----------------------------------------------------------------------------
 // bossnia_03 - Bossnia
@@ -147,8 +147,8 @@ bossnia_03,0,0	boss_monster	Falling Bishop	1871,2,300000
 bossnia_03,0,0	boss_monster	Kiel D-01	1734,2,300000
 bossnia_03,0,0	boss_monster	Nidhoggur's Shadow	2022,1,300000
 bossnia_03,0,0	boss_monster	Gioia	2251,1,300000
-bossnia_01,0,0	monster	Deviling	1582,3,300000
-bossnia_01,0,0	monster	Rudo	2256,2,300000
+bossnia_03,0,0	monster	Deviling	1582,3,300000
+bossnia_03,0,0	monster	Rudo	2256,2,300000
 
 //----------------------------------------------------------------------------
 // bossnia_04 - Bossnia
@@ -165,6 +165,6 @@ bossnia_04,0,0	boss_monster	Egnigem Cenia	1658,2,300000
 bossnia_04,0,0	boss_monster	Thanatos Phantom	1708,2,300000
 bossnia_04,0,0	boss_monster	Spider Chariot	3741,2,300000
 bossnia_04,0,0	boss_monster	Ifrit	1832,1,300000
-bossnia_03,0,0	boss_monster	General Daehyun	2253,1,300000
-bossnia_01,0,0	monster	Ghostring	1120,3,300000
-bossnia_01,0,0	monster	Elvira	2252,2,300000
+bossnia_04,0,0	boss_monster	General Daehyun	2253,1,300000
+bossnia_04,0,0	monster	Ghostring	1120,3,300000
+bossnia_04,0,0	monster	Elvira	2252,2,300000
