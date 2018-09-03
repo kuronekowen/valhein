@@ -95,6 +95,12 @@ izlude_b	mapflag	nobranch
 izlude_c	mapflag	nobranch
 izlude_d	mapflag	nobranch
 
+// Bossnia
+bossnia_01	mapflag	nobranch
+bossnia_02	mapflag	nobranch
+bossnia_03	mapflag	nobranch
+bossnia_04	mapflag	nobranch
+
 // Glast Heim Memorial Dungeon ===
 1@gl_k	mapflag	nobranch
 2@gl_k	mapflag	nobranch

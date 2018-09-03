@@ -41,3 +41,9 @@ que_swat	mapflag	nowarp
 // Rockridge
 un_myst	mapflag	nowarp
 rockmi2	mapflag	nowarp
+
+// Bossnia
+bossnia_01	mapflag	nowarp
+bossnia_02	mapflag	nowarp
+bossnia_03	mapflag	nowarp
+bossnia_04	mapflag	nowarp

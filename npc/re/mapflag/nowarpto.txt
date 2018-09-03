@@ -118,6 +118,12 @@ te_aldecas5	mapflag	nowarpto
 // Rebellion Job Change Map
 job_gun	mapflag	nowarpto
 
+// Bossnia
+bossnia_01	mapflag	nowarpto
+bossnia_02	mapflag	nowarpto
+bossnia_03	mapflag	nowarpto
+bossnia_04	mapflag	nowarpto
+
 // Ep 16
 prt_cas	mapflag	nowarpto
 prt_cas_q	mapflag	nowarpto
