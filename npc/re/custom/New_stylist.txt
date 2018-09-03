@@ -22,6 +22,7 @@ prontera,171,185,4	script	New Stylist	878,{
 		set jpdress,0;
 		end;
 		L_2:
+		setlook LOOK_CLOTHES_COLOR,1;
 		atcommand "@bodystyle 1";
 		set jpdress,1;
 		end;
