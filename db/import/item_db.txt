@@ -237,7 +237,7 @@
 31582,10_Cash_Coin,10 Cash Coin,11,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{ callfunc "Cash_coins_1"; },{},{}
 31583,1_Cash_Coin,1 Cash Coin,11,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{ callfunc "Cash_coins_2"; },{},{}
 31584,OCA_Pack,OCA Pack,18,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 31585,10; },{},{}
-31585,Old_Card_Album,Old Card Album,2,10000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ getrandgroupitem(IG_CardAlbum,1); },{},{}
+31585,Old_Card_Album2,Old Card Album,2,10000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ getrandgroupitem(IG_CardAlbum,1); },{},{}
 31586,Support_Card,Support Card,2,20000,,0,,,,,0xFFFFFFFF,63,2,,,,,,{ callfunc "heal_card"; },{},{}
 31587,Spirit_of_Alchemist,Spirit of Alchemist,2,20000,,10,,,,,0x00040000,63,2,,,,,,{ skilleffect "SL_ALCHEMIST",0; sc_start4 SC_SPIRIT,350000,5,445,0,0; },{},{}
 31588,Spirit_of_Monk,Spirit of Monk,2,20000,,10,,,,,0x00008000,63,2,,,,,,{ skilleffect "SL_MONK",0; sc_start4 SC_SPIRIT,350000,5,447,0,0; },{},{}
