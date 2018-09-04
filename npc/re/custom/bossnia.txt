@@ -61,7 +61,7 @@ prontera,167,198,4	script	Bossnia Staff#1	10194,{
 	} else {
 		mes "ท่านต้องการเข้าสู่ดันเจี้ยน Bossnia หรือไม่?";
 		next;
-		if (countitem(31583) > 24) {
+		if (countitem(31583) > 19) {
 			mes "[Bossnia Staff]";
 			mes "ดูเหมือนท่านจะอยากเข้าไปลองผจญภัยในนั้น?";
 			mes "โอเค งั้นเลือกเลยว่าอยากจะเข้าพื้นที่ไหน";
