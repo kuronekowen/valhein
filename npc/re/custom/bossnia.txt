@@ -20,7 +20,7 @@
 prontera,167,198,4	script	Bossnia Staff#1	10194,{
 	mes "[Bossnia Staff]";
 	mes "สวัสดีนักเดินทาง ข้าเป็นผู้เปิดประตูสู่แดนนรก Bossnia";
-	mes "ข้าจะพาท่านไปก็ได้ แต่ต้องมีค่าผ่านทาง 20 Cash Coin";
+	mes "ข้าจะพาท่านไปก็ได้ แต่ต้องมีค่าผ่านทาง 10 Cash Coin";
 
 	// If the VIP system is enabled, players pay a Reset Stone for 5 entrances (with a choice of warps).
 	// If it's disabled, players pay 5,000z per entrance.
@@ -61,7 +61,7 @@ prontera,167,198,4	script	Bossnia Staff#1	10194,{
 	} else {
 		mes "ท่านต้องการเข้าสู่ดันเจี้ยน Bossnia หรือไม่?";
 		next;
-		if (countitem(31583) > 19) {
+		if (countitem(31583) > 9) {
 			mes "[Bossnia Staff]";
 			mes "ดูเหมือนท่านจะอยากเข้าไปลองผจญภัยในนั้น?";
 			mes "โอเค งั้นเลือกเลยว่าอยากจะเข้าพื้นที่ไหน";
@@ -71,13 +71,13 @@ prontera,167,198,4	script	Bossnia Staff#1	10194,{
 			mes "เยี่ยม เตรียมตัวให้พร้อม~";
 			mes "หากตายขึ้นมา อย่ามาแค้นข้าซะล่ะ ฮ่าๆ!!";
 			close2;
-			delitem 31583,20;
+			delitem 31583,10;
 			warp "bossnia_0"+.@i,0,0;
 			end;
 		} else {
 			mes "[Bossnia Staff]";
 			mes "ท่านมี Cash Coin ไม่พอนี่...";
-			mes "ค่อยกลับมาอีกครั้งเมื่อท่านมี Cash Coin 20 ชิ้นแล้วกัน";
+			mes "ค่อยกลับมาอีกครั้งเมื่อท่านมี Cash Coin 10 ชิ้นแล้วกัน";
 			close;
 		}
 	}
