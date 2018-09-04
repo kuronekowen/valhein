@@ -12579,7 +12579,7 @@
 31388,Costume_Garden_of_Eden,Costume Garden of Eden,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,1653,{},{},{}
 31389,C_White_Bird_Rose,C White Bird Rose,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,1688,{},{},{}
 31390,C_Let_It_Snow,C Let It Snow,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,1690,{},{},{}
-31391,C_Floating_Stone_of_Sage,C Floating Stone of Sage,4,0,,0,,0,,0,0xFFFFFFFF,63,2,2048,,1,0,1230,{},{},{}
+31391,C_Floating_Stone_of_Sage,C Floating Stone of Sage,4,0,,0,,0,,0,0xFFFFFFFF,63,2,2048,,1,0,1230,{},{ sc_start SC_FSTONE,-1,0; },{ sc_end SC_FSTONE; }
 31392,C_Radio_Antenna,C Radio Antenna,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,347,{},{},{}
 31393,C_Vajra,C Vajra,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,983,{},{},{}
 31394,C_Magician_White_Hat,C Magician White Hat,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,283,{},{},{}
