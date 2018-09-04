@@ -19,7 +19,7 @@
 //= 1.6 Cleaned up the dialogue. [Aleos]
 //============================================================
 
-glast_01,200,351,5	script	Hugin#2	4_M_SAGE_C,{
+glast_01,200,351,5	script	Hugin#_H2	4_M_SAGE_C,{
 	if (BaseLevel < 160) {
 		mes "[Hugin]";
 		mes "Why don't you come back after becoming stronger?";
@@ -73,11 +73,11 @@ glast_01,200,351,5	script	Hugin#2	4_M_SAGE_C,{
 	else {
 		mes "[Hugin]";
 		mes "Umm? Did you see me at another place? I don't think so. What about this time?";
-		if (isbegin_quest(12335) == 1)
-			erasequest 12335;
+		if (isbegin_quest(12322) == 1)
+			erasequest 12322;
 	}
 	next;
-	switch( checkquest(12334,PLAYTIME) ) {
+	switch( checkquest(12317,PLAYTIME) ) {
 	case -1:
 		.@party_id = getcharid(1);
 		.@p_name$ = getpartyname(.@party_id);
@@ -155,25 +155,25 @@ glast_01,200,351,5	script	Hugin#2	4_M_SAGE_C,{
 }
 
 // Warps
-1@gl_k2,96,80,0	warp	#2Control_	2,2,1@gl_k2,80,80
-1@gl_k2,90,80,0	warp	#2Control2_	2,2,1@gl_k2,105,80
-1@gl_k2,202,79,0	warp	#3Control_	2,2,1@gl_k2,215,79
-1@gl_k2,206,79,0	warp	#3Control2_	2,2,1@gl_k2,195,79
-1@gl_k2,227,216,0	warp	#4Control_	2,2,1@gl_k2,215,216
-1@gl_k2,222,216,0	warp	#4Control2_	2,2,1@gl_k2,233,216
-1@gl_k2,150,284,0	warp	#2F Entrance_	2,2,2@gl_k2,150,46
-2@gl_k2,149,32,0	warp	#1 Control_	2,2,1@gl_k2,150,270
-2@gl_k2,145,123,0	warp	#22 Control_	2,2,2@gl_k2,126,123
-2@gl_k2,136,122,0	warp	#22 Control2_	2,2,2@gl_k2,150,116
-2@gl_k2,154,101,0	warp	#23 Control_	2,2,2@gl_k2,174,101
-2@gl_k2,165,101,0	warp	#23 Control2_	2,2,2@gl_k2,150,111
-2@gl_k2,150,163,0	warp	#24 Control_	2,2,2@gl_k2,150,179
-2@gl_k2,150,167,0	warp	#24 Control2_	2,2,2@gl_k2,150,149
-1@gl_k2,69,168,0	warp	#Secret Room Exit_	2,2,1@gl_k2,48,168
+1@gl_k2,96,80,0	warp	#2Con_trol	2,2,1@gl_k2,80,80
+1@gl_k2,90,80,0	warp	#2Con_trol2	2,2,1@gl_k2,105,80
+1@gl_k2,202,79,0	warp	#3Con_trol	2,2,1@gl_k2,215,79
+1@gl_k2,206,79,0	warp	#3Con_trol2	2,2,1@gl_k2,195,79
+1@gl_k2,227,216,0	warp	#4Con_trol	2,2,1@gl_k2,215,216
+1@gl_k2,222,216,0	warp	#4Con_trol2	2,2,1@gl_k2,233,216
+1@gl_k2,150,284,0	warp	#2F_Entrance	2,2,2@gl_k2,150,46
+2@gl_k2,149,32,0	warp	#1 Con_trol	2,2,1@gl_k2,150,270
+2@gl_k2,145,123,0	warp	#22 Con_trol	2,2,2@gl_k2,126,123
+2@gl_k2,136,122,0	warp	#22 Con_trol2	2,2,2@gl_k2,150,116
+2@gl_k2,154,101,0	warp	#23 Con_trol	2,2,2@gl_k2,174,101
+2@gl_k2,165,101,0	warp	#23 Con_trol2	2,2,2@gl_k2,150,111
+2@gl_k2,150,163,0	warp	#24 Con_trol	2,2,2@gl_k2,150,179
+2@gl_k2,150,167,0	warp	#24 Con_trol2	2,2,2@gl_k2,150,149
+1@gl_k2,69,168,0	warp	#_Secret Room Exit2	2,2,1@gl_k2,48,168
 
 // Floor 1
 //============================================================
-1@gl_k2,149,41,5	script	Varmundt#50	4_M_BARMUND,{
+1@gl_k2,149,41,5	script	Varmundt#_0	4_M_BARMUND,{
 	if (getcharid(0) != getpartyleader(getcharid(1),2)) {
 		mes "[Varmundt]";
 		mes "Where's your leader? I need his help.";
@@ -221,97 +221,97 @@ glast_01,200,351,5	script	Hugin#2	4_M_SAGE_C,{
 	npctalk "Varmundt: Hurry! Report to Sir. Heinrich about Himelmez. I must check the defense barrier here!";
 	close2;
 	cutin "",255;
-	disablenpc instance_npcname("Varmundt#50");
-	enablenpc instance_npcname("Heinrich#50");
-	enablenpc instance_npcname("Varmundt#51");
+	disablenpc instance_npcname("Varmundt#_0");
+	enablenpc instance_npcname("Heinrich#_1");
+	enablenpc instance_npcname("Varmundt#_1");
 	end;
 }
 
-1@gl_k2,145,104,6	script	Khalitzburg Knightage.#1	4_F_KHALITZBURG,{
+1@gl_k2,145,104,6	script	Khalitzburg Knightage#_1	4_F_KHALITZBURG,{
 	mes "[Khalitzburg Knightage]";
 	mes "My work shift will be over soon, but the next crew is not coming.";
 	close;
 }
 
-1@gl_k2,154,104,3	script	Khalitzburg Knightage.#2	4_F_KHALITZBURG,{
+1@gl_k2,154,104,3	script	Khalitzburg Knightage#_2	4_F_KHALITZBURG,{
 	mes "[Khalitzburg Knightage]";
 	mes "Something you want to tell me?";
 	close;
 }
 
-1@gl_k2,145,99,6	script	White Knight.#3	4_WHITEKNIGHT,{
+1@gl_k2,145,99,6	script	White Knight#_3	4_WHITEKNIGHT,{
 	mes "[White Knight]";
 	mes "Are you with Varmundt? Commander is waiting for you.";
 	close;
 }
 
-1@gl_k2,154,99,3	duplicate(Khalitzburg Knightage.#1)	White Knight.#4	4_WHITEKNIGHT
+1@gl_k2,154,99,3	duplicate(Khalitzburg Knightage#_1)	White Knight#_4	4_WHITEKNIGHT
 
-1@gl_k2,145,94,6	script	Khalitzburg Knightage.#5	4_F_KHALITZBURG,{
+1@gl_k2,145,94,6	script	Khalitzburg Knightage#_5	4_F_KHALITZBURG,{
 	mes "[Khalitzburg Knightage]";
 	mes "I had a weird dream last night. My mom was in it... Wonder if she is ok...";
 	close;
 }
 
-1@gl_k2,154,94,3	duplicate(White Knight.#3)	Khalitzburg Knightage.#6	4_F_KHALITZBURG
+1@gl_k2,154,94,3	duplicate(White Knight#_3)	Khalitzburg Knightage#_6	4_F_KHALITZBURG
 
-1@gl_k2,145,89,6	script	White Knight.#7	4_WHITEKNIGHT,{
+1@gl_k2,145,89,6	script	White Knight#_7	4_WHITEKNIGHT,{
 	mes "[White Knight]";
 	mes "Please do not make a mess here.";
 	close;
 }
-1@gl_k2,154,89,3	duplicate(White Knight.#7)	White Knight.#8	4_WHITEKNIGHT
+1@gl_k2,154,89,3	duplicate(White Knight#_7)	White Knight#_8	4_WHITEKNIGHT
 
-1@gl_k2,145,84,6	script	Khalitzburg Knightage.#9	4_F_KHALITZBURG,{
+1@gl_k2,145,84,6	script	Khalitzburg Knightage#_9	4_F_KHALITZBURG,{
 	mes "[Khalitzburg Knightage]";
 	mes "Orders please.";
 	close;
 }
-1@gl_k2,154,84,3	duplicate(Khalitzburg Knightage.#9)	Khalitzburg Knightage.#10	4_F_KHALITZBURG
+1@gl_k2,154,84,3	duplicate(Khalitzburg Knightage#_9)	Khalitzburg Knightage#_10	4_F_KHALITZBURG
 
-1@gl_k2,145,79,6	script	White Knight.#11	4_WHITEKNIGHT,{
+1@gl_k2,145,79,6	script	White Knight#_11	4_WHITEKNIGHT,{
 	mes "[White Knight]";
 	mes "How do you know Varmundt? I heard that he's not really a friendly man...";
 	close;
 }
-1@gl_k2,154,79,3	duplicate(White Knight.#11)	White Knight.#12	4_WHITEKNIGHT
+1@gl_k2,154,79,3	duplicate(White Knight#_11)	White Knight#_12	4_WHITEKNIGHT
 
-1@gl_k2,145,74,6	script	Khalitzburg Knightage.#13	4_F_KHALITZBURG,{
+1@gl_k2,145,74,6	script	Khalitzburg Knightage#_13	4_F_KHALITZBURG,{
 	mes "[Khalitzburg Knightage]";
 	mes "Doesn't this castle seem weird all of a sudden? Something's not quite right.";
 	close;
 }
-1@gl_k2,154,74,3	duplicate(Khalitzburg Knightage.#13)	Khalitzburg Knightage.#14	4_F_KHALITZBURG
+1@gl_k2,154,74,3	duplicate(Khalitzburg Knightage#_13)	Khalitzburg Knightage#_14	4_F_KHALITZBURG
 
-1@gl_k2,145,69,6	script	White Knight.#15	4_WHITEKNIGHT,{
+1@gl_k2,145,69,6	script	White Knight#_15	4_WHITEKNIGHT,{
 	mes "[White Knight]";
 	mes "I do not like to chat during work.";
 	close;
 }
-1@gl_k2,154,69,3	duplicate(White Knight.#15)	White Knight.#16	4_WHITEKNIGHT
+1@gl_k2,154,69,3	duplicate(White Knight#_15)	White Knight#_16	4_WHITEKNIGHT
 
-1@gl_k2,145,64,6	script	Khalitzburg Knightage.#17	4_F_KHALITZBURG,{
+1@gl_k2,145,64,6	script	Khalitzburg Knightage#_17	4_F_KHALITZBURG,{
 	mes "[Khalitzburg Knightage]";
 	mes "...";
 	close;
 }
-1@gl_k2,154,64,3	duplicate(Khalitzburg Knightage.#17)	Khalitzburg Knightage.#18	4_F_KHALITZBURG
+1@gl_k2,154,64,3	duplicate(Khalitzburg Knightage#_17)	Khalitzburg Knightage#_18	4_F_KHALITZBURG
 
-1@gl_k2,145,59,6	script	White Knight.#19	4_WHITEKNIGHT,{
+1@gl_k2,145,59,6	script	White Knight#_19	4_WHITEKNIGHT,{
 	mes "[White Knight]";
 	mes "What can I do for you?";
 	close;
 }
-1@gl_k2,154,59,3	duplicate(White Knight.#19)	White Knight.#20	4_WHITEKNIGHT
+1@gl_k2,154,59,3	duplicate(White Knight#_19)	White Knight#_20	4_WHITEKNIGHT
 
-1@gl_k2,145,54,6	script	Khalitzburg Knightage.#21	4_F_KHALITZBURG,{
+1@gl_k2,145,54,6	script	Khalitzburg Knightage#_21	4_F_KHALITZBURG,{
 	mes "[Khalitzburg Knightage]";
 	mes "Is there something you need?";
 	close;
 }
-1@gl_k2,154,54,3	duplicate(Khalitzburg Knightage.#21)	Khalitzburg Knightage.#22	4_F_KHALITZBURG
+1@gl_k2,154,54,3	duplicate(Khalitzburg Knightage#_21)	Khalitzburg Knightage#_22	4_F_KHALITZBURG
 
-1@gl_k2,149,100,6	script	Heinrich#50	4_M_HEINRICH,{
+1@gl_k2,149,100,6	script	Heinrich#_1	4_M_HEINRICH,{
 	if (getcharid(0) != getpartyleader(getcharid(1),2)) {
 		mes "[Heinrich]";
 		mes "Where is your leader? I must talk to him.";
@@ -346,12 +346,12 @@ glast_01,200,351,5	script	Hugin#2	4_M_SAGE_C,{
 	next;
 	mes "[Varmundt]";
 	mes "I'm not kidding, Sir Heinrich. If I'm correct, then she will be here very soon.";
-	npctalk "Varmundt: I'm not kidding, Sir Heinrich. If I'm correct, then she will be here very soon.", instance_npcname("Varmundt#51");
+	npctalk "Varmundt: I'm not kidding, Sir Heinrich. If I'm correct, then she will be here very soon.", instance_npcname("Varmundt#_1");
 	cutin "gl_barmund2",2;
 	next;
 	mes "[Varmundt]";
 	mes "We must hide the heart piece in a safe place before Himelmez's attack starts!";
-	npctalk "Varmundt: We must hide the heart piece in a safe place before Himelmez's attack starts!", instance_npcname("Varmundt#51");
+	npctalk "Varmundt: We must hide the heart piece in a safe place before Himelmez's attack starts!", instance_npcname("Varmundt#_1");
 	next;
 	select("Even if you don't believe me...");
 	mes "[" + .@player_name$ + "]";
@@ -368,30 +368,30 @@ glast_01,200,351,5	script	Hugin#2	4_M_SAGE_C,{
 	mes "We cannot risk moving the heart just because some stranger says so.";
 	npctalk "Heinrich: We cannot risk moving the heart just because some stranger says so.";
 	close2;
-	disablenpc instance_npcname("Heinrich#50");
-	enablenpc instance_npcname("Heinrich#52");
-	enablenpc instance_npcname("Himelmez#51");
-	donpcevent instance_npcname("#talkinstance1_") + "::OnEnable";
+	disablenpc instance_npcname("Heinrich#_1");
+	enablenpc instance_npcname("Heinrich#_2");
+	enablenpc instance_npcname("Himelmez#_1");
+	donpcevent instance_npcname("#_talkinstance1") + "::OnEnable";
 	cutin "",255;
 	end;
 }
 
-1@gl_k2,152,97,3	script	Varmundt#51	4_M_BARMUND,{ end; }
-1@gl_k2,149,97,5	duplicate(Varmundt#51)	Heinrich#52	4_M_HEINRICH
-1@gl_k2,149,100,5	duplicate(Varmundt#51)	Heinrich#53	4_M_HEINRICH
-1@gl_k2,149,89,1	duplicate(Varmundt#51)	Himelmez#51	4_F_HIMEL
+1@gl_k2,152,97,3	script	Varmundt#_1	4_M_BARMUND,{ end; }
+1@gl_k2,149,97,5	duplicate(Varmundt#_1)	Heinrich#_2	4_M_HEINRICH
+1@gl_k2,149,100,5	duplicate(Varmundt#_1)	Heinrich#_3	4_M_HEINRICH
+1@gl_k2,149,89,1	duplicate(Varmundt#_1)	Himelmez#_1	4_F_HIMEL
 
-// Control Timer
+// Con_trol Timer
 //============================================================
-1@gl_k2,1,1,0	script	#talkinstance1_	HIDDEN_WARP_NPC,{
+1@gl_k2,1,1,0	script	#_talkinstance1	HIDDEN_WARP_NPC,{
 	end;
 OnEnable:
 	mapannounce 'map_name$[0], "????'s: Muahahahaha~!", bc_map,0xFFFF00,FW_NORMAL,18;
 	initnpctimer;
-	'npc_himelmez1$ = instance_npcname("Himelmez#51");
-	'npc_varmundt1$ = instance_npcname("Varmundt#51");
-	'npc_heinrich2$ = instance_npcname("Heinrich#52");
-	'npc_heinrich3$ = instance_npcname("Heinrich#53");
+	'npc_himelmez1$ = instance_npcname("Himelmez#_1");
+	'npc_varmundt1$ = instance_npcname("Varmundt#_1");
+	'npc_heinrich2$ = instance_npcname("Heinrich#_2");
+	'npc_heinrich3$ = instance_npcname("Heinrich#_3");
 	end;
 OnTimer1500:
 	npctalk "Heinrich: Who are you?", 'npc_heinrich2$;
@@ -444,16 +444,16 @@ OnTimer90500:
 	end;
 OnTimer92000:
 	for (.@i = 1; .@i <= 20; .@i += 4) {
-		hideonnpc instance_npcname("Khalitzburg Knightage.#" + .@i);
-		hideonnpc instance_npcname("Khalitzburg Knightage.#" + (.@i+1));
-		hideonnpc instance_npcname("White Knight.#" + (.@i+2));
-		hideonnpc instance_npcname("White Knight.#" + (.@i+3));
+		hideonnpc instance_npcname("Khalitzburg Knightage#_" + .@i);
+		hideonnpc instance_npcname("Khalitzburg Knightage#_" + (.@i+1));
+		hideonnpc instance_npcname("White Knight#_" + (.@i+2));
+		hideonnpc instance_npcname("White Knight#_" + (.@i+3));
 	}
-	hideonnpc instance_npcname("Khalitzburg Knightage.#21");
-	hideonnpc instance_npcname("Khalitzburg Knightage.#22");
+	hideonnpc instance_npcname("Khalitzburg Knightage#_21");
+	hideonnpc instance_npcname("Khalitzburg Knightage#_22");
 
-	.@label$ = instance_npcname("#talkinstance1_") + "::OnMyMobDead";
-	monster 'map_name$[0],145,59,"[H] Abysmal Knight",3145,1,.@label$;// MG_KNIGHT_OF_ABYSS
+	.@label$ = instance_npcname("#_talkinstance1") + "::OnMyMobDead";
+monster 'map_name$[0],145,59,"[H] Abysmal Knight",3145,1,.@label$;// MG_KNIGHT_OF_ABYSS
 	monster 'map_name$[0],154,59,"[H] Abysmal Knight",3145,1,.@label$;
 	monster 'map_name$[0],145,69,"[H] Abysmal Knight",3145,1,.@label$;
 	monster 'map_name$[0],154,69,"[H] Abysmal Knight",3145,1,.@label$;
@@ -508,63 +508,63 @@ OnTimer109000:
 	mapannounce 'map_name$[0], "Sir Heinrich: Go back to the darkness!", bc_map,0xFFFF33,FW_NORMAL,15;
 	end;
 OnTimer109500:
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage.#1");
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage.#2");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage.#1");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage.#2");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage#_1");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage#_2");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage#_1");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage#_2");
 	end;
 OnTimer110000:
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("White Knight.#3");
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("White Knight.#4");
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage.#5");
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage.#6");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("White Knight.#3");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("White Knight.#4");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage.#5");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage.#6");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("White Knight#_3");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("White Knight#_4");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage#_5");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage#_6");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("White Knight#_3");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("White Knight#_4");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage#_5");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage#_6");
 	end;
 OnTimer110500:
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("White Knight.#7");
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("White Knight.#8");
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage.#9");
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage.#10");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("White Knight.#7");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("White Knight.#8");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage.#9");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage.#10");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("White Knight#_7");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("White Knight#_8");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage#_9");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage#_10");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("White Knight#_7");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("White Knight#_8");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage#_9");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage#_10");
 	end;
 OnTimer111000:
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("White Knight.#11");
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("White Knight.#12");
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage.#13");
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage.#14");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("White Knight.#11");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("White Knight.#12");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage.#13");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage.#14");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("White Knight#_11");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("White Knight#_12");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage#_13");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage#_14");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("White Knight#_11");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("White Knight#_12");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage#_13");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage#_14");
 	end;
 OnTimer111500:
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("White Knight.#15");
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("White Knight.#16");
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage.#17");
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage.#18");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("White Knight.#15");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("White Knight.#16");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage.#17");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage.#18");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("White Knight#_15");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("White Knight#_16");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage#_17");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage#_18");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("White Knight#_15");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("White Knight#_16");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage#_17");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage#_18");
 	end;
 OnTimer112000:
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("White Knight.#19");
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("White Knight.#20");
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage.#21");
-	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage.#22");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("White Knight.#19");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("White Knight.#20");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage.#21");
-	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage.#22");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("White Knight#_19");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("White Knight#_20");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage#_21");
+	specialeffect EF_GRANDCROSS,AREA, instance_npcname("Khalitzburg Knightage#_22");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("White Knight#_19");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("White Knight#_20");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage#_21");
+	specialeffect EF_LEXAETERNA,AREA, instance_npcname("Khalitzburg Knightage#_22");
 	disablenpc 'npc_heinrich2$;
 	enablenpc 'npc_heinrich3$;
-	killmonster 'map_name$[0], instance_npcname("#talkinstance1_") + "::OnMyMobDead";
+	killmonster 'map_name$[0], instance_npcname("#_talkinstance1") + "::OnMyMobDead";
 	end;
 OnTimer112500:
 	npctalk "Heinrich: I killed my own men...", 'npc_heinrich3$;
@@ -601,10 +601,10 @@ OnTimer147500:
 	end;
 OnTimer148500:
 	stopnpctimer;
-	donpcevent instance_npcname("#ghmemorialmob01_") + "::OnStart";
+	donpcevent instance_npcname("#ghmemorialmob_01") + "::OnStart";
 
 	disablenpc 'npc_varmundt1$;
-	disablenpc instance_npcname("#talkinstance1_");
+	disablenpc instance_npcname("#_talkinstance1");
 	'npc_himelmez1$ = 'npc_varmundt1$ = 'npc_heinrich2$ = 'npc_heinrich3$ = "";
 	end;
 OnMyMobDead:
@@ -613,16 +613,16 @@ OnMyMobDead:
 
 // Sector 1 Mobs
 //============================================================
-1@gl_k2,1,1,0	script	#ghmemorialmob01_	HIDDEN_WARP_NPC,{
+1@gl_k2,1,1,0	script	#ghmemorialmob_01	HIDDEN_WARP_NPC,{
 	end;
 OnStart:
-	enablenpc instance_npcname("#ghmemorialmob01_");
-	enablenpc instance_npcname("#2Control_");
-	enablenpc instance_npcname("#2Control2_");
+	enablenpc instance_npcname("#ghmemorialmob_01");
+	enablenpc instance_npcname("#2Con_trol");
+	enablenpc instance_npcname("#2Con_trol2");
 	mapannounce 'map_name$[0], "A portal has opened to the west.", bc_map,0xFFFF00;
 
 	// note: x17 MG_GHOUL / x17 MG_ZOMBIE / x17 MG_WRAITH
-	.@label$ = instance_npcname("#ghmemorialmob01_") + "::OnMyMobDead";
+	.@label$ = instance_npcname("#ghmemorialmob_01") + "::OnMyMobDead";
 	areamonster 'map_name$[0],76,99,87,10,"[H] Grand Chamberlain in pain",3141,14,.@label$;
 	areamonster 'map_name$[0],67,39,12, 6,"[H] Corrupted Monk",3140,17,.@label$;
 	areamonster 'map_name$[0],67,39,12, 6,"[H] Grand Chamberlain in pain",3141,3,.@label$;
@@ -630,18 +630,18 @@ OnStart:
 	areamonster 'map_name$[0],45,84,6,137,"[H] Corrupted Steward",3139,12,.@label$;
 	end;
 OnMyMobDead:
-	.@label$ = instance_npcname("#ghmemorialmob01_") + "::OnMyMobDead";
+	.@label$ = instance_npcname("#ghmemorialmob_01") + "::OnMyMobDead";
 	.@mob_dead_num = 51 - mobcount('map_name$[0],.@label$);
 	if (.@mob_dead_num > 35) {
 		mapannounce 'map_name$[0], "Himelmez's curse is getting weaker. Find any survivors!", bc_map,0xFFFFFF;
 		killmonster 'map_name$[0], .@label$;
-		enablenpc instance_npcname("Altar boy Domun#51");
-		disablenpc instance_npcname("#ghmemorialmob01_");
+		enablenpc instance_npcname("Altar boy Domun#_1");
+		disablenpc instance_npcname("#ghmemorialmob_01");
 	}
 	end;
 }
 
-1@gl_k2,17,51,3	script	Altar boy Domun#51	4_M_KID1,{
+1@gl_k2,17,51,3	script	Altar boy Domun#_1	4_M_KID1,{
 	if (getcharid(0) != getpartyleader(getcharid(1),2)) {
 		mes "[Altar boy Domun]";
 		mes "Save me, save me, please...";
@@ -683,43 +683,43 @@ OnMyMobDead:
 	mes "[Altar boy Domun]";
 	mes "Ok, I... I'll try.";
 	npctalk "Altar boy Domun: Ok, I... I'll try.";
-	disablenpc instance_npcname("Altar boy Domun#51");
-	donpcevent instance_npcname("#ghmemorialmob02_") + "::OnStart";
+	disablenpc instance_npcname("Altar boy Domun#_1");
+	donpcevent instance_npcname("#ghmemorialmob_02") + "::OnStart";
 	close;
 }
 
 // Sector 2 Mobs
 //============================================================
-1@gl_k2,1,1,0	script	#ghmemorialmob02_	HIDDEN_WARP_NPC,{
+1@gl_k2,1,1,0	script	#ghmemorialmob_02	HIDDEN_WARP_NPC,{
 	end;
 OnStart:
-	enablenpc instance_npcname("#ghmemorialmob02_");
-	enablenpc instance_npcname("#3Control_");
-	enablenpc instance_npcname("#3Control2_");
+	enablenpc instance_npcname("#ghmemorialmob_02");
+	enablenpc instance_npcname("#3Con_trol");
+	enablenpc instance_npcname("#3Con_trol2");
 	for ( .@i = 1; .@i <= 26; .@i++ )
-		enablenpc instance_npcname("A dead guy#" + .@i);
+		enablenpc instance_npcname("A dead man#_" + .@i);
 	mapannounce 'map_name$[0], "A portal has opened to the east.", bc_map,0xFFFF00;
 
 	// note: x34 MG_ZOMBIE / x35 MG_GHOUL
-	.@label$ = instance_npcname("#ghmemorialmob02_") + "::OnMyMobDead";
+	.@label$ = instance_npcname("#ghmemorialmob_02") + "::OnMyMobDead";
 	areamonster 'map_name$[0],236,12,288,52,"[H] Outraged Refiner",3141,18,.@label$;// MG_GHOUL
 	areamonster 'map_name$[0],236,12,288,52,"[H] Decomposed Blacksmith",3139,17,.@label$;// MG_ZOMBIE
 	areamonster 'map_name$[0],242,71,286,145,"[H] Outraged Refiner",3141,17,.@label$;
 	areamonster 'map_name$[0],242,71,286,145,"[H] Decomposed Blacksmith",3139,17,.@label$;
 	end;
 OnMyMobDead:
-	.@label$ = instance_npcname("#ghmemorialmob02_") + "::OnMyMobDead";
+	.@label$ = instance_npcname("#ghmemorialmob_02") + "::OnMyMobDead";
 	.@mob_dead_num = 69 - mobcount('map_name$[0],.@label$);
 	if (.@mob_dead_num > 56) {
 		mapannounce 'map_name$[0], "Himelmez's curse is getting weaker. Find any survivors!", bc_map,0xFFFFFF;
 		killmonster 'map_name$[0],.@label$;
-		enablenpc instance_npcname("Holgren the Destroyer#51");
-		disablenpc instance_npcname("#ghmemorialmob02_");
+		enablenpc instance_npcname("Holgren the Destroyer#_1");
+		disablenpc instance_npcname("#ghmemorialmob_02");
 	}
 	end;
 }
 
-1@gl_k2,291,145,3	script	Holgren the Destroyer#51	4_F_JOB_BLACKSMITH,{
+1@gl_k2,291,145,3	script	Holgren the Destroyer#_1	4_F_JOB_BLACKSMITH,{
 	if (getcharid(0) != getpartyleader(getcharid(1),2)) {
 		mes "[Holgren the Destroyer]";
 		mes "You human?";
@@ -758,14 +758,14 @@ OnMyMobDead:
 	mes "[Holgren the Destroyer]";
 	mes "It's ok. You've already done enough. I can help myself. Good luck to you too.";
 	npctalk "Holgren the Destroyer: It's ok. You've already done enough. I can help myself. Good luck to you too.";
-	disablenpc instance_npcname("Holgren the Destroyer#51");
-	donpcevent instance_npcname("#ghmemorialmob03_") + "::OnEnable";
+	disablenpc instance_npcname("Holgren the Destroyer#_1");
+	donpcevent instance_npcname("#ghmemorialmob_03") + "::OnEnable";
 	close;
 }
 
 // Tramp Mobs
 //============================================================
-1@gl_k2,221,82,3	script	A dead guy#1	4_M_DIEMAN,5,5,{
+1@gl_k2,221,82,3	script	A dead man#_1	4_M_DIEMAN,5,5,{
 	end;
 OnTouch_:
 	.@i = rand(1,10);
@@ -780,44 +780,44 @@ OnTouch_:
 	disablenpc instance_npcname( strnpcinfo(0) );
 	end;
 }
-1@gl_k2,233,123,4	duplicate(A dead guy#1)	A dead guy#2	4_M_DIEMAN,5,5
-1@gl_k2,258,150,2	duplicate(A dead guy#1)	A dead guy#3	4_M_DIEMAN,5,5
-1@gl_k2,255,157,5	duplicate(A dead guy#1)	A dead guy#4	4_M_DIEMAN,5,5
-1@gl_k2,280,167,4	duplicate(A dead guy#1)	A dead guy#5	4_M_DIEMAN,5,5
-1@gl_k2,293,161,2	duplicate(A dead guy#1)	A dead guy#6	4_M_DIEMAN,5,5
-1@gl_k2,249,101,3	duplicate(A dead guy#1)	A dead guy#7	4_M_DIEMAN,5,5
-1@gl_k2,241,86,6	duplicate(A dead guy#1)	A dead guy#8	4_M_DIEMAN,5,5
-1@gl_k2,246,62,0	duplicate(A dead guy#1)	A dead guy#9	4_M_DIEMAN,5,5
-1@gl_k2,240,43,7	duplicate(A dead guy#1)	A dead guy#10	4_M_DIEMAN,5,5
-1@gl_k2,271,19,1	duplicate(A dead guy#1)	A dead guy#11	4_M_DIEMAN,5,5
-1@gl_k2,282,48,5	duplicate(A dead guy#1)	A dead guy#12	4_M_DIEMAN,5,5
-1@gl_k2,285,81,7	duplicate(A dead guy#1)	A dead guy#13	4_M_DIEMAN,5,5
-1@gl_k2,276,106,0	duplicate(A dead guy#1)	A dead guy#14	4_M_DIEMAN,5,5
-1@gl_k2,261,164,0	duplicate(A dead guy#1)	A dead guy#15	4_M_DIEMAN,5,5
-1@gl_k2,269,173,0	duplicate(A dead guy#1)	A dead guy#16	4_M_DIEMAN,5,5
-1@gl_k2,252,120,0	duplicate(A dead guy#1)	A dead guy#17	4_M_DIEMAN,5,5
-1@gl_k2,213,63,0	duplicate(A dead guy#1)	A dead guy#18	4_M_DIEMAN,5,5
-1@gl_k2,222,39,0	duplicate(A dead guy#1)	A dead guy#19	4_M_DIEMAN,5,5
-1@gl_k2,214,27,0	duplicate(A dead guy#1)	A dead guy#20	4_M_DIEMAN,5,5
-1@gl_k2,223,17,1	duplicate(A dead guy#1)	A dead guy#21	4_M_DIEMAN,5,5
-1@gl_k2,230,50,2	duplicate(A dead guy#1)	A dead guy#22	4_M_DIEMAN,5,5
-1@gl_k2,235,16,3	duplicate(A dead guy#1)	A dead guy#23	4_M_DIEMAN,5,5
-1@gl_k2,226,96,4	duplicate(A dead guy#1)	A dead guy#24	4_M_DIEMAN,5,5
-1@gl_k2,222,119,5	duplicate(A dead guy#1)	A dead guy#25	4_M_DIEMAN,5,5
-1@gl_k2,251,20,6	duplicate(A dead guy#1)	A dead guy#26	4_M_DIEMAN,5,5
+1@gl_k2,233,123,4	duplicate(A dead man#_1)	A dead man#_2	4_M_DIEMAN,5,5
+1@gl_k2,258,150,2	duplicate(A dead man#_1)	A dead man#_3	4_M_DIEMAN,5,5
+1@gl_k2,255,157,5	duplicate(A dead man#_1)	A dead man#_4	4_M_DIEMAN,5,5
+1@gl_k2,280,167,4	duplicate(A dead man#_1)	A dead man#_5	4_M_DIEMAN,5,5
+1@gl_k2,293,161,2	duplicate(A dead man#_1)	A dead man#_6	4_M_DIEMAN,5,5
+1@gl_k2,249,101,3	duplicate(A dead man#_1)	A dead man#_7	4_M_DIEMAN,5,5
+1@gl_k2,241,86,6	duplicate(A dead man#_1)	A dead man#_8	4_M_DIEMAN,5,5
+1@gl_k2,246,62,0	duplicate(A dead man#_1)	A dead man#_9	4_M_DIEMAN,5,5
+1@gl_k2,240,43,7	duplicate(A dead man#_1)	A dead man#_10	4_M_DIEMAN,5,5
+1@gl_k2,271,19,1	duplicate(A dead man#_1)	A dead man#_11	4_M_DIEMAN,5,5
+1@gl_k2,282,48,5	duplicate(A dead man#_1)	A dead man#_12	4_M_DIEMAN,5,5
+1@gl_k2,285,81,7	duplicate(A dead man#_1)	A dead man#_13	4_M_DIEMAN,5,5
+1@gl_k2,276,106,0	duplicate(A dead man#_1)	A dead man#_14	4_M_DIEMAN,5,5
+1@gl_k2,261,164,0	duplicate(A dead man#_1)	A dead man#_15	4_M_DIEMAN,5,5
+1@gl_k2,269,173,0	duplicate(A dead man#_1)	A dead man#_16	4_M_DIEMAN,5,5
+1@gl_k2,252,120,0	duplicate(A dead man#_1)	A dead man#_17	4_M_DIEMAN,5,5
+1@gl_k2,213,63,0	duplicate(A dead man#_1)	A dead man#_18	4_M_DIEMAN,5,5
+1@gl_k2,222,39,0	duplicate(A dead man#_1)	A dead man#_19	4_M_DIEMAN,5,5
+1@gl_k2,214,27,0	duplicate(A dead man#_1)	A dead man#_20	4_M_DIEMAN,5,5
+1@gl_k2,223,17,1	duplicate(A dead man#_1)	A dead man#_21	4_M_DIEMAN,5,5
+1@gl_k2,230,50,2	duplicate(A dead man#_1)	A dead man#_22	4_M_DIEMAN,5,5
+1@gl_k2,235,16,3	duplicate(A dead man#_1)	A dead man#_23	4_M_DIEMAN,5,5
+1@gl_k2,226,96,4	duplicate(A dead man#_1)	A dead man#_24	4_M_DIEMAN,5,5
+1@gl_k2,222,119,5	duplicate(A dead man#_1)	A dead man#_25	4_M_DIEMAN,5,5
+1@gl_k2,251,20,6	duplicate(A dead man#_1)	A dead man#_26	4_M_DIEMAN,5,5
 
 // Sector 3 Mobs
 //============================================================
-1@gl_k2,1,1,0	script	#ghmemorialmob03_	HIDDEN_WARP_NPC,{
+1@gl_k2,1,1,0	script	#ghmemorialmob_03	HIDDEN_WARP_NPC,{
 	end;
 OnEnable:
-	enablenpc instance_npcname("#ghmemorialmob03_");
-	enablenpc instance_npcname("#4Control_");
-	enablenpc instance_npcname("#4Control2_");
+	enablenpc instance_npcname("#ghmemorialmob_03");
+	enablenpc instance_npcname("#4Con_trol");
+	enablenpc instance_npcname("#4Con_trol2");
 	mapannounce 'map_name$[0], "A portal has appeared to the northwest.", bc_map,0xFFFF00;
 
 	// note: x50 MG_RAYDRIC / x50 MG_RAYDRIC_ARCHER
-	.@label$ = instance_npcname("#ghmemorialmob03_") + "::OnMyMobDead";
+	.@label$ = instance_npcname("#ghmemorialmob_03") + "::OnMyMobDead";
 	areamonster 'map_name$[0],16,186,43,280,"[H] Outraged Archer",3144,25,.@label$;
 	areamonster 'map_name$[0],44,191,89,225,"[H] Hungry Palace Guard",3143,25,.@label$;
 	areamonster 'map_name$[0],115,215,188,273,"[H] Corrupted Palace Guard",3143,20,.@label$;
@@ -826,15 +826,15 @@ OnEnable:
 	areamonster 'map_name$[0],65,231,155,256,"[H] Wandering Archer",3144,13,.@label$;
 	end;
 OnMyMobDead:
-	.@label$ = instance_npcname("#ghmemorialmob03_") + "::OnMyMobDead";
+	.@label$ = instance_npcname("#ghmemorialmob_03") + "::OnMyMobDead";
 	.@mob_dead_num = 100 - mobcount('map_name$[0],.@label$);
 	if (.@mob_dead_num > 85) {
 		killmonster 'map_name$[0],.@label$;
-		enablenpc instance_npcname("#Mimelon_");
-		enablenpc instance_npcname("Himelmez#52");
-		enablenpc instance_npcname("Varmundt#52");
-		enablenpc instance_npcname("Heinrich#54");
-		disablenpc instance_npcname("#ghmemorialmob03_");
+		enablenpc instance_npcname("#_Mimelon");
+		enablenpc instance_npcname("Himelmez#_2");
+		enablenpc instance_npcname("Varmundt#_2");
+		enablenpc instance_npcname("Heinrich#_4");
+		disablenpc instance_npcname("#ghmemorialmob_03");
 		mapannounce 'map_name$[0], "Himelmez: Not bad. Thought you would be dead by now by my creatures~", bc_map,0xFFFFFF;
 		initnpctimer;
 	}
@@ -847,7 +847,7 @@ OnTimer5000:
 
 // 1st MVP
 //============================================================
-1@gl_k2,144,258,6	script	Heinrich#54	4_M_HEINRICH,{
+1@gl_k2,144,258,6	script	Heinrich#_4	4_M_HEINRICH,{
 	mes "[Heinrich]";
 	mes "Himelmez... I will never forget what you've done to my men.";
 	cutin "gl_heinrich1",2;
@@ -855,7 +855,7 @@ OnTimer5000:
 }
 
 // note: never hidden
-1@gl_k2,156,258,3	script	Varmundt#52	4_M_BARMUND,{
+1@gl_k2,156,258,3	script	Varmundt#_2	4_M_BARMUND,{
 	cutin "gl_barmund1",2;
 	mes "[Varmundt]";
 	if (checkquest(12336,HUNTING) != 2) {
@@ -878,20 +878,20 @@ OnTimer5000:
 	close3;
 }
 
-1@gl_k2,150,257,3	script	Himelmez#52	4_F_HIMEL,{
+1@gl_k2,150,257,3	script	Himelmez#_2	4_F_HIMEL,{
 	cutin "gl_himel2",2;
 	mes "[Himelmez]";
 	mes "Don't look at me nervous like that. It will be over soon...";
 	close3;
 }
 
-1@gl_k2,150,257,0	script	#Mimelon_	HIDDEN_WARP_NPC,7,7,{
+1@gl_k2,150,257,0	script	#_Mimelon	HIDDEN_WARP_NPC,7,7,{
 	end;
 OnTouch_:
-	disablenpc instance_npcname("#Mimelon_");
+	disablenpc instance_npcname("#_Mimelon");
 	initnpctimer;
-	'npc_himelmez2$ = instance_npcname("Himelmez#52");
-	'npc_heinrich4$ = instance_npcname("Heinrich#54");
+	'npc_himelmez2$ = instance_npcname("Himelmez#_2");
+	'npc_heinrich4$ = instance_npcname("Heinrich#_4");
 	end;
 OnTimer3000:
 	npctalk "Himelmez: Guess you are either lucky or powerful to make it this far.", 'npc_himelmez2$;
@@ -909,7 +909,7 @@ OnTimer15000:
 	npctalk "Himelmez: Ha ha ha, worry about yourself. You think I am alone here?", 'npc_himelmez2$;
 	end;
 OnTimer18000:
-	npctalk "Varmundt: Sir Heinrich! I sense something strange and strong coming!", instance_npcname("Varmundt#52");
+	npctalk "Varmundt: Sir Heinrich! I sense something strange and strong coming!", instance_npcname("Varmundt#_2");
 	end;
 OnTimer21000:
 	npctalk "Heinrich: What... These are!", 'npc_heinrich4$;
@@ -933,54 +933,54 @@ OnTimer35000:
 	mapannounce 'map_name$[0], "An echoing comes from deep inside of the knight's shrine.", bc_map,0xFFFFFF;
 	end;
 OnTimer38000:
-	donpcevent instance_npcname("#ghmemorialmob04_") + "::OnStart";
+	donpcevent instance_npcname("#ghmemorialmob_04") + "::OnStart";
 	stopnpctimer;
 	'npc_himelmez2$ = 'npc_heinrich4$ = "";
 	end;
 }
 
-1@gl_k2,1,1,0	script	#ghmemorialmob04_	HIDDEN_WARP_NPC,{
+1@gl_k2,1,1,0	script	#ghmemorialmob_04	HIDDEN_WARP_NPC,{
 	end;
 OnStart:
-	enablenpc instance_npcname("#ghmemorialmob04_");
-	monster 'map_name$[0],150,259,"[H] Corrupted Soul",3151,1, instance_npcname("#ghmemorialmob04_") + "::OnMyMobDead";// [H] MG_CORRUPTION_ROOT
+	enablenpc instance_npcname("#ghmemorialmob_04");
+	monster 'map_name$[0],150,259,"[H] Corrupted Soul",3151,1, instance_npcname("#ghmemorialmob_04") + "::OnMyMobDead";// [H] MG_CORRUPTION_ROOT
 	unittalk $@mobid[0],"Grrrrrrhh~~~";
 	end;
 OnMyMobDead:
-	if (mobcount('map_name$[0], instance_npcname("#ghmemorialmob04_") + "::OnMyMobDead") < 1) {
+	if (mobcount('map_name$[0], instance_npcname("#ghmemorialmob_04") + "::OnMyMobDead") < 1) {
 		mapannounce 'map_name$[0], "Opening 2nd floor entrance towards 12 O'clock direction.", bc_map,0xFFFF00;
-		npctalk "Varmundt: I collected some items dropped from its body. You can take it from me.", instance_npcname("Varmundt#52");
+		npctalk "Varmundt: I collected some items dropped from its body. You can take it from me.", instance_npcname("Varmundt#_2");
 
-		enablenpc instance_npcname("#2F Entrance_");
-		enablenpc instance_npcname("#1 Control_");
-		enablenpc instance_npcname("#22 Control_");
-		enablenpc instance_npcname("#22 Control2_");
-		enablenpc instance_npcname("#Servanton_");
-		enablenpc instance_npcname("Heinrich#71");
-		enablenpc instance_npcname("Varmundt#71");
-		donpcevent instance_npcname("#ghmemorialmob05_") + "::OnStart";
-		disablenpc instance_npcname("#ghmemorialmob04_");
+		enablenpc instance_npcname("#2F_Entrance");
+		enablenpc instance_npcname("#1 Con_trol");
+		enablenpc instance_npcname("#22 Con_trol");
+		enablenpc instance_npcname("#22 Con_trol2");
+		enablenpc instance_npcname("#_Servanton");
+		enablenpc instance_npcname("Heinrich#_21");
+		enablenpc instance_npcname("Varmundt#_21");
+		donpcevent instance_npcname("#ghmemorialmob_05") + "::OnStart";
+		disablenpc instance_npcname("#ghmemorialmob_04");
 	}
 	end;
 }
 
 // Floor 2
 //============================================================
-2@gl_k2,148,67,1	script	Heinrich#71	4_M_HEINRICH,{
+2@gl_k2,148,67,1	script	Heinrich#_21	4_M_HEINRICH,{
 	mes "[Heinrich]";
 	mes "Himelmez's closed space covers everywhere...";
 	cutin "gl_heinrich1",2;
 	close3;
 }
 
-2@gl_k2,151,71,7	script	Varmundt#71	4_M_BARMUND,{
+2@gl_k2,151,71,7	script	Varmundt#_21	4_M_BARMUND,{
 	mes "[Varmundt]";
 	mes "How many times have I done this job? In my dream, I did it over and over again...";
 	cutin "gl_barmund2",2;
 	close3;
 }
 
-2@gl_k2,150,66,0	script	#Servanton_effect_	HIDDEN_WARP_NPC,{
+2@gl_k2,150,66,0	script	#_Servanton_effect	HIDDEN_WARP_NPC,{
 	end;
 OnEffect:
 	specialeffect EF_LORD;
@@ -988,13 +988,13 @@ OnEffect:
 }
 
 // note: this part can be skipped
-2@gl_k2,150,66,0	script	#Servanton_	HIDDEN_WARP_NPC,7,7,{
+2@gl_k2,150,66,0	script	#_Servanton	HIDDEN_WARP_NPC,7,7,{
 	end;
 OnTouch_:
-	disablenpc instance_npcname("#Servanton_");
+	disablenpc instance_npcname("#_Servanton");
 	initnpctimer;
-	'npc_heinrich$ = instance_npcname("Heinrich#71");
-	'npc_varmundt$ = instance_npcname("Varmundt#71");
+	'npc_heinrich$ = instance_npcname("Heinrich#_21");
+	'npc_varmundt$ = instance_npcname("Varmundt#_21");
 	end;
 OnTimer3000:
 	npctalk "Heinrich: This structure was not in the castle before!", 'npc_heinrich$;
@@ -1009,8 +1009,8 @@ OnTimer12000:
 	npctalk "Varmundt: Step back. Let me try to dispel the magic.", 'npc_varmundt$;
 	end;
 OnTimer15000:
-	specialeffect EF_LORD,AREA, instance_npcname("#Servanton_effect_");
-	disablenpc instance_npcname("#Servanton_effect_");
+	specialeffect EF_LORD,AREA, instance_npcname("#_Servanton_effect");
+	disablenpc instance_npcname("#_Servanton_effect");
 	end;
 OnTimer18000:
 	npctalk "Varmundt: I think that part of closed space is broken down.", 'npc_varmundt$;
@@ -1074,16 +1074,16 @@ OnTimer69000:
 
 // Spots
 // Note: timer is the only condition for them to respawn
-2@gl_k2,118,141,0	script	#o_gh_2-1	HIDDEN_WARP_NPC,20,20,{
+2@gl_k2,118,141,0	script	#_ogh_2-1	HIDDEN_WARP_NPC,20,20,{
 	end;
 OnTouch_:
 	disablenpc instance_npcname( strnpcinfo(0) );
 	.@hidden_name$ = strnpcinfo(2);
-	.@event_type = atoi( charat(.@hidden_name$,4) );
+	.@event_type = atoi( charat(.@hidden_name$,5) );
 	if (.@event_type == 2)
-		.@label$ = instance_npcname("#ghmemorialmob05_") + "::OnMyMobDead";
+		.@label$ = instance_npcname("#ghmemorialmob_05") + "::OnMyMobDead";
 	else
-		.@label$ = instance_npcname("#ghmemorialmob06_") + "::OnMyMobDead";
+		.@label$ = instance_npcname("#ghmemorialmob_06") + "::OnMyMobDead";
 	getmapxy .@map$,.@x,.@y, UNITTYPE_NPC;
 	monster .@map$,.@x,.@y, "[H] Corrupted Palace Guard", 3143,1, .@label$;
 	monster .@map$,.@x,.@y, "[H] Archer of Death", 3144,1, .@label$;
@@ -1101,63 +1101,63 @@ OnStop:
 	stopnpctimer;
 	end;
 }
-2@gl_k2,128,81,0	duplicate(#o_gh_2-1)	#o_gh_2-2	HIDDEN_WARP_NPC,20,20
-2@gl_k2,131,54,0	duplicate(#o_gh_2-1)	#o_gh_2-3	HIDDEN_WARP_NPC,20,20
-2@gl_k2,89,48,0	duplicate(#o_gh_2-1)	#o_gh_2-4	HIDDEN_WARP_NPC,20,20
-2@gl_k2,64,117,0	duplicate(#o_gh_2-1)	#o_gh_2-5	HIDDEN_WARP_NPC,20,20
-2@gl_k2,62,82,0	duplicate(#o_gh_2-1)	#o_gh_2-6	HIDDEN_WARP_NPC,20,20
-2@gl_k2,38,138,0	duplicate(#o_gh_2-1)	#o_gh_2-7	HIDDEN_WARP_NPC,20,20
+2@gl_k2,128,81,0	duplicate(#_ogh_2-1)	#_ogh_2-2	HIDDEN_WARP_NPC,20,20
+2@gl_k2,131,54,0	duplicate(#_ogh_2-1)	#_ogh_2-3	HIDDEN_WARP_NPC,20,20
+2@gl_k2,89,48,0	duplicate(#_ogh_2-1)	#_ogh_2-4	HIDDEN_WARP_NPC,20,20
+2@gl_k2,64,117,0	duplicate(#_ogh_2-1)	#_ogh_2-5	HIDDEN_WARP_NPC,20,20
+2@gl_k2,62,82,0	duplicate(#_ogh_2-1)	#_ogh_2-6	HIDDEN_WARP_NPC,20,20
+2@gl_k2,38,138,0	duplicate(#_ogh_2-1)	#_ogh_2-7	HIDDEN_WARP_NPC,20,20
 
-2@gl_k2,171,120,0	duplicate(#o_gh_2-1)	#o_gh_3-1	HIDDEN_WARP_NPC,20,20
-2@gl_k2,232,133,0	duplicate(#o_gh_2-1)	#o_gh_3-2	HIDDEN_WARP_NPC,20,20
-2@gl_k2,256,149,0	duplicate(#o_gh_2-1)	#o_gh_3-3	HIDDEN_WARP_NPC,20,20
-2@gl_k2,212,106,0	duplicate(#o_gh_2-1)	#o_gh_3-4	HIDDEN_WARP_NPC,20,20
-2@gl_k2,243,73,0	duplicate(#o_gh_2-1)	#o_gh_3-5	HIDDEN_WARP_NPC,20,20
-2@gl_k2,229,26,0	duplicate(#o_gh_2-1)	#o_gh_3-6	HIDDEN_WARP_NPC,20,20
-2@gl_k2,181,34,0	duplicate(#o_gh_2-1)	#o_gh_3-7	HIDDEN_WARP_NPC,20,20
+2@gl_k2,171,120,0	duplicate(#_ogh_2-1)	#_ogh_3-1	HIDDEN_WARP_NPC,20,20
+2@gl_k2,232,133,0	duplicate(#_ogh_2-1)	#_ogh_3-2	HIDDEN_WARP_NPC,20,20
+2@gl_k2,256,149,0	duplicate(#_ogh_2-1)	#_ogh_3-3	HIDDEN_WARP_NPC,20,20
+2@gl_k2,212,106,0	duplicate(#_ogh_2-1)	#_ogh_3-4	HIDDEN_WARP_NPC,20,20
+2@gl_k2,243,73,0	duplicate(#_ogh_2-1)	#_ogh_3-5	HIDDEN_WARP_NPC,20,20
+2@gl_k2,229,26,0	duplicate(#_ogh_2-1)	#_ogh_3-6	HIDDEN_WARP_NPC,20,20
+2@gl_k2,181,34,0	duplicate(#_ogh_2-1)	#_ogh_3-7	HIDDEN_WARP_NPC,20,20
 
 // Commander 1
-2@gl_k2,1,1,0	script	#ghmemorialmob05_	HIDDEN_WARP_NPC,{
+2@gl_k2,1,1,0	script	#ghmemorialmob_05	HIDDEN_WARP_NPC,{
 	end;
 OnStart:
-	enablenpc instance_npcname("#ghmemorialmob05_");
+	enablenpc instance_npcname("#ghmemorialmob_05");
 	for ( .@i = 1; .@i <= 7; .@i++ )
-		enablenpc instance_npcname("#o_gh_2-" + .@i);
+		enablenpc instance_npcname("#_ogh_2-" + .@i);
 	end;
 
 OnMyMobDead:
 	if (rand(10) == 0) {// can re-spawn
 		mapannounce 'map_name$[1], "Evil Forces are appearing in this area.", bc_map,0xFFFF44,FW_NORMAL,15;
-		killmonster 'map_name$[1], instance_npcname("#ghmemorialmob05_") + "::OnBossDead";
+		killmonster 'map_name$[1], instance_npcname("#ghmemorialmob_05") + "::OnBossDead";
 
 		.@r = rand(4) * 2;
 		setarray .@coord[0], 41,146, 58,44, 122,148, 131,64;
-		monster 'map_name$[1],.@coord[.@r],.@coord[.@r+1], "[H] 1st Commander of Destruction",3148,1, instance_npcname("#ghmemorialmob05_") + "::OnBossDead";
+		monster 'map_name$[1],.@coord[.@r],.@coord[.@r+1], "[H] 1st Commander of Destruction",3148,1, instance_npcname("#ghmemorialmob_05") + "::OnBossDead";
 	}
 	end;
 
 OnBossDead:
 	mapannounce 'map_name$[1], "A portal has opened to the east in the central hallway.", bc_map,0xFFFF00;
-	enablenpc instance_npcname("#23 Control_");
-	enablenpc instance_npcname("#23 Control2_");
-	donpcevent instance_npcname("#ghmemorialmob06_") + "::OnStart";
+	enablenpc instance_npcname("#23 Con_trol");
+	enablenpc instance_npcname("#23 Con_trol2");
+	donpcevent instance_npcname("#ghmemorialmob_06") + "::OnStart";
 
-	disablenpc instance_npcname("#ghmemorialmob05_");
+	disablenpc instance_npcname("#ghmemorialmob_05");
 	for ( .@i = 1; .@i <= 7; .@i++ )
-		donpcevent instance_npcname("#o_gh_2-" + .@i) + "::OnStop";
+		donpcevent instance_npcname("#_ogh_2-" + .@i) + "::OnStop";
 	end;
 }
 
 // Commander 2
-2@gl_k2,1,1,0	script	#ghmemorialmob06_	HIDDEN_WARP_NPC,{
+2@gl_k2,1,1,0	script	#ghmemorialmob_06	HIDDEN_WARP_NPC,{
 	end;
 OnStart:
-	enablenpc instance_npcname("#ghmemorialmob06_");
+	enablenpc instance_npcname("#ghmemorialmob_06");
 	for ( .@i = 1; .@i <= 7; .@i++ )
-		enablenpc instance_npcname("#o_gh_3-" + .@i);
+		enablenpc instance_npcname("#_ogh_3-" + .@i);
 
 	// Fix spawn
-	.@label$ = instance_npcname("#ghmemorialmob06_") + "::OnMyMobDead";
+	.@label$ = instance_npcname("#ghmemorialmob_06") + "::OnMyMobDead";
 	monster 'map_name$[1],252, 75, "[H] Corrupted Palace Guard",3143,1, .@label$;
 	monster 'map_name$[1],253, 76, "[H] Corrupted Palace Guard",3143,1, .@label$;
 	monster 'map_name$[1],247, 77, "[H] Corrupted Palace Guard",3143,1, .@label$;
@@ -1207,25 +1207,25 @@ OnStart:
 OnMyMobDead:
 	if (rand(10) == 0) {// can re-spawn
 		mapannounce 'map_name$[1], "An evil presence has teleported into this area.", bc_map,0xFFFF44,FW_NORMAL,15;
-		killmonster 'map_name$[1], instance_npcname("#ghmemorialmob06_") + "::OnBossDead";
+		killmonster 'map_name$[1], instance_npcname("#ghmemorialmob_06") + "::OnBossDead";
 
 		.@r = rand(4) * 2;
 		setarray .@coord[0], 166,119, 211,45, 227,139, 245,74;
-		monster 'map_name$[1],.@coord[.@r],.@coord[.@r+1], "[H] 2nd Commander of Destruction",3149,1, instance_npcname("#ghmemorialmob06_") + "::OnBossDead";
+		monster 'map_name$[1],.@coord[.@r],.@coord[.@r+1], "[H] 2nd Commander of Destruction",3149,1, instance_npcname("#ghmemorialmob_06") + "::OnBossDead";
 	}
 	end;
 
 OnBossDead:
 	mapannounce 'map_name$[1], "A new portal has appeared at the end of the central corridor.", bc_map,0xFFFF00;
-	enablenpc instance_npcname("#24 Control_");
-	enablenpc instance_npcname("#24 Control2_");
-	enablenpc instance_npcname("#Geron_");
+	enablenpc instance_npcname("#24 Con_trol");
+	enablenpc instance_npcname("#24 Con_trol2");
+	enablenpc instance_npcname("#_Geron");
 	for ( .@i = 1; .@i <= 35; .@i++ )
-		enablenpc instance_npcname("Decomposed body.#" + .@i);
+		enablenpc instance_npcname("Decomposed body#_" + .@i);
 
-	disablenpc instance_npcname("#ghmemorialmob06_");
+	disablenpc instance_npcname("#ghmemorialmob_06");
 	for ( .@i = 1; .@i <= 7; .@i++ )
-		donpcevent instance_npcname("#o_gh_3-" + .@i) + "::OnStop";
+		donpcevent instance_npcname("#_ogh_3-" + .@i) + "::OnStop";
 
 	// Hidden mobs
 	setarray .@coord[0],
@@ -1239,19 +1239,19 @@ OnBossDead:
 }
 
 // Amdarais Room Entrance
-2@gl_k2,150,180,0	script	#Geron_	HIDDEN_WARP_NPC,7,7,{
+2@gl_k2,150,180,0	script	#_Geron	HIDDEN_WARP_NPC,7,7,{
 	end;
 OnTouch_:
-	disablenpc instance_npcname("#Geron_");
+	disablenpc instance_npcname("#_Geron");
 	mapannounce 'map_name$[1], "???: Do not come here! It's a trap... Kkkkah!!!", bc_map,0xFF7777,FW_NORMAL,15;
-	enablenpc instance_npcname("Himelmez#72");
-	enablenpc instance_npcname("Varmundt#73");
-	enablenpc instance_npcname("Heinrich#73");
-	enablenpc instance_npcname("Gerhalt#73");
+	enablenpc instance_npcname("Himelmez#_22");
+	enablenpc instance_npcname("Varmundt#_23");
+	enablenpc instance_npcname("Heinrich#_23");
+	enablenpc instance_npcname("Gerhalt#_23");
 	end;
 }
 
-2@gl_k2,143,260,4	script	Decomposed body.#1	4_M_DIEMAN,5,5,{
+2@gl_k2,143,260,4	script	Decomposed body#_1	4_M_DIEMAN,5,5,{
 	end;
 OnTouch_:
 	disablenpc instance_npcname( strnpcinfo(0) );
@@ -1271,63 +1271,63 @@ OnTimer45000:
 	stopnpctimer;
 	end;
 }
-2@gl_k2,145,236,4	duplicate(Decomposed body.#1)	Decomposed body.#2	4_M_DIEMAN,5,5
-2@gl_k2,141,222,2	duplicate(Decomposed body.#1)	Decomposed body.#3	4_M_DIEMAN,5,5
-2@gl_k2,147,203,5	duplicate(Decomposed body.#1)	Decomposed body.#4	4_M_DIEMAN,5,5
-2@gl_k2,167,225,4	duplicate(Decomposed body.#1)	Decomposed body.#5	4_M_DIEMAN,5,5
-2@gl_k2,172,233,2	duplicate(Decomposed body.#1)	Decomposed body.#6	4_M_DIEMAN,5,5
-2@gl_k2,176,244,3	duplicate(Decomposed body.#1)	Decomposed body.#7	4_M_DIEMAN,5,5
-2@gl_k2,184,248,6	duplicate(Decomposed body.#1)	Decomposed body.#8	4_M_DIEMAN,5,5
-2@gl_k2,193,228,0	duplicate(Decomposed body.#1)	Decomposed body.#9	4_M_DIEMAN,5,5
-2@gl_k2,206,250,7	duplicate(Decomposed body.#1)	Decomposed body.#10	4_M_DIEMAN,5,5
-2@gl_k2,130,249,1	duplicate(Decomposed body.#1)	Decomposed body.#11	4_M_DIEMAN,5,5
-2@gl_k2,122,236,5	duplicate(Decomposed body.#1)	Decomposed body.#12	4_M_DIEMAN,5,5
-2@gl_k2,130,228,7	duplicate(Decomposed body.#1)	Decomposed body.#13	4_M_DIEMAN,5,5
-2@gl_k2,106,226,0	duplicate(Decomposed body.#1)	Decomposed body.#14	4_M_DIEMAN,5,5
-2@gl_k2,104,245,0	duplicate(Decomposed body.#1)	Decomposed body.#15	4_M_DIEMAN,5,5
-2@gl_k2,131,187,0	duplicate(Decomposed body.#1)	Decomposed body.#16	4_M_DIEMAN,5,5
-2@gl_k2,121,197,0	duplicate(Decomposed body.#1)	Decomposed body.#17	4_M_DIEMAN,5,5
-2@gl_k2,107,194,0	duplicate(Decomposed body.#1)	Decomposed body.#18	4_M_DIEMAN,5,5
-2@gl_k2,92,187,0	duplicate(Decomposed body.#1)	Decomposed body.#19	4_M_DIEMAN,5,5
-2@gl_k2,153,214,3	duplicate(Decomposed body.#1)	Decomposed body.#20	4_M_DIEMAN,5,5
-2@gl_k2,155,195,4	duplicate(Decomposed body.#1)	Decomposed body.#21	4_M_DIEMAN,5,5
-2@gl_k2,154,188,2	duplicate(Decomposed body.#1)	Decomposed body.#22	4_M_DIEMAN,5,5
-2@gl_k2,143,195,5	duplicate(Decomposed body.#1)	Decomposed body.#23	4_M_DIEMAN,5,5
-2@gl_k2,132,214,4	duplicate(Decomposed body.#1)	Decomposed body.#24	4_M_DIEMAN,5,5
-2@gl_k2,125,208,2	duplicate(Decomposed body.#1)	Decomposed body.#25	4_M_DIEMAN,5,5
-2@gl_k2,114,210,3	duplicate(Decomposed body.#1)	Decomposed body.#26	4_M_DIEMAN,5,5
-2@gl_k2,137,182,6	duplicate(Decomposed body.#1)	Decomposed body.#27	4_M_DIEMAN,5,5
-2@gl_k2,138,246,0	duplicate(Decomposed body.#1)	Decomposed body.#28	4_M_DIEMAN,5,5
-2@gl_k2,132,260,7	duplicate(Decomposed body.#1)	Decomposed body.#29	4_M_DIEMAN,5,5
-2@gl_k2,128,251,1	duplicate(Decomposed body.#1)	Decomposed body.#30	4_M_DIEMAN,5,5
-2@gl_k2,179,260,3	duplicate(Decomposed body.#1)	Decomposed body.#31	4_M_DIEMAN,5,5
-2@gl_k2,170,261,4	duplicate(Decomposed body.#1)	Decomposed body.#32	4_M_DIEMAN,5,5
-2@gl_k2,177,219,2	duplicate(Decomposed body.#1)	Decomposed body.#33	4_M_DIEMAN,5,5
-2@gl_k2,190,214,5	duplicate(Decomposed body.#1)	Decomposed body.#34	4_M_DIEMAN,5,5
-2@gl_k2,201,214,4	duplicate(Decomposed body.#1)	Decomposed body.#35	4_M_DIEMAN,5,5
+2@gl_k2,145,236,4	duplicate(Decomposed body#_1)	Decomposed body#_2	4_M_DIEMAN,5,5
+2@gl_k2,141,222,2	duplicate(Decomposed body#_1)	Decomposed body#_3	4_M_DIEMAN,5,5
+2@gl_k2,147,203,5	duplicate(Decomposed body#_1)	Decomposed body#_4	4_M_DIEMAN,5,5
+2@gl_k2,167,225,4	duplicate(Decomposed body#_1)	Decomposed body#_5	4_M_DIEMAN,5,5
+2@gl_k2,172,233,2	duplicate(Decomposed body#_1)	Decomposed body#_6	4_M_DIEMAN,5,5
+2@gl_k2,176,244,3	duplicate(Decomposed body#_1)	Decomposed body#_7	4_M_DIEMAN,5,5
+2@gl_k2,184,248,6	duplicate(Decomposed body#_1)	Decomposed body#_8	4_M_DIEMAN,5,5
+2@gl_k2,193,228,0	duplicate(Decomposed body#_1)	Decomposed body#_9	4_M_DIEMAN,5,5
+2@gl_k2,206,250,7	duplicate(Decomposed body#_1)	Decomposed body#_10	4_M_DIEMAN,5,5
+2@gl_k2,130,249,1	duplicate(Decomposed body#_1)	Decomposed body#_11	4_M_DIEMAN,5,5
+2@gl_k2,122,236,5	duplicate(Decomposed body#_1)	Decomposed body#_12	4_M_DIEMAN,5,5
+2@gl_k2,130,228,7	duplicate(Decomposed body#_1)	Decomposed body#_13	4_M_DIEMAN,5,5
+2@gl_k2,106,226,0	duplicate(Decomposed body#_1)	Decomposed body#_14	4_M_DIEMAN,5,5
+2@gl_k2,104,245,0	duplicate(Decomposed body#_1)	Decomposed body#_15	4_M_DIEMAN,5,5
+2@gl_k2,131,187,0	duplicate(Decomposed body#_1)	Decomposed body#_16	4_M_DIEMAN,5,5
+2@gl_k2,121,197,0	duplicate(Decomposed body#_1)	Decomposed body#_17	4_M_DIEMAN,5,5
+2@gl_k2,107,194,0	duplicate(Decomposed body#_1)	Decomposed body#_18	4_M_DIEMAN,5,5
+2@gl_k2,92,187,0	duplicate(Decomposed body#_1)	Decomposed body#_19	4_M_DIEMAN,5,5
+2@gl_k2,153,214,3	duplicate(Decomposed body#_1)	Decomposed body#_20	4_M_DIEMAN,5,5
+2@gl_k2,155,195,4	duplicate(Decomposed body#_1)	Decomposed body#_21	4_M_DIEMAN,5,5
+2@gl_k2,154,188,2	duplicate(Decomposed body#_1)	Decomposed body#_22	4_M_DIEMAN,5,5
+2@gl_k2,143,195,5	duplicate(Decomposed body#_1)	Decomposed body#_23	4_M_DIEMAN,5,5
+2@gl_k2,132,214,4	duplicate(Decomposed body#_1)	Decomposed body#_24	4_M_DIEMAN,5,5
+2@gl_k2,125,208,2	duplicate(Decomposed body#_1)	Decomposed body#_25	4_M_DIEMAN,5,5
+2@gl_k2,114,210,3	duplicate(Decomposed body#_1)	Decomposed body#_26	4_M_DIEMAN,5,5
+2@gl_k2,137,182,6	duplicate(Decomposed body#_1)	Decomposed body#_27	4_M_DIEMAN,5,5
+2@gl_k2,138,246,0	duplicate(Decomposed body#_1)	Decomposed body#_28	4_M_DIEMAN,5,5
+2@gl_k2,132,260,7	duplicate(Decomposed body#_1)	Decomposed body#_29	4_M_DIEMAN,5,5
+2@gl_k2,128,251,1	duplicate(Decomposed body#_1)	Decomposed body#_30	4_M_DIEMAN,5,5
+2@gl_k2,179,260,3	duplicate(Decomposed body#_1)	Decomposed body#_31	4_M_DIEMAN,5,5
+2@gl_k2,170,261,4	duplicate(Decomposed body#_1)	Decomposed body#_32	4_M_DIEMAN,5,5
+2@gl_k2,177,219,2	duplicate(Decomposed body#_1)	Decomposed body#_33	4_M_DIEMAN,5,5
+2@gl_k2,190,214,5	duplicate(Decomposed body#_1)	Decomposed body#_34	4_M_DIEMAN,5,5
+2@gl_k2,201,214,4	duplicate(Decomposed body#_1)	Decomposed body#_35	4_M_DIEMAN,5,5
 
 // Amdarais Spawn
-2@gl_k2,153,250,8	script	Heinrich#73	4_M_HEINRICH,{
+2@gl_k2,153,250,8	script	Heinrich#_23	4_M_HEINRICH,{
 	cutin "gl_heinrich1",2;
 	mes "[Heinrich]";
 	mes "What are you putting on Himelmez!";
 	close3;
 }
 
-2@gl_k2,162,250,1	script	Varmundt#73	4_M_BARMUND,{
+2@gl_k2,162,250,1	script	Varmundt#_23	4_M_BARMUND,{
 	mes "[Varmundt]";
 	mes "Can't take off this bridle...";
 	cutin "gl_barmund2",2;
 	close3;
 }
 
-2@gl_k2,158,255,1	script	Gerhalt#73	4_LEVITATEMAN,{
+2@gl_k2,158,255,1	script	Gerhalt#_23	4_LEVITATEMAN,{
 	mes "[Gerhalt]";
 	mes "Uuuuu... Khhhah! Just run away with the commander.";
 	close;
 }
 
-2@gl_k2,158,252,1	script	Himelmez#72	4_F_HIMEL,3,3,{
+2@gl_k2,158,252,1	script	Himelmez#_22	4_F_HIMEL,3,3,{
 	cutin "gl_himel2",2;
 	mes "[Himelmez]";
 	mes "That is amazing ~ you made it all the way here. May I say thank you?";
@@ -1336,13 +1336,13 @@ OnTimer45000:
 OnTouch:
 	end;
 OnTouch_:
-	disablenpc instance_npcname("Himelmez#72");
-	enablenpc instance_npcname("Himelmez#73");
+	disablenpc instance_npcname("Himelmez#_22");
+	enablenpc instance_npcname("Himelmez#_23");
 	initnpctimer;
-	'npc_himelmez$ = instance_npcname("Himelmez#73");
-	'npc_gerhalt$ = instance_npcname("Gerhalt#73");
-	'npc_heinrich$ = instance_npcname("Heinrich#73");
-	'npc_varmundt$ = instance_npcname("Varmundt#73");
+	'npc_himelmez$ = instance_npcname("Himelmez#_23");
+	'npc_gerhalt$ = instance_npcname("Gerhalt#_23");
+	'npc_heinrich$ = instance_npcname("Heinrich#_23");
+	'npc_varmundt$ = instance_npcname("Varmundt#_23");
 	end;
 OnTimer3000:
 	npctalk "Himelmez: Amazing~ I thought that you were not even close to getting here...", 'npc_himelmez$;
@@ -1430,24 +1430,24 @@ OnTimer76000:
 	end;
 OnTimer80000:
 	disablenpc 'npc_gerhalt$;
-	donpcevent instance_npcname("#ghmemorialmob07_") + "::OnStart";
+	donpcevent instance_npcname("#ghmemorialmob_07") + "::OnStart";
 	stopnpctimer;
 	'npc_himelmez$ = 'npc_gerhalt$ = 'npc_heinrich$ = 'npc_varmundt$ = "";
 	end;
 }
 
-2@gl_k2,158,252,4	script	Himelmez#73	4_F_HIMEL,{
+2@gl_k2,158,252,4	script	Himelmez#_23	4_F_HIMEL,{
 	cutin "gl_himel2",2;
 	mes "[Himelmez]";
 	mes "That is amazing ~ you made it all the way here. May I say thank you?";
 	close3;
 }
 
-2@gl_k2,1,1,0	script	#ghmemorialmob07_	HIDDEN_WARP_NPC,{
+2@gl_k2,1,1,0	script	#ghmemorialmob_07	HIDDEN_WARP_NPC,{
 	end;
 OnStart:
-	enablenpc instance_npcname("#ghmemorialmob07_");
-	monster 'map_name$[1],158,255,"[H] Amdarais",3150,1,instance_npcname("#ghmemorialmob07_") + "::OnMyMobDead";// [H] MG_AMDARAIS
+	enablenpc instance_npcname("#ghmemorialmob_07");
+	monster 'map_name$[1],158,255,"[H] Amdarais",3150,1,instance_npcname("#ghmemorialmob_07") + "::OnMyMobDead";// [H] MG_AMDARAIS
 	'boss_id = $@mobid[0];
 	unittalk 'boss_id, "Run away... run away from me...";
 	initnpctimer;
@@ -1465,33 +1465,33 @@ OnTimer22000:
 	unittalk 'boss_id, "Demolition... Death!...";
 	end;
 OnTimer55000:
-	donpcevent instance_npcname("#ghmemorialmob08_") + "::OnStart";// Varmundt buffs and additionnal monsters
+	donpcevent instance_npcname("#ghmemorialmob_08") + "::OnStart";// Varmundt buffs and additionnal monsters
 	stopnpctimer;
 	end;
 
 OnMyMobDead:
-	if (mobcount('map_name$[1], instance_npcname("#ghmemorialmob07_") + "::OnMyMobDead") < 1) {
+	if (mobcount('map_name$[1], instance_npcname("#ghmemorialmob_07") + "::OnMyMobDead") < 1) {
 		stopnpctimer;
-		enablenpc instance_npcname("Hugin#71");
-		enablenpc instance_npcname("#Secret Room Exit_");
+		enablenpc instance_npcname("Hugin#_21");
+		enablenpc instance_npcname("#_Secret Room Exit2");
 
 		stopnpctimer;
-		disablenpc instance_npcname("#ghmemorialmob07_");
-		// note: monsters from #ghmemorialmob08_ still alive on Amdarais's dead
+		disablenpc instance_npcname("#ghmemorialmob_07");
+		// note: monsters from #ghmemorialmob_08 still alive on Amdarais's dead
 	}
 	end;
 }
 
 // Varmundt Buffs
-2@gl_k2,1,1,0	script	#ghmemorialmob08_	HIDDEN_WARP_NPC,{
+2@gl_k2,1,1,0	script	#ghmemorialmob_08	HIDDEN_WARP_NPC,{
 	end;
 OnStart:
-	enablenpc instance_npcname("#ghmemorialmob08_");
+	enablenpc instance_npcname("#ghmemorialmob_08");
 	initnpctimer;
 	end;
 OnTimer5000:
 	if (unitexists('boss_id) == 0) {
-		disablenpc instance_npcname("#ghmemorialmob08_");
+		disablenpc instance_npcname("#ghmemorialmob_08");
 		stopnpctimer;
 		end;
 	}
@@ -1508,54 +1508,54 @@ OnTimer5000:
 		break;
 	case 8:
 		donpcevent instance_npcname("Varmundt's Ghost_#Buff3") + "::OnEvent";
-		areamonster 'map_name$[1],140,220,175,255,"[H] Suffered Khalitzburg",3146,6, instance_npcname("#ghmemorialmob08_") + "::OnMobDead";
+		areamonster 'map_name$[1],140,220,175,255,"[H] Suffered Khalitzburg",3146,6, instance_npcname("#ghmemorialmob_08") + "::OnMobDead";
 		break;
 	case 7:
 		donpcevent instance_npcname("Varmundt's Ghost_#Buff3") + "::OnEvent";
-		areamonster 'map_name$[1],140,220,175,255,"[H] Abysmal Knight",3145,6, instance_npcname("#ghmemorialmob08_") + "::OnMobDead";
+		areamonster 'map_name$[1],140,220,175,255,"[H] Abysmal Knight",3145,6, instance_npcname("#ghmemorialmob_08") + "::OnMobDead";
 		break;
 	case 6:
 		donpcevent instance_npcname("Varmundt's Ghost_#Buff3") + "::OnEvent";
-		areamonster 'map_name$[1],140,220,175,255,"[H] Bloody Knight",3147,6, instance_npcname("#ghmemorialmob08_") + "::OnMobDead";
+		areamonster 'map_name$[1],140,220,175,255,"[H] Bloody Knight",3147,6, instance_npcname("#ghmemorialmob_08") + "::OnMobDead";
 		break;
 	case 5:
 		donpcevent instance_npcname("Varmundt's Ghost_#Buff2") + "::OnEvent";
 		break;
 	case 4:
 		donpcevent instance_npcname("Varmundt's Ghost_#Buff3") + "::OnEvent";
-		areamonster 'map_name$[1],140,220,175,255,"[H] Wandering Archer",3144,6, instance_npcname("#ghmemorialmob08_") + "::OnMobDead";
+		areamonster 'map_name$[1],140,220,175,255,"[H] Wandering Archer",3144,6, instance_npcname("#ghmemorialmob_08") + "::OnMobDead";
 		break;
 	case 3:
 		donpcevent instance_npcname("Varmundt's Ghost_#Buff1") + "::OnEvent";
 		donpcevent instance_npcname("Varmundt's Ghost_#Buff3") + "::OnEvent";
-		areamonster 'map_name$[1],140,220,175,255,"[H] Bloody Knight",3147,6, instance_npcname("#ghmemorialmob08_") + "::OnMobDead";
+		areamonster 'map_name$[1],140,220,175,255,"[H] Bloody Knight",3147,6, instance_npcname("#ghmemorialmob_08") + "::OnMobDead";
 		break;
 	case 2:
 		donpcevent instance_npcname("Varmundt's Ghost_#Buff1") + "::OnEvent";
 		donpcevent instance_npcname("Varmundt's Ghost_#Buff3") + "::OnEvent";
-		areamonster 'map_name$[1],140,220,175,255,"[H] Abysmal Knight",3145,6, instance_npcname("#ghmemorialmob08_") + "::OnMobDead";
+		areamonster 'map_name$[1],140,220,175,255,"[H] Abysmal Knight",3145,6, instance_npcname("#ghmemorialmob_08") + "::OnMobDead";
 		break;
 	case 1:
 	case 0:
 		donpcevent instance_npcname("Varmundt's Ghost_#Buff1") + "::OnEvent";
 		donpcevent instance_npcname("Varmundt's Ghost_#Buff4") + "::OnEvent";
-		areamonster 'map_name$[1],140,220,175,255,"[H] Wandering Archer",3144,6, instance_npcname("#ghmemorialmob08_") + "::OnMobDead";
+		areamonster 'map_name$[1],140,220,175,255,"[H] Wandering Archer",3144,6, instance_npcname("#ghmemorialmob_08") + "::OnMobDead";
 		break;
 	}
 	end;
 OnTimer30000:
-	killmonster 'map_name$[1], instance_npcname("#ghmemorialmob08_") + "::OnMobDead";
+	killmonster 'map_name$[1], instance_npcname("#ghmemorialmob_08") + "::OnMobDead";
 	initnpctimer;
 	end;
 OnMobDead:
 	end;
 }
 
-2@gl_k2,150,247,5	script	Varmundt's Ghost_#Buff1	4_M_BARMUND,2,2,{
+2@gl_k2,150,247,5	script	Varmundt's Ghost#_Buff1	4_M_BARMUND,2,2,{
 	end;
 OnTouch:
 	specialeffect2 EF_ENHANCE;
-	.@num = atoi( replacestr(strnpcinfo(2), "Buff", "") );
+	.@num = atoi( replacestr(strnpcinfo(2), "_Buff", "") );
 	if (.@num == 1)
 		sc_start SC_GLASTHEIM_HIDDEN,30000,1,10000,SCSTART_NOTICKDEF;
 	else if (.@num == 2)
@@ -1572,7 +1572,7 @@ OnTouch:
 OnEvent:
 	initnpctimer;
 	enablenpc instance_npcname( strnpcinfo(0) );
-	.@num = atoi( replacestr(strnpcinfo(2), "Buff", "") );
+	.@num = atoi( replacestr(strnpcinfo(2), "_Buff", "") );
 	if (.@num == 1)
 		npctalk "Varmundt's Ghost: Amdarais may use a strong magic shield! Stay close to me and I'll protect you!";
 	else if (.@num == 2)
@@ -1587,12 +1587,12 @@ OnTimer10000:
 	disablenpc instance_npcname( strnpcinfo(0) );
 	end;
 }
-2@gl_k2,165,247,3	duplicate(Varmundt's Ghost_#Buff1)	Varmundt's Ghost_#Buff2	4_M_BARMUND,2,2
-2@gl_k2,150,232,8	duplicate(Varmundt's Ghost_#Buff1)	Varmundt's Ghost_#Buff3	4_M_BARMUND,2,2
-2@gl_k2,165,232,2	duplicate(Varmundt's Ghost_#Buff1)	Varmundt's Ghost_#Buff4	4_M_BARMUND,2,2
+2@gl_k2,165,247,3	duplicate(Varmundt's Ghost#_Buff1)	Varmundt's Ghost#_Buff2	4_M_BARMUND,2,2
+2@gl_k2,150,232,8	duplicate(Varmundt's Ghost#_Buff1)	Varmundt's Ghost#_Buff3	4_M_BARMUND,2,2
+2@gl_k2,165,232,2	duplicate(Varmundt's Ghost#_Buff1)	Varmundt's Ghost#_Buff4	4_M_BARMUND,2,2
 
 
-2@gl_k2,158,241,1	script	Hugin#71	4_M_SAGE_C,{
+2@gl_k2,158,241,1	script	Hugin#_21	4_M_SAGE_C,{
 	if (checkquest(12337,HUNTING) == 2) {// note: complete hunting 'Corrupted Soul Hunt' prerequis
 		mes "[Hugin]";
 		mes "Hm, you are very well. First of all, let me give you some loot from Amdarais.";
@@ -1651,7 +1651,7 @@ OnTimer10000:
 
 // Treasure Room
 //============================================================
-1@gl_k2,165,136,3	script	Strange crack#72	CLEAR_NPC,{
+1@gl_k2,165,136,3	script	Strange crack#_2	CLEAR_NPC,{
 	if (isbegin_quest(12335) == 0) {// Space Distortion
 		mes "The crack looks suspicious but nothing more to check.";
 		close;
@@ -1659,7 +1659,7 @@ OnTimer10000:
 	specialeffect EF_SPELLBREAKER;
 
 	.@random = rand(1,4);
-	switch( atoi(strnpcinfo(2)) ) {
+	switch( atoi( charat(strnpcinfo(2),1) ) ) {
 	case 2:
 		for ( .@i = 1; .@i <= .@random; ++.@i )
 			makeitem 719,1,"this",165,138;
@@ -1716,14 +1716,14 @@ OnTimer10000:
 	disablenpc instance_npcname( strnpcinfo(0) );
 	end;
 }
-1@gl_k2,159,136,3	duplicate(Strange crack#72)	Strange crack#73	CLEAR_NPC
-1@gl_k2,153,136,3	duplicate(Strange crack#72)	Strange crack#74	CLEAR_NPC
-1@gl_k2,147,136,3	duplicate(Strange crack#72)	Strange crack#75	CLEAR_NPC
-1@gl_k2,141,136,3	duplicate(Strange crack#72)	Strange crack#76	CLEAR_NPC
-1@gl_k2,135,136,3	duplicate(Strange crack#72)	Strange crack#77	CLEAR_NPC
-1@gl_k2,129,136,3	duplicate(Strange crack#72)	Strange crack#78	CLEAR_NPC
+1@gl_k2,159,136,3	duplicate(Strange crack#_2)	Strange crack#_3	CLEAR_NPC
+1@gl_k2,153,136,3	duplicate(Strange crack#_2)	Strange crack#_4	CLEAR_NPC
+1@gl_k2,147,136,3	duplicate(Strange crack#_2)	Strange crack#_5	CLEAR_NPC
+1@gl_k2,141,136,3	duplicate(Strange crack#_2)	Strange crack#_6	CLEAR_NPC
+1@gl_k2,135,136,3	duplicate(Strange crack#_2)	Strange crack#_7	CLEAR_NPC
+1@gl_k2,129,136,3	duplicate(Strange crack#_2)	Strange crack#_8	CLEAR_NPC
 
-1@gl_k2,269,267,3	script	Strange crack#71	CLEAR_NPC,{
+1@gl_k2,269,267,3	script	Strange crack#_1	CLEAR_NPC,{
 	if (isbegin_quest(12335) == 0) {// Space Distortion
 		mes "The crack looks suspicious but nothing more to check.";
 		close;
@@ -1736,82 +1736,82 @@ OnInstanceInit:
 	'map_name$[1] = instance_mapname("2@gl_k2");
 
 	// Entrance
-	disablenpc instance_npcname("Himelmez#51");
-	disablenpc instance_npcname("Varmundt#51");
-	disablenpc instance_npcname("Heinrich#50");
-	disablenpc instance_npcname("Heinrich#52");
-	disablenpc instance_npcname("Heinrich#53");
+	disablenpc instance_npcname("Himelmez#_1");
+	disablenpc instance_npcname("Varmundt#_1");
+	disablenpc instance_npcname("Heinrich#_1");
+	disablenpc instance_npcname("Heinrich#_2");
+	disablenpc instance_npcname("Heinrich#_3");
 
 	// Rescue 1
-	disablenpc instance_npcname("#ghmemorialmob01_");
-	disablenpc instance_npcname("Altar boy Domun#51");
+	disablenpc instance_npcname("#ghmemorialmob_01");
+	disablenpc instance_npcname("Altar boy Domun#_1");
 
 	// Rescue 2
-	disablenpc instance_npcname("#ghmemorialmob02_");
-	disablenpc instance_npcname("Holgren the Destroyer#51");
+	disablenpc instance_npcname("#ghmemorialmob_02");
+	disablenpc instance_npcname("Holgren the Destroyer#_1");
 	for ( .@i = 1; .@i <= 26; .@i++ )
-		disablenpc instance_npcname("A dead guy#" + .@i);
+		disablenpc instance_npcname("A dead man#_" + .@i);
 
 	// Sector 3
-	disablenpc instance_npcname("#ghmemorialmob03_");
+	disablenpc instance_npcname("#ghmemorialmob_03");
 
 	// Root of Corruption
-	disablenpc instance_npcname("Himelmez#52");
-	disablenpc instance_npcname("Varmundt#52");
-	disablenpc instance_npcname("Heinrich#54");
-	disablenpc instance_npcname("#Mimelon_");
-	disablenpc instance_npcname("#ghmemorialmob04_");
+	disablenpc instance_npcname("Himelmez#_2");
+	disablenpc instance_npcname("Varmundt#_2");
+	disablenpc instance_npcname("Heinrich#_4");
+	disablenpc instance_npcname("#_Mimelon");
+	disablenpc instance_npcname("#ghmemorialmob_04");
 
 	// Entrance 2nd map
-	disablenpc instance_npcname("Varmundt#71");
-	disablenpc instance_npcname("Heinrich#71");
-	disablenpc instance_npcname("#Servanton_");
-	hideonnpc instance_npcname("#Servanton_effect_");
+	disablenpc instance_npcname("Varmundt#_21");
+	disablenpc instance_npcname("Heinrich#_21");
+	disablenpc instance_npcname("#_Servanton");
+	hideonnpc instance_npcname("#_Servanton_effect");
 
 	// Commanders
-	disablenpc instance_npcname("#ghmemorialmob05_");
-	disablenpc instance_npcname("#ghmemorialmob06_");
+	disablenpc instance_npcname("#ghmemorialmob_05");
+	disablenpc instance_npcname("#ghmemorialmob_06");
 	for ( .@i = 1; .@i <= 7; .@i++ ) {
-		disablenpc instance_npcname("#o_gh_2-" + .@i);
-		disablenpc instance_npcname("#o_gh_3-" + .@i);
+		disablenpc instance_npcname("#_ogh_2-" + .@i);
+		disablenpc instance_npcname("#_ogh_3-" + .@i);
 	}
 
 	// Amdarais Room Entrance
-	disablenpc instance_npcname("#Geron_");
+	disablenpc instance_npcname("#_Geron");
 	for ( .@i = 1; .@i <= 35; .@i++ )
-		disablenpc instance_npcname("Decomposed body.#" + .@i);
+		disablenpc instance_npcname("Decomposed body#_" + .@i);
 
 	// Amdarais Spawn
-	disablenpc instance_npcname("Gerhalt#73");
-	disablenpc instance_npcname("Himelmez#72");
-	disablenpc instance_npcname("Himelmez#73");
-	disablenpc instance_npcname("Varmundt#73");
-	disablenpc instance_npcname("Heinrich#73");
-	disablenpc instance_npcname("#ghmemorialmob07_");
+	disablenpc instance_npcname("Gerhalt#_23");
+	disablenpc instance_npcname("Himelmez#_22");
+	disablenpc instance_npcname("Himelmez#_23");
+	disablenpc instance_npcname("Varmundt#_23");
+	disablenpc instance_npcname("Heinrich#_23");
+	disablenpc instance_npcname("#ghmemorialmob_07");
 
 	// Varmundt Buffs
-	disablenpc instance_npcname("#ghmemorialmob08_");
-	disablenpc instance_npcname("Varmundt's Ghost_#Buff1");
-	disablenpc instance_npcname("Varmundt's Ghost_#Buff2");
-	disablenpc instance_npcname("Varmundt's Ghost_#Buff3");
-	disablenpc instance_npcname("Varmundt's Ghost_#Buff4");
-	disablenpc instance_npcname("Hugin#71");
+	disablenpc instance_npcname("#ghmemorialmob_08");
+	disablenpc instance_npcname("Varmundt's Ghost#_Buff1");
+	disablenpc instance_npcname("Varmundt's Ghost#_Buff2");
+	disablenpc instance_npcname("Varmundt's Ghost#_Buff3");
+	disablenpc instance_npcname("Varmundt's Ghost#_Buff4");
+	disablenpc instance_npcname("Hugin#_21");
 
 	// Warps
-	disablenpc instance_npcname("#2Control_");
-	disablenpc instance_npcname("#2Control2_");
-	disablenpc instance_npcname("#3Control_");
-	disablenpc instance_npcname("#3Control2_");
-	disablenpc instance_npcname("#4Control_");
-	disablenpc instance_npcname("#4Control2_");
-	disablenpc instance_npcname("#2F Entrance_");
-	disablenpc instance_npcname("#1 Control_");
-	disablenpc instance_npcname("#22 Control_");
-	disablenpc instance_npcname("#22 Control2_");
-	disablenpc instance_npcname("#23 Control_");
-	disablenpc instance_npcname("#23 Control2_");
-	disablenpc instance_npcname("#24 Control_");
-	disablenpc instance_npcname("#24 Control2_");
-	disablenpc instance_npcname("#Secret Room Exit_");
+	disablenpc instance_npcname("#2Con_trol");
+	disablenpc instance_npcname("#2Con_trol2");
+	disablenpc instance_npcname("#3Con_trol");
+	disablenpc instance_npcname("#3Con_trol2");
+	disablenpc instance_npcname("#4Con_trol");
+	disablenpc instance_npcname("#4Con_trol2");
+	disablenpc instance_npcname("#2F_Entrance");
+	disablenpc instance_npcname("#1 Con_trol");
+	disablenpc instance_npcname("#22 Con_trol");
+	disablenpc instance_npcname("#22 Con_trol2");
+	disablenpc instance_npcname("#23 Con_trol");
+	disablenpc instance_npcname("#23 Con_trol2");
+	disablenpc instance_npcname("#24 Con_trol");
+	disablenpc instance_npcname("#24 Con_trol2");
+	disablenpc instance_npcname("#_Secret Room Exit2");
 	end;
 }
