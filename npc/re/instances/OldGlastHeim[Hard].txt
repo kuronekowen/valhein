@@ -73,11 +73,11 @@ glast_01,200,351,5	script	Hugin#_H2	4_M_SAGE_C,{
 	else {
 		mes "[Hugin]";
 		mes "Umm? Did you see me at another place? I don't think so. What about this time?";
-		if (isbegin_quest(12322) == 1)
-			erasequest 12322;
+		if (isbegin_quest(12335) == 1)
+			erasequest 12335;
 	}
 	next;
-	switch( checkquest(12317,PLAYTIME) ) {
+	switch( checkquest(12334,PLAYTIME) ) {
 	case -1:
 		.@party_id = getcharid(1);
 		.@p_name$ = getpartyname(.@party_id);
