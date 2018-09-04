@@ -70,7 +70,7 @@
 0,20773,60	// Excelion Wing
 0,28941,60  //,Excelion Shield
 0,5916,100  //,Exorcist Glasses
-0,19081,100  //,Faceworm Egg Shell
+0,19081,50  //,Faceworm Egg Shell
 0,28438,100  //,Fairy Leaf Powder
 0,2589,100  //,Fallen angel wing
 0,28386,100  //,Fallen Monk Rosary
@@ -85,7 +85,7 @@
 0,18787,100  //,Goal Tender Mask
 0,5475,100  //,Gozarian hat
 0,22172,100  //,Gray Wing Boots
-0,19269,100  //,Happy Flapping Angel Wings
+0,19269,50  //,Happy Flapping Angel Wings
 0,28929,100  //,Happy Shield
 0,19306,60  //,heart card
 0,18563,100  //,heart wing hairband
@@ -129,7 +129,7 @@
 0,5938,100  //,Octopus Hat
 0,20932,100  //,Old Morroc Shawl
 0,15142,100  //,Orca Clothes
-0,19102,100  //,Pale Moon Hat
+0,19102,50  //,Pale Moon Hat
 0,28565,250  //,Perverse Demon Mask
 0,20859,100  //,Phreeoni Wings
 0,18908,60  //,Piamette's red ear
@@ -150,6 +150,7 @@
 0,28900,60  //,Royal Guard Shield
 0,2347,100  //,Saphien's Armor of Ocean
 0,28410,100  //,Sapphire Wrist
+0,28903,100	//,Scutum
 0,5907,60  //,Sea Captain Hat
 0,19138,100  //,Seraphim Coronet
 0,19327,100  //,Seraphim Feather
@@ -230,12 +231,12 @@
 1,7621,6
 
 //Other
-7,12920,140
-7,12921,140
+7,12920,90
+7,12921,90
 7,16396,40
 7,16394,40
-7,7620,15
-7,7619,15
+7,7620,10
+7,7619,10
 7,16260,90
 7,16261,90
 7,6226,10

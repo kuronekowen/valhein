@@ -11,7 +11,7 @@
 //= limit doram class hstyle and hcolor line(18,19). [HaureN]
 //============================================================
 
-prontera,171,185,4	script	New Stylist	878,{
+prontera,171,185,4	script	New Stylist	894,{
 	mes "[ช่างแต่งตัว]","บริการเปลี่ยนการแต่งตัว","เปลี่ยนชุดเป็นแบบญี่ปุ่น";
 	next;
 	menu "เปลี่ยนชุดญี่ปุ่น",JP_1,"เปลี่ยนสีชุดญี่ปุ่น",JP_2;
