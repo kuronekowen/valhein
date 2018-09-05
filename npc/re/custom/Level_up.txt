@@ -22,13 +22,13 @@ case 1:
 	next;
 	if (BaseLevel < 99)	goto L_no99;
 	mes .@heading$;
-	if (#reditem99){
+	if (red_item99){
 		mes "ÍêÐæ ÃÑºä»áÅéÇ¹Ð¨êÐ";
 		close;
 	}
 	mes "ÂÔ¹´Õ´éÇÂ¤Ø³àÅè¹¨¹àÅàÇÅµÑ¹áÅÐ¨êÍºàÅàÇÅµÑ¹";
 	getitem 31582,1;
-	set #reditem99, 1;
+	set red_item99, 1;
 	mes "¤Ø³ÃÑºäÍà·Áä»áÅéÇ";
 	mes "¢ÍãËéâª¤´Õ";
 	close;
@@ -39,13 +39,13 @@ case 2:
 	next;
 	if (BaseLevel < 100)	goto L_no100;
 	mes .@heading$;
-	if (#reditem100){
+	if (red_item100){
 		mes "ÍêÐæ ÃÑºä»áÅéÇ¹Ð¨êÐ";
 		close;
 	}
 	mes "ÂÔ¹´Õ´éÇÂ¤Ø³àÅè¹¨¹àÅàÇÅµÑ¹áÅÐ¨êÍºàÅàÇÅµÑ¹";
 	getitem 31582,3;
-	set #reditem100, 1;
+	set red_item100, 1;
 	mes "¤Ø³ÃÑºäÍà·Áä»áÅéÇ";
 	mes "¢ÍãËéâª¤´Õ";
 	close;
@@ -56,13 +56,13 @@ case 3:
 	next;
 	if (BaseLevel < 120)	goto L_no120;
 	mes .@heading$;
-	if (#reditem120){
+	if (red_item120){
 		mes "ÍêÐæ ÃÑºä»áÅéÇ¹Ð¨êÐ";
 		close;
 	}
 	mes "ÂÔ¹´Õ´éÇÂ¤Ø³àÅè¹¨¹àÅàÇÅµÑ¹áÅÐ¨êÍºàÅàÇÅµÑ¹";
 	getitem 31582,2;
-	set #reditem120, 1;
+	set red_item120, 1;
 	mes "¤Ø³ÃÑºäÍà·Áä»áÅéÇ";
 	mes "¢ÍãËéâª¤´Õ";
 	close;	
@@ -73,13 +73,13 @@ case 4:
 	next;
 	if (BaseLevel < 140)	goto L_no140;
 	mes .@heading$;
-	if (#reditem140){
+	if (red_item140){
 		mes "ÍêÐæ ÃÑºä»áÅéÇ¹Ð¨êÐ";
 		close;
 	}
 	mes "ÂÔ¹´Õ´éÇÂ¤Ø³àÅè¹¨¹àÅàÇÅµÑ¹áÅÐ¨êÍºàÅàÇÅµÑ¹";
 	getitem 31582,2;
-	set #reditem140, 1;
+	set red_item140, 1;
 	mes "¤Ø³ÃÑºäÍà·Áä»áÅéÇ";
 	mes "¢ÍãËéâª¤´Õ";
 	close;
@@ -90,13 +90,13 @@ case 5:
 	next;
 	if (BaseLevel < 150)	goto L_no150;
 	mes .@heading$;
-	if (#reditem150){
+	if (red_item150){
 		mes "ÍêÐæ ÃÑºä»áÅéÇ¹Ð¨êÐ";
 		close;
 	}
 	mes "ÂÔ¹´Õ´éÇÂ¤Ø³àÅè¹¨¹àÅàÇÅµÑ¹áÅÐ¨êÍºàÅàÇÅµÑ¹";
 	getitem 31582,4;
-	set #reditem150, 1;
+	set red_item150, 1;
 	mes "¤Ø³ÃÑºäÍà·Áä»áÅéÇ";
 	mes "¢ÍãËéâª¤´Õ";
 	close;		
@@ -107,13 +107,13 @@ case 6:
 	next;
 	if (BaseLevel < 175)	goto L_no175;
 	mes .@heading$;
-	if (#reditem175){
+	if (red_item175){
 		mes "ÍêÐæ ÃÑºä»áÅéÇ¹Ð¨êÐ";
 		close;
 	}
 	mes "ÂÔ¹´Õ´éÇÂ¤Ø³àÅè¹¨¹àÅàÇÅµÑ¹áÅÐ¨êÍºàÅàÇÅµÑ¹";
 	getitem 31581,1;
-	set #reditem175, 1;
+	set red_item175, 1;
 	mes "¤Ø³ÃÑºäÍà·Áä»áÅéÇ";
 	mes "¢ÍãËéâª¤´Õ";
 	close;		
