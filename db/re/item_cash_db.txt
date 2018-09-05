@@ -29,6 +29,7 @@
 0,15249,100  //,Antonio's Coat
 0,28430,100  //,Arch Bishop Ring
 0,28429,100  //,Arquien's Necklace
+0,28320,60  //,Ascendant crown
 0,28320,100  //,Assassin's Despair
 0,20714,100  //,Assassin's Muffler
 0,5898,100  //,Autumn Headband
@@ -54,6 +55,7 @@
 0,22138,100  //,Devil Worshipper Shoes
 0,19329,100  //,Devil's Hand
 0,5968,100  //,Divine Angel Nurse Cap
+0,5900,100  //,Divine Guard Hat
 0,15135,100  //,Dragon Cloth
 0,5924,100  //,Dragon Knight's Eyepatch
 0,15130,100  //,Dragon Mail
@@ -77,6 +79,7 @@
 0,28386,100  //,Fallen Monk Rosary
 0,15125,100  //,Female Diver's Suit
 0,20726,100  //,Fire Dragon's Coat
+0,5901,100  //,Focus Beret
 0,15175,100  //,Flame Dragon Armor
 0,5937,100  //,Flying Helmet
 0,5918,150  //,gambler seal
@@ -103,6 +106,7 @@
 0,28551,100  //,Imperial Glove
 0,2153,100  //,Imperial Guard
 0,28372,100  //,Imperial Ring
+0,5966,100  //,Kardui Ear
 0,15169,100  //,Kardui Robe
 0,28503,100  //,Keraunos
 0,28394,100  //,King of Spirit Ring
@@ -112,6 +116,7 @@
 0,2345,100  //,Lucius's Fierce Armor of Volcano
 0,28433,100  //,Luminous Blue Stone
 0,19156,100  //,Lunar Rainbow
+0,5905,60  //,Lyrica Hat
 0,18720,100  //,Magical Booster
 0,28377,100  //,Magical Ring
 0,19171,60  //,Magician Knit Hat
@@ -127,9 +132,12 @@
 0,15072,100  //,Nectar Suit
 0,18799,100  //,Nero Mask
 0,18813,100  //,New wave sunglasses
+0,18813,60  //,Night Sparrow hat
 0,5938,100  //,Octopus Hat
 0,20932,100  //,Old Morroc Shawl
+0,5906,60  //,Oni Horn
 0,15142,100  //,Orca Clothes
+0,18794,60  //,Ordinary Black Magician Hat
 0,19102,50  //,Pale Moon Hat
 0,28565,250  //,Perverse Demon Mask
 0,20859,100  //,Phreeoni Wings
@@ -189,6 +197,7 @@
 0,15108,100  //,Venomous Insect Armor
 0,15143,100  //,Vermin Cloth
 0,28575,100  //,Verus Core
+0,5904,60  //,Very normal hat
 0,28352,100  //,Vesper Gear 01
 0,28353,100  //,Vesper Gear 02
 0,28357,100  //,Vesper Gear 03
