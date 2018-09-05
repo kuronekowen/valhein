@@ -1388,6 +1388,5 @@ mes "Do you want to escape?";
 next;
 switch(select("Yes","No")) {
 	case 1:
-		getitem 31583,100;// 100 cash coin
 		warp verus01,152,150;}
 }
