@@ -2012,3 +2012,11 @@
 27178  // Gaster_Card
 27179  // Coyote_Card
 27180  // Spider_Chariot_Card
+27321  // Despair_God_Morocc_Card
+27322  // Demon_God's_Apostle_Ahat_Card
+27323  // Demon_God's_Apostle_Shnaim_Card
+27324  // Brinaranea_Card
+27325  // Muspellskoll_Card
+27326  // Morocc's_Minion_Card
+27327  // Grim_Reaper_Ankou_Card
+27328  // Corrupted_Life_Card

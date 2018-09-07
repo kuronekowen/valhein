@@ -287,6 +287,18 @@
 2725:2774,{ bonus2 bAddClass,Class_All,5; bonus bMatkRate,3; bonus bHealPower,5; }
 2726:2727,{ bonus bUseSPrate,-25; }
 27264:27265,{ bonus2 bAddEle,Ele_Dark,15; bonus2 bAddEle,Ele_Undead,15; bonus2 bMagicAddEle,Ele_Dark,15; bonus2 bMagicAddEle,Ele_Undead,15; bonus2 bSubEle,Ele_Dark,15; bonus2 bSubEle,Ele_Undead,15; }
+27322:27323,{ bonus bMaxHPrate,5; bonus bMaxSPrate,5; }
+27324:27325,{ bonus2 bMagicAtkEle,Ele_Water,10; bonus2 bSubDefEle,Ele_Fire,10; }
+27326:27321,{ bonus bMaxHPrate,50; }
+27328:4020,{ bonus bBaseAtk,15; bonus2 bAtkEle,Ele_Dark,20; }
+27328:4023,{ bonus bInt,3; bonus bMaxSP,100; bonus bMatkRate,5; }
+27328:4066,{ bonus2 bSubRace,RC_DemiHuman,15; bonus2 bSubRace,RC_Player,15; }
+27328:4067,{ bonus bDef,100; }
+27328:4071,{ bonus bHit,15; bonus bFlee,15; bonus bCritAtkRate,15; }
+27328:4077,{ bonus bVariableCastrate,-25; }
+27328:4082,{ bonus2 bAddSize,Size_Medium,15; bonus2 bAddSize,Size_Large,15; }
+27328:4107,{ bonus bMaxHPrate,4; bonus bMaxSPrate,4; }
+27328:4375,{ bonus bFlee,5; bonus2 bSubEle,Ele_Neutral,5; }
 2733:2772,{ bonus2 bAddClass,Class_All,5; bonus bMatkRate,3; bonus bHealPower,5; }
 2733:2773,{ bonus2 bAddClass,Class_All,5; bonus bMatkRate,3; bonus bHealPower,5; }
 2733:2774,{ bonus2 bAddClass,Class_All,5; bonus bMatkRate,3; bonus bHealPower,5; }
@@ -415,7 +427,7 @@
 4545:18730,{ bonus bMatk,5; bonus bBaseAtk,5; }
 4605:4606,{ bonus2 bSubEle,Ele_Neutral,20; bonus bFlee,20; bonus2 bHPLossRate,100,6000; bonus2 bSPLossRate,6,6000; }
 4608:4609,{ bonus2 bAddSize,Size_Medium,15; bonus2 bAddSize,Size_Large,15; bonus2 bSubSize,Size_Medium,5; bonus2 bSubSize,Size_Large,5; }
-4610:27168,{ bonus bBaseAtk,100; autobonus "{}",30,6000,BF_WEAPON,"{ active_transform 3190,6000; }"; ; }
+4610:27168,{ bonus bBaseAtk,100; autobonus "{}",30,6000,BF_WEAPON,"{ active_transform 3190,6000; }"; }
 4626:4628,{ bonus2 bIgnoreMdefRaceRate,RC_Demon,50; }
 4627:4628,{ bonus2 bIgnoreDefRaceRate,RC_Formless,50; bonus2 bIgnoreDefRaceRate,RC_Demon,50;}
 4629:4630,{ bonus3 bAutoSpell,"NPC_WIDECURSE",2,2; bonus2 bSubEle,Ele_Neutral,5; }

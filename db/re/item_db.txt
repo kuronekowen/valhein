@@ -11980,6 +11980,14 @@
 27318,Miguel_Card,Miguel Card,6,20,,10,,,,,,,,64,,,,,{ bonus bCritAtkRate,20; bonus2 bSubRace,RC_All,-10; },{},{}
 27319,R48_85_BESTIA_Card,R48-85-BESTIA Card,6,20,,10,,,,,,,,16,,,,,{ bonus2 bAddEle,Ele_Poison,40; },{},{}
 27320,E_EA1L_card,E-EA1L card,6,20,,10,,,,,,,,2,,,,,{ .@r = getrefine(); .@val = 3; if (.@r >= 9) { .@val += 2; if (.@r >= 11) { .@val += 5; } } bonus2 bMagicAtkEle,Ele_Fire,.@val; },{},{}
+27321,Despair_God_Morocc_Card,Despair God Morocc Card,6,20,,10,,,,,,,,64,,,,,{ bonus bAtkRate,10; bonus bMaxHPrate,-50; bonus2 bAddRace,RC_Angel,30; bonus2 bAddRace,RC_DemiHuman,30; bonus2 bAddRace,RC_PLAYER,30; autobonus3 "{}",10000,5,"NV_FIRSTAID","{ active_transform 3097,5000; specialeffect2 EF_POTION_BERSERK; }"; },{},{}
+27322,Demon_God's_Apostle_Ahat_Card,Demon God's Apostle Ahat Card,6,20,,10,,,,,,,,136,,,,,{ bonus bMaxSPrate,5; },{},{}
+27323,Demon_God's_Apostle_Shnaim_Card,Demon God's Apostle Shnaim Card,6,20,,10,,,,,,,,136,,,,,{ bonus bMaxHPrate,5; },{},{}
+27324,Brinaranea_Card,Brinaranea Card,6,20,,10,,,,,,,,2,,,,,{ bonus2 bMagicAtkEle,Ele_Water,15; },{},{}
+27325,Muspellskoll_Card,Muspellskoll Card,6,20,,10,,,,,,,,2,,,,,{ bonus2 bSubDefEle,Ele_Fire,30; },{},{}
+27326,Morocc's_Minion_Card,Morocc's Minion Card,6,20,,10,,,,,,,,16,,,,,{ bonus bBaseAtk,100; bonus bAspdRate,25; bonus bMaxHPrate,-20; },{},{}
+27327,Grim_Reaper_Ankou_Card,Grim Reaper Ankou Card,6,20,,10,,,,,,,,769,,,,,{ .@r = getrefine(); autobonus2 "{ bonus bAtkRate,25; bonus bMatkRate,25; }",10*.@r,10000,BF_WEAPON|BF_MAGIC,"{}"; autobonus3 "{}",10000,5000,"NV_FIRSTAID","{ active_transform 3029,5000; specialeffect2 EF_POTION_BERSERK; }"; bonus4 bAutoSpellWhenHit,"NPC_WIDECURSE",3,.@r,0; },{},{}
+27328,Corrupted_Life_Card,Corrupted Life Card,6,20,,10,,,,,,,,769,,,,,{ bonus bMaxHP,500; bonus2 bSubRace,RC_Angel,-50; },{},{}
 28000,Thanos_Katar,Thanatos Katar,5,10,,1800,220:80,,1,1,0x00001000,56,2,34,4,120,1,16,{ bonus bInt,6; bonus bVit,6; bonus bLuk,-6; bonus2 bHPDrainRate,50,5; bonus2 bSPDrainRate,10,5; bonus2 bHPLossRate,100,10000; },{},{ heal -1000,0; }
 28001,Katar_Of_Evil_Slayer,Evil Slayer Ripper Katar,5,0,,1200,120,,1,1,0x00001000,63,2,34,3,100,1,16,{ bonus2 bAddRace,RC_Demon,10; bonus2 bAddRace,RC_Undead,10; .@r = getrefine(); if(.@r>=9) { .@dmg = 5; if(.@r>=12) { .@dmg += 7; } bonus2 bAddClass,Class_All,.@dmg; } },{},{}
 28002,Half_BF_Katar2,Half BF Katar2,5,20,,0,130,,1,0,0x00001000,63,2,34,3,80,1,16,{ bonus bStr,1; bonus bDex,1; bonus bLuk,1; bonus2 bAddRace,RC_DemiHuman,35; bonus2 bAddRace,RC_Player,35; bonus bCritAtkRate,10; bonus bAspdRate,3; bonus bUnbreakableWeapon; },{},{}
