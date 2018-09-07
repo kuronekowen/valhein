@@ -3818,7 +3818,7 @@
 //22821,475,100	//
 22823,475,100	// Sealed_Sniper_Scroll
 22828,475,100	// Sealed_Album_Scroll
-22829,475,100	// Sealed_Card_Album
+22829,473,100	// Sealed_Card_Album
 22837,507,100	// Integer_Time
 22842,475,100	// Sealed_Dracula_Scroll_II
 22844,475,100	// Sealed_Dracula_Card_Album
