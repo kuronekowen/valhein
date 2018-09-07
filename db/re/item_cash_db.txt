@@ -111,6 +111,7 @@
 0,28503,100  //,Keraunos
 0,28394,100  //,King of Spirit Ring
 0,5497,100  //,King tiger doll
+0,15103,100	// Kirin Armor
 0,22051,100  //,Lamor Shoes
 0,2198,100  //,Lapine Shield
 0,2345,100  //,Lucius's Fierce Armor of Volcano
