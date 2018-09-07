@@ -993,6 +993,7 @@ OnMobDead2:
 	specialeffect EF_THUNDERSTORM,AREA, .@reaper$;
 	sleep 1000;
 	specialeffect EF_LORD,AREA, .@reaper$;
+	set Morse_counter,1;
 	end;
 }
 
