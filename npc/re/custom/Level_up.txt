@@ -22,7 +22,7 @@ case 1:
 	next;
 	if (BaseLevel < 99)	goto L_no99;
 	mes .@heading$;
-	if (red_item99){
+	if (red_item99 == 1){
 		mes "ÍêÐæ ÃÑºä»áÅéÇ¹Ð¨êÐ";
 		close;
 	}
@@ -39,7 +39,7 @@ case 2:
 	next;
 	if (BaseLevel < 100)	goto L_no100;
 	mes .@heading$;
-	if (red_item100){
+	if (red_item100 == 1){
 		mes "ÍêÐæ ÃÑºä»áÅéÇ¹Ð¨êÐ";
 		close;
 	}
@@ -56,7 +56,7 @@ case 3:
 	next;
 	if (BaseLevel < 120)	goto L_no120;
 	mes .@heading$;
-	if (red_item120){
+	if (red_item120 == 1){
 		mes "ÍêÐæ ÃÑºä»áÅéÇ¹Ð¨êÐ";
 		close;
 	}
@@ -73,7 +73,7 @@ case 4:
 	next;
 	if (BaseLevel < 140)	goto L_no140;
 	mes .@heading$;
-	if (red_item140){
+	if (red_item140 == 1){
 		mes "ÍêÐæ ÃÑºä»áÅéÇ¹Ð¨êÐ";
 		close;
 	}
@@ -90,7 +90,7 @@ case 5:
 	next;
 	if (BaseLevel < 150)	goto L_no150;
 	mes .@heading$;
-	if (red_item150){
+	if (red_item150 == 1){
 		mes "ÍêÐæ ÃÑºä»áÅéÇ¹Ð¨êÐ";
 		close;
 	}
@@ -107,7 +107,7 @@ case 6:
 	next;
 	if (BaseLevel < 175)	goto L_no175;
 	mes .@heading$;
-	if (red_item175){
+	if (red_item175 == 1){
 		mes "ÍêÐæ ÃÑºä»áÅéÇ¹Ð¨êÐ";
 		close;
 	}

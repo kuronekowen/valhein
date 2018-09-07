@@ -773,7 +773,7 @@ moro_vol,142,131,5	script	Barget Tiblack#ep14bs	4_M_ALCHE_D,{
 		mes "At a glance, Sonias look like plastic tubes, but their structure is very minimal.";
 		next;
 		mes "[Barget Tiblack]";
-		mes "They're not difficult to gather. Please ^0000FFpick 50 Sonias and bring me 50 stems^000000.";
+		mes "They're not difficult to gather. Please ^0000FFpick 25 Sonias and bring me 25 stems^000000.";
 		next;
 		mes "[Barget Tiblack]";
 		mes "Sonia specimens are the last of my specimen collection. If you happen to ^0000FFsee peculiar Sonias^000000, please don't hesitate to let me know.";

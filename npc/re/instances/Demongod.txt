@@ -143,12 +143,12 @@ OnInit:
 
 moro_cav,43,73,3	script	Yggdrasil Lookalike::alatdgyl	HIDDEN_NPC,{
 OnStart:
-	//mes .@npcname$;
-	//if (Morse_counter == 0) {
-	//	mes "This tree is lookalike Yggdrasil tree";
-	//	close;
-	//}
-	//else set .@party_id, getcharid(1);
+	mes .@npcname$;
+	if (Morse_counter == 0) {
+		mes "This tree is lookalike Yggdrasil tree";
+		close;
+	}
+	else {
 	set .@party_id, getcharid(1);
 	set .@tdg_leader, ( getcharid(0) == getpartyleader(.@party_id,2) );
 
@@ -327,6 +327,7 @@ OnInit:
 	set $tdg_timer_delay, 3600; //1 hour to clean the instance
 	set .instance_name$, "Temple of the Demon God";
 	end;
+}
 }
 
 function	script	IGF_SquadPrize	{
