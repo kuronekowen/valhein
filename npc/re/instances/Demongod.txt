@@ -310,6 +310,7 @@ OnStart:
 	default: 
 		break;
 }
+}
 close;
 
 OnPCLoginEvent:
@@ -327,7 +328,6 @@ OnInit:
 	set $tdg_timer_delay, 3600; //1 hour to clean the instance
 	set .instance_name$, "Temple of the Demon God";
 	end;
-}
 }
 
 function	script	IGF_SquadPrize	{
