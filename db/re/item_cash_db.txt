@@ -145,6 +145,7 @@
 0,18908,60  //,Piamette's red ear
 0,22189,100  //,Pilgrim Shoes
 0,22104,100  //,Pororoca Shoes
+0,28598,100  //,Powered Chip
 0,20931,100  //,Prism Rangers Scarf 
 0,32206,100  //,Prontera Militia Glove
 0,19024,100  //,Protect Feather
@@ -210,6 +211,7 @@
 0,2196,50  //,White gold shield
 0,18856,60  //,White king tiger
 0,18656,100  //,Witch Pumpkin
+0,19407,100	//,Work Cap
 
 // Consumable
 6,14160,20
