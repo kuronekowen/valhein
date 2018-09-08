@@ -8812,7 +8812,7 @@
 16030,Pilebuncker_S,Pile Bunker S,5,20,,3000,400,,1,1,0x00000400,56,2,2,4,130,1,8,{ bonus bAspdRate,getrefine()/2; },{},{}
 16031,Pilebuncker_P,Pile Bunker P,5,20,,4000,450,,1,,0x00000400,56,2,2,4,130,1,8,{ bonus bBaseAtk,getrefine()*5; },{},{}
 16032,Pilebuncker_T,Pile Bunker T,5,20,,3500,400,,1,1,0x00000400,56,2,2,4,130,1,8,{ bonus bUseSPrate,getrefine()*-1; },{},{}
-16033,Robot's_Arm,Robot's Mechanical Arm,5,20,,3000,195,,1,2,0x00000400,56,2,2,4,130,1,8,{ bonus bUnbreakableWeapon; bonus bCritical,20; },{},{}
+16033,Robot's_Arm,Robot's Mechanical Arm,5,20,,3000,195,,1,2,0x0004C580,56,2,2,4,130,1,8,{ bonus bUnbreakableWeapon; bonus bCritical,20; },{},{}
 16034,Half_Mjolnir,Half Mjolnir,5,20,,6000,350,,1,0,0x000444A2,63,2,2,4,95,0,8,{ bonus bAtkEle,Ele_Wind; bonus bDex,50; bonus bStr,20; bonus bAspdRate,10; bonus3 bAutoSpell,"MG_THUNDERSTORM",10,100; autobonus "{ bonus bSplashRange,1; }",50,10000; },{},{}
 16035,Half_BF_Morning_Star1,Half BF Morning Star1,5,20,,0,105,,1,0,0x0004C5B3,63,2,2,3,80,1,8,{ bonus bStr,1; bonus bDex,1; bonus2 bAddRace,RC_DemiHuman,35; bonus2 bAddRace,RC_Player,35; bonus2 bIgnoreDefRaceRate,RC_DemiHuman,10; bonus2 bIgnoreDefRaceRate,RC_Player,10; bonus bUnbreakableWeapon; },{},{}
 16036,Ru_Blue_Mace,Blue Mace,5,10,,1500,170,,1,1,0x00008000,56,2,2,3,100,1,8,{ bonus bVit,5; bonus bInt,5; },{},{}
@@ -10553,7 +10553,7 @@
 20002,C_Mouse_Hat4,Costume Mouse Hat 4,4,10,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,1,1196,{},{},{}
 20003,C_Mouse_Hat5,Costume Mouse Hat 5,4,10,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,1,1197,{},{},{}
 20004,C_Big_Golden_Bell,Costume Big Golden Bell,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,1,175,{},{},{}
-20005,C_Pegasus_Wing_Ears,Costume Sigrun Wing,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,1,568,{},{},{}
+20005,C_Pegasus_Wing_Ears,Costume Sigrun Wing,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,1,568,{},{},{}
 20006,C_Dark_Knight_Mask,Costume Dark Knight Mask,4,0,,0,,,,0,0xFFFFFFFF,63,2,3072,,1,1,479,{},{},{}
 20007,C_Bullock_Helm_J,Costume Horned Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,1,322,{},{},{}
 20008,C_General_Helmet,Costume Dragon General Helm,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,1,729,{},{},{}
@@ -12042,9 +12042,9 @@
 28332,Jewel_Ring,Jewerly Ring,4,10,,100,,,,0,0xFFFFFFFF,63,2,136,,1,0,,{ bonus bLuk,20; autobonus "{ bonus bAspd,2; }",50,2000,BF_WEAPON|BF_MAGIC; },{},{}
 28333,Gold_PC_Room_Ring,Gold PC Room Ring,4,10,,0,,,,1,0xFFFFFFFF,63,2,136,,1,0,,{ bonus bMaxHPrate,3; bonus bMaxSPrate,3; },{},{}
 28342,Critical_Anklet,Critical Anklet,4,0,,200,,3,,1,0xFFFFFFFF,63,2,136,,,0,,{ bonus bCritical,5; },{},{}
-28354,City_Map,City Map,4,0,,100,,0,,1,0xFFFFFFFF,63,2,136,,1,0,0,{ /* todo */ },{},{}
-28355,Shining_Holy_Water_,Shining Holy Water,4,0,,100,,0,,1,0xFFFFFFFF,63,2,136,,1,0,0,{ /* todo */ },{},{}
-28356,Prontera_Badge,Prontera Badge,4,0,,100,,0,,0,0xFFFFFFFF,63,2,136,,1,0,0,{ /*warp "prontera",159,192;  15 mins cooldown */ },{},{}
+28354,City_Map,City Map,4,0,,100,,0,,1,0xFFFFFFFF,63,2,136,,1,0,0,{ skill "AL_INCAGI",3; },{},{}
+28355,Shining_Holy_Water_,Shining Holy Water,4,0,,100,,0,,1,0xFFFFFFFF,63,2,136,,1,0,0,{ bonus2 bAddDefMonster,3451,20; bonus2 bAddDefMonster,3452,20; bonus2 bAddDefMonster,3487,20; bonus2 bAddDefMonster,3488,20; bonus2 bAddDefMonster,3489,20; bonus2 bAddDefMonster,3490,20; bonus2 bHPRegenRate,100,10000; bonus2 bSPRegenRate,5,10000; },{},{}
+28356,Prontera_Badge,Prontera Badge,4,0,,100,,0,,0,0xFFFFFFFF,63,2,136,,1,0,0,{},{},{}
 28358,Cursed_Lucky_Clover,Cursed Lucky Clover,4,0,,100,,,,1,0xFFFFFFFF,63,2,136,,100,0,,{ bonus bLuk,2; bonus bFlee,3; bonus2 bAddEff2,Eff_Curse,5; },{},{ sc_end SC_CLOAKING; /*FIXME: Because the combo has Cloaking skill*/ }
 28372,Imperial_Ring,Imperial Ring,4,0,,500,,3,,1,0xFFFFFFFF,63,2,136,,50,0,,{ bonus bStr,1; bonus bInt,1; bonus bMaxHPRate,3; bonus bMaxSPRate,3; },{},{}
 28374,Foxtail_Ring,Foxtail Ring,4,20,,100,,0,,0,0x80000000,7,2,136,,1,0,,{ bonus2 bExpAddRace,RC_All,5; .@lvl = min(BaseLevel/5,10); bonus bAtk,2*.@lvl; bonus bMatk,2*.@lvl; bonus bMaxHP,10*.@lvl; bonus bMaxSP,5*.@lvl; },{},{}

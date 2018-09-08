@@ -175,6 +175,7 @@
 0,20836,100  //,Skin of Lindwyrm
 0,2191,100  //,Solomon's Key
 0,18793,60  //,Sorcerer's Night Cap
+0,1835,100	//,Spartacus
 0,2935,100  //,Sprint Gloves
 0,19114,100  //,Sting Silk Ribbon
 0,28506,100  //,Storm Stone
