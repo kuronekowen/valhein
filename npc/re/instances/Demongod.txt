@@ -143,6 +143,13 @@ OnInit:
 
 moro_cav,43,73,3	script	Yggdrasil Lookalike::alatdgyl	HIDDEN_NPC,{
 OnStart:
+	if (countitem(590) >= 1) {
+		set Morse_counter,1;
+		set .@instance_delay,0;
+		delitem 590,1;
+		mes "Use Dungeon Debugger item!!";
+		close2;
+	}
 	set .@npcname$, "[Yggdrasil Lookalike]";
 	mes .@npcname$;
 	if (Morse_counter == 0) {
@@ -156,16 +163,12 @@ OnStart:
 	//RATHENA	
 	set .@has_instance, TDG_INSTANCE_ID > 0;
 	//HERCULES
-	//set .@has_instance, has_instance(.map$[0], instance_id());
+	//set .@has_instance, has_instance(.map$[0]);
 	
 	set .@instance_delay, ( instance_delay_templedg - gettimetick(2) );
+
 	mes "You touched the tree and felt a strange flow of mana.";
 	mes "Perhaps the flow of mana will guide to the depth of the temple.";
-	if( .@instance_delay > 0 )
-	{
-		mes "You have to wait : ^FF0000"+.@instance_delay+" Seconds.^000000";
-		close;
-	}
 	next;
 	switch( select( 
 		(( .@party_id && .@tdg_leader && !.@has_instance )?"Create " + .instance_name$:""),
@@ -174,6 +177,11 @@ OnStart:
 	"Nevermind."
 		)){
 	case 1:
+		if( .@instance_delay > 0 )
+		{
+			mes "You have to wait : ^FF0000"+.@instance_delay+" Seconds.^000000";
+			close;
+		}
 		getpartymember .@party_id,2;
 		if( .min_party_member >= 1 ){
 			set .@origin, getcharid(3);
@@ -256,14 +264,8 @@ OnStart:
 			//}
 			//instance_set_timeout .instance_delay,300,instance_id();
 			//instance_init(instance_id());
-			
-			//disable unused npcs for now
-			disablenpc instance_npcname( "tdgWarp#1", instance_id() );
-			disablenpc instance_npcname( "tdgWarp#2", instance_id() );
-			disablenpc instance_npcname( "tdgWarp#3", instance_id() );
-			disablenpc instance_npcname( "tdgWarp#4", instance_id() );
-			disablenpc instance_npcname( "tdgWarp#5", instance_id() );
  		}
+		break;
 	case 2:
 		if( TDG_INSTANCE_ID <= 0 ){
 			mes .instance_name$ + " doesn't exist for Party - "+getpartyname( .@party_id );
@@ -271,6 +273,7 @@ OnStart:
 		else{
 			//RATHENA
 			getmapxy(.@map$, .@x, .@y, UNITTYPE_PC);
+			save .@map$, .@x, .@y;
 			switch(instance_enter(.instance_name$)) {
 				default:
 					mes "An unknown error has occurred.";
@@ -317,7 +320,7 @@ OnPCLogoutEvent:
 	end;
 
 OnInit:
-	setarray .base_level[0],145, 175;
+	setarray .base_level[0],160,175;
 	setarray .map$[0],"1@eom";
 	set .map_size, getarraysize( .map$ );
 	set .min_party_member, 1;
