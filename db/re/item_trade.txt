@@ -21,7 +21,7 @@
 //	Only groups of group-level 50 and up can override this setting.
 
 547,8,100	// White_Slim_Potion
-590,511,100	// Brezel_
+590,509,100	// Brezel_
 598,475,100	// Light_Red_Pot
 599,475,100	// Light_Orange_Pot
 603,8,100	// Old_Blue_Box
