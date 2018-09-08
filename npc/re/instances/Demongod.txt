@@ -149,7 +149,7 @@ OnStart:
 		delitem 590,1;
 		mes "Use Dungeon Debugger item!!";
 		close2;
-	}
+	} else set .@instance_delay, ( instance_delay_templedg - gettimetick(2) );
 	set .@npcname$, "[Yggdrasil Lookalike]";
 	mes .@npcname$;
 	if (Morse_counter == 0) {
@@ -165,8 +165,6 @@ OnStart:
 	//HERCULES
 	//set .@has_instance, has_instance(.map$[0]);
 	
-	set .@instance_delay, ( instance_delay_templedg - gettimetick(2) );
-
 	mes "You touched the tree and felt a strange flow of mana.";
 	mes "Perhaps the flow of mana will guide to the depth of the temple.";
 	next;
