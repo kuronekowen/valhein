@@ -143,6 +143,7 @@ OnInit:
 
 moro_cav,43,73,3	script	Yggdrasil Lookalike::alatdgyl	HIDDEN_NPC,{
 OnStart:
+	set .@npcname$, "[Yggdrasil Lookalike]";
 	mes .@npcname$;
 	if (Morse_counter == 0) {
 		mes "This tree is lookalike Yggdrasil tree";
@@ -158,9 +159,6 @@ OnStart:
 	//set .@has_instance, has_instance(.map$[0], instance_id());
 	
 	set .@instance_delay, ( instance_delay_templedg - gettimetick(2) );
-
-	set .@npcname$, "[Yggdrasil Lookalike]";
-	mes .@npcname$;
 	mes "You touched the tree and felt a strange flow of mana.";
 	mes "Perhaps the flow of mana will guide to the depth of the temple.";
 	if( .@instance_delay > 0 )

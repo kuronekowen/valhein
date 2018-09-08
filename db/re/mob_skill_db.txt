@@ -11311,7 +11311,7 @@
 3097,Despair God Morroc@WZ_STORMGUST,attack,89,10,1000,1000,30000,no,target,always,,,,,,,6,
 3097,Despair God Morroc@WZ_STORMGUST,attack,89,10,1000,1000,30000,no,target,always,,,,,,,6,
 3097,Despair God Morroc@WZ_METEOR,chase,83,10,1000,1000,30000,no,target,always,,,,,,,6,
-3097,Despair God Morroc@WZ_VERMILION,chase,85,10,1000,1000,30000,no,target,always,,,,,,,6,
+3097,Despair God Morroc@WZ_VERMILION,attack,85,10,1000,1000,30000,no,target,always,,,,,,,6,
 3097,MoroccAdt@BLOODDRAIN,attack,199,1,2500,0,60000,no,target,always,0,,,,,,,
 3097,MoroccAdt@BLOODDRAIN,chase,199,1,2500,0,60000,no,target,always,0,,,,,,,
 3097,MoroccAdt@CRITICALWOUND,attack,673,5,3500,0,180000,no,target,always,0,,,,,,,
