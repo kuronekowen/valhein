@@ -588,7 +588,6 @@
 19117:22101,{ bonus2 bDropAddRace,RC_All,5; bonus2 bExpAddRace,RC_All,5; if(getequiprefinerycnt(EQI_SHOES) >= 12) { bonus bFixedCast,-400; } }
 19118:22101,{ bonus2 bDropAddRace,RC_All,4; bonus2 bExpAddRace,RC_All,4; if(getequiprefinerycnt(EQI_SHOES) >= 12) { bonus bFixedCast,-400; } }
 19344:28244,{ .@weapon = getequiprefinerycnt(EQI_HAND_R); .@eq = getequiprefinerycnt(EQI_HEAD_TOP); bonus2 bAddClass,Class_All,10; if (.@weapon >= 7 && .@eq >= 7) { bonus bAspd,2; } if ((.@weapon + .@eq) >= 18) { bonus bLongAtkRate,10; if ((.@weapon + .@eq) >= 22) { bonus2 bSkillAtk,"GS_SPREADATTACK",30; } } }
-20135:20136,{ bonus bAllStats,12; }
 20717:22000,{ bonus bMaxHPRate,15; bonus bMaxSPRate,5; }
 20717:22001,{ bonus bMaxHPRate,15; bonus bMaxSPRate,5; }
 20717:22002,{ bonus bMaxHPRate,15; bonus bMaxSPRate,5; }
