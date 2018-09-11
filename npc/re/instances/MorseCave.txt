@@ -973,28 +973,26 @@ OnMobDead2:
 	donpcevent instance_npcname("#morse_cave_wave_3") + "::OnStop";
 	donpcevent instance_npcname("#morse_cave_boss_talk") + "::OnStop";
 	donpcevent instance_npcname("#morse_cave_wave_3_mobs") + "::OnStop";
-	sleep2 3000;
+	sleep 3000;
 	.@reaper$ = instance_npcname("Reaper Yanku#RZ Event_6");
 	enablenpc .@reaper$;
-	sleep2 1000;
+	sleep 1000;
 	npctalk "Reaper Yanku: Sigh, Necromancer, why did you have to die so quickly?", .@reaper$;
-	sleep2 3000;
+	sleep 3000;
 	npctalk "Reaper Yanku: Don't be so happy!", .@reaper$;
-	sleep2 3000;
+	sleep 3000;
 	npctalk "Reaper Yanku: Now that Lord Morroc has fully recovered his strength, you're as good as dead!", .@reaper$;
-	sleep2 3000;
+	sleep 3000;
 	npctalk "Reaper Yanku: We'll meet again. *Chuckle*", .@reaper$;
-	sleep2 2000;
+	sleep 2000;
 	hideonnpc .@reaper$;
 	enablenpc instance_npcname("#RZ Move_17a");
 	specialeffect EF_THUNDERSTORM,AREA, .@reaper$;	// officially Morocc Necromancer#RZ1 display the effects but they have the same coordinates
-	sleep2 1000;
+	sleep 1000;
 	specialeffect EF_LORD,AREA, .@reaper$;
 	specialeffect EF_THUNDERSTORM,AREA, .@reaper$;
-	sleep2 1000;
+	sleep 1000;
 	specialeffect EF_LORD,AREA, .@reaper$;
-	set Morse_counter,1;
-	sleep 500;
 	end;
 }
 
@@ -1104,6 +1102,7 @@ OnMobDead:
 	next;
 	if (select( "No.", "Yes." ) == 2) {
 		mes "- Teleporting... -";
+		set Morse_counter,1;
 		close2;
 		warp "moro_cav",59,63;
 		end;

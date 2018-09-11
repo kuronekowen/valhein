@@ -153,7 +153,7 @@ OnStart:
 	} else set .@instance_delay, ( instance_delay_templedg - gettimetick(2) );
 	set .@npcname$, "[Yggdrasil Lookalike]";
 	mes .@npcname$;
-	if (Morse_counter == 0) {
+	if ( Morse_counter == 0 && Demongod_counter == 0 ) {
 		mes "This tree is lookalike Yggdrasil tree";
 		close;
 	}
@@ -417,7 +417,6 @@ OnInstanceInit:
 	set 'tdgMercenaryOn, 0;
 	set .@npc_name$, instance_npcname( strnpcinfo(0) );
 	summon_normal( .@map$,.@npc_name$, 1 );
-	
 	set .timerCount, 0;
 	initnpctimer;
 	end;
@@ -484,6 +483,12 @@ function	summon_normal	{
 		{
 			set .@clabel$, .@npcname$ + "::" + .@label$[.@i];
 		}	
+		if('instance_tdg_level == 1) {
+			if ('gatekeep == 2) end;
+				areamonster(.@map$,.@coordinate[0],.@coordinate[1],.@coordinate[2],.@coordinate[3],"--ja--",.@monster[.@i],.@target_amount,.@clabel$,.@size);
+				'gatekeep++;
+		}
+		else 
 		areamonster .@map$,.@coordinate[0],.@coordinate[1],.@coordinate[2],.@coordinate[3],"--ja--",.@monster[.@i],.@target_amount,.@clabel$,.@size;
 	}
 	return;
@@ -1058,6 +1063,8 @@ OnInit:
 		if( attachrid( $@partymemberaid[.@i] ) && TDG_INSTANCE_ID > 0){
 			set TDG_INSTANCE_ID, -1;
 		}
+	set Demongod_counter,1;
+	getitem 22567,1;
 	instance_destroy instance_id();
 	close;
 
