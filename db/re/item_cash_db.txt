@@ -19,186 +19,188 @@
 //    Item cost, in cash points (#CASHPOINTS).
 
 //Hot
-0,15204,250  //,Abyss Dress
-0,32203,100  //,Accelerator Chip
+0,15204,400  //,Abyss Dress
+0,32203,60  //,Accelerator Chip
 0,2576,100  //,Adventurer's Backpack
-0,20831,100  //,Adventurer's Spirit
-0,2349,100  //,Aebecee's Raging Typhoon Armor
-0,15144,100  //,Agriculture Clothes
+0,20831,60  //,Adventurer's Spirit
+0,2349,60  //,Aebecee's Raging Typhoon Armor
+0,15144,60  //,Agriculture Clothes
 0,28921,60  //,Anemos Shield
 0,15249,100  //,Antonio's Coat
+0,4243,60	//,Antonio's Card
 0,28430,100  //,Arch Bishop Ring
 0,28429,100  //,Arquien's Necklace
 0,28320,60  //,Ascendant crown
-0,28320,100  //,Assassin's Despair
-0,20714,100  //,Assassin's Muffler
-0,5898,100  //,Autumn Headband
-0,15087,100  //,Azure Dragon Armor
+0,28320,60  //,Assassin's Despair
+0,20714,60  //,Assassin's Muffler
+0,5898,250  //,Autumn Headband
+0,15087,60  //,Azure Dragon Armor
 0,5464,100  //,Bacsojin Hat
 0,20860,100  //,Battle Surcoat
 0,18603,100  //,Black Devil mask
 0,5899,60  //,Black Ribbon
-0,28531,100  //,Blacksmith's Gloves
-0,19326,100  //,Book of Soyga
+0,28531,200  //,Blacksmith's Gloves
+0,19326,60  //,Book of Soyga
 0,28618,100  //,Book of the Sun God
-0,18666,100  //,CD in mouth
-0,19079,100  //,Celestial Woman's Flower
-0,28513,100  //,Celine's Brooch
-0,18849,100	//,Celine's Ribbon
-0,18862,100  //,Chiu Armor
-0,2351,100  //,Claytos Cracking Earth Armor
+0,18666,60  //,CD in mouth
+0,19079,60  //,Celestial Woman's Flower
+0,28513,250  //,Celine's Brooch
+0,18849,200	//,Celine's Ribbon
+0,18862,60  //,Chiu Armor
+0,2351,60  //,Claytos Cracking Earth Armor
 0,20813,100  //,Cloak of Survival
 0,5933,60  //,Crow Tengu Mask
-0,28901,100 // Curse Mad bunny
-0,28902,100 // Mad bunny
-0,19125,100  //,Cylinder Hairband
+0,28901,150 // Curse Mad bunny
+0,28902,200 // Mad bunny
+0,19125,250  //,Cylinder Hairband
 0,22138,100  //,Devil Worshipper Shoes
-0,19329,100  //,Devil's Hand
-0,5968,100  //,Divine Angel Nurse Cap
-0,5900,100  //,Divine Guard Hat
-0,15135,100  //,Dragon Cloth
-0,5924,100  //,Dragon Knight's Eyepatch
-0,15130,100  //,Dragon Mail
-0,28520,100  //,Egir Ring
-0,20799,100  //,Elemental Towel
-0,28573,100  //,Emerald Ring
-0,20800,100  //,Enforcer Cape
-0,22134,100  //,Enforcer Shoes
-0,15106,100  //,Engineer Mail
-0,20797,100  //,Etran Shirt
-0,15145,60  //,Evil dragon Armor
-0,2980,80	//Evil Spirit Gloves
+0,19329,150  //,Devil's Hand
+0,5968,60  //,Divine Angel Nurse Cap
+0,5900,60  //,Divine Guard Hat
+0,15135,60  //,Dragon Cloth
+0,5924,60  //,Dragon Knight's Eyepatch
+0,15130,60  //,Dragon Mail
+0,28520,60  //,Egir Ring
+0,20799,60  //,Elemental Towel
+0,28573,200  //,Emerald Ring
+0,20800,60  //,Enforcer Cape
+0,22134,250  //,Enforcer Shoes
+0,15106,60  //,Engineer Mail
+0,20797,200  //,Etran Shirt
+0,15145,100  //,Evil dragon Armor
+0,2980,200	//Evil Spirit Gloves
 0,22103,60	// Excelion Leg
 0,15128,60	// Excelion Suit
 0,20773,60	// Excelion Wing
 0,28941,60  //,Excelion Shield
-0,5916,100  //,Exorcist Glasses
+0,5916,60  //,Exorcist Glasses
 0,19081,50  //,Faceworm Egg Shell
 0,28438,100  //,Fairy Leaf Powder
-0,2589,100  //,Fallen angel wing
-0,28386,100  //,Fallen Monk Rosary
+0,2589,400  //,Fallen angel wing
+0,28386,60  //,Fallen Monk Rosary
 0,15125,100  //,Female Diver's Suit
-0,20726,100  //,Fire Dragon's Coat
-0,5901,100  //,Focus Beret
-0,15175,100  //,Flame Dragon Armor
-0,5937,100  //,Flying Helmet
-0,5918,150  //,gambler seal
-0,28916,100  //,Gaia Shield
+0,20726,60  //,Fire Dragon's Coat
+0,5901,60  //,Focus Beret
+0,15175,250  //,Flame Dragon Armor
+0,5937,60  //,Flying Helmet
+0,5918,250  //,gambler seal
+0,28916,60  //,Gaia Shield
 0,1449,100  //,Gelerdia
 0,28521,100  //,Giant's Protection
-0,18787,100  //,Goal Tender Mask
-0,5475,100  //,Gozarian hat
-0,22172,100  //,Gray Wing Boots
+0,18787,60  //,Goal Tender Mask
+0,5475,60  //,Gozarian hat
+0,22172,150  //,Gray Wing Boots
 0,19269,50  //,Happy Flapping Angel Wings
-0,28929,100  //,Happy Shield
+0,28929,60  //,Happy Shield
 0,19306,60  //,heart card
-0,18563,100  //,heart wing hairband
-0,20783,100  //,Hero Cape
+0,18563,150  //,heart wing hairband
+0,20783,60  //,Hero Cape
 0,18676,100  //,Hexagon Spectacles
 0,28437,100  //,Hibram's Gloves
-0,15205,100  //,Holy Coat
-0,15124,100  //,Holy Father Mail
+0,15205,200  //,Holy Coat
+0,15124,60  //,Holy Father Mail
 0,28501,100  //,Horn of Kirin
-0,15102,100  //,Hunter Mail
-0,28491,100  //,Hunting Knife
-0,32204,100  //,Immortal Dog Tag
-0,18823,100  //,Imperial Feather
+0,15102,60  //,Hunter Mail
+0,28491,60  //,Hunting Knife
+0,32204,300  //,Immortal Dog Tag
+0,18823,250  //,Imperial Feather
 0,28551,100  //,Imperial Glove
 0,2153,100  //,Imperial Guard
 0,28372,100  //,Imperial Ring
-0,5966,100  //,Kardui Ear
+0,5966,250  //,Kardui Ear
 0,15169,100  //,Kardui Robe
 0,28503,100  //,Keraunos
 0,28394,100  //,King of Spirit Ring
-0,5497,100  //,King tiger doll
-0,15103,100	// Kirin Armor
-0,22051,100  //,Lamor Shoes
-0,2198,100  //,Lapine Shield
-0,2345,100  //,Lucius's Fierce Armor of Volcano
-0,28433,100  //,Luminous Blue Stone
+0,5497,150  //,King tiger doll
+0,15103,300	// Kirin Armor
+0,22051,60  //,Lamor Shoes
+0,2198,60  //,Lapine Shield
+0,2345,60  //,Lucius's Fierce Armor of Volcano
+0,28433,200  //,Luminous Blue Stone
 0,19156,100  //,Lunar Rainbow
 0,5905,60  //,Lyrica Hat
 0,18720,100  //,Magical Booster
 0,28377,100  //,Magical Ring
 0,19171,60  //,Magician Knit Hat
-0,28507,100  //,Magician's Gloves
-0,20845,100  //,Malach's Skin
-0,18933,100  //,Mechanical Plant Hat
-0,15283,100  //,Mighty Black Threaded Armor
-0,15112,100  //,Military Mail
+0,28507,200  //,Magician's Gloves
+0,20845,60  //,Malach's Skin
+0,18933,60  //,Mechanical Plant Hat
+0,15283,300  //,Mighty Black Threaded Armor
+0,15112,60  //,Military Mail
 0,18591,100  //,Mini Glasses
-0,28502,250  //,Mob Scarf
-0,5921,100  //,Monster Fish Gills
-0,15140,100  //,Natural Clothes
-0,15072,100  //,Nectar Suit
-0,18799,100  //,Nero Mask
+0,28502,400  //,Mob Scarf
+0,5921,60  //,Monster Fish Gills
+0,15140,60  //,Natural Clothes
+0,15072,60  //,Nectar Suit
+0,18799,60  //,Nero Mask
 0,18813,100  //,New wave sunglasses
 0,18813,60  //,Night Sparrow hat
 0,5938,100  //,Octopus Hat
 0,20932,100  //,Old Morroc Shawl
 0,5906,60  //,Oni Horn
-0,15142,100  //,Orca Clothes
+0,15142,60  //,Orca Clothes
 0,18794,60  //,Ordinary Black Magician Hat
 0,19102,50  //,Pale Moon Hat
-0,28565,250  //,Perverse Demon Mask
+0,28565,400  //,Perverse Demon Mask
 0,20859,100  //,Phreeoni Wings
 0,18908,60  //,Piamette's red ear
 0,22189,100  //,Pilgrim Shoes
-0,22104,100  //,Pororoca Shoes
-0,28598,100  //,Powered Chip
-0,20931,100  //,Prism Rangers Scarf 
-0,32206,100  //,Prontera Militia Glove
-0,19024,100  //,Protect Feather
+0,22104,250  //,Pororoca Shoes
+0,28598,150  //,Powered Chip
+0,20931,400  //,Prism Rangers Scarf 
+0,32206,60  //,Prontera Militia Glove
+0,19024,60  //,Protect Feather
 0,15165,100  //,Pure White Marching Hat
-0,28484,100  //,Rebel Scarf
+0,28484,200  //,Rebel Scarf
 0,2936,100  //,Recovery Ring
 0,19116,100  //,Red baby dragon
-0,20778,100  //,Red Lotus Stole
-0,19115,100  //,Republic Hat
+0,20778,60  //,Red Lotus Stole
+0,19115,200  //,Republic Hat
+0,5208,40	//,Rideword Hat
 0,15166,100  //,Rosary Necklace
 0,2192,100  //,Rose of Eden
-0,19246,60	// Royal guard kneclace
-0,28900,60  //,Royal Guard Shield
-0,2347,100  //,Saphien's Armor of Ocean
+0,19246,100	// Royal guard kneclace
+0,28900,200  //,Royal Guard Shield
+0,2347,60  //,Saphien's Armor of Ocean
 0,28410,100  //,Sapphire Wrist
 0,28903,100	//,Scutum
 0,5907,60  //,Sea Captain Hat
-0,19138,100  //,Seraphim Coronet
+0,19138,300  //,Seraphim Coronet
 0,19327,100  //,Seraphim Feather
 0,28379,100  //,Shadow Ring
-0,2596,100  //,Sharel Manteau
-0,22055,100  //,Sharel Shoes
-0,15139,100  //,Shepherd Cloth
+0,2596,60  //,Sharel Manteau
+0,22055,60  //,Sharel Shoes
+0,15139,60  //,Shepherd Cloth
 0,28485,100  //,Shinobi Sash H
 0,18791,100  //,Shrine Maiden Hat
-0,19285,100  //,Siegfried's Helmet
+0,19285,60  //,Siegfried's Helmet
 0,20837,100  //,Skin of Gwiber
 0,20836,100  //,Skin of Lindwyrm
-0,2191,100  //,Solomon's Key
+0,2191,60  //,Solomon's Key
 0,18793,60  //,Sorcerer's Night Cap
-0,1835,100	//,Spartacus
-0,2935,100  //,Sprint Gloves
-0,19114,100  //,Sting Silk Ribbon
+0,1835,150	//,Spartacus
+0,2935,60  //,Sprint Gloves
+0,19114,60  //,Sting Silk Ribbon
 0,28506,100  //,Storm Stone
 0,19137,100  //,Strawberry Mouth Guard
-0,19020,100  //,Survive Circlet
-0,19139,100  //,Survive Orb
-0,22170,100  //,Survivor's Shoes
-0,22042,100  //,Talaria Shoes
-0,20846,100  //,Temporal Manteau
-0,28594,250  //,Temporal Ring
+0,19020,200  //,Survive Circlet
+0,19139,300  //,Survive Orb
+0,22170,200  //,Survivor's Shoes
+0,22042,60  //,Talaria Shoes
+0,20846,60  //,Temporal Manteau
+0,28594,500  //,Temporal Ring
 0,19112,60  //,Tengu Scroll
-0,28492,100  //,Thieve's Guide Vol.1
-0,5978,100  //,Toy Syringe
-0,19299,100  //,Tree Sprout
+0,28492,60  //,Thieve's Guide Vol.1
+0,5978,60  //,Toy Syringe
+0,19299,60  //,Tree Sprout
 0,15071,100  //,Valkyrian Robe
 0,20712,100  //,Valkyrie Cape
 0,28564,100  //,Valkyrie Drop
-0,16051,100  //,Valkyrie Hammer
-0,28717,100  //,Valkyrie Knife
-0,18652,60  //,Vanagrand
-0,15108,100  //,Venomous Insect Armor
-0,15143,100  //,Vermin Cloth
+0,16051,300  //,Valkyrie Hammer
+0,28717,300  //,Valkyrie Knife
+0,18652,100  //,Vanagrand
+0,15108,60  //,Venomous Insect Armor
+0,15143,60  //,Vermin Cloth
 0,28575,100  //,Verus Core
 0,5904,60  //,Very normal hat
 0,28352,100  //,Vesper Gear 01
@@ -206,12 +208,12 @@
 0,28357,100  //,Vesper Gear 03
 0,28359,100  //,Vesper Gear 04
 0,20814,100  //,Wakwak Manteau
-0,20728,100  //,Water Dragon Coat
-0,5945,100  //,Well-Chewed Pencil
+0,20728,60  //,Water Dragon Coat
+0,5945,60  //,Well-Chewed Pencil
 0,2196,50  //,White gold shield
-0,18856,60  //,White king tiger
-0,18656,100  //,Witch Pumpkin
-0,19407,100	//,Work Cap
+0,18856,80  //,White king tiger
+0,18656,60  //,Witch Pumpkin
+0,19407,200	//,Work Cap
 
 // Consumable
 6,14160,20
@@ -236,8 +238,10 @@
 1,31584,100
 1,12208,2
 1,14156,18
-1,12210,2
-1,14158,18
+1,14545,10
+1,13758,90
+1,12210,10
+1,14158,90
 1,14165,5
 1,17106,100
 1,12922,130
