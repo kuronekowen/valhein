@@ -10682,8 +10682,8 @@
 20132,C_Subject_Aura,Costume Aura Vicious Mind,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,1,1267,{},{},{}
 20133,C_Poring_Mascot_Costume,Costume Poring Mascot,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,1,1268,{},{},{}
 20134,C_Helm_Of_Abyss_White,Costume White Helm Of Abyss,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,1,1269,{},{},{}
-20135,C_12_Anniversary_Crown_Of_Saint,Costume 12 Anniversary Crown of Saint,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,1,1117,{},{},{}
-20136,C_12_Anniversary_Elf_Ears,Costume 12 Anniversary Elf Ears,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,1,875,{},{},{}
+20135,C_12_Anniversary_Crown_Of_Saint,Costume 12 Anniversary Crown of Saint,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1117,{},{},{}
+20136,C_12_Anniversary_Elf_Ears,Costume 12 Anniversary Elf Ears,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,875,{},{},{}
 20137,C_Bomb_Wick,Costume Bomb Wick,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,1,66,{},{},{}
 20138,C_Sea_Otter_Hat,Costume Sea Otter Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,1,162,{},{},{}
 20139,C_Horse_Hairpin,Costume Horse Hairpin,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,1,1271,{},{},{}
