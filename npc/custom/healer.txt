@@ -32,14 +32,10 @@
 	specialeffect2 EF_HEAL2;
 	percentheal 100,100;
 	atcommand "@identifyall";
-	skilleffect 33,0; sc_start SC_ANGELUS,1800000,10;
 	skilleffect 74,0; sc_start SC_MAGNIFICAT,1800000,5;
-	skilleffect 75,0; sc_start SC_GLORIA,1800000,5;
-	skilleffect 66,0; sc_start SC_IMPOSITIO,1800000,5;
 	skilleffect 34,0; sc_start SC_BLESSING,1800000,10;
 	skilleffect 29,0; sc_start SC_INCREASEAGI,1800000,10;
 	specialeffect2 101; atcommand "@repairall";
-	SC_Start(SC_KYRIE,1800000,10);
 	//SC_Start(SC_CP_HELM,1800000,1);
 	//SC_Start(SC_CP_ARMOR,1800000,1);
 	//SC_Start(SC_CP_SHIELD,1800000,1);
@@ -50,10 +46,6 @@
 	sc_start SC_INTFood,1800000,10;
 	sc_start SC_DEXFood,1800000,10;
 	sc_start SC_LUKFood,1800000,10;
-	sc_start SC_HitFood,1800000,30;
-	sc_start SC_FleeFood,1800000,30;
-	sc_start SC_BATKFood,1800000,10;
-	sc_start SC_MATKFood,1800000,10;
 	if (.@Buffs) {
 		specialeffect2 EF_INCAGILITY;
 		sc_start SC_INCREASEAGI,240000,10;
@@ -67,10 +59,7 @@
 
 function	script	heal_card	{
 	atcommand "@identifyall";
-	skilleffect 33,0; sc_start SC_ANGELUS,1800000,10;
 	skilleffect 74,0; sc_start SC_MAGNIFICAT,1800000,5;
-	skilleffect 75,0; sc_start SC_GLORIA,1800000,5;
-	skilleffect 66,0; sc_start SC_IMPOSITIO,1800000,5;
 	skilleffect 34,0; sc_start SC_BLESSING,1800000,10;
 	skilleffect 29,0; sc_start SC_INCREASEAGI,1800000,10;
 	specialeffect2 101; atcommand "@repairall";
@@ -80,8 +69,6 @@ function	script	heal_card	{
 	sc_start SC_INTFood,1800000,10;
 	sc_start SC_DEXFood,1800000,10;
 	sc_start SC_LUKFood,1800000,10;
-	sc_start SC_HitFood,1800000,30;
-	sc_start SC_FleeFood,1800000,30;
 }
 
 // Duplicates
