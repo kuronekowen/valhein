@@ -41,7 +41,7 @@ OnStart:
 	case 1:
 		if( .@instance_delay > 0 )
 		{
-			mes "^FF0000Sky fortress^000000 will reopen in the next 1 days";
+			mes "^FF0000Sky fortress^000000 will reopen in the next 3 days";
 			mes "You have to wait : ^FF0000"+.@instance_delay+" Seconds.^000000";
 			close;
 		}
@@ -174,7 +174,7 @@ OnInit:
 	set .map_size, getarraysize( .map$ );
 	set .min_party_member, 1;
 	set .instance_zeny, 0;
-	set .instance_delay, 43200;
+	set .instance_delay, 0;
 	set $sf_timer_delay, 3600; //1 hour to clean the instance
 	set .instance_name$, "Sky Fortress Invasion";
 	end;
@@ -932,10 +932,16 @@ OnInit:
 	}
 	else if('ldEntryX != 0 && 'ldEntryY != 0)
 	{
-		if(.@x == 'ldEntryX && .@y == 'ldEntryY)
-		{
-			switch('warpPoint)
-			{
+		if (countitem('sfKeyId) == 0) {
+			mes "[Locked Door]";
+			mes "You don't have ^ff0000Key^000000";
+			end;
+		}
+		if(countitem('sfKeyId) >= 1 && .@x == 'ldEntryX && .@y == 'ldEntryY) {
+			mes "[Locked Door]";
+			mes "Do you want to open this door again !?";
+			if(select("Yes","No") == 1) {
+			switch('warpPoint) {
 				case 0:
 					setarray .entry[0], 115, 92;
 					break;
@@ -951,8 +957,8 @@ OnInit:
 				case 4:
 					setarray .entry[0], 15, 93;
 					break;
-			}
-
+				}
+			delitem 'sfKeyId, 1;
 			getpartymember getcharid(1),2;
 			for( set .@i, 0; .@i < $@partymembercount; set .@i, .@i+1 )
 				if( attachrid( $@partymemberaid[.@i] ) ){
@@ -961,6 +967,7 @@ OnInit:
 						warp instance_mapname( "1@sthc" ), .entry[0], .entry[1];
 					}
 				}
+			}
 		}
 	}
 	end;
@@ -1094,4 +1101,3 @@ OnInit:
 
 1@sthb,73,70	warp	sfwarp#1	2,2,1@sthb,73,75
 1@sthb,93,74	warp	sfwarp#2	2,2,1@sthb,210,98
-
