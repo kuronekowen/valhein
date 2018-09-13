@@ -250,6 +250,7 @@
 31598,Spirit_of_Blacksmith,Spirit of Blacksmith,2,20000,,10,,,,,0x00000400,63,2,,,,,,{ skilleffect "SL_BLACKSMITH",0; sc_start4 SC_SPIRIT,350000,5,458,0,0; },{},{}
 31599,Spirit_of_Hunter,Spirit of Hunter,2,20000,,10,,,,,0x00000800,63,2,,,,,,{ skilleffect "SL_HUNTER",0; sc_start4 SC_SPIRIT,350000,5,460,0,0; },{},{}
 31600,Spirit_of_Soul_Linker,Spirit of Soul Linker,2,20000,,10,,,,,0x00800000,63,2,,,,,,{ skilleffect "SL_SOULLINKER",0; sc_start4 SC_SPIRIT,350000,5,461,0,0; },{},{}
+31601,Spirit_of_BD,Spirit of BD,2,20000,,10,,,,,0x00080000,63,2,,,,,,{ skilleffect "SL_BARDDANCER",0; sc_start4 SC_SPIRIT,350000,5,455,0,0; },{},{}
 32013,Metal_Stick,Metal Stick,5,20,,2000,180,,3,3,0x00004082,56,2,2,4,150,1,4,{ .@r = getrefine(); bonus2 bSkillAtk,"LG_CANNONSPEAR",10; if (.@r>=7) bonus2 bSkillAtk,"LG_OVERBRAND",10; if (.@r>=9) bonus2 bSkillAtk,"LG_OVERBRAND",15; if (.@r>=12) bonus bDelayrate,-15; },{},{}
 32203,Accelerator_Chip,Accelerator Chip,4,20,,100,,0,,1,0xFFFFFFFF,63,2,136,,100,0,0,{ bonus bAtkRate,5; bonus bMatkRate,5; },{},{}
 32204,Immortal_Dog_Tag,Immortal Dog Tag,4,20,,100,,0,,1,0xFFFFFFFF,63,2,136,,100,0,0,{ bonus bBaseAtk,50; bonus bMatk,50; bonus2 bSubRace,RC_Undead,4; },{},{}
