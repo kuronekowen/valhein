@@ -1390,6 +1390,9 @@
 //3036,0,0,0,0,0,0,10,0,no,0,0,0,none,0,0x0,	BA_POEMBRAGI2,Poem of Bragi 2
 //3037,0,0,0,0,0,0,10,0,no,0,0,0,none,0,0x0,	DC_FORTUNEKISS2,Fortune Kiss 2
 
+3041,0,6,4,0,0x1,0,1,1,no,0,0,0,none,0,0x0,	ALL_NIFLHEIM_RECALL,Niflheim Recall
+3042,0,6,4,0,0x1,0,1,1,no,0,0,0,none,0,0x0,	ALL_PRONTERA_RECALL,Return To Prontera
+
 //****
 // EP 14.3 Part 2 3rd Job Skills
 5001,1,8,1,-1,0,0,5,3,no,0,0,0,weapon,0,0x0, GC_DARKCROW,Dark Claw

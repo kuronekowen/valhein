@@ -717,6 +717,8 @@ bool skill_isNotOk(uint16 skill_id, struct map_session_data *sd)
 		case RETURN_TO_ELDICASTES:
 		case ALL_GUARDIAN_RECALL:
 		case ECLAGE_RECALL:
+		case ALL_NIFLHEIM_RECALL:
+		case ALL_PRONTERA_RECALL:
 			if(mapdata->flag[MF_NOWARP]) {
 				clif_skill_teleportmessage(sd,0);
 				return true;
@@ -10231,6 +10233,8 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case RETURN_TO_ELDICASTES:
 	case ALL_GUARDIAN_RECALL:
 	case ECLAGE_RECALL:
+	case ALL_NIFLHEIM_RECALL:
+	case ALL_PRONTERA_RECALL:
 		if( sd )
 		{
 			short x=0, y=0; // Destiny position.
@@ -10252,6 +10256,16 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 				x = 47;
 				y = 31;
 				mapindex  = mapindex_name2id(MAP_ECLAGE_IN);
+				break;
+			case ALL_NIFLHEIM_RECALL:
+				x = 193;
+				y = 186;
+				mapindex  = mapindex_name2id(MAP_NIFLHEIM);
+				break;
+			case ALL_PRONTERA_RECALL:
+				x = 159;
+				y = 152;
+				mapindex  = mapindex_name2id(MAP_PRONTERA);
 				break;
 			}
 
