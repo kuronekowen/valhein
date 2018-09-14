@@ -10508,11 +10508,11 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			break;
 		case SC_GN_CARTBOOST:
 			if( val1 < 3 )
-				val2 = 50;
+				val2 = 25;
 			else if( val1 > 2 && val1 < 5 )
-				val2 = 75;
+				val2 = 25;
 			else
-				val2 = 100;
+				val2 = 25;
 			break;
 		case SC_PROPERTYWALK:
 			val3 = 0;
