@@ -12812,6 +12812,8 @@
 3473,Stefan J.E Wolf@NPC_CRITICALSLASH,attack,170,1,2000,0,5000,yes,target,always,0,,,,,,,
 3473,Stefan J.E Wolf@NPC_CRITICALSLASH,chase,170,1,2000,0,5000,yes,target,always,0,,,,,,,
 3473,Stefan J.E Wolf@NPC_GUIDEDATTACK,chase,172,5,500,0,20000,no,target,always,0,,,,,,,
+3484,Stefan J.E Wolf@NPC_EARTHQUAKE,attack,653,10,2000,600,10000,yes,target,always,0,,,,,,,
+3484,Stefan J.E Wolf@NPC_EARTHQUAKE,chase,653,10,2000,600,10000,yes,target,always,0,,,,,,,
 3474,Immortal Cursed Knight@CR_SHIELDCHARGE,attack,250,5,500,0,5000,yes,target,always,0,,,,,,9,
 3474,Immortal Cursed Knight@KN_BRANDISHSPEAR,attack,57,5,1500,1000,10000,no,target,always,0,,,,,,9,
 3474,Immortal Cursed Knight@NPC_FIREATTACK,attack,186,3,1500,2000,30000,no,self,always,,,,,,,,
