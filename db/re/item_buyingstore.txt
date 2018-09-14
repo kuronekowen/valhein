@@ -1983,6 +1983,10 @@
 25298  // Soul-contained_Gemstone
 25299  // Snowball
 25300  // Ktullanux_Eye
+25311  // Piece_of_Dark_Soul
+25312  // Beautiful_Old_Doll
+25314  // Logbook
+25315  // Piece_of_Shell
 27081  // Angry_Moonlight_Flower_Card
 27082  // Angry_Nine_Tail_Card
 27083  // Resentful_Bongun_Card

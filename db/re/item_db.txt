@@ -11826,6 +11826,10 @@
 25298,Soul-contained_Gemstone,Soul-contained Gemstone,3,20,,10,,,,,,,,,,,,,{},{},{}
 25299,Snowball,Snowball,3,20,,10,,,,,,,,,,,,,{},{},{}
 25300,Ktullanux_Eye,Ktullanux Eye,3,20,,10,,,,,,,,,,,,,{},{},{}
+25311,Piece_of_Dark_Soul,Piece of Dark Soul,3,300,,10,,,,,,,,,,,,,{},{},{}
+25312,Beautiful_Old_Doll,Beautiful Old Doll,3,300,,10,,,,,,,,,,,,,{},{},{}
+25314,Logbook,Logbook,3,300,,10,,,,,,,,,,,,,{},{},{}
+25315,Piece_of_Shell,Piece of Shell,3,300,,10,,,,,,,,,,,,,{},{},{}
 25464,World_Moving_Rights,World Moving Rights,3,20,,0,,,,,,,,,,,,,{},{},{}
 //===================================================================
 // New Spears
