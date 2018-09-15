@@ -16,7 +16,7 @@ tur_d03_i,0,0,0,0	monster	Ominous Heater	3803,30,5000
 
 
 
-tur_d04_i,0,0,0,0	monster	Ominous Assulter	3799,15,5000
+tur_d04_i,0,0,0,0	monster	Ominous Assulter	3799,30,5000
 tur_d04_i,0,0,0,0	monster	Ominous Permeter	3800,30,5000
 tur_d04_i,0,0,0,0	monster	Ominous Freezer	3801,30,5000
 tur_d04_i,0,0,0,0	monster	Ominous Solider	3802,30,5000
