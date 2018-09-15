@@ -19,7 +19,7 @@
 //    Item cost, in cash points (#CASHPOINTS).
 
 //Hot
-0,15204,400  //,Abyss Dress
+//0,15204,400  //,Abyss Dress
 0,32203,60  //,Accelerator Chip
 0,2576,100  //,Adventurer's Backpack
 0,20831,60  //,Adventurer's Spirit
@@ -235,6 +235,7 @@
 
 // Hot
 1,31583,1
+6,12622,20
 1,31584,100
 1,12208,2
 1,14156,18
