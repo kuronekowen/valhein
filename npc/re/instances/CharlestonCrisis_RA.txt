@@ -1896,7 +1896,6 @@ OnEnable:
 				close2;
 				cutin "shaloshi01.bmp",255;
 				warp "verus04",107,124;
-				instance_destroy instance_id();
 				end;
 			}
 	}
