@@ -668,7 +668,7 @@
 4226,10800,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"91-99 Mission Board Timer"
 4227,10800,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"91-99 Mission Board Timer"
 
-4229,82800,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Devil in the Cave"
+4229,43200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Devil in the Cave"
 
 4254,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Fairy with a stomache"
 4255,0,2363,20,0,0,0,0,0,0,0,0,0,0,0,0,0,"Revenge!"
@@ -2064,7 +2064,7 @@
 9173,72000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Tutorial Timer Cooldown"
 
 9222,0,2327,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"Get Rid of Bangungot from Hospital 2F"
-9223,604800,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Will there be Peace at the Hospital?"
+9223,43200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Will there be Peace at the Hospital?"
 9224,3600,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Explore Hospital 2F"
 
 9225,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Mystery Robbery Incident 1"
@@ -2979,7 +2979,7 @@
 12273,579600,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"In progress general culvert weekly service"
 12274,579600,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"In progress hard culvert weekly service"
 
-12278,604800,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Towards Bakonawa Lake..."
+12278,43200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Towards Bakonawa Lake..."
 12279,0,2322,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"Get Rid of Bakonawa"
 
 12280,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"A suspicious prisoner"
