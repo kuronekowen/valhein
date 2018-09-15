@@ -414,7 +414,7 @@ D46: setarray @c[2],248,23,190,94;
 	 Pick("","rockmi1","harboro2");
 D47: setarray @c[2],158,38,96,35,192,42,121,20;
 	 Disp("Illusion of Moonlight:Illusion of Vampire:Illusion of Frozen:Illusion of Turtle");
-	 Pick("","pay_d03_i","gef_d01_i","ice_d03_i,tur_d04_i");
+	 Pick("","pay_d03_i","gef_d01_i","ice_d03_i","tur_d04_i");
 // --------------------------------------------------
 	Castles:
 // --------------------------------------------------
