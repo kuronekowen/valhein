@@ -26,7 +26,7 @@
 //	callfunc "rrshop"{,<shop ID>{,<shop ID>{,...}}};
 //  ADD YOUR NPC HERE
 //============================================================
-tur_d04_i,103,27,4	script	Master Roshi	705,{
+tur_d04_i,103,27,4	script	Master Roshi	448,{
 	mes "[Master Roshi]","Have you ever heard this ?","Try to be like 'Turtle'. Comfortable in your own shell.";
 	next;
 	mes "[Master Roshi]","Greeting adventurer!, I'm a the Master Roshi.","What can I do for you?";
@@ -246,7 +246,7 @@ tur_d04_i,103,27,4	script	Master Roshi	705,{
 		}
 }
 
-tur_d04_i,96,27,6	script	Shellcutter	900,{
+tur_d04_i,96,27,6	script	Shellcutter	709,{
 mes "[Shellcutter]","Do you want to cut 5 piece of ^0000ffIllusion Gemstone^000000? to 1 ^ff0000Illusion Stone^000000 ?";
 	if (select("Yes:No" ) == 1) {
 		.@count = countitem(25272);
