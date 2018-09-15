@@ -1130,11 +1130,11 @@ OnTimer33000:
 }
 
 1@mcd,132,129,4	script	Charleston#ERp	4_F_CHARLESTON01,{
-	if (countitem(6213) > 3) {
+	if (countitem(6213) >= 1) {
 		mes "[Charleston]";
 		mes "Well, we already have enough explosives to blow up the entrance.";
 		npctalk "Well, we already have enough explosives to blow up the entrance.";
-		delitem 6213,4; //Explosive Powder
+		delitem 6213,1; //Explosive Powder
 		next;
 		mes "[Charleston]";
 		mes "Get away!";
@@ -1168,7 +1168,7 @@ OnTimer33000:
 	} else {
 		cutin "dalle01.bmp",2;
 		mes "[Charleston]";
-		mes "The entrance is sealed, if we only had some ^5533FFExplosive Powder ^000000 to make it fly.";
+		mes "The entrance is sealed, if we only had an ^5533FFExplosive Powder ^000000 to make it fly.";
 		close2;
 		cutin "dalle01.bmp",255;
 		end;	
@@ -1896,7 +1896,6 @@ OnEnable:
 				close2;
 				cutin "shaloshi01.bmp",255;
 				warp "verus04",107,124;
-				instance_destroy instance_id();
 				end;
 			}
 	}
@@ -2422,7 +2421,7 @@ OnEnable:
 OnMyMobDead:
 	set .@map$, instance_mapname(strnpcinfo(4),  instance_id());
 	set .MyMobs, .MyMobs-1;
-	if (.MyMobs == 0) {
+	if (.MyMobs <= 4) {
 		donpcevent instance_npcname(strnpcinfo(0), instance_id())+"::OnComplete";
 		donpcevent instance_npcname("Charleston#1_00y", instance_id())+"::OnCompleteSetp1";
 		mapannounce .@map$, "Charleston: the security system has been deactivated!",bc_map,"0xFFFF00";

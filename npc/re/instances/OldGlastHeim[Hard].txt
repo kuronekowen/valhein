@@ -1602,14 +1602,14 @@ OnTimer10000:
 			setquest 12339;// Time Conqueror
 			completequest 12339;
 			getitem 6607,5;// Temporal_Crystal
-			getitem 6608,5;// Coagulated_Spell
-			getitem 6755,5;// Contaminated Magic
+			getitem 6608,10;// Coagulated_Spell
+			getitem 6755,10;// Contaminated Magic
 			getexp 350000,350000;
 		}
 		else {
-			getitem 6607,1;// Temporal_Crystal
-			getitem 6608,1;// Coagulated_Spell
-			getitem 6755,1;// Contaminated Magic
+			getitem 6607,5;// Temporal_Crystal
+			getitem 6608,10;// Coagulated_Spell
+			getitem 6755,10;// Contaminated Magic
 		}
 		next;
 		mes "[Hugin]";
