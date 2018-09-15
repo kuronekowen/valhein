@@ -3268,7 +3268,7 @@
 13182,82800,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Nightmarish Jitterbug: Waiting"
 13183,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Nightmarish Jitterbug: Completed"
 13184,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Charleston Factory"
-13185,72000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Charleston Factory - Hold"
+13185,43200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Charleston Factory - Hold"
 13186,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Charleston Factory - Complete"
 13187,0,3125,50,0,0,0,0,0,0,0,0,0,0,0,0,0,"Deal with the Staff"
 13188,72000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Deal with the Staff - Hold"
