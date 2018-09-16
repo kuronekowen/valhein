@@ -17,3 +17,21 @@ if (killedrid == .mobid[.@c]){
 }
 end;
 }
+
+-	script	DropSystem	-1,{
+OnNPCKillEvent:
+	if( getmonsterinfo(killedrid, MOB_MVPEXP) > 0 ){
+		.@RylBossDrop = rand(1, 100);
+		if (.@RylBossDrop == 1){
+			getmapxy(.@map$,.@x,.@y,UNITTYPE_PC);
+			makeitem 31581,1,.@map$,.@x,.@y;
+		}
+		end;
+	}else{
+		.@RylMonDrop = rand(1, 100);
+		if (.@RylMonDrop == 2){
+			getmapxy(.@map$,.@x,.@y,UNITTYPE_PC);
+			makeitem 31579,1,.@map$,.@x,.@y;
+		}
+	}
+}

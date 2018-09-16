@@ -29,6 +29,7 @@
 28241,471,100	// Calf_Diamondback
 28242,471,100	// Calf_Anaconda
 28243,471,100	// Calf_Python
+31579,393,100	// 5_Cash_Coin
 31581,393,100	// 100_Cash_Coin
 31582,393,100	// 10_Cash_Coin
 31583,393,100	// 1_Cash_Coin
