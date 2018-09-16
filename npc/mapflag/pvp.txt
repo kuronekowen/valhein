@@ -13,6 +13,7 @@
 //============================================================
 
 // PvP ========================
+guild_vs3	mapflag	pvp
 pvp_y_1-1	mapflag	pvp
 pvp_y_1-2	mapflag	pvp
 pvp_y_1-3	mapflag	pvp
