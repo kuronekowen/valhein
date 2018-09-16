@@ -26,6 +26,7 @@
 0,2349,60  //,Aebecee's Raging Typhoon Armor
 0,15144,60  //,Agriculture Clothes
 0,28921,60  //,Anemos Shield
+0,2737,60	//,Anklet
 0,15249,100  //,Antonio's Coat
 0,4243,60	//,Antonio's Card
 0,28430,100  //,Arch Bishop Ring
