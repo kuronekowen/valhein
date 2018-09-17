@@ -180,6 +180,7 @@
 0,2191,60  //,Solomon's Key
 0,18793,60  //,Sorcerer's Night Cap
 0,1835,150	//,Spartacus
+0,19249,100	//,Spell Circuit
 0,2935,60  //,Sprint Gloves
 0,19114,60  //,Sting Silk Ribbon
 0,28506,100  //,Storm Stone
