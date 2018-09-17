@@ -45,19 +45,3 @@ if( .@countitem )
 	}
 close;
 }
-
-function	script	Cash_coins_3	{
-.@item = 31579;
-.@rate = 5;
-
-.@countitem = countitem( .@item );
-mes "Exchange "+.@countitem+" x "+getitemname( .@item )+" to "+( .@countitem * .@rate )+" Point ?";
-
-if( .@countitem )
-	if( select( "YES","Cancel" ) == 1 ){
-		delitem .@item,.@countitem;
-		#CASHPOINTS = #CASHPOINTS + ( .@countitem * .@rate );
-		mes "Done";
-	}
-close;
-}
