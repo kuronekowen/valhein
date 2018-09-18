@@ -11867,7 +11867,7 @@
 27083,Resentful_Bongun_Card,Resentful Bongun Card,6,20,,10,,,,,,,,16,,,,,{ bonus bBaseAtk,20; bonus bMatk,20; },{},{}
 27084,Resentful_Sohee_Card,Resentful Sohee Card,6,20,,10,,,,,,,,16,,,,,{ bonus bMatk,10; if (getrefine() >= 10) { bonus bMatkRate,2; } },{},{}
 27085,Resentful_Munak_Card,Resentful Munak Card,6,20,,10,,,,,,,,2,,,,,{ bonus bBaseAtk,15; bonus bMatk,15; },{},{}
-27086,Resentful_Soldier_Card,Resentful Soldier Card,6,20,,10,,,,,,,,2,,,,,{ if (getiteminfo(getequipid(EQI_COMPOUND_ON),11) == W_BOW) { bonus3 bAutoSpell,"TF_DOUBLE",5,30; if (getrefine() >= 10) { bonus2 bWeaponDamageRate,W_BOW,20; } } },{},{}
+27086,Resentful_Soldier_Card,Resentful Soldier Card,6,20,,10,,,,,,,,2,,,,,{ if (getiteminfo(getequipid(EQI_COMPOUND_ON),11) == W_BOW) { bonus3 bAutoSpell,"AC_DOUBLE",5,30; if (getrefine() >= 10) { bonus2 blongatkrate,W_BOW,20; } } },{},{}
 27087,Truthful_Wizard_Card,Truthful Wizard Card,6,20,,10,,,,,,,,2,,,,,{ bonus bMatk,25; autobonus "{ bonus bNoCastCancel; }",5,5000,BF_MAGIC,"{ showscript \"This is the truth!\"; }"; },{},{}
 27088,Fury_Hero_Card,Fury Hero Card,6,20,,10,,,,,,,,769,,,,,{ bonus2 bAddClass,Class_All,2; bonus5 bAutoSpell,"SM_ENDURE",1,5,BF_SHORT,0; },{},{}
 27101,Sweet_Nightmare_Card,Sweet Nightmare Card,6,20,,10,,,,,,,,16,,,,,{ bonus bMatk,20; bonus bNoCastCancel; },{},{}
