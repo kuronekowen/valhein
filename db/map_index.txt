@@ -1027,6 +1027,7 @@ vis_h03
 vis_h04
 ein_d02_i
 com_d02_i
+com_d02_i2
 1@soul
 star_frst
 star_in
