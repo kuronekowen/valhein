@@ -154,17 +154,17 @@
 					next;
 					switch(select("Mirror Shield:Chain Mail:Saint Robe:Silk Robe:Boots:Shoes:Muffler:Guard:Buckler:Shield:Bongun Hat"))
 					{
-						case 1:  callfunc "Func_Socket",2107,2108,40,61,250,999,5;
-						case 2:  callfunc "Func_Socket",2314,2315,40,61,250,999,5;
-						case 3:  callfunc "Func_Socket",2325,2326,40,61,300,999,5;
-						case 4:  callfunc "Func_Socket",2321,2322,40,61,300,999,5;
-						case 5:  callfunc "Func_Socket",2405,2406,40,61,300,999,5;
-						case 6:  callfunc "Func_Socket",2403,2404,40,61,300,999,5;
-						case 7:  callfunc "Func_Socket",2503,2504,40,61,300,999,5;
-						case 8:  callfunc "Func_Socket",2101,2102,40,61,300,999,5;
-						case 9:  callfunc "Func_Socket",2103,2104,40,61,300,999,5;
-						case 10: callfunc "Func_Socket",2105,2106,40,61,250,999,5;
-						case 11: callfunc "Func_Socket",5046,5168,40,61,250,999,5;
+						case 1:  callfunc "Func_Socket",2107,2108,40,61,25,999,5;
+						case 2:  callfunc "Func_Socket",2314,2315,40,61,25,999,5;
+						case 3:  callfunc "Func_Socket",2325,2326,40,61,30,999,5;
+						case 4:  callfunc "Func_Socket",2321,2322,40,61,30,999,5;
+						case 5:  callfunc "Func_Socket",2405,2406,40,61,30,999,5;
+						case 6:  callfunc "Func_Socket",2403,2404,40,61,30,999,5;
+						case 7:  callfunc "Func_Socket",2503,2504,40,61,30,999,5;
+						case 8:  callfunc "Func_Socket",2101,2102,40,61,30,999,5;
+						case 9:  callfunc "Func_Socket",2103,2104,40,61,30,999,5;
+						case 10: callfunc "Func_Socket",2105,2106,40,61,25,999,5;
+						case 11: callfunc "Func_Socket",5046,5168,40,61,25,999,5;
 					}
 				case 3:
 					mes "[Seiyablem]";
@@ -174,24 +174,24 @@
 					next;
 					switch(select("Gemmed Sallet:Bucket Hat:Memory Book:Tights:Legion Plate Armor:Full Plate:Thief Clothes:Greaves:Coif:Manteau:Helm:Ninja Suit:Orc Helm:Ancient Cape:Monk Hat:Golden Gear:Brooch:Munak Hat"))
 					{
-						case 1:  callfunc "Func_Socket",2230,2231,40,61,400,985,1;
-						case 2:  callfunc "Func_Socket",5114,5120,40,61,400,985,1;
-						case 3:  callfunc "Func_Socket",2109,2121,40,61,400,985,1;
-						case 4:  callfunc "Func_Socket",2330,2331,40,61,400,985,1;
-						case 5:  callfunc "Func_Socket",2341,2342,40,61,400,985,1;
-						case 6:  callfunc "Func_Socket",2316,2317,40,61,400,985,1;
-						case 7:  callfunc "Func_Socket",2335,2336,40,61,400,985,1;
-						case 8:  callfunc "Func_Socket",2411,2412,40,61,400,985,1;
-						case 9:  callfunc "Func_Socket",5092,5093,40,61,400,985,1;
-						case 10: callfunc "Func_Socket",2505,2506,40,61,400,985,1;
-						case 11: callfunc "Func_Socket",2228,2229,40,61,400,985,1;
-						case 12: callfunc "Func_Socket",2337,2359,40,61,400,985,1;
-						case 13: callfunc "Func_Socket",2299,5157,40,61,400,985,1;
-						case 14: callfunc "Func_Socket",2507,2525,40,61,400,985,1;
-						case 15: callfunc "Func_Socket",2251,5158,40,61,400,985,1;
-						case 16: callfunc "Func_Socket",2246,5159,40,61,400,985,1;
-						case 17: callfunc "Func_Socket",2605,2625,40,61,400,985,1;
-						case 18: callfunc "Func_Socket",2264,5167,40,61,300,985,1;
+						case 1:  callfunc "Func_Socket",2230,2231,40,61,40,985,1;
+						case 2:  callfunc "Func_Socket",5114,5120,40,61,40,985,1;
+						case 3:  callfunc "Func_Socket",2109,2121,40,61,40,985,1;
+						case 4:  callfunc "Func_Socket",2330,2331,40,61,40,985,1;
+						case 5:  callfunc "Func_Socket",2341,2342,40,61,40,985,1;
+						case 6:  callfunc "Func_Socket",2316,2317,40,61,40,985,1;
+						case 7:  callfunc "Func_Socket",2335,2336,40,61,40,985,1;
+						case 8:  callfunc "Func_Socket",2411,2412,40,61,40,985,1;
+						case 9:  callfunc "Func_Socket",5092,5093,40,61,40,985,1;
+						case 10: callfunc "Func_Socket",2505,2506,40,61,40,985,1;
+						case 11: callfunc "Func_Socket",2228,2229,40,61,40,985,1;
+						case 12: callfunc "Func_Socket",2337,2359,40,61,40,985,1;
+						case 13: callfunc "Func_Socket",2299,5157,40,61,40,985,1;
+						case 14: callfunc "Func_Socket",2507,2525,40,61,40,985,1;
+						case 15: callfunc "Func_Socket",2251,5158,40,61,40,985,1;
+						case 16: callfunc "Func_Socket",2246,5159,40,61,40,985,1;
+						case 17: callfunc "Func_Socket",2605,2625,40,61,40,985,1;
+						case 18: callfunc "Func_Socket",2264,5167,40,61,30,985,1;
 					}
 				case 4:
 					mes "[Seiyablem]";
@@ -201,17 +201,17 @@
 					next;
 					switch(select("Majestic Goat:Spiky Band:Bone Helm:Corsair:Crown:Tiara:Sphinx Hat:Robe of Cast:Earring:Ring:Bow Thimble"))
 					{
-						case 1:  callfunc "Func_Socket",2256,5160,40,51,2000,985,2;
-						case 2:  callfunc "Func_Socket",2258,5161,40,51,2000,985,2;
-						case 3:  callfunc "Func_Socket",5017,5162,40,51,2000,985,2;
-						case 4:  callfunc "Func_Socket",5019,5163,40,51,2000,985,2;
-						case 5:  callfunc "Func_Socket",2235,5165,40,51,2000,985,2;
-						case 6:  callfunc "Func_Socket",2234,5164,40,51,2000,985,2;
-						case 7:  callfunc "Func_Socket",5053,5166,40,51,1000,985,2;
-						case 8:  callfunc "Func_Socket",2343,2360,40,51,1000,985,2;
-						case 9:  callfunc "Func_Socket",2602,2622,40,51,1000,985,2;
-						case 10: callfunc "Func_Socket",2601,2621,40,51,1000,985,2;
-						case 11: callfunc "Func_Socket",2619,2671,40,51,1000,985,2;
+						case 1:  callfunc "Func_Socket",2256,5160,40,51,200,985,2;
+						case 2:  callfunc "Func_Socket",2258,5161,40,51,200,985,2;
+						case 3:  callfunc "Func_Socket",5017,5162,40,51,200,985,2;
+						case 4:  callfunc "Func_Socket",5019,5163,40,51,200,985,2;
+						case 5:  callfunc "Func_Socket",2235,5165,40,51,200,985,2;
+						case 6:  callfunc "Func_Socket",2234,5164,40,51,200,985,2;
+						case 7:  callfunc "Func_Socket",5053,5166,40,51,100,985,2;
+						case 8:  callfunc "Func_Socket",2343,2360,40,51,100,985,2;
+						case 9:  callfunc "Func_Socket",2602,2622,40,51,100,985,2;
+						case 10: callfunc "Func_Socket",2601,2621,40,51,100,985,2;
+						case 11: callfunc "Func_Socket",2619,2671,40,51,100,985,2;
 					}
 			}
 		case 3:

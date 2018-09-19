@@ -11834,6 +11834,11 @@
 //===================================================================
 // New Spears
 //===================================================================
+25615,Nasarin's_Soul_Stone,Nasarin's Soul Stone,3,700,,10,,,,,,,,,,,,,{},{},{}
+25616,Green_Gummy_Bear,Green Gummy Bear,3,700,,10,,,,,,,,,,,,,{},{},{}
+25617,Fine_Chonchon_Doll,Fine Chonchon Doll,3,700,,10,,,,,,,,,,,,,{},{},{}
+25618,Gothic_Porcelain_Doll,Gothic Porcelain Doll,3,700,,10,,,,,,,,,,,,,{},{},{}
+25619,Clay_Doll,Clay Doll,3,700,,10,,,,,,,,,,,,,{},{},{}
 26007,Illusion_Spectral_Spear,Illusion Spectral Spear,5,20,,2000,240,,3,1,0x00004082,63,2,34,4,99,1,5,{ .@r = getrefine(); .@val = 3*(.@r/2); bonus2 bAddEle,Ele_Dark,(20+.@val); bonus2 bAddRace,RC_Demon,(20+.@val); bonus2 bAddRace,RC_Undead,(20+.@val); bonus2 bSubRace,RC_Demon,(10+.@val); bonus2 bSubEle,Ele_Undead,(10+.@val); bonus2 bSubEle,Ele_Dark,(10+.@val); bonus bHPGainValue,50; bonus bSPGainValue,(.@r/2); bonus2 bAddEff2,Eff_Confusion,1000; },{},{}
 //===================================================================
 // New Staves

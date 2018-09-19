@@ -1987,6 +1987,11 @@
 25312  // Beautiful_Old_Doll
 25314  // Logbook
 25315  // Piece_of_Shell
+25615  // Nasarin's_Soul_Stone
+25616  // Green_Gummy_Bear
+25617  // Fine_Chonchon_Doll
+25618  // Gothic_Porcelain_Doll
+25619  // Clay_Doll
 27081  // Angry_Moonlight_Flower_Card
 27082  // Angry_Nine_Tail_Card
 27083  // Resentful_Bongun_Card
