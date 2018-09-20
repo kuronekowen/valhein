@@ -1,6 +1,6 @@
 // Mapflags
-ein_d02_i	mapflag	nomemo
-ein_d02_i2	mapflag	nomemo
+com_d02_i	mapflag	nomemo
+com_d02_i2	mapflag	nomemo
 
 // Mob Spawn - Luanda Cave
 com_d02_i,0,0,0,0	monster	Ancient Tri Joint	20270,35,5000
