@@ -118,7 +118,7 @@ com_d02_i,233,271,4	script	Mystical Explorer	642,{
 				else callfunc "required2";
 				}
 				firm3: {
-				mes "<ITEM>Illusion Goibne's Helm[1]<INFO>19366</INFO></ITEM>","  - +9 Goibne's Helm ","  - 120 Illusion Stone","  - 10 Wootan Defender's Shield Fragment"," - 150 Wootan Token"," ","Do you want to Comfirm?";
+				mes "<ITEM>Illusion Goibne's Helm[1]<INFO>19366</INFO></ITEM>","  - +9 Goibne's Helm","  - 120 Illusion Stone","  - 10 Wootan Defender's Shield Fragment"," - 150 Wootan Token"," ","Do you want to Comfirm?";
 				if (select("Yes:No" ) == 1) {
 					if (checkweight(19366,1)) {
 					getinventorylist;
@@ -152,7 +152,7 @@ com_d02_i,233,271,4	script	Mystical Explorer	642,{
 				else callfunc "required2";
 				}				
 				firm4: {
-				mes "<ITEM>Illusion Goibne's Armor﻿[1]<INFO>19366</INFO></ITEM>","  - +9 Goibne's Armor﻿ ","  - 80 Illusion Stone","  - 100 Solid Clay"," - 150 Megalith Token"," ","Do you want to Comfirm?";
+				mes "<ITEM>Illusion Goibne's Armor[1]<INFO>19366</INFO></ITEM>","  - +9 Goibne's Armor","  - 80 Illusion Stone","  - 100 Solid Clay"," - 150 Megalith Token"," ","Do you want to Comfirm?";
 				if (select("Yes:No" ) == 1) {
 					if (checkweight(19366,1)) {
 					getinventorylist;
@@ -186,7 +186,7 @@ com_d02_i,233,271,4	script	Mystical Explorer	642,{
 				else callfunc "required2";
 				}
 				firm5: {
-				mes "<ITEM>Illusion Goibne's Gr﻿eaves﻿﻿﻿﻿[1]<INFO>22192</INFO></ITEM>","  - +9 Goibne's Gr﻿eaves﻿﻿﻿﻿ ","  - 80 Illusion Stone","  - 100 Wootan Warrior's﻿ Hai﻿r"," - 150 Wootan Token"," ","Do you want to Comfirm?";
+				mes "<ITEM>Illusion Goibne's Greaves[1]<INFO>22192</INFO></ITEM>","  - +9 Goibne's Greaves","  - 80 Illusion Stone","  - 100 Wootan Warrior's﻿ Hai﻿r"," - 150 Wootan Token"," ","Do you want to Comfirm?";
 				if (select("Yes:No" ) == 1) {
 					if (checkweight(22192,1)) {
 					getinventorylist;
@@ -220,7 +220,7 @@ com_d02_i,233,271,4	script	Mystical Explorer	642,{
 				else callfunc "required2";
 				}
 				firm6: {
-				mes "<ITEM>Illusion Goibne's﻿ Sp﻿aulde﻿rs﻿﻿﻿﻿﻿﻿﻿[1]<INFO>20923</INFO></ITEM>","  - +9 Goibne's﻿ Sp﻿aulde﻿rs﻿﻿﻿﻿﻿﻿﻿ ","  - 120 Illusion Stone","  - 10 Lightning Stone Fragment"," - 150 Megalith Tok﻿en"," ","Do you want to Comfirm?";
+				mes "<ITEM>Illusion Goibne's Spaulders[1]<INFO>20923</INFO></ITEM>","  - +9  Goibne's Spaulders","  - 120 Illusion Stone","  - 10 Lightning Stone Fragment"," - 150 Megalith Tok﻿en"," ","Do you want to Comfirm?";
 				if (select("Yes:No" ) == 1) {
 					if (checkweight(20923,1)) {
 					getinventorylist;
