@@ -1992,6 +1992,16 @@
 25617  // Fine_Chonchon_Doll
 25618  // Gothic_Porcelain_Doll
 25619  // Clay_Doll
+25633  // Wootan_Token
+25634  // Wootan_Defender's_Shield_Fragment
+25635  // Wootan_Warrior's_Hair
+25636  // Shooting_Good_Stone
+25637  // Hair-like_Leaf
+25638  // Megalith_Token
+25639  // Lightning_Stone_Fragment
+25640  // Flowerpot_Stone
+25641  // Solid_Clay
+25642  // Fragile_Worm
 27081  // Angry_Moonlight_Flower_Card
 27082  // Angry_Nine_Tail_Card
 27083  // Resentful_Bongun_Card

@@ -11839,6 +11839,16 @@
 25617,Fine_Chonchon_Doll,Fine Chonchon Doll,3,700,,10,,,,,,,,,,,,,{},{},{}
 25618,Gothic_Porcelain_Doll,Gothic Porcelain Doll,3,700,,10,,,,,,,,,,,,,{},{},{}
 25619,Clay_Doll,Clay Doll,3,700,,10,,,,,,,,,,,,,{},{},{}
+25633,Wootan_Token,Wootan Token,3,700,,10,,,,,,,,,,,,,{},{},{}
+25634,Wootan_Defender's_Shield_Fragment,Wootan Defender's Shield Fragment,3,700,,10,,,,,,,,,,,,,{},{},{}
+25635,Wootan_Warrior's_Hair,Wootan Warrior's Hair,3,700,,10,,,,,,,,,,,,,{},{},{}
+25636,Shooting_Good_Stone,Shooting Good Stone,3,700,,10,,,,,,,,,,,,,{},{},{}
+25637,Hair-like_Leaf,Hair-like Leaf,3,700,,10,,,,,,,,,,,,,{},{},{}
+25638,Megalith_Token,Megalith Token,3,700,,10,,,,,,,,,,,,,{},{},{}
+25639,Lightning_Stone_Fragment,Lightning Stone Fragment,3,700,,10,,,,,,,,,,,,,{},{},{}
+25640,Flowerpot_Stone,Flowerpot Stone,3,700,,10,,,,,,,,,,,,,{},{},{}
+25641,Solid_Clay,Solid Clay,3,700,,10,,,,,,,,,,,,,{},{},{}
+25642,Fragile_Worm,Fragile Worm,3,700,,10,,,,,,,,,,,,,{},{},{}
 26007,Illusion_Spectral_Spear,Illusion Spectral Spear,5,20,,2000,240,,3,1,0x00004082,63,2,34,4,99,1,5,{ .@r = getrefine(); .@val = 3*(.@r/2); bonus2 bAddEle,Ele_Dark,(20+.@val); bonus2 bAddRace,RC_Demon,(20+.@val); bonus2 bAddRace,RC_Undead,(20+.@val); bonus2 bSubRace,RC_Demon,(10+.@val); bonus2 bSubEle,Ele_Undead,(10+.@val); bonus2 bSubEle,Ele_Dark,(10+.@val); bonus bHPGainValue,50; bonus bSPGainValue,(.@r/2); bonus2 bAddEff2,Eff_Confusion,1000; },{},{}
 //===================================================================
 // New Staves
@@ -11966,7 +11976,7 @@
 27293,Ancient_Megalith_Card,Ancient Megalith Card,6,20,,10,,,,,,,,2,,,,,{ bonus bMatk,30; bonus bMaxSPrate,-1; },{},{}
 27294,Ancient Tao Gunka Card,Ancient Tao Gunka Card,6,20,,10,,,,,,,,769,,,,,{ .@val = 30; if (getrefine() >= 10) { .@val += 20; } bonus2 bIgnoreDefClassRate,Class_Boss,.@val; },{},{}
 27295,Ancient_Stone_Shooter_Card,Ancient Stone Shooter Card,6,20,,10,,,,,,,,4,,,,,{ .@luk = readparam(bLuk); .@aspd = .@crit = .@luk/10; if (.@luk >= 120) { .@crit += 5; } bonus bAspdRate,.@aspd; bonus bCritAtkRate,.@crit; },{},{}
-27296,Ancient_Wootan_Shooter_Card,Ancient Wootan Shooter Card,6,20,,10,,,,,,,,4,,,,,{ .@dex = readparam(bDex); .@val = .@dex/10; if (.@val) { bonus bAspdRate,.@val; bonus2 bWeaponDamageRate,W_BOW,.@val; if (.@dex >= 120) { bonus bBaseAtk,40; } } },{},{}
+27296,Ancient_Wootan_Shooter_Card,Ancient Wootan Shooter Card,6,20,,10,,,,,,,,4,,,,,{ .@dex = readparam(bDex); .@val = .@dex/10; if (.@val) { bonus bAspdRate,.@val; if (getiteminfo(getequipid(EQI_COMPOUND_ON),11) == W_BOW) bonus blongatkrate,.@val; if (.@dex >= 120) bonus bBaseAtk,40; } },{},{}
 27297,Ancient_Wootan_Fighter_Card,Ancient Wootan Fighter Card,6,20,,10,,,,,,,,2,,,,,{ bonus bCritical,5; bonus bCritAtkRate,10; },{},{}
 27298,Ancient_Wootan_Defender_Card,Ancient Wootan Defender Card,6,20,,10,,,,,,,,32,,,,,{ .@val = 30; if (getrefine() >= 10) { .@val += 20; } bonus2 bSubClass,Class_Boss,.@val; },{},{}
 //===================================================================
