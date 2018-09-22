@@ -41,7 +41,7 @@ OnStart:
 	case 1:
 		if( .@instance_delay > 0 )
 		{
-			mes "^FF0000Sky fortress^000000 will reopen in the next 12 hours";
+			mes "^FF0000Sky fortress^000000 will reopen in the next 4 hours";
 			mes "You have to wait : ^FF0000"+.@instance_delay+" Seconds.^000000";
 			close;
 		}
@@ -174,7 +174,7 @@ OnInit:
 	set .map_size, getarraysize( .map$ );
 	set .min_party_member, 1;
 	set .instance_zeny, 0;
-	set .instance_delay, 43200;
+	set .instance_delay, 14400;
 	set $sf_timer_delay, 3600; //1 hour to clean the instance
 	set .instance_name$, "Sky Fortress Invasion";
 	end;
