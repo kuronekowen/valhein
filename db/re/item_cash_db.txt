@@ -142,7 +142,7 @@
 0,15142,60  //,Orca Clothes
 0,18794,60  //,Ordinary Black Magician Hat
 0,19102,50  //,Pale Moon Hat
-0,28565,200  //,Perverse Demon Mask
+0,28565,400  //,Perverse Demon Mask
 0,20859,100  //,Phreeoni Wings
 0,18908,60  //,Piamette's red ear
 0,22189,100  //,Pilgrim Shoes
