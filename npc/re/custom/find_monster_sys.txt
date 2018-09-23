@@ -17,8 +17,8 @@ L_FindByName:
 	mes "ใส่ชื่อมอนเตอร์ที่ต้องการ";
 	input .@monster_name$;
 	
-	query_sql "SELECT `ID`, `iName` FROM `mob_db` WHERE `iName` like '%"+escape_sql(.@monster_name$)+"%'", .@mob_id_1, .@mob_name_1$;
-	query_sql "SELECT `ID`, `iName` FROM `mob_db2` WHERE `iName` like '%"+escape_sql(.@monster_name$)+"%'", .@mob_id_2, .@mob_name_2$;
+	query_sql "SELECT `ID`, `iName` FROM `mob_db_re` WHERE `iName` like '%"+escape_sql(.@monster_name$)+"%'", .@mob_id_1, .@mob_name_1$;
+	query_sql "SELECT `ID`, `iName` FROM `mob_db_re2_re` WHERE `iName` like '%"+escape_sql(.@monster_name$)+"%'", .@mob_id_2, .@mob_name_2$;
 	set .@type,1;
 	goto L_ShowMob;
 	end;
@@ -29,8 +29,8 @@ L_FindByAZ:
 	set .@i,select($@FINMB_az_menu$)-1;
 	set .@monster_name$,$@FINMB_az_db$[.@i];
 	
-	query_sql "SELECT `ID`, `iName` FROM `mob_db` WHERE `iName` like '"+escape_sql(.@monster_name$)+"%'", .@mob_id_1, .@mob_name_1$;
-	query_sql "SELECT `ID`, `iName` FROM `mob_db2` WHERE `iName` like '"+escape_sql(.@monster_name$)+"%'", .@mob_id_2, .@mob_name_2$;
+	query_sql "SELECT `ID`, `iName` FROM `mob_db_re` WHERE `iName` like '"+escape_sql(.@monster_name$)+"%'", .@mob_id_1, .@mob_name_1$;
+	query_sql "SELECT `ID`, `iName` FROM `mob_db_re2_re` WHERE `iName` like '"+escape_sql(.@monster_name$)+"%'", .@mob_id_2, .@mob_name_2$;
 	set .@type,2;
 	goto L_ShowMob;
 	end;
