@@ -57,7 +57,7 @@
 0,22138,100  //,Devil Worshipper Shoes
 0,19329,150  //,Devil's Hand
 0,5968,60  //,Divine Angel Nurse Cap
-0,5900,60  //,Divine Guard Hat
+0,5900,250  //,Divine Guard Hat
 0,15135,60  //,Dragon Cloth
 0,5924,60  //,Dragon Knight's Eyepatch
 0,15130,60  //,Dragon Mail
