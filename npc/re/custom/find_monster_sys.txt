@@ -81,7 +81,8 @@ L_ShowMob:
 	next;
 	set .@mob,select(.@mob_menu$)-1;
 	
-	query_sql "SELECT `map_name`, `x`, `y` FROM `"+$@FINMB_db$+"`.`map_monster` WHERE `mob_id` = "+.@mob_id[.@mob]+"", .@map_name$, .@x, .@y;
+	//query_sql "SELECT `map_name`, `x`, `y` FROM `"+$@FINMB_db$+"`.`map_monster` WHERE `mob_id` = "+.@mob_id[.@mob]+"", .@map_name$, .@x, .@y;
+	query_sql "SELECT `map_name`, `x`, `y` FROM `map_monster` WHERE `mob_id` = "+.@mob_id[.@mob]+"", .@map_name$, .@x, .@y;
 	set .@size,getarraysize(.@map_name$);
 	
 	if (.@size == 0)
