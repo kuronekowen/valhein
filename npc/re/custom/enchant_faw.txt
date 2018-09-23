@@ -79,7 +79,7 @@ jExit:            set .@menu$, "";
             mes "[Fallen Angel]";
             mes "เลือกประเภทที่จะออฟ";
             next;
-            switch(select("Fighting:Magic:Archer:Sharp:Aspd:Max HP:Max SP:Str:Agi:Dex:Vit:Int:Luk")) {//dito tayo sir
+            switch(select("Fighting:Magic:Archer:Fatal:Aspd:Max HP:Max SP:Str:Agi:Dex:Vit:Int:Luk")) {//dito tayo sir
                 set .@i, rand(1,15);
                 case 1: //Fighting
                     if(getequipcardid(EQI_GARMENT,2)) set .@enchant,4821;
@@ -99,11 +99,11 @@ jExit:            set .@menu$, "";
                     else if (.@i < 8)   set .@enchant,4833;
                     else set .@enchant,4832;
                 goto eStart;
-                case 4://Sharp
-                    if(getequipcardid(EQI_GARMENT,2)) set .@enchant,4843;
-                    else if (.@i < 4)   set .@enchant,4816;
-                    else if (.@i < 8)   set .@enchant,4817;
-                    else set .@enchant,4818;
+                case 4://Fatal
+                    if(getequipcardid(EQI_GARMENT,2)) set .@enchant,4866;
+                    else if (.@i < 4)   set .@enchant,4865;
+                    else if (.@i < 8)   set .@enchant,4864;
+                    else set .@enchant,4863;
                 goto eStart;
                 case 5://Aspd
                     if(getequipcardid(EQI_GARMENT,2)) set .@enchant,4873;
