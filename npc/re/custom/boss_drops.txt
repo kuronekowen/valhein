@@ -11,6 +11,8 @@ setarray .mobid[0],1511,1647,1785,1630,1399,1039,1874,2068,1272,1719,1046,1389,1
 
 for (set .@c, 0; .@c < getarraysize(.mobid); set .@c, .@c + 1){
 if (killedrid == .mobid[.@c]){
+	getmapxy(.@map$,.@x,.@y,UNITTYPE_PC);
+	if (.@map$ == "prontera") end;
 	getitem 31583,1; //==== TCG Card <itemid>,<amount> you can change it.
 	}
 }
