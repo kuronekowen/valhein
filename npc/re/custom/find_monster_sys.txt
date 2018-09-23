@@ -39,8 +39,8 @@ L_ShowMob:
 	set .@size,getarraysize(.@mob_id_1);
 	for (set .@i,0; .@i < .@size; set .@i,.@i+1)
 	{
-		//if (.@num >= 200)
-			//break;
+		if (.@num >= 200)
+			break;
 			
 		set .@mob_menu$,.@mob_menu$+"- "+.@mob_name_1$[.@i]+" ["+.@mob_id_1[.@i]+"]:";
 		set .@mob_name$[.@num],.@mob_name_1$[.@i];
@@ -51,8 +51,8 @@ L_ShowMob:
 	set .@size,getarraysize(.@mob_id_2);
 	for (set .@i,0; .@i < .@size; set .@i,.@i+1)
 	{
-		//if (.@num >= 200)
-			//break;
+		if (.@num >= 200)
+			break;
 			
 		set .@mob_menu$,.@mob_menu$+"- "+.@mob_name_2$[.@i]+" ["+.@mob_id_2[.@i]+"]:";
 		set .@mob_name$[.@num],.@mob_name_2$[.@i];
@@ -81,8 +81,8 @@ L_ShowMob:
 	next;
 	set .@mob,select(.@mob_menu$)-1;
 	
-	//query_sql "SELECT `map_name`, `x`, `y` FROM `"+$@FINMB_db$+"`.`map_monster` WHERE `mob_id` = "+.@mob_id[.@mob]+"", .@map_name$, .@x, .@y;
-	query_sql "SELECT `map_name`, `x`, `y` FROM `map_monster` WHERE `mob_id` = "+.@mob_id[.@mob]+"", .@map_name$, .@x, .@y;
+	query_sql "SELECT `map_name`, `x`, `y` FROM `"+$@FINMB_db$+"`.`map_monster` WHERE `mob_id` = "+.@mob_id[.@mob]+"", .@map_name$, .@x, .@y;
+	//query_sql "SELECT `map_name`, `x`, `y` FROM `map_monster` WHERE `mob_id` = "+.@mob_id[.@mob]+"", .@map_name$, .@x, .@y;
 	set .@size,getarraysize(.@map_name$);
 	
 	if (.@size == 0)
