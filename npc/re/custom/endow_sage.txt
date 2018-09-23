@@ -4,7 +4,7 @@
 // OnInit label at the end.
 // V1.0 - Released - 5-Jul-2018
 
-prontera,169,183,4	script	Well Endowed Sage	742,{
+prontera,169,183,4	script	เคลือบธาตุ	742,{
 	mes "[Well Endowed Sage]","Greetings! How would you like to be endowed?";
 	if(@End_Ele) .@Last_Ele$ = "Last Element - "+.Element$[@End_Ele]+":"; else .@Last_Ele$ = ":";
 	select(.@Last_Ele$+.Element$[1]+":"+.Element$[2]+":"+.Element$[3]+":"+.Element$[4]+":Converters");
