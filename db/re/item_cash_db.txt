@@ -75,6 +75,7 @@
 0,20773,60	// Excelion Wing
 0,28941,60  //,Excelion Shield
 0,5916,60  //,Exorcist Glasses
+0,19391,100	//,Eye of Illusion
 0,19081,50  //,Faceworm Egg Shell
 0,28438,100  //,Fairy Leaf Powder
 0,2589,400  //,Fallen angel wing
@@ -134,6 +135,7 @@
 0,15140,60  //,Natural Clothes
 0,15072,60  //,Nectar Suit
 0,18799,60  //,Nero Mask
+0,28951,100	//,Nero Shield
 0,18813,100  //,New wave sunglasses
 0,18813,60  //,Night Sparrow hat
 0,5938,100  //,Octopus Hat
@@ -194,6 +196,7 @@
 0,19112,60  //,Tengu Scroll
 0,28492,60  //,Thieve's Guide Vol.1
 0,5978,60  //,Toy Syringe
+0,22198,80	//,Traveler Shoes
 0,19299,60  //,Tree Sprout
 0,15071,100  //,Valkyrian Robe
 0,20712,100  //,Valkyrie Cape
