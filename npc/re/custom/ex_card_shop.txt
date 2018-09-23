@@ -6,7 +6,7 @@
 //= Exchange cards for points?.?
 //============================================================
 
-prontera,143,172,4	script	การ์ดแลก Point	853,{
+lighthalzen,144,99,4	script	การ์ดแลก Point	853,{
 	mes "[Card Trader]";
 	mes "หวัดดี, "+strcharinfo(0)+"!";
 	mes "มีอะไรให้ข้ารับใช้ไหม ?";

@@ -25,13 +25,13 @@ case 1:
 	if (red_item99 == 1){
 		mes "อ๊ะๆ รับไปแล้วนะจ๊ะ";
 		close;
-	}
-	mes "ยินดีด้วยคุณเล่นจนเลเวลตันและจ๊อบเลเวลตัน";
-	getitem 31582,1;
+	} else {
+	mes "ยินดีด้วยคุณเล่นจนเลเวล 99 รับไปเลย 10 cash";
+	atcommand "@cash 10";
 	set red_item99, 1;
 	mes "คุณรับไอเทมไปแล้ว";
 	mes "ขอให้โชคดี";
-	close;
+	close; }
 	
 case 2:
 	mes .@heading$;
@@ -42,13 +42,13 @@ case 2:
 	if (red_item100 == 1){
 		mes "อ๊ะๆ รับไปแล้วนะจ๊ะ";
 		close;
-	}
-	mes "ยินดีด้วยคุณเล่นจนเลเวลตันและจ๊อบเลเวลตัน";
-	getitem 31582,3;
+	} else {
+	mes "ยินดีด้วยคุณเล่นจนเลเวล 100  รับไปเลย 30 cash";
+	atcommand "@cash 30";
 	set red_item100, 1;
 	mes "คุณรับไอเทมไปแล้ว";
 	mes "ขอให้โชคดี";
-	close;
+	close; }
 	
 case 3:
 	mes .@heading$;
@@ -59,13 +59,13 @@ case 3:
 	if (red_item120 == 1){
 		mes "อ๊ะๆ รับไปแล้วนะจ๊ะ";
 		close;
-	}
-	mes "ยินดีด้วยคุณเล่นจนเลเวลตันและจ๊อบเลเวลตัน";
-	getitem 31582,2;
+	} else {
+	mes "ยินดีด้วยคุณเล่นจนเลเวล 120  รับไปเลย 20 cash";
+	atcommand "@cash 20";
 	set red_item120, 1;
 	mes "คุณรับไอเทมไปแล้ว";
 	mes "ขอให้โชคดี";
-	close;	
+	close; }
 	
 case 4:
 	mes .@heading$;
@@ -76,13 +76,13 @@ case 4:
 	if (red_item140 == 1){
 		mes "อ๊ะๆ รับไปแล้วนะจ๊ะ";
 		close;
-	}
-	mes "ยินดีด้วยคุณเล่นจนเลเวลตันและจ๊อบเลเวลตัน";
-	getitem 31582,2;
+	} else {
+	mes "ยินดีด้วยคุณเล่นจนเลเวล 140  รับไปเลย 20 cash";
+	atcommand "@cash 20";
 	set red_item140, 1;
 	mes "คุณรับไอเทมไปแล้ว";
 	mes "ขอให้โชคดี";
-	close;
+	close; }
 
 case 5:
 	mes .@heading$;
@@ -93,13 +93,13 @@ case 5:
 	if (red_item150 == 1){
 		mes "อ๊ะๆ รับไปแล้วนะจ๊ะ";
 		close;
-	}
-	mes "ยินดีด้วยคุณเล่นจนเลเวลตันและจ๊อบเลเวลตัน";
-	getitem 31582,4;
+	} else {
+	mes "ยินดีด้วยคุณเล่นจนเลเวล 150  รับไปเลย 40 cash";
+	atcommand "@cash 40";
 	set red_item150, 1;
 	mes "คุณรับไอเทมไปแล้ว";
 	mes "ขอให้โชคดี";
-	close;		
+	close; }	
 	
 case 6:
 	mes .@heading$;
@@ -110,13 +110,13 @@ case 6:
 	if (red_item175 == 1){
 		mes "อ๊ะๆ รับไปแล้วนะจ๊ะ";
 		close;
-	}
-	mes "ยินดีด้วยคุณเล่นจนเลเวลตันและจ๊อบเลเวลตัน";
-	getitem 31581,1;
+	} else {
+	mes "ยินดีด้วยคุณเล่นจนเลเวลตันและจ๊อบเลเวลตัน  รับไปเลย 100 cash";
+	atcommand "@cash 100";
 	set red_item175, 1;
 	mes "คุณรับไอเทมไปแล้ว";
 	mes "ขอให้โชคดี";
-	close;		
+	close; }		
 
 L_no99:
 	mes .@heading$;
