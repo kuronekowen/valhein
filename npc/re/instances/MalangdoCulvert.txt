@@ -220,8 +220,8 @@ mal_in01,172,26,2	script	Madeca#mal	544,{
 			callsub L_EraseQuest,12267,12268,12273;
 		else {
 			// Reward: 1x Sea God's Wrath
-			callsub L_CheckQuest,12267,"Weird Coelacanth",6423,1;
-			callsub L_CheckQuest,12268,"Gloomy Coelacanth",6423,1;
+			callsub L_CheckQuest,12267,"Weird Coelacanth",6423,15;
+			callsub L_CheckQuest,12268,"Gloomy Coelacanth",6423,15;
 		}
 		break;
 	case 4: // Hard Culvert Weekly Service
@@ -229,8 +229,8 @@ mal_in01,172,26,2	script	Madeca#mal	544,{
 			callsub L_EraseQuest,12269,12270,12274;
 		else {
 			// Reward: 5x Sea God's Wrath
-			callsub L_CheckQuest,12269,"Violent Coelacanth",6423,5;
-			callsub L_CheckQuest,12270,"Mutant Coelacanth",6423,5;
+			callsub L_CheckQuest,12269,"Violent Coelacanth",6423,60;
+			callsub L_CheckQuest,12270,"Mutant Coelacanth",6423,60;
 		}
 		break;
 	default:
