@@ -23,6 +23,9 @@ end;
 
 -	script	coindrops	-1,{
 OnNPCKillEvent:
+setarray .mobid2[0],1078,1079,1080,1081,1082,1083,1084,1085;
+for (set .@c, 0; .@c < getarraysize(.mobid2); set .@c, .@c + 1){
+if (killedrid == .mobid2[.@c])end; }
 .@coindrop = rand(1, 100);
 	if (.@coinDrop <= 2 && idle_drop == 0){
 		atcommand "@cash 5";

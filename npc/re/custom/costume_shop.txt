@@ -1,5 +1,5 @@
 //prontera,141,182,6	script	ร้านค้า Costume	954,{
-manuk,275,136,6	script	ร้านค้า Costume	954,{
+prontera,141,182,6	script	ร้านค้า Costume	954,{
 mes "ร้านค้า Costume เรียงตามตัวอักษร A-Z";
 switch(select("A:B:C:D:E:F:G:H:I:J:K:L:M:N:O:P:Q:R:S:T:U:V:W:X:Y:Z")) {
 	case 1:
@@ -105,6 +105,9 @@ switch(select("A:B:C:D:E:F:G:H:I:J:K:L:M:N:O:P:Q:R:S:T:U:V:W:X:Y:Z")) {
 	case 26:
 	callshop "shopZ", 0;
 	break;
+
+OnInit:
+waitingroom "ร้านค้า Costume",0;
 }
 }
 
