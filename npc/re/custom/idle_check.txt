@@ -39,15 +39,17 @@ OnHourlyRewards:
 			end;
 		}
 		if(.s_idle){
-			//if(checkidle() > .s_idle_time){
+			//if(checkidle() > .s_idle_time)
 			getmapxy( .@map2$,.@x2,.@y2,0 );
 			if(.@map$ == .@map2$ && .@x == .@x2 && .@y == .@y2) {
-				dispbottom "คุณจะไม่ได้รับ Cash จากมอนสเตอร์ 10 วินาที เนื่องจากหยุดนิ่งนานเกินไป !",0xff0000;
-				//message strcharinfo(0),"[Hourly Rewards]: คุณจะไม่ได้รับ Cash จากมอนสเตอร์ 10 วินาที เนื่องจากหยุดนิ่งนานเกินไป!.";
-				set idle_drop,1;
-				addtimer .s_time, strnpcinfo(3)+"::OnHourlyRewards";
+				set .@idle_counter,.@idle_counter+9;
+				if (.@idle_counter == 180) {
+					message strcharinfo(0),"[AFK check]: คุณจะไม่ได้รับ Cash จากมอนสเตอร์ 10 วินาที เนื่องจากหยุดนิ่งนานเกินไป!.";
+					set idle_drop,1;
+					set .@idle_counter,0;
+					addtimer .s_time, strnpcinfo(3)+"::OnHourlyRewards"; }
 				end;
-			}
+			} else set .@idle_counter,0;
 		}
 		if(.s_vip){
 			if(!vip_status(VIP_STATUS_ACTIVE)){
@@ -136,7 +138,7 @@ end;
 
 OnInit:
 	.s_idle = 1; //	ban hourly rewards from idle players ? 0 no / 1 yes {if player didn't move for x time he wont get hourly reward}  , DEFAULT = 0
-	.s_idle_time = 300; //	this the time for idle in secend  , DEFAULT = 1800 (30 min)
+	.s_idle_time = 180; //	this the time for idle in secend  , DEFAULT = 1800 (30 min)
 	.s_vip = 0; //	1 = only for VIP / 0 = for everyone  , DEFAULT = 0
 	.s_time = 9000; //	1000 = 1 secend | 60000 = 1 min | 3600000 = 1 houre  , DEFAULT = 3600000 (1 hr)
 	.s_hourly_level = 0; //	Minimam level to get the Houerly rewards / 0 = no minimem level  , DEFAULT 0
