@@ -32,13 +32,16 @@
 -	script	idle_check_drop	-1,{
 
 OnHourlyRewards:
+		getmapxy( .@map$,.@x,.@y,0 );
 		if(#Hourly_Ban){
 			//message strcharinfo(0),"[Hourly Rewards]: You did ban this char from the Hourly Rewards , Relogin to change that .";
 			addtimer .s_time, strnpcinfo(3)+"::OnHourlyRewards";
 			end;
 		}
 		if(.s_idle){
-			if(checkidle() > .s_idle_time){
+			//if(checkidle() > .s_idle_time){
+			getmapxy( .@map2$,.@x2,.@y2,0 );
+			if(.@map$ == .@map2$ && .@x == .@x2 && .@y == .@y2) {
 				dispbottom "คุณจะไม่ได้รับ Cash จากมอนสเตอร์ 10 วินาที เนื่องจากหยุดนิ่งนานเกินไป !",0xff0000;
 				//message strcharinfo(0),"[Hourly Rewards]: คุณจะไม่ได้รับ Cash จากมอนสเตอร์ 10 วินาที เนื่องจากหยุดนิ่งนานเกินไป!.";
 				set idle_drop,1;
@@ -135,7 +138,7 @@ OnInit:
 	.s_idle = 1; //	ban hourly rewards from idle players ? 0 no / 1 yes {if player didn't move for x time he wont get hourly reward}  , DEFAULT = 0
 	.s_idle_time = 300; //	this the time for idle in secend  , DEFAULT = 1800 (30 min)
 	.s_vip = 0; //	1 = only for VIP / 0 = for everyone  , DEFAULT = 0
-	.s_time = 10000; //	1000 = 1 secend | 60000 = 1 min | 3600000 = 1 houre  , DEFAULT = 3600000 (1 hr)
+	.s_time = 9000; //	1000 = 1 secend | 60000 = 1 min | 3600000 = 1 houre  , DEFAULT = 3600000 (1 hr)
 	.s_hourly_level = 0; //	Minimam level to get the Houerly rewards / 0 = no minimem level  , DEFAULT 0
 	.s_GePard_ip = 0; //	0 = no Gepard / 1 = Gepard / 2 = IP  , DEFAULT 0
 	.s_vinding = 7; //	DEFAULT 7 / 0 = will give the reward even if vending / 1 = no normal vending / 2 = no @autotrade / 4 = no buyingstore | Example: if you want to ban normal vend and buying store you add the numbers 1+4=5
@@ -145,7 +148,6 @@ OnInit:
 end;
 
 Hourly_Rewads:
-	dispbottom "คุณจะได้รับ Cash จากมอนสเตอร์ตามปกติ !",0x0000ff;
 	set idle_drop,0;
 	//put the Hourly Rewards here
 	//#HourlyRewards += 1;
