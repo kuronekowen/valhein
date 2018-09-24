@@ -9920,7 +9920,7 @@
 18910,Isabella_Blue_Ear,Isabella Blue Ear,4,10,,300,,8,,1,0xFFFFFFFF,63,2,256,,1,1,1032,{ bonus bMaxHPrate,10; bonus2 bSubRace,RC_DemiHuman,5; bonus2 bAddSize,Size_Medium,10; if(getrefine()>=12){ bonus bShortWeaponDamageReturn,5; } },{},{}
 18917,LoveLove_Balloon,LoveLove Balloon,4,10,,200,,5,,0,0xFFFFFFFF,63,2,1,,1,0,1039,{ bonus bAllStats,1; bonus bUnbreakableHelm; },{},{}
 18918,Long_Octopus_Balloon,Long Octopus Balloon,4,10,,200,,5,,0,0xFFFFFFFF,63,2,1,,1,,1040,{ bonus bVit,1; bonus bInt,1; bonus bMaxSP,30; bonus bUnbreakableHelm; },{},{}
-18921,C_Tarnished_Lamp,C Tarnished Lamp,4,20,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,897,{ bonus bLuk,10; },{},{}
+18921,C_Tarnished_Lamp,C Tarnished Lamp,4,20,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,897,{},{},{}
 18925,GodOfWinds_Fan,GodOfWinds Fan,4,0,,300,,,,0,0xFFFFFFFF,63,2,1,,,0,1051,{ bonus2 bSkillAtk,"WZ_VERMILION",3; bonus2 bSkillAtk,"WL_CHAINLIGHTNING",3; bonus bUseSPrate,5; },{},{}
 18929,Elephant_Model_Hat,Elephant Model Hat,4,10,,300,,10,,1,0xFFFFFFFF,63,2,256,,30,1,1065,{ .@r = getrefine(); bonus bDex,2+((.@r >= 2 && .@r <= 8) ? 1 : ((.@r > 8) ? (.@r/8): 0)); bonus3 bAutoSpellWhenHit,"WZ_STORMGUST",5,50; },{},{}
 18930,Gorilla_Model_Hat,Gorilla Model Hat,4,10,,300,,10,,1,0xFFFFFFFF,63,2,256,,30,1,1066,{ bonus bStr,2+((getrefine()>=11) ? 3 : 0); bonus3 bAutoSpell,"KN_BOWLINGBASH",1,50; },{},{}
@@ -10092,7 +10092,7 @@
 19535,C_Sinsuncho_Hat,Costume Sinsuncho Hat,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,730,{ bonus bUnbreakableHelm; bonus bStr,1; bonus2 bExpAddRace,RC_All,1; },{},{}
 19536,C_Rose_Corsage,Costume Rose Corsage,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,533,{ bonus bUnbreakableHelm; bonus bInt,1; },{},{}
 19537,C_Gryphon_Hat,Costume Gryphon Hat,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,591,{ bonus bUnbreakableHelm; },{},{}
-19538,Full_Moon,Full Moon,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,780,{ autobonus "{ bonus bBaseAtk,50; }",10,5000,BF_WEAPON,"{},{},{}
+19538,Full_Moon,Full Moon,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,780,{},{},{}
 19539,C_Reginleif_Hairband,Costume Hairband Of Reginleif,4,20,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,468,{ bonus bAllStats,1; },{},{}
 19540,C_Rabbit_Earplug,Costume Rabbit Earplugs,4,20,,0,,0,,0,0xFFFFFFFF,63,2,7168,,1,0,515,{ bonus bAgi,1; bonus bFlee,2; },{},{}
 19541,C_Romantic_White_Flower,Costume Romantic White Flower,4,20,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,259,{ bonus bUnbreakableHelm; },{},{}
