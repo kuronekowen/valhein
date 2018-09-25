@@ -14,8 +14,11 @@ if (killedrid == .mobid[.@c]){
 	if (.@map$ == "prontera") end;
 	.@bosscoin = rand(1, 100);
 	if (.@bosscoin <= 1) {
-	atcommand "@cash 50";
-	} else atcommand "@cash 1";
+	#CASHPOINTS = #CASHPOINTS + 50;
+	dispbottom "คุณได้รับ CASH จำนวน 50 P";
+	} else {
+	#CASHPOINTS = #CASHPOINTS + 1;
+	dispbottom "คุณได้รับ CASH จำนวน 1 P"; }
 }
 }
 end;
@@ -31,7 +34,8 @@ for (set .@c, 0; .@c < getarraysize(.mobid2); set .@c, .@c + 1){
 if (killedrid == .mobid2[.@c])end; }
 .@coindrop = rand(1, 100);
 	if (.@coinDrop <= 2){
-		atcommand "@cash 5";
+		#CASHPOINTS = #CASHPOINTS + 5;
+		dispbottom "คุณได้รับ CASH จำนวน 5 P";
 	}
 end;
 }

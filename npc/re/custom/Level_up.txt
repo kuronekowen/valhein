@@ -27,7 +27,8 @@ case 1:
 		close;
 	} else {
 	mes "ยินดีด้วยคุณเล่นจนเลเวล 99 รับไปเลย 10 cash";
-	atcommand "@cash 10";
+	#CASHPOINTS = #CASHPOINTS + 10;
+	dispbottom "คุณได้รับ CASH จำนวน 10 P";
 	set red_item99, 1;
 	mes "คุณรับไอเทมไปแล้ว";
 	mes "ขอให้โชคดี";
@@ -44,7 +45,8 @@ case 2:
 		close;
 	} else {
 	mes "ยินดีด้วยคุณเล่นจนเลเวล 100  รับไปเลย 30 cash";
-	atcommand "@cash 30";
+	#CASHPOINTS = #CASHPOINTS + 30;
+	dispbottom "คุณได้รับ CASH จำนวน 30 P";
 	set red_item100, 1;
 	mes "คุณรับไอเทมไปแล้ว";
 	mes "ขอให้โชคดี";
@@ -61,7 +63,8 @@ case 3:
 		close;
 	} else {
 	mes "ยินดีด้วยคุณเล่นจนเลเวล 120  รับไปเลย 20 cash";
-	atcommand "@cash 20";
+	#CASHPOINTS = #CASHPOINTS + 20;
+	dispbottom "คุณได้รับ CASH จำนวน 20 P";
 	set red_item120, 1;
 	mes "คุณรับไอเทมไปแล้ว";
 	mes "ขอให้โชคดี";
@@ -78,7 +81,8 @@ case 4:
 		close;
 	} else {
 	mes "ยินดีด้วยคุณเล่นจนเลเวล 140  รับไปเลย 20 cash";
-	atcommand "@cash 20";
+	#CASHPOINTS = #CASHPOINTS + 20;
+	dispbottom "คุณได้รับ CASH จำนวน 20 P";
 	set red_item140, 1;
 	mes "คุณรับไอเทมไปแล้ว";
 	mes "ขอให้โชคดี";
@@ -95,7 +99,8 @@ case 5:
 		close;
 	} else {
 	mes "ยินดีด้วยคุณเล่นจนเลเวล 150  รับไปเลย 40 cash";
-	atcommand "@cash 40";
+	#CASHPOINTS = #CASHPOINTS + 40;
+	dispbottom "คุณได้รับ CASH จำนวน 40 P";
 	set red_item150, 1;
 	mes "คุณรับไอเทมไปแล้ว";
 	mes "ขอให้โชคดี";
@@ -112,7 +117,8 @@ case 6:
 		close;
 	} else {
 	mes "ยินดีด้วยคุณเล่นจนเลเวลตันและจ๊อบเลเวลตัน  รับไปเลย 100 cash";
-	atcommand "@cash 100";
+	#CASHPOINTS = #CASHPOINTS + 100;
+	dispbottom "คุณได้รับ CASH จำนวน 100 P";
 	set red_item175, 1;
 	mes "คุณรับไอเทมไปแล้ว";
 	mes "ขอให้โชคดี";
