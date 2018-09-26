@@ -59,23 +59,17 @@ gef_d01_i,98,40,4	script	Vampire's Disciple	705,{
 					for (; .@i < @inventorylist_count; .@i++) {
 						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 80) .@true[1] = 1;
 						if(@inventorylist_id[.@i] == 25261 && @inventorylist_amount[.@i] >= 20) .@true[2] = 1;
-						if(@inventorylist_id[.@i] == 1266 && @inventorylist_refine[.@i] >= 9 && .@true[1] == 1 && .@true[2] == 1){
+					}
+					if(getequipid(EQI_HAND_R) == 1266 && getequiprefinerycnt(EQI_HAND_R) >= 9) .@true[3] = 1;
+					if (.@true[1] == 1 && .@true[2] == 1 && .@true[3] == 1) {
 							next;
 							mes "Weww It's looking good equipment!";
-							.@r[.@i] = @inventorylist_refine[.@i];
-							.@a[.@i] = @inventorylist_attribute[.@i];
-							.@id[.@i] = @inventorylist_identify[.@i];
-							.@c1[.@i] = @inventorylist_card1[.@i];
-							.@c2[.@i] = @inventorylist_card2[.@i];
-							.@c3[.@i] = @inventorylist_card3[.@i];
-							.@c4[.@i] = @inventorylist_card4[.@i];
-							delitem2 1266,1,.@id[.@i],.@r[.@i],.@a[.@i],.@c1[.@i],.@c2[.@i],.@c3[.@i],.@c4[.@i];
+							delequip EQI_HAND_R;
 							delitem 25271,80;
 							delitem 25261,20;
 							getitem 28022,1;
 							specialeffect2 567;
 							close;
-						}
 					}
 					callfunc "required1";
 					}
@@ -89,25 +83,19 @@ gef_d01_i,98,40,4	script	Vampire's Disciple	705,{
 					if (checkweight(28023,1)) {
 					getinventorylist;
 					for (; .@i < @inventorylist_count; .@i++) {
-						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 10) .@true[3] = 1;
-						if(@inventorylist_id[.@i] == 25264 && @inventorylist_amount[.@i] >= 100) .@true[4] = 1;
-						if(@inventorylist_id[.@i] == 1260 && @inventorylist_refine[.@i] >= 9 && .@true[3] == 1 && .@true[4] == 1){
+						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 10) .@true[1] = 1;
+						if(@inventorylist_id[.@i] == 25264 && @inventorylist_amount[.@i] >= 100) .@true[2] = 1;
+					}
+					if(getequipid(EQI_HAND_R) == 1260 && getequiprefinerycnt(EQI_HAND_R) >= 9) .@true[3] = 1;
+					if (.@true[1] == 1 && .@true[2] == 1 && .@true[3] == 1) {
 							next;
 							mes "Weww It's looking good equipment!";
-							.@r[.@i] = @inventorylist_refine[.@i];
-							.@a[.@i] = @inventorylist_attribute[.@i];
-							.@id[.@i] = @inventorylist_identify[.@i];
-							.@c1[.@i] = @inventorylist_card1[.@i];
-							.@c2[.@i] = @inventorylist_card2[.@i];
-							.@c3[.@i] = @inventorylist_card3[.@i];
-							.@c4[.@i] = @inventorylist_card4[.@i];
-							delitem2 1260,1,.@id[.@i],.@r[.@i],.@a[.@i],.@c1[.@i],.@c2[.@i],.@c3[.@i],.@c4[.@i];
+							delequip EQI_HAND_R;
 							delitem 25271,10;
 							delitem 25264,100;
 							getitem 28023,1;
 							specialeffect2 567;
 							close;
-						}
 					}
 					callfunc "required1";
 					}
@@ -121,25 +109,19 @@ gef_d01_i,98,40,4	script	Vampire's Disciple	705,{
 					if (checkweight(2039,1)) {
 					getinventorylist;
 					for (; .@i < @inventorylist_count; .@i++) {
-						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 40) .@true[5] = 1;
-						if(@inventorylist_id[.@i] == 25267 && @inventorylist_amount[.@i] >= 100) .@true[6] = 1;
-						if(@inventorylist_id[.@i] == 1473 && @inventorylist_refine[.@i] >= 9 && .@true[5] == 1 && .@true[6] == 1){
+						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 40) .@true[1] = 1;
+						if(@inventorylist_id[.@i] == 25267 && @inventorylist_amount[.@i] >= 100) .@true[2] = 1;
+					}
+					if(getequipid(EQI_HAND_R) == 1473 && getequiprefinerycnt(EQI_HAND_R) >= 9) .@true[3] = 1;
+					if (.@true[1] == 1 && .@true[2] == 1 && .@true[3] == 1) {
 							next;
 							mes "Weww It's looking good equipment!";
-							.@r[.@i] = @inventorylist_refine[.@i];
-							.@a[.@i] = @inventorylist_attribute[.@i];
-							.@id[.@i] = @inventorylist_identify[.@i];
-							.@c1[.@i] = @inventorylist_card1[.@i];
-							.@c2[.@i] = @inventorylist_card2[.@i];
-							.@c3[.@i] = @inventorylist_card3[.@i];
-							.@c4[.@i] = @inventorylist_card4[.@i];
-							delitem2 1473,1,.@id[.@i],.@r[.@i],.@a[.@i],.@c1[.@i],.@c2[.@i],.@c3[.@i],.@c4[.@i];
+							delequip EQI_HAND_R;
 							delitem 25271,40;
 							delitem 25267,100;
 							getitem 2039,1;
 							specialeffect2 567;
 							close;
-						}
 					}
 					callfunc "required1";
 					}
@@ -153,25 +135,19 @@ gef_d01_i,98,40,4	script	Vampire's Disciple	705,{
 					if (checkweight(18149,1)) {
 					getinventorylist;
 					for (; .@i < @inventorylist_count; .@i++) {
-						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 50) .@true[7] = 1;
-						if(@inventorylist_id[.@i] == 25265 && @inventorylist_amount[.@i] >= 100) .@true[8] = 1;
-						if(@inventorylist_id[.@i] == 1727 && @inventorylist_refine[.@i] >= 9 && .@true[7] == 1 && .@true[8] == 1){
+						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 50) .@true[1] = 1;
+						if(@inventorylist_id[.@i] == 25265 && @inventorylist_amount[.@i] >= 100) .@true[2] = 1;
+					}
+					if(getequipid(EQI_HAND_R) == 1727 && getequiprefinerycnt(EQI_HAND_R) >= 9) .@true[3] = 1;
+					if (.@true[1] == 1 && .@true[2] == 1 && .@true[3] == 1) {
 							next;
 							mes "Weww It's looking good equipment!";
-							.@r[.@i] = @inventorylist_refine[.@i];
-							.@a[.@i] = @inventorylist_attribute[.@i];
-							.@id[.@i] = @inventorylist_identify[.@i];
-							.@c1[.@i] = @inventorylist_card1[.@i];
-							.@c2[.@i] = @inventorylist_card2[.@i];
-							.@c3[.@i] = @inventorylist_card3[.@i];
-							.@c4[.@i] = @inventorylist_card4[.@i];
-							delitem2 1727,1,.@id[.@i],.@r[.@i],.@a[.@i],.@c1[.@i],.@c2[.@i],.@c3[.@i],.@c4[.@i];
+							delequip EQI_HAND_R;
 							delitem 25271,50;
 							delitem 25265,100;
 							getitem 18149,1;
 							specialeffect2 567;
 							close;
-						}
 					}
 					callfunc "required1";
 					}
@@ -185,25 +161,19 @@ gef_d01_i,98,40,4	script	Vampire's Disciple	705,{
 					if (checkweight(28612,1)) {
 					getinventorylist;
 					for (; .@i < @inventorylist_count; .@i++) {
-						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 50) .@true[9] = 1;
-						if(@inventorylist_id[.@i] == 25262 && @inventorylist_amount[.@i] >= 100) .@true[10] = 1;
-						if(@inventorylist_id[.@i] == 1557 && @inventorylist_refine[.@i] >= 9 && .@true[9] == 1 && .@true[10] == 1){
+						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 50) .@true[1] = 1;
+						if(@inventorylist_id[.@i] == 25262 && @inventorylist_amount[.@i] >= 100) .@true[2] = 1;
+					}
+					if(getequipid(EQI_HAND_R) == 1557 && getequiprefinerycnt(EQI_HAND_R) >= 9) .@true[3] = 1;
+					if (.@true[1] == 1 && .@true[2] == 1 && .@true[3] == 1) {
 							next;
 							mes "Weww It's looking good equipment!";
-							.@r[.@i] = @inventorylist_refine[.@i];
-							.@a[.@i] = @inventorylist_attribute[.@i];
-							.@id[.@i] = @inventorylist_identify[.@i];
-							.@c1[.@i] = @inventorylist_card1[.@i];
-							.@c2[.@i] = @inventorylist_card2[.@i];
-							.@c3[.@i] = @inventorylist_card3[.@i];
-							.@c4[.@i] = @inventorylist_card4[.@i];
-							delitem2 1557,1,.@id[.@i],.@r[.@i],.@a[.@i],.@c1[.@i],.@c2[.@i],.@c3[.@i],.@c4[.@i];
+							delequip EQI_HAND_R;
 							delitem 25271,50;
 							delitem 25262,100;
 							getitem 28612,1;
 							specialeffect2 567;
 							close;
-						}
 					}
 					callfunc "required1";
 					}
@@ -217,25 +187,19 @@ gef_d01_i,98,40,4	script	Vampire's Disciple	705,{
 					if (checkweight(20840,1)) {
 					getinventorylist;
 					for (; .@i < @inventorylist_count; .@i++) {
-						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 50) .@true[11] = 1;
-						if(@inventorylist_id[.@i] == 25263 && @inventorylist_amount[.@i] >= 200) .@true[12] = 1;
-						if(@inventorylist_id[.@i] == 2525 && @inventorylist_refine[.@i] >= 9 && .@true[11] == 1 && .@true[12] == 1){
+						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 50) .@true[1] = 1;
+						if(@inventorylist_id[.@i] == 25263 && @inventorylist_amount[.@i] >= 200) .@true[2] = 1;
+					}
+					if(getequipid(EQI_GARMENT) == 2525 && getequiprefinerycnt(EQI_GARMENT) >= 9) .@true[3] = 1;
+					if (.@true[1] == 1 && .@true[2] == 1 && .@true[3] == 1) {
 							next;
 							mes "Weww It's looking good equipment!";
-							.@r[.@i] = @inventorylist_refine[.@i];
-							.@a[.@i] = @inventorylist_attribute[.@i];
-							.@id[.@i] = @inventorylist_identify[.@i];
-							.@c1[.@i] = @inventorylist_card1[.@i];
-							.@c2[.@i] = @inventorylist_card2[.@i];
-							.@c3[.@i] = @inventorylist_card3[.@i];
-							.@c4[.@i] = @inventorylist_card4[.@i];
-							delitem2 2525,1,.@id[.@i],.@r[.@i],.@a[.@i],.@c1[.@i],.@c2[.@i],.@c3[.@i],.@c4[.@i];
+							delequip EQI_GARMENT;
 							delitem 25271,50;
 							delitem 25263,200;
 							getitem 20840,1;
 							specialeffect2 567;
 							close;
-						}
 					}
 					callfunc "required1";
 					}
@@ -249,25 +213,19 @@ gef_d01_i,98,40,4	script	Vampire's Disciple	705,{
 					if (checkweight(28508,1)) {
 					getinventorylist;
 					for (; .@i < @inventorylist_count; .@i++) {
-						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 50) .@true[13] = 1;
-						if(@inventorylist_id[.@i] == 25266 && @inventorylist_amount[.@i] >= 400) .@true[14] = 1;
-						if(@inventorylist_id[.@i] == 2715 && .@true[13] == 1 && .@true[14] == 1){
+						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 50) .@true[1] = 1;
+						if(@inventorylist_id[.@i] == 25266 && @inventorylist_amount[.@i] >= 400) .@true[2] = 1;
+					}
+					if(getequipid(EQI_ACC_R) == 2715) .@true[3] = 1;
+					if (.@true[1] == 1 && .@true[2] == 1 && .@true[3] == 1) {
 							next;
 							mes "Weww It's looking good equipment!";
-							.@r[.@i] = @inventorylist_refine[.@i];
-							.@a[.@i] = @inventorylist_attribute[.@i];
-							.@id[.@i] = @inventorylist_identify[.@i];
-							.@c1[.@i] = @inventorylist_card1[.@i];
-							.@c2[.@i] = @inventorylist_card2[.@i];
-							.@c3[.@i] = @inventorylist_card3[.@i];
-							.@c4[.@i] = @inventorylist_card4[.@i];
-							delitem2 2715,1,.@id[.@i],.@r[.@i],.@a[.@i],.@c1[.@i],.@c2[.@i],.@c3[.@i],.@c4[.@i];
+							delequip EQI_ACC_R;
 							delitem 25271,50;
 							delitem 25266,400;
 							getitem 28508,1;
 							specialeffect2 567;
 							close;
-						}
 					}
 					callfunc "required1";
 					}
@@ -281,25 +239,19 @@ gef_d01_i,98,40,4	script	Vampire's Disciple	705,{
 					if (checkweight(28509,1)) {
 					getinventorylist;
 					for (; .@i < @inventorylist_count; .@i++) {
-						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 50) .@true[15] = 1;
-						if(@inventorylist_id[.@i] == 25267 && @inventorylist_amount[.@i] >= 100) .@true[16] = 1;
-						if(@inventorylist_id[.@i] == 2621 && .@true[15] == 1 && .@true[16] == 1){
+						if(@inventorylist_id[.@i] == 25271 && @inventorylist_amount[.@i] >= 50) .@true[1] = 1;
+						if(@inventorylist_id[.@i] == 25267 && @inventorylist_amount[.@i] >= 100) .@true[2] = 1;
+						}
+					if(getequipid(EQI_ACC_R) == 2621) .@true[3] = 1;
+					if (.@true[1] == 1 && .@true[2] == 1 && .@true[3] == 1) {
 							next;
 							mes "Weww It's looking good equipment!";
-							.@r[.@i] = @inventorylist_refine[.@i];
-							.@a[.@i] = @inventorylist_attribute[.@i];
-							.@id[.@i] = @inventorylist_identify[.@i];
-							.@c1[.@i] = @inventorylist_card1[.@i];
-							.@c2[.@i] = @inventorylist_card2[.@i];
-							.@c3[.@i] = @inventorylist_card3[.@i];
-							.@c4[.@i] = @inventorylist_card4[.@i];
-							delitem2 2621,1,.@id[.@i],.@r[.@i],.@a[.@i],.@c1[.@i],.@c2[.@i],.@c3[.@i],.@c4[.@i];
+							delequip EQI_ACC_R;
 							delitem 25271,50;
 							delitem 25267,100;
 							getitem 28509,1;
 							specialeffect2 567;
 							close;
-						}
 					}
 					callfunc "required1";
 					}
