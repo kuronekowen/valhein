@@ -109,6 +109,7 @@
 24257:24270,{ bonus2 bSkillAtk,"CR_HOLYCROSS",20; bonus2 bSkillUseSPrate,"CR_GRANDCROSS",-20; }
 24258:24271,{ bonus2 bAddSize,Size_All,3; bonus2 bSkillUseSPrate,"BS_WEAPONPERFECT",-20; }
 24259:24272,{ skill "BS_ADRENALINE",3; }
+24260:24273,{ if (BaseClass == Job_Priest) { bonus bMatkRate,3; bonus2 bVariableCastrate,"PR_MAGNUS",-40; } }
 2509:22170,{ .@r = getequiprefinerycnt(EQI_GARMENT); bonus bMatkRate,10; if (.@r>=7) { bonus2 bSubEle,Ele_Earth,15; bonus2 bSubEle,Ele_Wind,15; } if (.@r>=9) { bonus2 bSubEle,Ele_Earth,15; bonus2 bSubEle,Ele_Wind,15; } }
 2596:2159,{ .@r = getequiprefinerycnt(EQI_GARMENT); bonus2 bSubrace,RC_Demon,.@r; bonus2 bSubDefEle,Ele_Fire,-(.@r); }
 2596:22055,{ .@r = getequiprefinerycnt(EQI_GARMENT); bonus bMaxHPrate,.@r; bonus bMaxSPrate,.@r; bonus2 bAddEle,Ele_Fire,5; }
