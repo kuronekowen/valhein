@@ -92,7 +92,10 @@ rachel,132,144,4	duplicate(Bossnia Staff#1)	Bossnia Staff#6	10194
 
 // Monster Spawns
 //============================================================
-
+bossnia_01	mapflag	noexp
+bossnia_02	mapflag	noexp
+bossnia_03	mapflag	noexp
+bossnia_04	mapflag	noexp
 //----------------------------------------------------------------------------
 // bossnia_01 - Bossnia
 //----------------------------------------------------------------------------
