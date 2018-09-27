@@ -1988,11 +1988,8 @@ void clif_buylist(struct map_session_data *sd, struct npc_data *nd)
 void clif_selllist(struct map_session_data *sd)
 {
 	int fd,i,c=0,val;
-	struct npc_data *nd;
 
 	nullpo_retv(sd);
-	if (!sd->npc_shopid || (nd = map_id2nd(sd->npc_shopid)) == NULL)
-		return;
 
 	fd=sd->fd;
 	WFIFOHEAD(fd, MAX_INVENTORY * 10 + 4);
@@ -2001,7 +1998,7 @@ void clif_selllist(struct map_session_data *sd)
 	{
 		if( sd->inventory.u.items_inventory[i].nameid > 0 && sd->inventory_data[i] )
 		{
-			if( !pc_can_sell_item(sd, &sd->inventory.u.items_inventory[i], nd->subtype))
+			if( !pc_can_sell_item(sd, &sd->inventory.u.items_inventory[i]))
 				continue;
 
 			val=sd->inventory_data[i]->value_sell;

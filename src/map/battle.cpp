@@ -1135,7 +1135,7 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 			return 0;
 		}
 
-		if( (sce = sc->data[SC_AUTOGUARD]) && flag&BF_WEAPON && !(skill_get_inf3(skill_id)&INF3_NO_EFF_AUTOGUARD) && rnd()%100 < sce->val2) {
+		if( (sce = sc->data[SC_AUTOGUARD]) && flag&BF_WEAPON && !(skill_get_nk(skill_id)&NK_NO_CARDFIX_ATK) && rnd()%100 < sce->val2 ) {
 			int delay;
 			struct status_change_entry *sce_d = sc->data[SC_DEVOTION];
 			struct block_list *d_bl = NULL;
@@ -1227,7 +1227,7 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 			return 0;
 		}
 
-		if (((sce = sc->data[SC_UTSUSEMI]) || sc->data[SC_BUNSINJYUTSU]) && flag&BF_WEAPON && !(skill_get_inf3(skill_id)&INF3_NO_EFF_CICADA)) {
+		if (((sce = sc->data[SC_UTSUSEMI]) || sc->data[SC_BUNSINJYUTSU]) && flag&BF_WEAPON && !(skill_get_nk(skill_id)&NK_NO_CARDFIX_ATK)) {
 			skill_additional_effect (src, bl, skill_id, skill_lv, flag, ATK_BLOCK, gettick() );
 			if (!status_isdead(src))
 				skill_counter_additional_effect( src, bl, skill_id, skill_lv, flag, gettick() );
@@ -2479,9 +2479,10 @@ static bool is_attack_critical(struct Damage wd, struct block_list *src, struct 
 
 		if (sd) {
 			cri += sd->critaddrace[tstatus->race] + sd->critaddrace[RC_ALL];
-			if(!skill_id && is_skill_using_arrow(src, skill_id)) {
+			if(is_skill_using_arrow(src, skill_id)) {
 				cri += sd->bonus.arrow_cri;
-				cri += sd->bonus.critical_rangeatk;
+				if (!skill_id)
+					cri += sd->bonus.critical_rangeatk;
 			}
 		}
 
@@ -3350,7 +3351,7 @@ struct Damage battle_calc_skill_base_damage(struct Damage wd, struct block_list 
 					RE_ALLATK_ADDRATE(wd, sd->bonus.atk_rate);
 				}
 #ifndef RENEWAL
-				if(sd->bonus.crit_atk_rate && !skill_id && is_attack_critical(wd, src, target, skill_id, skill_lv, false)) { // add +crit damage bonuses here in pre-renewal mode [helvetica]
+				if(sd->bonus.crit_atk_rate && is_attack_critical(wd, src, target, skill_id, skill_lv, false)) { // add +crit damage bonuses here in pre-renewal mode [helvetica]
 					ATK_ADDRATE(wd.damage, wd.damage2, sd->bonus.crit_atk_rate);
 				}
 #endif
@@ -5229,10 +5230,9 @@ struct Damage battle_calc_weapon_final_atk_modifiers(struct Damage wd, struct bl
 	if( sc ) {
 		//SC_FUSION hp penalty [Komurka]
 		if (sc->data[SC_FUSION]) {
-			unsigned int hp = sstatus->max_hp;
-
+			int hp= sstatus->max_hp;
 			if (sd && tsd) {
-				hp = hp / 13;
+				hp = 8*hp/100;
 				if (((int64)sstatus->hp * 100) <= ((int64)sstatus->max_hp * 20))
 					hp = sstatus->hp;
 			} else
@@ -5569,7 +5569,7 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src, struct bl
 		return wd; //Enough, rest is not needed.
 
 #ifdef RENEWAL
-	if (!skill_id && is_attack_critical(wd, src, target, skill_id, skill_lv, false)) {
+	if (is_attack_critical(wd, src, target, skill_id, skill_lv, false)) {
 		if (sd) { //Check for player so we don't crash out, monsters don't have bonus crit rates [helvetica]
 			wd.damage = (int)floor((float)((wd.damage * 140) / 100 * (100 + sd->bonus.crit_atk_rate)) / 100);
 			if (is_attack_left_handed(src, skill_id))
@@ -8634,7 +8634,6 @@ static const struct _battle_data {
 	{ "feature.attendance",                 &battle_config.feature_attendance,              1,      0,      1,              },
 	{ "feature.privateairship",             &battle_config.feature_privateairship,          1,      0,      1,              },
 	{ "homunculus_exp_gain",                &battle_config.homunculus_exp_gain,             10,     0,      100,            },
-	{ "rental_transaction",                 &battle_config.rental_transaction,              1,      0,      1,              },
 
 #include "../custom/battle_config_init.inc"
 };
