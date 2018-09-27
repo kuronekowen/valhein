@@ -137,7 +137,7 @@
 0,18799,60  //,Nero Mask
 0,28951,100	//,Nero Shield
 0,18813,100  //,New wave sunglasses
-0,18813,60  //,Night Sparrow hat
+0,18795,60  //,Night Sparrow hat
 0,5938,100  //,Octopus Hat
 0,20932,100  //,Old Morroc Shawl
 0,5906,60  //,Oni Horn

@@ -1793,3 +1793,4 @@
 31598,32 //soul link
 31599,32 //soul link
 31600,32 //soul link
+31601,32 //Bard Dance
