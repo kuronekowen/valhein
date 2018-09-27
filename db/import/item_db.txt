@@ -190,18 +190,20 @@
 24259,Alchemist_Shadow_Shoes,Alchemist Shadow Shoes,12,,,0,,,,,0xFFFFFFFF,63,2,524288,,1,1,,{ .@r = getrefine(); if (BaseClass==Job_Alchemist) bonus bHealPower,30+7*.@r; },{},{}
 24260,Priest_Shadow_Shoes,Priest Shadow Shoes,12,,,0,,,,,0xFFFFFFFF,63,2,524288,,1,1,,{ .@r = getrefine(); bonus2 bSkillUseSPrate,"PR_LEXAETERNA",-20; bonus2 bSkillUseSPrate,"PR_KYRIE",-20; bonus bSkillUseSPrate,-3*.@r; },{},{}
 24261,Monk_Shadow_Shoes,Monk Shadow Shoes,12,,,0,,,,,0xFFFFFFFF,63,2,524288,,1,1,,{ .@r = getrefine(); bonus2 bSkillAtk,"MO_CHAINCOMBO",20+.@r*5; },{},{}
-24262,Assassin_Shadow_Shoes,Assassin Shadow Shoes,12,,,0,,,,,0xFFFFFFFF,63,2,524288,,1,1,,{ .@r = getrefine(); . bonus2 bSkillAtk,"AS_GRIMTOOTH",20+.@r*5; },{},{}
+24262,Assassin_Shadow_Shoes,Assassin Shadow Shoes,12,,,0,,,,,0xFFFFFFFF,63,2,524288,,1,1,,{ .@r = getrefine(); bonus2 bSkillAtk,"AS_GRIMTOOTH",20+.@r*5; },{},{}
 24263,Rogue_Shadow_Shoes,Rogue Shadow Shoes,12,,,0,,,,,0xFFFFFFFF,63,2,524288,,1,1,,{ .@a = getskilllv("SM_SWORD"); .@r = max(getrefine(),6); bonus bBaseAtk,.@a+((.@r-6)*.@a); },{},{}
-24264,Wizard_Shadow_Shoes,Wizard Shadow Shoes,12,,,0,,,,,0xFFFFFFFF,63,2,524288,,1,1,,{ .@r = getrefine(); bonus2 bVariableCastrate,"WZ_STORMGUST",-*1(20+(3*.@r)); bonus2 bVariableCastrate,"WZ_VERMILION",-1*(20+(3*.@r)); bonus2 bVariableCastrate,"WZ_METEOR",-1*(20+(3*.@r)); },{},{}
-24265,Sage_Shadow_Shoes,Sage Shadow Shoes,12,,,0,,,,,0xFFFFFFFF,63,2,524288,,1,1,,{ .@r = getrefine(); . bonus2 bSkillAtk,"WZ_HEAVENDRIVE",20+.@r*5; },{},{}
-24266,Hunter_Shadow_Shoes,Hunter Shadow Shoes,12,,,0,,,,,0xFFFFFFFF,63,2,524288,,1,1,,{ .@r = getrefine(); . bonus2 bSkillAtk,"HT_BLITZBEAT",20+.@r*5; },{},{}
+24264,Wizard_Shadow_Shoes,Wizard Shadow Shoes,12,,,0,,,,,0xFFFFFFFF,63,2,524288,,1,1,,{ .@r = getrefine(); bonus2 bVariableCastrate,"WZ_STORMGUST",-1*(20+(3*.@r)); bonus2 bVariableCastrate,"WZ_VERMILION",-1*(20+(3*.@r)); bonus2 bVariableCastrate,"WZ_METEOR",-1*(20+(3*.@r)); },{},{}
+24265,Sage_Shadow_Shoes,Sage Shadow Shoes,12,,,0,,,,,0xFFFFFFFF,63,2,524288,,1,1,,{ .@r = getrefine(); bonus2 bSkillAtk,"WZ_HEAVENDRIVE",20+.@r*5; },{},{}
+24266,Hunter_Shadow_Shoes,Hunter Shadow Shoes,12,,,0,,,,,0xFFFFFFFF,63,2,524288,,1,1,,{ .@r = getrefine(); bonus2 bSkillAtk,"HT_BLITZBEAT",20+.@r*5; },{},{}
 24267,Bard_Shadow_Shoes,Bard Shadow Shoes,12,,,0,,,,,0xFFFFFFFF,63,2,524288,,1,1,,{ .@a = getskilllv("BA_MUSICALLESSON"); .@r = max(getrefine(),6); bonus bBaseAtk,.@a+((.@r-6)*.@a); },{},{}
 24268,Dancer_Shadow_Shoes,Dancer Shadow Shoes,12,,,0,,,,,0xFFFFFFFF,63,2,524288,,1,1,,{ .@a = getskilllv("DC_DANCINGLESSON"); .@r = max(getrefine(),6); bonus bBaseAtk,.@a+((.@r-6)*.@a); },{},{}
 24269,Knight_Shadow_Armor,Knight Shadow Armor,12,10,,0,,,,,0xFFFFFFFF,63,2,65536,,1,1,,{ .@r = getrefine(); bonus2 bSkillUseSPrate,"KN_BOWLINGBASH",-1*(20+(.@r*3)); },{},{}
-24270,Crusader_Shadow_Armor,Crusader Shadow Armor,12,10,,0,,,,,0xFFFFFFFF,63,2,65536,,1,1,,{ .@r = getrefine(); . bonus2 bSkillAtk,"CR_GRANDCROSS",20+.@r*5; },{},{}
+24270,Crusader_Shadow_Armor,Crusader Shadow Armor,12,10,,0,,,,,0xFFFFFFFF,63,2,65536,,1,1,,{ .@r = getrefine(); bonus2 bSkillAtk,"CR_GRANDCROSS",20+.@r*5; },{},{}
 24271,Blacksmith_Shadow_Armor,Blacksmith Shadow Armor,12,10,,0,,,,,0xFFFFFFFF,63,2,65536,,1,1,,{ .@r = getrefine(); autobonus3 " bonus2 bAddSize,Size_All,5; ",1000,50000,"BS_WEAPONPERFECT"; if (.@r>=7) bonus bAtkRate,1; },{},{}
 24272,Alchemist_Shadow_Armor,Alchemist Shadow Armor,12,10,,0,,,,,0xFFFFFFFF,63,2,65536,,1,1,,{ .@a = getskilllv("AM_LEARNINGPOTION"); .@r = max(getrefine(),6); bonus bBaseAtk,.@a+((.@r-6)*.@a); },{},{}
-24273,Priest_Shadow_Armor,Priest Shadow Armor,12,10,,0,,,,,0xFFFFFFFF,63,2,65536,,1,1,,{ .@r = getrefine(); . bonus2 bSkillAtk,"PR_MAGNUS",20+.@r*5; },{},{}
+24273,Priest_Shadow_Armor,Priest Shadow Armor,12,10,,0,,,,,0xFFFFFFFF,63,2,65536,,1,1,,{ .@r = getrefine(); bonus2 bSkillAtk,"PR_MAGNUS",20+.@r*5; },{},{}
+24274,Monk_Shadow_Armor,Monk Shadow Armor,12,10,,0,,,,,0xFFFFFFFF,63,2,65536,,1,1,,{ .@r = getrefine(); bonus2 bSkillAtk,"MO_FINGEROFFENSIVE",20+.@r*5; bonus2 bSkillAtk,"MO_INVESTIGATE",20+.@r*5; },{},{}
+24275,Assassin_Shadow_Armor,Assassin Shadow Armor,12,10,,0,,,,,0xFFFFFFFF,63,2,65536,,1,1,,{ .@r = getrefine(); bonus2 bSkillUseSPrate,"AS_SONICBLOW",-1*(20+(.@r*3)); },{},{}
 28215,Probation_Rifle,Probation Rifle,5,20,,1500,200,,9,1,0x41000000,63,2,34,3,100,1,18,{ .@r = getrefine(); bonus bHit,10; bonus bCritical,20; bonus bBaseAtk,(min(Baselevel,160)*6/10); bonus2 bSkillAtk,"RL_HAMMER_OF_GOD",20; if (.@r>=7) bonus bLongAtkRate,getskilllv("GS_TRACKING"); },{},{}
 28216,Probation_Gatling,Probation Gatling,5,20,,1500,180,,9,1,0x41000000,63,2,34,3,100,1,19,{ .@r = getrefine(); bonus bHit,-20; bonus bCritical,10; bonus bAspd,1; bonus bBaseAtk,(min(Baselevel,160)*6/10); bonus2 bSkillAtk,"RL_FIRE_RAIN",20; if (.@r>=7) bonus bLongAtkRate,getskilllv("GS_GATLINGFEVER"); },{},{}
 28217,Probation_Grenade_Launcher,Probation Grenade Launcher,5,20,,1500,350,,9,1,0x41000000,63,2,34,3,100,1,21,{ bonus bBaseAtk,(min(Baselevel,160)*6/10); bonus2 bSkillAtk,"RL_D_TAIL",20; },{},{}

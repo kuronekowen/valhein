@@ -110,6 +110,8 @@
 24258:24271,{ bonus2 bAddSize,Size_All,3; bonus2 bSkillUseSPrate,"BS_WEAPONPERFECT",-20; }
 24259:24272,{ skill "BS_ADRENALINE",3; }
 24260:24273,{ if (BaseClass == Job_Priest) { bonus bMatkRate,3; bonus2 bVariableCastrate,"PR_MAGNUS",-40; } }
+24261:24274,{ bonus2 bSkillUseSPrate,"MO_INVESTIGATE",-20; bonus2 bSkillUseSPrate,"MO_FINGEROFFENSIVE",-20; bonus2 bSkillUseSPrate,"MO_CHAINCOMBO",-20; }
+24262:24275,{ bonus2 bSkillUseSPrate,"AS_GRIMTOOTH",-20; bonus2 bSkillAtk,"AS_SONICBLOW",20; }
 2509:22170,{ .@r = getequiprefinerycnt(EQI_GARMENT); bonus bMatkRate,10; if (.@r>=7) { bonus2 bSubEle,Ele_Earth,15; bonus2 bSubEle,Ele_Wind,15; } if (.@r>=9) { bonus2 bSubEle,Ele_Earth,15; bonus2 bSubEle,Ele_Wind,15; } }
 2596:2159,{ .@r = getequiprefinerycnt(EQI_GARMENT); bonus2 bSubrace,RC_Demon,.@r; bonus2 bSubDefEle,Ele_Fire,-(.@r); }
 2596:22055,{ .@r = getequiprefinerycnt(EQI_GARMENT); bonus bMaxHPrate,.@r; bonus bMaxSPrate,.@r; bonus2 bAddEle,Ele_Fire,5; }
@@ -142,7 +144,7 @@
 28506:2884,{ bonus bAtkRate,5; bonus bMaxSPrate,5; bonus bAspdRate,5; bonus2 bSubRace,RC_DemiHuman,4; bonus2 bSubRace,RC_Player,4; }
 28513:18848,{ .@r = getequiprefinerycnt(EQI_HEAD_TOP); .@a = min(.@r,10); bonus bAllStats,.@a; bonus bFixedCastrate,-50; if (.@r>=7) { bonus2 bMagicAddClass,Class_Boss,20; } }
 28513:18849,{ .@r = getequiprefinerycnt(EQI_HEAD_TOP); .@a = min(.@r,10); bonus bAllStats,.@a; bonus2 bMagicAddClass,Class_Boss,10; bonus bFixedCastrate,-50; if (.@r>=7) { bonus2 bMagicAddClass,Class_Boss,20; bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player,10; } if (.@r>=9) { bonus2 bMagicAddClass,Class_Boss,20; bonus2 bSubRace,RC_DemiHuman,2; bonus2 bSubRace,RC_Player,2; } }
-28513:2980,{ bonus bBaseAtk,50; bonus bMatk,50; bonus bAspd,2; }
+28513:2980,{ bonus bBaseAtk,50; bonus bMatk,50; bonus bAspd,2; bonus3 bAutoSpell,"SO_EARTHGRAVE",1,20; bonus3 bAutoSpell,"SO_VARETYR_SPEAR",1,20; bonus3 bAutoSpell,"WL_RECOGNIZEDSPELL",1,10; bonus3 bAutoSpell,"WZ_QUAGMIRE",3,50; }
 28521:1387,{ .@r = getequiprefinerycnt(EQI_HAND_R); bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player,3; if (.@r>=7) { bonus2 bAddClass,Class_Boss,5; bonus2 bSkillAtk,485,5; } if (.@r>=9) { bonus2 bAddClass,Class_Boss,10; bonus2 bSkillAtk,485,10; } }
 28594:4875,{ bonus bStr,40; bonus bMaxHPrate,10; }
 28594:4876,{ bonus bInt,40; bonus bMaxSPrate,10; }
