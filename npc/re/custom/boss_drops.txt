@@ -32,15 +32,13 @@ setarray .mobid2[0],1078,1079,1080,1081,1082,1083,1084,1085,1522,1431,1427,1604,
 2206,2277,2278,2279,2280,2484,3744,3745,3746,3766,3493,3494,3767,3766,3768,3769,3770,3771,3772,3773,20264,20265,20266,20267,20268,20278,20279,20280;
 for (set .@c, 0; .@c < getarraysize(.mobid2); set .@c, .@c + 1){
 if (killedrid == .mobid2[.@c])end; }
-	.@coindrop = rand(1, 100);
-	if (.@coinDrop <= 1){
-		.@check1 = 1; }
-	.@coindrop = rand(1, 100);
-	if (.@coinDrop <= 1){
-		.@check2 = 1; }
-	if (.@check1 == 1 || .@check2 == 1) {
-		#CASHPOINTS = #CASHPOINTS + 5;
-		dispbottom "คุณได้รับ CASH จำนวน 5 P";
+rand(1, 100);
+if (rand(1, 100) == 1){
+	#CASHPOINTS = #CASHPOINTS + 5;
+	dispbottom "คุณได้รับ CASH จำนวน 5 P";	}
+else if (rand(1, 100) == 1) {
+	#CASHPOINTS = #CASHPOINTS + 5;
+	dispbottom "คุณได้รับ CASH จำนวน 5 P";
 	}
 end;
 }
