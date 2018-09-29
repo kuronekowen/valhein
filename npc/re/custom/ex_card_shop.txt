@@ -58,7 +58,7 @@ OnSellItem:
 	mes "การ์ดที่จะแลก:";
 	mes "-----------------------------------";
 	for(set .@i,0; .@i<getarraysize(@sold_nameid); set .@i,.@i+1)
-		if ((@sold_nameid[.@i] > 4000 && @sold_nameid[.@i] < 4700) || (@sold_nameid[.@i] > 27011 && @sold_nameid[.@i] < 27266) || (@sold_nameid[.@i] > 31005 && @sold_nameid[.@i] < 31027)) {
+		if ((@sold_nameid[.@i] > 4000 && @sold_nameid[.@i] < 4700) || (@sold_nameid[.@i] > 27011 && @sold_nameid[.@i] < 27299) || (@sold_nameid[.@i] > 31005 && @sold_nameid[.@i] < 31027)) {
 			if (.Level) {
 				query_sql("SELECT `LV` FROM `mob_db` WHERE `DropCardid` = "+@sold_nameid[.@i],.@lv);
 				if (.@lv < .Level) {
