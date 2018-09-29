@@ -1724,3 +1724,52 @@
 2,31574,50
 2,31575,50
 2,31580,50
+2,31604,50
+2,31605,50
+2,31606,50
+2,31562,50
+2,31563,50
+2,31564,50
+2,31565,50
+2,31566,50
+2,31567,50
+
+//Shadow
+5,24018,50	//Physical Earring (Shadow)
+5,24019,50	//Physical Weapon (Shadow)
+5,24020,50	//Physical Pendant (Shadow)
+5,24186,50	//Basis Shadow Armor
+5,24198,50	//Basis Shadow Shield
+5,24021,50	//Magical Earring (Shadow)
+5,24022,50	//Magical Weapon (Shadow)
+5,24023,50	//Magical Pencil (Shadow)
+5,24111,50	//Spellflow Shadow Shoes
+5,24112,50	//Spellflow Shadow Armor
+5,24113,50	//Spellflow Shadow Shield
+5,24030,50	//Critital Shadow Armor
+5,24032,50	//Critical Hit Shadow Weapon
+5,24029,50	//Ancient Shadow Armor
+5,24031,50	//Kingbird's Shadow Weapon
+5,24090,50	//Stability Shadow Shield
+5,24099,50	//Unfreezing Shadow Weapon
+5,24100,50	//Unfreezing Shadow Earring
+5,24101,50	//Unfreezing Shadow Pendant
+5,24081,50	//Malicious Shas Shadow Armor
+5,24082,50	//Malicious Shas Shadow Shoes
+5,24083,50	//Malicious Shas Shadow Shield
+5,24053,50	//Safeguard Shield (Shadow)
+5,24063,50	//Liberation Shoes (Shadow)
+5,24084,50	//Gemstone Shadow Armor
+5,24085,50	//Gemstone Shadow Shoes
+5,24086,50	//Gemstone Shadow Shield
+5,24087,50	//Gemstone Shadow Weapon
+5,24088,50	//Gemstone Shadow Earring
+5,24089,50	//Gemstone Shadow Pendant
+5,24091,50	//Harrods Plaster Shadow Armor
+5,24092,50	//Harrods Plaster Shadow Shoes
+5,24243,50	//Reload Shadow Shoes
+5,24244,50	//Reload Shadow Shield
+5,24245,50	//Reload Shadow Armor
+5,24243,50	//Reload Shadow Shoes
+5,24244,50	//Reload Shadow Shield
+5,24245,50	//Reload Shadow Armor

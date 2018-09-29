@@ -112,6 +112,9 @@
 24260:24273,{ if (BaseClass == Job_Priest) { bonus bMatkRate,3; bonus2 bVariableCastrate,"PR_MAGNUS",-40; } }
 24261:24274,{ bonus2 bSkillUseSPrate,"MO_INVESTIGATE",-20; bonus2 bSkillUseSPrate,"MO_FINGEROFFENSIVE",-20; bonus2 bSkillUseSPrate,"MO_CHAINCOMBO",-20; }
 24262:24275,{ bonus2 bSkillUseSPrate,"AS_GRIMTOOTH",-20; bonus2 bSkillAtk,"AS_SONICBLOW",20; }
+24263:24276,{ if (BaseClass == Job_Rogue) { bonus2 bAddSize,Size_All,3; bonus2 bSkillUseSPrate,"RG_RAID",-20; } }
+24264:24277,{ bonus2 bSkillAtk,"WZ_VERMILION",20; bonus2 bSkillAtk,"WZ_METEOR",20; bonus2 bSkillAtk,"WZ_STORMGUST",20; bonus2 bVariableCastrate,"WZ_JUPITEL",-40; }
+24265:24278,{ if (BaseClass == Job_Sage) { bonus bMatkRate,3; bonus2 bVariableCastrate,"WZ_HEAVENDRIVE",-40; } }
 2509:22170,{ .@r = getequiprefinerycnt(EQI_GARMENT); bonus bMatkRate,10; if (.@r>=7) { bonus2 bSubEle,Ele_Earth,15; bonus2 bSubEle,Ele_Wind,15; } if (.@r>=9) { bonus2 bSubEle,Ele_Earth,15; bonus2 bSubEle,Ele_Wind,15; } }
 2596:2159,{ .@r = getequiprefinerycnt(EQI_GARMENT); bonus2 bSubrace,RC_Demon,.@r; bonus2 bSubDefEle,Ele_Fire,-(.@r); }
 2596:22055,{ .@r = getequiprefinerycnt(EQI_GARMENT); bonus bMaxHPrate,.@r; bonus bMaxSPrate,.@r; bonus2 bAddEle,Ele_Fire,5; }
