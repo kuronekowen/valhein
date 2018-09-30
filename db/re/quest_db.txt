@@ -4039,13 +4039,3 @@
 60355,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Bathroom Ghost"
 
 62238,3600,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Midgardian Mercenary timer"
-
-//Custom
-13181,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Nightmarish Jitterbug"
-13182,82800,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Nightmarish Jitterbug: Waiting"
-13183,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Nightmarish Jitterbug: Completed"
-13184,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Charleston Factory"
-13185,72000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Charleston Factory - Hold"
-13186,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Charleston Factory - Complete"
-13187,0,3125,50,0,0,0,0,0,0,0,0,0,0,0,0,0,"Deal with the Staff"
-13188,72000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Deal with the Staff - Hold"
