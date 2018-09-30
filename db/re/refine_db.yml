@@ -1604,11 +1604,11 @@ Shadow:
   RandomBonusValue: 0
   Costs:
     - Type: REFINE_COST_NORMAL
-      Price: 20000
+      Price: 2000
       Material: 985
       RefineUI: true
     - Type: REFINE_COST_HD
-      Price: 20000
+      Price: 2000
       Material: 6241
       RefineUI: true
       OnFail:
@@ -1616,12 +1616,12 @@ Shadow:
         DownRefine: 100
         DownRefineNum: 1
     - Type: REFINE_COST_ENRICHED
-      Price: 20000
+      Price: 2000
       Material: 7619
       RefineUI: true
     # 'Event' rates
     - Type: REFINE_COST_EVT_ENRICHED
-      Price: 20000
+      Price: 2000
       Material: 7619
       RefineUI: false
   Rates:
@@ -1662,7 +1662,7 @@ Shadow:
       - Type: REFINE_COST_NORMAL
         Rate: 60
       - Type: REFINE_COST_ENRICHED
-        Rate: 90
+        Rate: 100
       - Type: REFINE_COST_EVT_ENRICHED
         Rate: 95
     - Level: 6
@@ -1670,7 +1670,7 @@ Shadow:
       - Type: REFINE_COST_NORMAL
         Rate: 40
       - Type: REFINE_COST_ENRICHED
-        Rate: 70
+        Rate: 90
       - Type: REFINE_COST_EVT_ENRICHED
         Rate: 80
     - Level: 7
@@ -1678,7 +1678,7 @@ Shadow:
       - Type: REFINE_COST_NORMAL
         Rate: 40
       - Type: REFINE_COST_ENRICHED
-        Rate: 70
+        Rate: 80
       - Type: REFINE_COST_EVT_ENRICHED
         Rate: 80
     - Level: 8
@@ -1731,10 +1731,10 @@ ShadowWeapon:
   RandomBonusValue: 0
   Costs:
     - Type: REFINE_COST_NORMAL
-      Price: 20000
+      Price: 2000
       Material: 984
     - Type: REFINE_COST_HD
-      Price: 20000
+      Price: 2000
       Material: 6240
       OnFail:
         Break: 0
@@ -1786,7 +1786,7 @@ ShadowWeapon:
       - Type: REFINE_COST_NORMAL
         Rate: 60
       - Type: REFINE_COST_ENRICHED
-        Rate: 90
+        Rate: 100
       - Type: REFINE_COST_EVT_ENRICHED
         Rate: 95
     - Level: 6
@@ -1794,7 +1794,7 @@ ShadowWeapon:
       - Type: REFINE_COST_NORMAL
         Rate: 40
       - Type: REFINE_COST_ENRICHED
-        Rate: 70
+        Rate: 90
       - Type: REFINE_COST_EVT_ENRICHED
         Rate: 80
     - Level: 7
@@ -1802,7 +1802,7 @@ ShadowWeapon:
       - Type: REFINE_COST_NORMAL
         Rate: 40
       - Type: REFINE_COST_ENRICHED
-        Rate: 70
+        Rate: 80
       - Type: REFINE_COST_EVT_ENRICHED
         Rate: 80
     - Level: 8

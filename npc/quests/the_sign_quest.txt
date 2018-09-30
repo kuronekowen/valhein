@@ -5477,12 +5477,12 @@ OnInit:
 OnTouch_:
 	if (.s_check < 30) {
 		if (sign_q == 30) {
-			set sign_q,32;
+			set sign_q,34;
 		}
 	}
 	else if (.s_check < 34) {
 		if (sign_q == 30) {
-			set sign_q,33;
+			set sign_q,34;
 		}
 	}
 	else if (.s_check == 34) {
