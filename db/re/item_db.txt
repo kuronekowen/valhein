@@ -10981,7 +10981,7 @@
 20436,C_Angelring_Furhat,Costume Angelring Furhat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,953,{},{},{}
 20437,C_Sakura_Hairband,Costume Sakura Hairband,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,949,{},{},{}
 20438,C_Abacus_In_Mouth,Costume Abacus In Mouth,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,825,{},{},{}
-20439,C_New_Year_Shine,Costume New Year Shine,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,0,{},{},{}
+20439,C_New_Year_Shine,Costume New Year Shine,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,0,{},{ hateffect(20,true); },{ hateffect(20,false); }
 20440,C_Tone_of_Gold,Costume Tone of Gold,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1447,{},{},{}
 20441,C_Large_Ribbon_Muffler_Red,Costume Large Ribbon Muffler Red,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1448,{},{},{}
 20442,C_Red_and_White_Mochiring_Hat,Costume Red and White Mochiring Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1449,{},{},{}
