@@ -12722,8 +12722,9 @@
 31530,Costume_Dragoon_Helm,Costume Dragoon Helm,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1695,{},{},{}
 31531,Costume_Heart_Lovely_Hat,Costume Heart Lovely Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1770,{},{},{}
 31532,Costume_Neev_Barrette,Costume Neev Barrette,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,1696,{},{},{}
-31533,Costume_Warm_Cat_Muffler_Bl,Costume Warm Cat Muffler Bl,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1771,{},{},{}
+31533,Costume_Warm_Cat_Muffler_Bl,Costume Warm Cat Muffler Bl,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,1771,{},{},{}
 31537,Costume_2nd_Year_An,Costume 2nd Year Anniversary,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1772,{},{},{}
+31538,Costume_Love_Feeling,Costume Love Feeling,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,1717,{},{},{}
 31539,Costume_Bulgogi_Hat,Costume Bulgogi Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1773,{},{},{}
 31540,Gemini_RedEyes,Gemini_RedEyes,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,1654,{},{},{}
 31541,Costume_Insectivorous_Plant_H,Costume Insectivorous Plant Hairpin,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,850,{},{},{}
