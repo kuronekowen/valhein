@@ -12769,5 +12769,5 @@
 31621,Costume_Marin_Muffler,Costume Marin Muffler,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1795,{},{},{}
 31622,Costume_Drop_Muffler,Costume Drop Muffler,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1796,{},{},{}
 31623,Costume_Poporing_Muffler,Costume Poporing Muffler,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1797,{},{},{}
-31624,Costume_Poporing_Muffler,Costume Poporing Muffler,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1798,{},{},{}
+31624,Costume_Bikeman_Helmet,Costume Bikeman Helmet,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1798,{},{},{}
 32005,Illusion_Pole_Axe,Illusion Pole Axe,5,0,,1500,190,,3,2,0x00004082,63,2,2,4,120,1,4,{ .@r = getrefine(); bonus bStr,3; bonus bInt,2; bonus bDex,2; if (.@r >= 13) { .@val = -2000; } else if (.@r >= 9) { .@val = -1000; } bonus2 bSkillCooldown,"RK_HUNDREDSPEAR",.@val; },{},{}
