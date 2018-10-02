@@ -999,7 +999,6 @@ OnTouch:
 	end;
 
 OnTouch:
-	set .talking, 0;
 	if(.talking == 0)
 	{
 		set 'sfTalking, getcharid(3);
