@@ -43,7 +43,7 @@ prontera,169,183,4	script	เคลือบธาตุ	742,{
 	}
 
 OnInit:
-	.Price = 1000;			// Price for endowment.
+	.Price = 10000;			// Price for endowment.
 	.Ticks = 1800000;		// Time in ticks for duration of buff.
 	.ReqType = 1;			// Requirements. 0 = None | 1 = Elemental Stones | 2 = Greater Elemental Stones
 	.ConvPrice = 2000;		// Price for Elemental Converters
