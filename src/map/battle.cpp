@@ -4384,12 +4384,13 @@ static int battle_calc_attack_skill_ratio(struct Damage wd, struct block_list *s
 
 					for (i = 0; i < ARRAYLENGTH(slug); i++) {
 						if ((index = pc_search_inventory(sd, slug[i])) >= 0) {
-							w = (sd->inventory_data[index]->weight / 10) * 32;
+							w = (sd->inventory_data[index]->weight);
 							break;
 						}
 					}
 				}
-				if (target->type != BL_PC) // Monster
+				skillratio += -100 + (max(w,1) * skill_lv * 32); //(custom)
+				/*if (target->type != BL_PC) // Monster
 					skillratio += -100 + 1200 * skill_lv;
 				else // Player
 					skillratio += -100 + 2000 * skill_lv;
@@ -4397,7 +4398,7 @@ static int battle_calc_attack_skill_ratio(struct Damage wd, struct block_list *s
 					case SZ_SMALL: skillratio += w * 2; break;
 					case SZ_MEDIUM: skillratio += w * 3; break;
 					case SZ_BIG: skillratio += w * 4; break;
-				}
+				}*/
 			}
 			break;
 		case RL_D_TAIL:
