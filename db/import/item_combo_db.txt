@@ -151,7 +151,7 @@
 24299:24312,{ bonus bMaxHPrate,2; bonus bMaxSPrate,2; bonus bLongAtkRate,getskilllv("WM_LESSON")/2; }
 24300:24313,{ bonus bMaxHPrate,2; bonus bMaxSPrate,2; bonus bLongAtkRate,getskilllv("WM_LESSON")/2; }
 24402:24405,{ bonus2 bSkillCooldown,"RL_HEAT_BARREL",-4000; bonus2 bSkillCooldown,"RL_HAMMER_OF_GOD",-2000; }
-24402:24405:24283:24319,{ bonus2 bIgnoreDefClassRate,Class_Normal,50; bonus2 bIgnoreMDefClassRate,Class_Normal,50; bonus bAllStats,7; bonus bMaxHPrate,3; bonus bMaxSPrate,3; }
+24402:24405:24283:24319,{ bonus2 bIgnoreDefClassRate,Class_Normal,50; bonus2 bIgnoreMDefClassRate,Class_Normal,50; bonus bAllStats,7; bonus bMaxHPrate,3; bonus bMaxSPrate,3; bonus bLongAtkRate,20; }
 24403:24406,{ bonus2 bSkillCooldown,"KO_JYUMONJIKIRI",-1000; bonus bLongAtkRate,5; }
 24403:24406:24285:24314,{ bonus2 bIgnoreDefClassRate,Class_Normal,50; bonus2 bIgnoreMDefClassRate,Class_Normal,50; bonus bAllStats,7; bonus bMaxHPrate,3; bonus bMaxSPrate,3; bonus2 bSkillAtk,"KO_BAKURETSU",50; }
 24404:24407,{ bonus2 bSkillCooldown,"KO_ZANZOU",-3000; bonus2 bMagicAtkEle,Ele_Fire,5; bonus2 bMagicAtkEle,Ele_Water,5; bonus2 bMagicAtkEle,Ele_Wind,5; }
