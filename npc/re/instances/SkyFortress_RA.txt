@@ -999,9 +999,11 @@ OnTouch:
 	end;
 
 OnTouch:
+	set .talking, 0;
 	if(.talking == 0)
 	{
 		set 'sfTalking, getcharid(3);
+		set .talking, 1;
 		charcommand "#me " + strcharinfo(0) + " So this is finally the last...I suppose he must be the cause of Prontera invasion isn't he?";
 		sleep2 1500;
 		
@@ -1031,7 +1033,6 @@ OnTouch:
 		npctalk "Soldiers...Bijou's Fortress...Cut them all...I'll step up...I'll kill them...All.";
 		instance_announce instance_id(), "[Stefan J.E Wolf] Soldiers...Bijou's Fortress...Cut them all...I'll step up...I'll kill them...All", bc_map, 0x0000FF;
 		sleep2 1500;
-		set .talking, 1;
 		disablenpc strnpcinfo(3);
 		cutin "", 255;
 		donpcevent instance_npcname( "sky_fortress" ) + "::OnLastFloorOn";
