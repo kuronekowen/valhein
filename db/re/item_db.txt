@@ -12751,4 +12751,15 @@
 31604,Costume_HFAW,Costume HFAW,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1251,{},{},{}
 31605,Costume_Gold_Magestic_Goat,Costume Gold Magestic Goat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1800,{},{},{}
 31606,Costume_Autumn_Headband,Costume Autumn Headband,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1119,{},{},{}
+31607,Costume_Yellow_Scarf,Costume Yellow Scarf,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1170,{},{},{}
+31608,Costume_Well-Chewed_Pencil,Costume Well-Chewed Pencil,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,931,{},{},{}
+31609,Costume_Book_of_Soyga,Costume Book of Soyga,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,423,{},{},{}
+31610,Costume_Spider_Web_Taiwan,Costume Spider Web Taiwan,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1711,{},{},{}
+31611,Costume_Golden_Fish_in_Mouth,Costume Golden Fish in Mouth,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1081,{},{},{}
+31612,Costume_Angel_Feather,Costume Angel Feather,4,0,,0,,,,0,0xFFFFFFFF,63,2,8192,,1,0,18,{},{},{}
+31613,Costume_Goldfish_Hat,Costume Goldfish Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1645,{},{},{}
+31614,Costume_Forest_Guide_Hat,Costume Forest Guide Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1802,{},{},{}
+31615,Costume_Medium_Wave_Hair,Costume Medium Wave Hair,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1803,{},{},{}
+31616,Costume_Kishu_Inu,Costume Kishu Inu,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,1804,{},{},{}
+31617,Costume_Blue_Underrim_Glasses,Costume Blue Underrim Glasses,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,1805,{},{},{}
 32005,Illusion_Pole_Axe,Illusion Pole Axe,5,0,,1500,190,,3,2,0x00004082,63,2,2,4,120,1,4,{ .@r = getrefine(); bonus bStr,3; bonus bInt,2; bonus bDex,2; if (.@r >= 13) { .@val = -2000; } else if (.@r >= 9) { .@val = -1000; } bonus2 bSkillCooldown,"RK_HUNDREDSPEAR",.@val; },{},{}
