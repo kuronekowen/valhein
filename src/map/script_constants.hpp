@@ -7264,6 +7264,7 @@
 	export_constant(HAT_EF_C_SHINING_ANGEL_WING);
 	export_constant(HAT_EF_MAGIC_STAR_TW);
 	export_constant(HAT_DIGITAL_SPACE);
+	export_constant(HAT_EF_C_MAPLE_WHICH_FALLS_RD);
 
 	/* pet catch */
 	export_constant(PET_CATCH_UNIVERSAL);
