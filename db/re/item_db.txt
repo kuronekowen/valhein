@@ -12763,4 +12763,7 @@
 31615,Costume_Medium_Wave_Hair,Costume Medium Wave Hair,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1803,{},{},{}
 31616,Costume_Kishu_Inu,Costume Kishu Inu,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,1804,{},{},{}
 31617,Costume_Blue_Underrim_Glasses,Costume Blue Underrim Glasses,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,1805,{},{},{}
+31618,Costume_Red_Falls_Maple,Costume Red Falls Maple,4,0,,0,,,,0,0xFFFFFFFF,63,2,8192,,1,0,0,{},{ hateffect(89,true); },{ hateffect(89,false); }
+31619,Costume_Black_Feather_Beret,Costume Black Feather Beret,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,731,{},{},{}
+31620,Costume_Morning_Poring,Costume Morning Poring,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1801,{},{},{}
 32005,Illusion_Pole_Axe,Illusion Pole Axe,5,0,,1500,190,,3,2,0x00004082,63,2,2,4,120,1,4,{ .@r = getrefine(); bonus bStr,3; bonus bInt,2; bonus bDex,2; if (.@r >= 13) { .@val = -2000; } else if (.@r >= 9) { .@val = -1000; } bonus2 bSkillCooldown,"RK_HUNDREDSPEAR",.@val; },{},{}
