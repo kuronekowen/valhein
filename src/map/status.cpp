@@ -2522,7 +2522,7 @@ unsigned short status_base_matk(struct block_list *bl, const struct status_data*
 		case BL_MOB:
 			///! TODO: Confirm these RENEWAL calculations. Currently is using previous calculation before 083cf5d9 (issue: #321) and until re/mob_db.txt is updated.
 			//return status->int_ + level;
-			return status->int_ + (status->int_ / 2) + (status->dex / 5) + (status->luk / 3) + (level / 4);
+			return (status->int_ * 5) + 50;
 		case BL_HOM:
 			return status_get_homint(bl) + level;
 		case BL_MER:
