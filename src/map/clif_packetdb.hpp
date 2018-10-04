@@ -2191,6 +2191,7 @@
 // 2014-02-05bRagexeRE
 #if PACKETVER >= 20140205
 	packet(0x09DA,-1);
+#endif
 
 // 2014-10-08Ragexe
 #if PACKETVER >= 20141008
