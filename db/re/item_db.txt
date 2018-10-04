@@ -10862,7 +10862,7 @@
 20282,C_White_Student_Cap,Costume White Student Cap,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,1,877,{},{},{}
 20283,C_Over_Protector,Costume Over Protector,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,1,1329,{},{},{}
 20284,C_Cherry_Blossom_Hat,Costume Sakura Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,1,1330,{},{},{}
-20285,C_Blossom_Fluttering,Costume Dancing Fallen Sakura,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,1,1331,{ hateffect HAT_EF_BLOSSOM_FLUTTERING,true; },{},{ hateffect HAT_EF_BLOSSOM_FLUTTERING,false; }
+20285,C_Blossom_Fluttering,Costume Dancing Fallen Sakura,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,1,0,{ hateffect HAT_EF_BLOSSOM_FLUTTERING,true; },{},{ hateffect HAT_EF_BLOSSOM_FLUTTERING,false; }
 20286,C_Under_Rim_Glasses_Red,Costume Under Rim Glasses Red,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,1,1332,{},{},{}
 20287,C_Mans_Medal_Gold,Costume Man's Medal(Gold),4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,1,1333,{},{},{}
 20288,C_Bijou_Hat,Costume Bijou Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,1,1334,{},{},{}
