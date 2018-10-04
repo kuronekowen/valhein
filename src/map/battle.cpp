@@ -4389,7 +4389,7 @@ static int battle_calc_attack_skill_ratio(struct Damage wd, struct block_list *s
 						}
 					}
 				}
-				skillratio += -100 + (max(w,1) * skill_lv * 32); //(custom)
+				skillratio += -100 + (max(w,1) * skill_lv * 32 / 10); //(custom)
 				/*if (target->type != BL_PC) // Monster
 					skillratio += -100 + 1200 * skill_lv;
 				else // Player
