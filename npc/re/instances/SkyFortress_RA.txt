@@ -641,7 +641,6 @@ OnGuardianDied:
 				if( attachrid( $@partymemberaid[.@i] ) && SF_INSTANCE_ID > 0){
 					set SF_INSTANCE_ID, -1;
 				}
-			instance_destroy instance_id();
 			end;
 		}
 	}
@@ -887,7 +886,6 @@ OnInit:
 	getmapxy(.@map$, .@x, .@y, UNITTYPE_NPC);
 
 	//debugmes "entry: [" + .@x + "," + .@y + "] / [" + 'ldEntryX + "," + 'ldEntryY + "]";
-	sleep2 200;
 
 	if(countitem('sfKeyId) > 0 && .@x != 'ldEntryX && .@y != 'ldEntryY)
 	{
