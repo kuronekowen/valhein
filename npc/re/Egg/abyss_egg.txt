@@ -29,7 +29,8 @@ set .@rare,0;
 		close2; 
 	}
 
-getitem .@item[rand(getarraysize(.@item))],1;
-if (.@rare == 1) announce "Abyss Egg: ท่าน " + strcharinfo(0) + "ได้รับ" + getitemname(.@item[]),0;
+.@egg = rand(getarraysize(.@item));
+getitem .@item[.@egg],1;
+if (.@rare == 1) announce "Abyss Egg: ท่าน " + strcharinfo(0) + "ได้รับ" + getitemname(.@item[.@egg]),0;
 return;
 }
