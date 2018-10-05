@@ -23,24 +23,24 @@
 //===== Credits ==============================================
 //= NovaRo for their Information regarding the possible Options.
 //============================================================
-prt_q,248,82,4	script	Vicious Mind Enchanter	101,{
+prt_q,248,82,4	script	เสริมพลัง Vicious Mind	101,{
 
 mes .n$;
-mes "Hello, "+strcharinfo(0)+"!";
-mes "What can I do for you?";
-if(select("- Enchant Vicious Weapons:- Nevermind") - 1) close;
+mes "สวัสดีท่าน, "+strcharinfo(0)+"!";
+mes "มีอะไรให้ข้าช่วยมั้ย ?";
+if(select("- เสริมพลังอุปกรณ์ Vicious Mind:- ไม่มีอะไร") - 1) close;
 next;
 mes .n$;
-mes "To apply an random properity to an Vicious Weapon, you need to have it equipped in your right hand.";
-mes "Also be warned, that what you get and with which value is completely random!";
+mes "ก่อนที่เราจะเริ่มการเสริมพลัง ข้าขอแนะนำให้ท่านควรจะสวมอุปกรณ์ที่ต้องการเสียก่อน";
+mes "นอกจากนั้น คุณสมบัติที่จะเพิ่มเข้ามา ข้าไม่รับประกันนะว่าท่านจะได้รูปแบบไหน!";
 next;
 mes .n$;
-mes "First, let's see what you have equipped...:";
+mes "มาเริ่มกันเลย ขอข้าดูอุปกรณ์ของท่านหน่อยนะ";
 next;
 set .@part,EQI_HAND_R; // Save equip location
 mes .n$;
 if(!getequipid(.@part)) {
-	mes "You don't have anything equipped!";
+	mes "ท่านไม่ได้สวมใส่อุปกรณ์อยู่นี่!";
 	close;
 }
 switch(getequipid(.@part)) {
@@ -71,17 +71,17 @@ switch(getequipid(.@part)) {
 	break;
 	
 	default:
-	mes "This is not an Vicious Weapon, please be sure to equip one and come back again.";
+	mes "เอ่อ. ขอโทษด้วย ข้าสามารถเสริมพลังได้เฉพาะอุปกรณ์ Vicious Mind เท่านั้น";
 	close;
 }
-mes "Equipped Weapon: "+getitemname(getequipid(.@part));
+mes "อุปกรณ์ที่สวมใส่: "+getitemname(getequipid(.@part));
 set .@ropt1,getequiprandomoption(.@part,0,ROA_ID);
 set .@ropt2,getequiprandomoption(.@part,1,ROA_ID);
 set .@ropt3,getequiprandomoption(.@part,2,ROA_ID);
 if(.@ropt1 || .@ropt2 || .@ropt2) {
 	mes " ";
-	mes "I'm sorry, but this weapon already has bonus properities applied.";
-	mes "Please choose a different one.";
+	mes "ขอภัย อุปกรณ์นี้ผ่านการเสริมพลังมาแล้ว";
+	mes "กรุณาเลือกอุปกรณ์ชิ้นอื่น";
 	close;
 }
 next;
@@ -112,7 +112,7 @@ setrandomoption(.@part,0,getd(".RandOpt1_"+.@Type$+"["+.@Opt1+"]"),.@Opt1_V,0);
 setrandomoption(.@part,1,getd(".RandOpt2_"+.@Type$+"["+.@Opt2+"]"),.@Opt2_V,0);
 setrandomoption(.@part,2,getd(".RandOpt3_"+.@Type$+"["+.@Opt3+"]"),.@Opt3_V,0);
 mes .n$;
-mes "Random bonus properities have been applied on your \""+getitemname(getequipid(.@part))+"\" successfully.";
+mes "การเสริมพลังให้แก่ \""+getitemname(getequipid(.@part))+"\" เสร็จสมบูรณ์";
 end;
 
 OnInit:

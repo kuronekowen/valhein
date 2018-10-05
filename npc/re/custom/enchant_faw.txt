@@ -106,7 +106,7 @@ jExit:            set .@menu$, "";
                     else set .@enchant,4863;
                 goto eStart;
                 case 5://Aspd
-                    if(getequipcardid(EQI_GARMENT,2)) set .@enchant,4873;
+                    if(getequipcardid(EQI_GARMENT,2)) set .@enchant,4807;
                     else if (.@i < 4)   set .@enchant,4872;
                     else if (.@i < 8)   set .@enchant,4869;
                     else set .@enchant,4869;

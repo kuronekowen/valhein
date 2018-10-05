@@ -3,13 +3,13 @@ function	script	Cash_coins	{
 .@rate = 100;
 
 .@countitem = countitem( .@item );
-mes "Exchange "+.@countitem+" x "+getitemname( .@item )+" to "+( .@countitem * .@rate )+" Point ?";
+mes "ต้องการแลก "+.@countitem+" x "+getitemname( .@item )+" เป็น "+( .@countitem * .@rate )+" Point หรือไม่ ?";
 
 if( .@countitem )
 	if( select( "YES","Cancel" ) == 1 ){
 		delitem .@item,.@countitem;
 		#CASHPOINTS = #CASHPOINTS + ( .@countitem * .@rate );
-		mes "Done";
+		mes "เรียบร้อย~";
 	}
 close;
 }
@@ -19,13 +19,13 @@ function	script	Cash_coins_1	{
 .@rate = 10;
 
 .@countitem = countitem( .@item );
-mes "Exchange "+.@countitem+" x "+getitemname( .@item )+" to "+( .@countitem * .@rate )+" Point ?";
+mes "ต้องการแลก "+.@countitem+" x "+getitemname( .@item )+" เป็น "+( .@countitem * .@rate )+" Point หรือไม่ ?";
 
 if( .@countitem )
 	if( select( "YES","Cancel" ) == 1 ){
 		delitem .@item,.@countitem;
 		#CASHPOINTS = #CASHPOINTS + ( .@countitem * .@rate );
-		mes "Done";
+		mes "เรียบร้อย~";
 	}
 close;
 }
@@ -35,13 +35,13 @@ function	script	Cash_coins_2	{
 .@rate = 1;
 
 .@countitem = countitem( .@item );
-mes "Exchange "+.@countitem+" x "+getitemname( .@item )+" to "+( .@countitem * .@rate )+" Point ?";
+mes "ต้องการแลก "+.@countitem+" x "+getitemname( .@item )+" เป็น "+( .@countitem * .@rate )+" Point หรือไม่ ?";
 
 if( .@countitem )
 	if( select( "YES","Cancel" ) == 1 ){
 		delitem .@item,.@countitem;
 		#CASHPOINTS = #CASHPOINTS + ( .@countitem * .@rate );
-		mes "Done";
+		mes "เรียบร้อย~";
 	}
 close;
 }
