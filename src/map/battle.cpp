@@ -978,8 +978,7 @@ static void battle_absorb_damage(struct block_list *bl, struct Damage *d) {
 }
 
 /**
- * Check Safety Wall and Pneuma effect.
- * Maybe expand this to move checks the target's SC from battle_calc_damage?
+ * Check for active statuses that block damage
  * @param src Attacker
  * @param target Target of attack
  * @param sc STatus Change
@@ -987,53 +986,212 @@ static void battle_absorb_damage(struct block_list *bl, struct Damage *d) {
  * @param damage Damage received
  * @param skill_id
  * @param skill_lv
- * @return True:Damage inflicted, False:Missed
+ * @return True: Damage inflicted, False: Missed
  **/
 bool battle_check_sc(struct block_list *src, struct block_list *target, struct status_change *sc, struct Damage *d, int64 damage, uint16 skill_id, uint16 skill_lv) {
 	if (!sc)
 		return true;
 
-	if (sc->data[SC_SAFETYWALL] && (d->flag&(BF_SHORT|BF_MAGIC)) == BF_SHORT) {
-		struct skill_unit_group* group = skill_id2group(sc->data[SC_SAFETYWALL]->val3);
-		uint16 skill_id_val = sc->data[SC_SAFETYWALL]->val2;
+	struct map_session_data *sd = nullptr;
+	int flag = d->flag;
+
+	if (target->type == BL_PC)
+		sd = (struct map_session_data *)target;
+
+	if ((sc->data[SC_PNEUMA] && (flag&(BF_MAGIC | BF_LONG)) == BF_LONG) ||
+		(sc->data[SC_BASILICA] && !status_bl_has_mode(src, MD_STATUS_IMMUNE)) ||
+		(sc->data[SC_ZEPHYR] && !(flag&BF_MAGIC && skill_id) && !(skill_get_inf(skill_id)&(INF_GROUND_SKILL | INF_SELF_SKILL))) ||
+		sc->data[SC__MANHOLE] ||
+		sc->data[SC_KINGS_GRACE]
+		)
+	{
+		d->dmg_lv = ATK_BLOCK;
+		return false;
+	}
+
+	struct status_change_entry *sce = nullptr;
+
+	if ((sce = sc->data[SC_WEAPONBLOCKING]) && flag&(BF_SHORT | BF_WEAPON) && rnd() % 100 < sce->val2) {
+		clif_skill_nodamage(target, src, GC_WEAPONBLOCKING, sce->val1, 1);
+		sc_start2(src, target, SC_COMBO, 100, GC_WEAPONBLOCKING, src->id, skill_get_time2(GC_WEAPONBLOCKING, sce->val1));
+		d->dmg_lv = ATK_BLOCK;
+		return false;
+	}
+
+	if (sc->data[SC_WHITEIMPRISON]) { // Gravitation and Pressure do damage without removing the effect
+		if (skill_id == MG_NAPALMBEAT ||
+			skill_id == MG_SOULSTRIKE ||
+			skill_id == WL_SOULEXPANSION ||
+			(skill_id && skill_get_ele(skill_id, skill_lv) == ELE_GHOST) ||
+			(!skill_id && (status_get_status_data(src))->rhw.ele == ELE_GHOST))
+		{
+			if (skill_id == WL_SOULEXPANSION)
+				damage <<= 1; // If used against a player in White Imprison, the skill deals double damage.
+			status_change_end(target, SC_WHITEIMPRISON, INVALID_TIMER); // Those skills do damage and removes effect
+		} else {
+			d->dmg_lv = ATK_BLOCK;
+			return false;
+		}
+	}
+
+	if ((sce = sc->data[SC_SAFETYWALL]) && (flag&(BF_SHORT | BF_MAGIC)) == BF_SHORT) {
+		struct skill_unit_group* group = skill_id2group(sce->val3);
 
 		if (group) {
-			if (skill_id_val == MH_STEINWAND) {
-				if (--group->val2 <= 0)
-					skill_delunitgroup(group);
-				d->dmg_lv = ATK_BLOCK;
-				if( (group->val3 - damage) > 0 )
-					group->val3 -= (int)cap_value(damage, INT_MIN, INT_MAX);
-				else
-					skill_delunitgroup(group);
-				return false;
-			}
-			//in RE, SW possesses a lifetime equal to group val2, (3x caster hp, or homon formula)
 			d->dmg_lv = ATK_BLOCK;
+
+			switch (sce->val2) {
+				case MG_SAFETYWALL:
+					if (--group->val2 <= 0) {
+						skill_delunitgroup(group);
+						break;
+					}
 #ifdef RENEWAL
-			if ( ( group->val2 - damage) > 0 ) {
-				group->val2 -= (int)cap_value(damage, INT_MIN, INT_MAX);
-			} else
-				skill_delunitgroup(group);
-			return false;
-#else
-			if (--group->val2 <= 0)
-				skill_delunitgroup(group);
-			return false;
+					if ((group->val3 - damage) > 0)
+						group->val3 -= (int)cap_value(damage, INT_MIN, INT_MAX);
+					else
+						skill_delunitgroup(group);
 #endif
+					break;
+				case MH_STEINWAND:
+					if (--group->val2 <= 0) {
+						skill_delunitgroup(group);
+						break;
+					}
+					if ((group->val3 - damage) > 0)
+						group->val3 -= (int)cap_value(damage, INT_MIN, INT_MAX);
+					else
+						skill_delunitgroup(group);
+					break;
+			}
+			return false;
 		}
 		status_change_end(target, SC_SAFETYWALL, INVALID_TIMER);
 	}
 
-	if (sc->data[SC_NEUTRALBARRIER] && ((d->flag&(BF_LONG|BF_MAGIC)) == BF_LONG || skill_id == CR_ACIDDEMONSTRATION)) {
+	if ((sce = sc->data[SC_MILLENNIUMSHIELD]) && sce->val2 > 0 && damage > 0) {
+		sce->val3 -= (int)cap_value(damage, INT_MIN, INT_MAX); // absorb damage
+		d->dmg_lv = ATK_BLOCK;
+		if (sce->val3 <= 0) { // Shield Down
+			sce->val2--;
+			if (sce->val2 >= 0) {
+				clif_millenniumshield(target, sce->val2);
+				if (!sce->val2)
+					status_change_end(target, SC_MILLENNIUMSHIELD, INVALID_TIMER); // All shields down
+				else
+					sce->val3 = 1000; // Next shield
+			}
+			status_change_start(src, target, SC_STUN, 10000, 0, 0, 0, 0, 1000, SCSTART_NOTICKDEF);
+		}
+		return false;
+	}
+
+	if ((sce = sc->data[SC_AUTOGUARD]) && flag&BF_WEAPON && !(skill_get_inf3(skill_id)&INF3_NO_EFF_AUTOGUARD) && rnd() % 100 < sce->val2) {
+		struct status_change_entry *sce_d = sc->data[SC_DEVOTION];
+		struct block_list *d_bl = nullptr;
+		int delay;
+
+		// different delay depending on skill level [celest]
+		if (sce->val1 <= 5)
+			delay = 300;
+		else if (sce->val1 > 5 && sce->val1 <= 9)
+			delay = 200;
+		else
+			delay = 100;
+		if (sd && pc_issit(sd))
+			pc_setstand(sd, true);
+		if (sce_d && (d_bl = map_id2bl(sce_d->val1)) &&
+			((d_bl->type == BL_MER && ((TBL_MER*)d_bl)->master && ((TBL_MER*)d_bl)->master->bl.id == target->id) ||
+			(d_bl->type == BL_PC && ((TBL_PC*)d_bl)->devotion[sce_d->val2] == target->id)) &&
+			check_distance_bl(target, d_bl, sce_d->val3))
+		{ //If player is target of devotion, show guard effect on the devotion caster rather than the target
+			clif_skill_nodamage(d_bl, d_bl, CR_AUTOGUARD, sce->val1, 1);
+			unit_set_walkdelay(d_bl, gettick(), delay, 1);
+			d->dmg_lv = ATK_MISS;
+			return false;
+		} else {
+			clif_skill_nodamage(target, target, CR_AUTOGUARD, sce->val1, 1);
+			unit_set_walkdelay(target, gettick(), delay, 1);
+			if (sc->data[SC_SHRINK] && rnd() % 100 < 5 * sce->val1)
+				skill_blown(target, src, skill_get_blewcount(CR_SHRINK, 1), -1, BLOWN_NONE);
+			d->dmg_lv = ATK_MISS;
+			return false;
+		}
+	}
+
+	if (sc->data[SC_NEUTRALBARRIER] && ((flag&(BF_LONG|BF_MAGIC)) == BF_LONG || skill_id == CR_ACIDDEMONSTRATION)) {
 		d->dmg_lv = ATK_MISS;
 		return false;
 	}
 
-	if( sc->data[SC_PNEUMA] && (d->flag&(BF_MAGIC|BF_LONG)) == BF_LONG ) {
-		d->dmg_lv = ATK_BLOCK;
+	if ((sce = sc->data[SC_LIGHTNINGWALK]) && flag&BF_LONG && rnd() % 100 < sce->val1) {
+		int dx[8] = { 0,-1,-1,-1,0,1,1,1 };
+		int dy[8] = { 1,1,0,-1,-1,-1,0,1 };
+		uint8 dir = map_calc_dir(target, src->x, src->y);
+
+		if (unit_movepos(target, src->x - dx[dir], src->y - dy[dir], 1, 1)) {
+			clif_blown(target);
+			unit_setdir(target, dir);
+		}
+		d->dmg_lv = ATK_DEF;
+		status_change_end(target, SC_LIGHTNINGWALK, INVALID_TIMER);
+		return 0;
+	}
+
+	if (sc->data[SC_HERMODE] && flag&BF_MAGIC ||
+		sc->data[SC_TATAMIGAESHI] && (flag&(BF_MAGIC | BF_LONG)) == BF_LONG)
+		return false;
+
+	// attack blocked by Parrying
+	if ((sce = sc->data[SC_PARRYING]) && flag&BF_WEAPON && skill_id != WS_CARTTERMINATION && rnd() % 100 < sce->val2) {
+		clif_skill_nodamage(target, target, LK_PARRYING, sce->val1, 1);
 		return false;
 	}
+
+	if (sc->data[SC_DODGE] && (flag&BF_LONG || sc->data[SC_SPURT]) && rnd() % 100 < 20) {
+		if (sd && pc_issit(sd))
+			pc_setstand(sd, true); //Stand it to dodge.
+		clif_skill_nodamage(target, target, TK_DODGE, 1, 1);
+		sc_start4(src, target, SC_COMBO, 100, TK_JUMPKICK, src->id, 1, 0, 2000);
+		return false;
+	}
+
+	//Kaupe blocks damage (skill or otherwise) from players, mobs, homuns, mercenaries.
+	if ((sce = sc->data[SC_KAUPE]) && rnd() % 100 < sce->val2) {
+		clif_specialeffect(target, EF_STORMKICK4, AREA);
+		//Shouldn't end until Breaker's non-weapon part connects.
+#ifndef RENEWAL
+		if (skill_id != ASC_BREAKER || !(flag&BF_WEAPON))
+#endif
+			if (--(sce->val3) <= 0) //We make it work like Safety Wall, even though it only blocks 1 time.
+				status_change_end(target, SC_KAUPE, INVALID_TIMER);
+		return false;
+	}
+
+	if (flag&BF_MAGIC && (sce = sc->data[SC_PRESTIGE]) && rnd() % 100 < sce->val2) {
+		clif_specialeffect(target, EF_STORMKICK4, AREA); // Still need confirm it.
+		return false;
+	}
+
+	if (((sce = sc->data[SC_UTSUSEMI]) || sc->data[SC_BUNSINJYUTSU]) && flag&BF_WEAPON && !(skill_get_inf3(skill_id)&INF3_NO_EFF_CICADA)) {
+		skill_additional_effect(src, target, skill_id, skill_lv, flag, ATK_BLOCK, gettick());
+		if (!status_isdead(src))
+			skill_counter_additional_effect(src, target, skill_id, skill_lv, flag, gettick());
+		if (sce) {
+			clif_specialeffect(target, EF_STORMKICK4, AREA);
+			skill_blown(src, target, sce->val3, -1, BLOWN_NONE);
+		}
+		//Both need to be consumed if they are active.
+		if (sce && --(sce->val2) <= 0)
+			status_change_end(target, SC_UTSUSEMI, INVALID_TIMER);
+		if ((sce = sc->data[SC_BUNSINJYUTSU]) && --(sce->val2) <= 0)
+			status_change_end(target, SC_BUNSINJYUTSU, INVALID_TIMER);
+		return false;
+	}
+
+	if (sc->data[SC_MEIKYOUSISUI] && rnd()%100 < 40) // custom value
+		return false;
+
 	return true;
 }
 
@@ -1095,156 +1253,15 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 		return damage; //These skills bypass everything else.
 
 	if( sc && sc->count ) { // SC_* that reduce damage to 0.
-		if( sc->data[SC_BASILICA] && !status_bl_has_mode(src,MD_STATUS_IMMUNE) ) {
-			d->dmg_lv = ATK_BLOCK;
-			return 0;
-		}
-		if( sc->data[SC_WHITEIMPRISON] ) { // Gravitation and Pressure do damage without removing the effect
-			if( skill_id == MG_NAPALMBEAT ||
-				skill_id == MG_SOULSTRIKE ||
-				skill_id == WL_SOULEXPANSION ||
-				(skill_id && skill_get_ele(skill_id, skill_lv) == ELE_GHOST) ||
-				(!skill_id && (status_get_status_data(src))->rhw.ele == ELE_GHOST) )
-			{
-				if( skill_id == WL_SOULEXPANSION )
-					damage <<= 1; // If used against a player in White Imprison, the skill deals double damage.
-				status_change_end(bl,SC_WHITEIMPRISON,INVALID_TIMER); // Those skills do damage and removes effect
-			} else {
-				d->dmg_lv = ATK_BLOCK;
-				return 0;
-			}
-		}
-
-		if( sc->data[SC_ZEPHYR] && !(flag&BF_MAGIC && skill_id) && !(skill_get_inf(skill_id)&(INF_GROUND_SKILL|INF_SELF_SKILL)) ) {
-			d->dmg_lv = ATK_BLOCK;
-			return 0;
-		}
-
 		if (!battle_check_sc(src, bl, sc, d, damage, skill_id, skill_lv))
 			return 0;
 
-		if (sc->data[SC__MANHOLE] || (src->type == BL_PC && sc->data[SC_KINGS_GRACE])) {
-			d->dmg_lv = ATK_BLOCK;
-			return 0;
-		}
-
-		if( sc->data[SC_WEAPONBLOCKING] && flag&(BF_SHORT|BF_WEAPON) && rnd()%100 < sc->data[SC_WEAPONBLOCKING]->val2 ) {
-			clif_skill_nodamage(bl,src,GC_WEAPONBLOCKING,sc->data[SC_WEAPONBLOCKING]->val1,1);
-			sc_start2(src,bl,SC_COMBO,100,GC_WEAPONBLOCKING,src->id,skill_get_time2(GC_WEAPONBLOCKING,sc->data[SC_WEAPONBLOCKING]->val1));
-			d->dmg_lv = ATK_BLOCK;
-			return 0;
-		}
-
-		if( (sce = sc->data[SC_AUTOGUARD]) && flag&BF_WEAPON && !(skill_get_inf3(skill_id)&INF3_NO_EFF_AUTOGUARD) && rnd()%100 < sce->val2) {
-			int delay;
-			struct status_change_entry *sce_d = sc->data[SC_DEVOTION];
-			struct block_list *d_bl = NULL;
-
-			// different delay depending on skill level [celest]
-			if (sce->val1 <= 5)
-				delay = 300;
-			else if (sce->val1 > 5 && sce->val1 <= 9)
-				delay = 200;
-			else
-				delay = 100;
-			if (sd && pc_issit(sd))
-				pc_setstand(sd, true);
-			if( sce_d && (d_bl = map_id2bl(sce_d->val1)) &&
-				((d_bl->type == BL_MER && ((TBL_MER*)d_bl)->master && ((TBL_MER*)d_bl)->master->bl.id == bl->id) ||
-				(d_bl->type == BL_PC && ((TBL_PC*)d_bl)->devotion[sce_d->val2] == bl->id)) &&
-				check_distance_bl(bl,d_bl,sce_d->val3) )
-			{ //If player is target of devotion, show guard effect on the devotion caster rather than the target
-				clif_skill_nodamage(d_bl,d_bl,CR_AUTOGUARD,sce->val1,1);
-				unit_set_walkdelay(d_bl,gettick(),delay,1);
-				d->dmg_lv = ATK_MISS;
-				return 0;
-			} else {
-				clif_skill_nodamage(bl,bl,CR_AUTOGUARD,sce->val1,1);
-				unit_set_walkdelay(bl,gettick(),delay,1);
-				if( sc->data[SC_SHRINK] && rnd()%100 < 5 * sce->val1 )
-					skill_blown(bl,src,skill_get_blewcount(CR_SHRINK,1),-1,BLOWN_NONE);
-				d->dmg_lv = ATK_MISS;
-				return 0;
-			}
-		}
-
-		if( (sce = sc->data[SC_MILLENNIUMSHIELD]) && sce->val2 > 0 && damage > 0 ) {
-			sce->val3 -= (int)cap_value(damage,INT_MIN,INT_MAX); // absorb damage
-			d->dmg_lv = ATK_BLOCK;
-			if( sce->val3 <= 0 ) { // Shield Down
-				sce->val2--;
-				if( sce->val2 >= 0 ) {
-					clif_millenniumshield(bl,sce->val2);
-					if( !sce->val2 )
-						status_change_end(bl,SC_MILLENNIUMSHIELD,INVALID_TIMER); // All shields down
-					else
-						sce->val3 = 1000; // Next shield
-				}
-				status_change_start(src,bl,SC_STUN,10000,0,0,0,0,1000,SCSTART_NOTICKDEF);
-			}
-			return 0;
-		}
-
-		// attack blocked by Parrying
-		if( (sce = sc->data[SC_PARRYING]) && flag&BF_WEAPON && skill_id != WS_CARTTERMINATION && rnd()%100 < sce->val2 ) {
-			clif_skill_nodamage(bl, bl, LK_PARRYING, sce->val1,1);
-			return 0;
-		}
-
-		if (sc->data[SC_DODGE] && (flag&BF_LONG || sc->data[SC_SPURT]) && rnd() % 100 < 20) {
-			if (sd && pc_issit(sd))
-				pc_setstand(sd, true); //Stand it to dodge.
-			clif_skill_nodamage(bl, bl, TK_DODGE, 1, 1);
-			sc_start4(src, bl, SC_COMBO, 100, TK_JUMPKICK, src->id, 1, 0, 2000);
-			return 0;
-		}
-
-		if(sc->data[SC_HERMODE] && flag&BF_MAGIC)
-			return 0;
-
-		if(sc->data[SC_TATAMIGAESHI] && (flag&(BF_MAGIC|BF_LONG)) == BF_LONG)
-			return 0;
-
-		//Kaupe blocks damage (skill or otherwise) from players, mobs, homuns, mercenaries.
-		if ((sce = sc->data[SC_KAUPE]) && rnd()%100 < sce->val2) {
-			clif_specialeffect(bl, EF_STORMKICK4, AREA);
-			//Shouldn't end until Breaker's non-weapon part connects.
-#ifndef RENEWAL
-			if (skill_id != ASC_BREAKER || !(flag&BF_WEAPON))
-#endif
-				if (--(sce->val3) <= 0) //We make it work like Safety Wall, even though it only blocks 1 time.
-					status_change_end(bl, SC_KAUPE, INVALID_TIMER);
-			return 0;
-		}
-
+		// Damage increasing effects
 #ifdef RENEWAL // Flat +400% damage from melee
 		if (sc->data[SC_KAITE] && (flag&(BF_SHORT|BF_MAGIC)) == BF_SHORT)
 			damage <<= 2;
 #endif
 
-		if( flag&BF_MAGIC && (sce=sc->data[SC_PRESTIGE]) && rnd()%100 < sce->val2) {
-			clif_specialeffect(bl, EF_STORMKICK4, AREA); // Still need confirm it.
-			return 0;
-		}
-
-		if (((sce = sc->data[SC_UTSUSEMI]) || sc->data[SC_BUNSINJYUTSU]) && flag&BF_WEAPON && !(skill_get_inf3(skill_id)&INF3_NO_EFF_CICADA)) {
-			skill_additional_effect (src, bl, skill_id, skill_lv, flag, ATK_BLOCK, gettick() );
-			if (!status_isdead(src))
-				skill_counter_additional_effect( src, bl, skill_id, skill_lv, flag, gettick() );
-			if (sce) {
-				clif_specialeffect(bl, EF_STORMKICK4, AREA);
-				skill_blown(src,bl,sce->val3,-1,BLOWN_NONE);
-			}
-			//Both need to be consumed if they are active.
-			if (sce && --(sce->val2) <= 0)
-				status_change_end(bl, SC_UTSUSEMI, INVALID_TIMER);
-			if ((sce = sc->data[SC_BUNSINJYUTSU]) && --(sce->val2) <= 0)
-				status_change_end(bl, SC_BUNSINJYUTSU, INVALID_TIMER);
-
-			return 0;
-		}
-
-		//Now damage increasing effects
 		if (sc->data[SC_AETERNA] && skill_id != PF_SOULBURN) {
 			if (src->type != BL_MER || !skill_id)
 				damage <<= 1; // Lex Aeterna only doubles damage of regular attacks from mercenaries
@@ -1315,9 +1332,8 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 			}
 		}
 
-		// Damage reductions
-		// Assumptio doubles the def & mdef on RE mode, otherwise gives a reduction on the final damage. [Igniz]
-#ifndef RENEWAL
+		// Damage reduction effects
+#ifndef RENEWAL // Assumptio doubles the DEF & MDEF in renewal, otherwise gives a reduction on the final damage. [Igniz]
 		if( sc->data[SC_ASSUMPTIO] ) {
 			if( map_flag_vs(bl->m) )
 				damage = (int64)damage*2/3; //Receive 66% damage
@@ -1486,25 +1502,8 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 				status_change_end(bl, SC_TUNAPARTY, INVALID_TIMER);
 		}
 
-		if( sc->data[SC_MEIKYOUSISUI] && rnd()%100 < 40 ) // custom value
-			damage = 0;
-
 		if (!damage)
 			return 0;
-
-		if( (sce = sc->data[SC_LIGHTNINGWALK]) && flag&BF_LONG && rnd()%100 < sce->val1 ) {
-			int dx[8] = { 0,-1,-1,-1,0,1,1,1 };
-			int dy[8] = { 1,1,0,-1,-1,-1,0,1 };
-			uint8 dir = map_calc_dir(bl, src->x, src->y);
-
-			if( unit_movepos(bl, src->x-dx[dir], src->y-dy[dir], 1, 1) ) {
-				clif_blown(bl);
-				unit_setdir(bl, dir);
-			}
-			d->dmg_lv = ATK_DEF;
-			status_change_end(bl, SC_LIGHTNINGWALK, INVALID_TIMER);
-			return 0;
-		}
 
 		if( sd && (sce = sc->data[SC_FORCEOFVANGUARD]) && flag&BF_WEAPON && rnd()%100 < sce->val2 )
 			pc_addspiritball(sd,skill_get_time(LG_FORCEOFVANGUARD,sce->val1),sce->val3);
@@ -4686,6 +4685,13 @@ struct Damage battle_attack_sc_bonus(struct Damage wd, struct block_list *src, s
 			RE_ALLATK_ADDRATE(wd, sc->data[SC_GVG_GIANT]->val3);
 		}
 
+		if (!skill_id) {
+			if (sc->data[SC_EXEEDBREAK]) {
+				ATK_ADDRATE(wd.damage, wd.damage2, sc->data[SC_EXEEDBREAK]->val2);
+				RE_ALLATK_ADDRATE(wd, sc->data[SC_EXEEDBREAK]->val2);
+			}
+		}
+
 		if (sc->data[SC_MIRACLE])
 			anger_id = 2; // Always treat all monsters as star flagged monster when in miracle state
 	}
@@ -7392,11 +7398,8 @@ enum damage_lv battle_weapon_attack(struct block_list* src, struct block_list* t
 		vanish_damage = battle_vanish(sd, target, &wd);
 
 	if( sc && sc->count ) {
-		if (sc->data[SC_EXEEDBREAK]) {
-			if (!is_infinite_defense(target, wd.flag) && !vanish_damage)
-				wd.damage *= sc->data[SC_EXEEDBREAK]->val2 / 100;
+		if (sc->data[SC_EXEEDBREAK])
 			status_change_end(src, SC_EXEEDBREAK, INVALID_TIMER);
-		}
 		if( sc->data[SC_SPELLFIST] ) {
 			if( --(sc->data[SC_SPELLFIST]->val1) >= 0 && !vanish_damage ){
 				if (!is_infinite_defense(target, wd.flag)) {
