@@ -662,6 +662,7 @@ struct Battle_Config
 	int feature_privateairship;
 	int homunculus_exp_gain;
 	int rental_transaction;
+	int feature_equipswitch;
 
 #include "../custom/battle_config_struct.inc"
 };

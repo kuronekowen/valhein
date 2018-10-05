@@ -8638,6 +8638,7 @@ static const struct _battle_data {
 	{ "feature.privateairship",             &battle_config.feature_privateairship,          1,      0,      1,              },
 	{ "homunculus_exp_gain",                &battle_config.homunculus_exp_gain,             10,     0,      100,            },
 	{ "rental_transaction",                 &battle_config.rental_transaction,              1,      0,      1,              },
+	{ "feature.equipswitch",                &battle_config.feature_equipswitch,             1,      0,      1,              },
 
 #include "../custom/battle_config_init.inc"
 };
@@ -8776,6 +8777,13 @@ void battle_adjust_conf()
 	if (battle_config.feature_pet_auto_feed) {
 		ShowWarning("conf/battle/feature.conf pet auto feed is enabled but it requires PACKETVER 2014-10-08 or newer, disabling...\n");
 		battle_config.feature_pet_auto_feed = 0;
+	}
+#endif
+
+#if PACKETVER < 20170208
+	if (battle_config.feature_equipswitch) {
+		ShowWarning("conf/battle/feature.conf equip switch is enabled but it requires PACKETVER 2017-02-08 or newer, disabling...\n");
+		battle_config.feature_equipswitch = 0;
 	}
 #endif
 
