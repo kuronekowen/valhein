@@ -90,6 +90,7 @@
 0,28916,60  //,Gaia Shield
 0,1449,100  //,Gelerdia
 0,28521,100  //,Giant's Protection
+0,2204,100	//,Glasses []
 0,18787,60  //,Goal Tender Mask
 0,5475,60  //,Gozarian hat
 0,22172,150  //,Gray Wing Boots
@@ -188,6 +189,7 @@
 0,19114,60  //,Sting Silk Ribbon
 0,28506,100  //,Storm Stone
 0,19137,100  //,Strawberry Mouth Guard
+0,2202,100	//,Sunglasses []
 0,19020,200  //,Survive Circlet
 0,19139,300  //,Survive Orb
 0,22170,200  //,Survivor's Shoes
@@ -253,6 +255,9 @@
 1,12922,130
 1,7621,15
 
+// Egg
+3,12641,50
+
 //Other
 7,12920,90
 7,12921,90
@@ -279,8 +284,6 @@
 4,5564,20
 4,5367,20
 4,5325,20
-4,2202,100
-4,2204,100
 4,5305,20
 4,5137,40
 4,5359,20

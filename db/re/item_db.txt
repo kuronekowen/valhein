@@ -6901,7 +6901,7 @@
 12638,Dried_Squid_Box,Dried Squid Box,2,20,,2000,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 13292,200; },{},{}
 12639,Flying_Fish_Box,Flying Fish Box,2,20,,2000,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 13293,200; },{},{}
 12640,Starfish_Box,Starfish Box,2,20,,500,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 13291,200; },{},{}
-12641,Lucky_Egg_C8,Lucky Egg C8,2,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getgroupitem(IG_Lucky_Egg_C8); },{},{}
+12641,Lucky_Egg_C8,Abyss Egg,2,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getgroupitem(IG_Lucky_Egg_C8); },{},{}
 12642,Fruit_Of_Mastela_Box2,Fruit Of Mastela 100 Box,2,0,,0,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 522,100; },{},{}
 12643,E_Coin_Pack50,E Coin Pack50,2,0,,0,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 6422,50; },{},{}
 12644,PCBang_Coupon_Box4,PCBang Coupon Box4,2,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
@@ -12812,3 +12812,4 @@
 31623,Costume_Poporing_Muffler,Costume Poporing Muffler,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1797,{},{},{}
 31624,Costume_Bikeman_Helmet,Costume Bikeman Helmet,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1798,{},{},{}
 32005,Illusion_Pole_Axe,Illusion Pole Axe,5,0,,1500,190,,3,2,0x00004082,63,2,2,4,120,1,4,{ .@r = getrefine(); bonus bStr,3; bonus bInt,2; bonus bDex,2; if (.@r >= 13) { .@val = -2000; } else if (.@r >= 9) { .@val = -1000; } bonus2 bSkillCooldown,"RK_HUNDREDSPEAR",.@val; },{},{}
+40100,Saltz,Saltz,3,20,,0,,,,,,,,,,,,,{},{},{}
