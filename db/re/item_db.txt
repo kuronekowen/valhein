@@ -6901,7 +6901,7 @@
 12638,Dried_Squid_Box,Dried Squid Box,2,20,,2000,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 13292,200; },{},{}
 12639,Flying_Fish_Box,Flying Fish Box,2,20,,2000,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 13293,200; },{},{}
 12640,Starfish_Box,Starfish Box,2,20,,500,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 13291,200; },{},{}
-12641,Lucky_Egg_C8,Abyss Egg,2,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getgroupitem(IG_Lucky_Egg_C8); },{},{}
+12641,Lucky_Egg_C8,Abyss Egg,2,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ callfunc "Abyss Egg"; },{},{}
 12642,Fruit_Of_Mastela_Box2,Fruit Of Mastela 100 Box,2,0,,0,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 522,100; },{},{}
 12643,E_Coin_Pack50,E Coin Pack50,2,0,,0,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 6422,50; },{},{}
 12644,PCBang_Coupon_Box4,PCBang Coupon Box4,2,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}

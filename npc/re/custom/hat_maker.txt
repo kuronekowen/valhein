@@ -28,7 +28,7 @@
 //============================================================
 prontera,164,172,3	script	เควสหมวก	58,{ callfunc "qshop",1; }
 prontera,164,169,3	script	เควส Shadow Costume	852,{ callfunc "qshop",2,3,4,5; }
-prontera,139,179,6	script	เกลือแลกของ	840,{ callfunc "qshop",6; }	// call the shop 1 and 2 defined below
+prontera,139,179,6	script	เกลือแลกของ	840,{ callfunc "qshop",6; }
 // etc.. Add your Shop NPCs 'Quest Shop#XXX' here
 //============================================================
 
@@ -73,8 +73,8 @@ OnInit:
 		"Shadow Maker (Class1)",		// Shadow Maker
 		"Shadow Maker (Class2)",
 		"Shadow Maker (Class3)",
-		"Shadow Maker (Extend)",		// Shop Named 3
-		"Salt shop";	//ร้านเกลือ
+		"Shadow Maker (Extend)",
+		"Salt shop";
 
 // -----------------------------------------------------------
 //  Quest items -- do NOT use a reward item more than once!
@@ -677,3 +677,6 @@ function	script	qshop	{
 -	shop	qshop3	-1,909:-1
 -	shop	qshop4	-1,909:-1
 -	shop	qshop5	-1,909:-1
+-	shop	qshop6	-1,909:-1
+-	shop	qshop7	-1,909:-1
+-	shop	qshop8	-1,909:-1
