@@ -4,10 +4,6 @@ set .@rare,0;
 	if(.@t <= 75) { // 75% to get Tier 1
 		mes "·èÒ¹ä´éÃÒ§ÇÑÅÃĞ´Ñº Common";
 		setarray .@item[0],40100, // Saltz
-						   40100, // Saltz
-						   40100, // Saltz
-						   12902, // Bubble Gum Box
-						   13600; // Token 5 box
 		close2; 
 	}					   
 	else if(.@t > 75 && .@t <= 97) { // 23% to get Tier 2
