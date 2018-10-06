@@ -165,7 +165,7 @@ ein_d02_i,27,260,4	script	Teddy Lover	96,{
 							next;
 							mes "Weww It's looking good equipment!";
 							delequip EQI_SHOES;
-							delitem 25271,95;
+							delitem 25271,85;
 							delitem 25616,50;
 							delitem 25618,50;
 							getitem 22190,1;
