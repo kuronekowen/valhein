@@ -10123,7 +10123,7 @@
 19536,C_Rose_Corsage,Costume Rose Corsage,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,533,{ bonus bUnbreakableHelm; bonus bInt,1; },{},{}
 19537,C_Gryphon_Hat,Costume Gryphon Hat,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,591,{ bonus bUnbreakableHelm; },{},{}
 19538,Full_Moon,Full Moon,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,780,{},{},{}
-19539,C_Reginleif_Hairband,Costume Hairband Of Reginleif,4,20,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,468,{ bonus bAllStats,1; },{},{}
+19539,C_Reginleif_Hairband,Costume Hairband Of Reginleif,4,20,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,468,{},{},{}
 19540,C_Rabbit_Earplug,Costume Rabbit Earplugs,4,20,,0,,0,,0,0xFFFFFFFF,63,2,7168,,1,0,515,{ bonus bAgi,1; bonus bFlee,2; },{},{}
 19541,C_Romantic_White_Flower,Costume Romantic White Flower,4,20,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,259,{ bonus bUnbreakableHelm; },{},{}
 19542,C_Devil_Whisper,Costume Devil Whisper,4,20,,0,,0,,0,0xFFFFFFFF,63,2,2048,,1,0,712,{ bonus bUnbreakableHelm; bonus2 bSubRace,RC_Angel,1; bonus2 bSubRace,RC_Demon,1; bonus3 bAddMonsterDropItem,523,RC_Angel,400; bonus3 bAddMonsterDropItem,12020,RC_Demon,400; },{},{}
@@ -10253,7 +10253,7 @@
 19666,C_Cookie_Hat,Costume Cookie Hat,4,20,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,217,{ bonus2 bAddItemHealRate,513,1100; },{},{}
 19667,C_Dragon_Helm,Costume Dragon Helm,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,1,464,{},{},{}
 19668,C_Wind_Milestone,Costume Wind Milestone,4,10,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,1,463,{},{},{}
-19669,C_Reginleif_Hairband_,Costume Reginleif Hairband,4,0,,0,,0,,0,0xFFFFFFFF,63,2,2048,,1,1,214,{},{},{}
+19669,C_Reginleif_Hairband_,Costume Reginleif Hairband,4,0,,0,,0,,0,0xFFFFFFFF,63,2,2048,,1,1,468,{},{},{}
 19670,C_Southern_Cross,Costume Southern Cross,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,1,601,{},{},{}
 19671,C_Piggie_Bank,Costume Piggie Bank,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,1,603,{},{},{}
 19672,Costume_Poring_Letter,Costume Poring Letter,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,604,{},{},{}
