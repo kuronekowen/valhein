@@ -181,7 +181,7 @@ eStart:            specialeffect2 EF_REPAIRWEAPON;
                                     set .@equip_refine, getequiprefinerycnt(EQI_GARMENT);
 									
                                     setarray .@equip_card[0], getequipcardid(EQI_GARMENT,0),getequipcardid(EQI_GARMENT,1),getequipcardid(EQI_GARMENT,2);
-                                    getitem2 .@,1,1,.@equip_refine,0,.@equip_card[0],.@equip_card[1],.@equip_card[2],.@enchant; //Archangel_Wing
+                                    getitem2 .@fallen_type,1,1,.@equip_refine,0,.@equip_card[0],.@equip_card[1],.@equip_card[2],.@enchant; //Archangel_Wing
                             }
                         else { //second slot array
                             set .@equip_refine, getequiprefinerycnt(EQI_GARMENT);
