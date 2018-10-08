@@ -3709,9 +3709,9 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 					}
 				}
 				break;
-			case WM_METALICSOUND:
+			/*case WM_METALICSOUND:
 				status_zap(bl, 0, damage*100/(100*(110-((sd) ? pc_checkskill(sd,WM_LESSON) : skill_get_max(WM_LESSON))*10)));
-				break;
+				break;*/
 			case SR_TIGERCANNON:
 				status_zap(bl, 0, damage * 10 / 100);
 				break;

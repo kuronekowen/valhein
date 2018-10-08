@@ -3451,8 +3451,8 @@ static struct Damage battle_calc_multi_attack(struct Damage wd, struct block_lis
 
 	switch (skill_id) {
 		case RA_AIMEDBOLT:
-			if( tsc && (tsc->data[SC_BITE] || tsc->data[SC_ANKLE] || tsc->data[SC_ELECTRICSHOCKER]) )
-				wd.div_ = tstatus->size + 2 + ( (rnd()%100 < 50-tstatus->size*10) ? 1 : 0 );
+			//if( tsc && (tsc->data[SC_BITE] || tsc->data[SC_ANKLE] || tsc->data[SC_ELECTRICSHOCKER]) )
+			wd.div_ = tstatus->size + 2 + ( (rnd()%100 < 50-tstatus->size*10) ? 1 : 0 );
 			break;
 		case RL_QD_SHOT:
 			wd.div_ = 1 + (sd ? sd->status.job_level : 1) / 20 + (tsc && tsc->data[SC_C_MARKER] ? 2 : 0);
@@ -3956,7 +3956,7 @@ static int battle_calc_attack_skill_ratio(struct Damage wd, struct block_list *s
 			RE_LVL_DMOD(100);
 			break;
 		case RA_AIMEDBOLT:
-			skillratio += 400 + 50 * skill_lv;
+			skillratio += 500 + 20 * skill_lv;
 			RE_LVL_DMOD(100);
 			break;
 		case RA_CLUSTERBOMB:
@@ -4139,9 +4139,14 @@ static int battle_calc_attack_skill_ratio(struct Damage wd, struct block_list *s
 			break;
 		case SR_FALLENEMPIRE:
 			// ATK [(Skill Level x 150 + 100) x Caster Base Level / 150] %
-			skillratio += 150 * skill_lv;
+			skillratio += 250 * skill_lv + status_get_str(src) + status_get_dex(src);
+			switch( tstatus->size ) {
+				case SZ_SMALL: skillratio += skillratio; // Small
+				case SZ_MEDIUM: skillratio += skillratio * 120 / 100; // Medium
+				case SZ_BIG: skillratio += skillratio * 140 / 100; // Large
+			}
 			RE_LVL_DMOD(150);
- 			break;
+			break;
 		case SR_TIGERCANNON:
 			{
 				unsigned int hp = sstatus->max_hp * abs(skill_get_hp_rate(skill_id, skill_lv)) / 100,
@@ -5961,7 +5966,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case MG_COLDBOLT:
 					case MG_LIGHTNINGBOLT:
 						if (sc && sc->data[SC_SPELLFIST] && mflag&BF_SHORT)  {
-							skillratio += (sc->data[SC_SPELLFIST]->val4 * 100) + (sc->data[SC_SPELLFIST]->val1 * 50) - 100;// val4 = used bolt level, val2 = used spellfist level. [Rytech]
+							skillratio += (sc->data[SC_SPELLFIST]->val4 * 100) + (sc->data[SC_SPELLFIST]->val2 * 50) - 100;// val4 = used bolt level, val2 = used spellfist level. [Rytech]
 							ad.div_ = 1; // ad mods, to make it work similar to regular hits [Xazax]
 							ad.flag = BF_WEAPON|BF_SHORT;
 							ad.type = DMG_NORMAL;
