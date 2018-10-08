@@ -775,9 +775,9 @@ OnTimer22000:
 OnTimer23000:
 	set .@map$, instance_mapname(strnpcinfo(4),  instance_id());
 	set .@label$, instance_npcname("#step34_00p", instance_id())+"::OnMyMobDead";
-	areamonster .@map$,HIDDEN_WARP_NPC,219,151,207,"L-TYPE",3128,2,.@label$;
-	areamonster .@map$,HIDDEN_WARP_NPC,219,151,207,"O-TYPE",3128,2,.@label$;
-	areamonster .@map$,HIDDEN_WARP_NPC,219,151,207,"B-TYPE",3126,1,.@label$;
+	areamonster .@map$,HIDDEN_WARP_NPC,219,151,207,"L-TYPE",3128,1,.@label$;
+	areamonster .@map$,HIDDEN_WARP_NPC,219,151,207,"O-TYPE",3128,1,.@label$;
+	areamonster .@map$,HIDDEN_WARP_NPC,219,151,207,"B-TYPE",3126,3,.@label$;
 	end;
 OnTimer25000:
 	donpcevent instance_npcname("Charleston No.2#1_00p", instance_id()) + "::OnChat5";
@@ -822,9 +822,9 @@ OnTimer41000:
 OnTimer44000:
 	set .@map$, instance_mapname(strnpcinfo(4),  instance_id());
 	set .@label$, instance_npcname("#step34_00p", instance_id())+"::OnMyMobDead2";
-	areamonster .@map$,HIDDEN_WARP_NPC,219,151,207,"C-TYPE",3128,2,.@label$;
-	areamonster .@map$,HIDDEN_WARP_NPC,219,151,207,"N-TYPE",3126,2,.@label$;
-	areamonster .@map$,HIDDEN_WARP_NPC,219,151,207,"T-TYPE",3128,2,.@label$;
+	areamonster .@map$,HIDDEN_WARP_NPC,219,151,207,"C-TYPE",3128,1,.@label$;
+	areamonster .@map$,HIDDEN_WARP_NPC,219,151,207,"N-TYPE",3126,4,.@label$;
+	areamonster .@map$,HIDDEN_WARP_NPC,219,151,207,"T-TYPE",3128,1,.@label$;
 	monster .@map$,144,218,"N-TYPE",3127,1,.@label$;
 	set .MyMobs,7;
 	end;
