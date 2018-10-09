@@ -9104,6 +9104,13 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		}
 		break;
 	case RK_IGNITIONBREAK:
+			clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, skill_id, skill_lv, DMG_SKILL);
+			i = skill_get_splash(skill_id,skill_lv);
+			map_foreachinrange(skill_area_sub, bl,i,BL_CHAR,
+				src,skill_id,skill_lv,tick,flag|BCT_ENEMY|1,skill_castend_damage_id);
+			clif_soundeffectall(src,"effect\\wl_jackfrost.wav",0,AREA);
+			clif_specialeffect(src,722,AREA);
+		break;
 	case LG_EARTHDRIVE:
 			clif_skill_damage(src,bl,tick, status_get_amotion(src), 0, -30000, 1, skill_id, skill_lv, DMG_SKILL);
 			i = skill_get_splash(skill_id,skill_lv);
