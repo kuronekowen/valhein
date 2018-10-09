@@ -12813,3 +12813,4 @@
 31624,Costume_Bikeman_Helmet,Costume Bikeman Helmet,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1798,{},{},{}
 32005,Illusion_Pole_Axe,Illusion Pole Axe,5,0,,1500,190,,3,2,0x00004082,63,2,2,4,120,1,4,{ .@r = getrefine(); bonus bStr,3; bonus bInt,2; bonus bDex,2; if (.@r >= 13) { .@val = -2000; } else if (.@r >= 9) { .@val = -1000; } bonus2 bSkillCooldown,"RK_HUNDREDSPEAR",.@val; },{},{}
 40100,Saltz,Saltz,3,20,,0,,,,,,,,,,,,,{},{},{}
+40101,Magic_Tournament_Egg,Magic Tournament Egg,2,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ callfunc "Magic Egg"; },{},{}

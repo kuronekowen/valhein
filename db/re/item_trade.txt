@@ -3932,3 +3932,4 @@
 31141,403,100	// C_Rose_Corsage_
 31143,403,100	// Costume_Krathong_Crown
 40100,9,100	// Saltz
+40101,475,100	// Magic_Tournament_Egg
