@@ -1224,7 +1224,7 @@
 //===================================================================
 // Whips
 //===================================================================
-1944,Hippie_Guitar,Hippie Guitar,5,20,,1000,140,,2,2,0x00080000,56,1,2,3,100,1,13,{ .@r = getrefine(); bonus bAspdRate,getskilllv("BA_MUSICALLESSON"); if (.@r>=7) bonus bAtkRate,5*getskilllv("BA_MUSICALLESSON"); if (.@r>=9) bonus baspd,1; },{},{}
+1944,Hippie_Guitar,Hippie Guitar,5,20,,1000,140,,2,2,0x00080000,56,1,2,3,100,1,13,{ .@r = getrefine(); bonus bAspdRate,getskilllv("BA_MUSICALLESSON"); if (.@r>=7) bonus bbaseatk,5*getskilllv("BA_MUSICALLESSON"); if (.@r>=9) bonus baspd,1; },{},{}
 1950,Rope,Rope,5,2500,,400,45,,2,3,0x00080000,63,0,2,1,3,1,14,{},{},{}
 1951,Rope_,Rope,5,2500,,400,45,,2,4,0x00080000,63,0,2,1,3,1,14,{},{},{}
 1952,Line,Whip,5,12000,,300,80,,2,2,0x00080000,63,0,2,2,16,1,14,{},{},{}
@@ -12814,3 +12814,5 @@
 32005,Illusion_Pole_Axe,Illusion Pole Axe,5,0,,1500,190,,3,2,0x00004082,63,2,2,4,120,1,4,{ .@r = getrefine(); bonus bStr,3; bonus bInt,2; bonus bDex,2; if (.@r >= 13) { .@val = -2000; } else if (.@r >= 9) { .@val = -1000; } bonus2 bSkillCooldown,"RK_HUNDREDSPEAR",.@val; },{},{}
 40100,Saltz,Saltz,3,20,,0,,,,,,,,,,,,,{},{},{}
 40101,Magic_Tournament_Egg,Magic Tournament Egg,2,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ callfunc "Magic Egg"; },{},{}
+40102,Magic_Particle,Magic Particle,3,20,,0,,,,,,,,,,,,,{},{},{}
+40103,Geffen_Card_Album,Geffen Card Album,2,10,,100,,,,0,0xFFFFFFFF,63,2,,,1,,,{ getitem callfunc("F_Rand",27249,27250,27251,27252,27253,27254,27255,27256,27257,27258,27259,27260,27261,27262,27263),1; },{},{}

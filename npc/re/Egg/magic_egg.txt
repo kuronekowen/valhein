@@ -3,24 +3,28 @@ set .@rare,0;
 	set .@t,rand(1,100);
 	if(.@t <= 77) { // 77% to get Tier 1
 		mes "ท่านได้รางวัลระดับ Common";
-		setarray .@item[0],40100; // Saltz
+		setarray .@item[0],40102, // Magic Particle
+						   40100, // Salt
+						   40100, // Salt
+						   40100, // Salt
+						   40100; // Salt
 		close2; 
 	}					   
-	else if(.@t > 77 && .@t <= 97) { // 10% to get Tier 2
+	else if(.@t > 77 && .@t <= 97) { // 20% to get Tier 2
 		mes "ท่านได้รางวัลระดับ Rare";
-		setarray .@item[0],12412, // HE Bubble Gum
-						   12412, // HE Bubble Gum
-						   12921, // Enrich Ori 10 box
-						   12921, // Enrich Ori 10 box
-						   12920, // Enrich Elu 10 box
-						   12920; // Enrich Elu 10 box
+		setarray .@item[0],12412, // Geffen Card Album
+						   12412, // Geffen Card Album
+						   12412, // Geffen Card Album
+						   27261, // Ju card
+						   27262, // Dwight
+						   27263; // Fay kanavian
 		close2; 
 	}				   
 	else if(.@t > 97) { // 3% to get Tier 3
 		mes "ท่านได้รางวัลระดับ Ultra Rare";
-		setarray .@item[0],40001, // New Battle Surcoat
-						   28594, // Temporal Ring
-						   15204; // Abyss Dress
+		setarray .@item[0],15352, // Nature Dress
+						   4556, // Fenrir Card
+						   40002; // New Spartacus
 		set .@rare,1;
 		close2; 
 	}

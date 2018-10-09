@@ -662,7 +662,7 @@ dali,100,147,3	script	Dimensional Device#gefma	PORTAL,{
 								end;
 							case 0:
 								mapannounce "dali02",strcharinfo(0)+" of the party, "+.@p_name$+" is entering the "+.@md_name$+".",bc_map,"0x00ff99";
-								GeffenTournament = gettimetick(2) + 82800;
+								GeffenTournament = gettimetick(2) + 14400;
 								if(.@ins_geffen_time != -1) erasequest 9316;
 								setquest 9316;
 								end;

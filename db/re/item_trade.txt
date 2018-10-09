@@ -1438,7 +1438,7 @@
 12638,475,100	// Dried_Squid_Box
 12639,475,100	// Flying_Fish_Box
 12640,475,100	// Starfish_Box
-12641,475,100	// Lucky_Egg_C8
+12641,473,100	// Lucky_Egg_C8
 12642,475,100	// Fruit_Of_Mastela_Box2
 12644,475,100	// PCBang_Coupon_Box4
 12645,475,100	// J_Aspersio_5_Scroll_C
@@ -3932,4 +3932,6 @@
 31141,403,100	// C_Rose_Corsage_
 31143,403,100	// Costume_Krathong_Crown
 40100,9,100	// Saltz
-40101,475,100	// Magic_Tournament_Egg
+40101,473,100	// Magic_Tournament_Egg
+40102,9,100	// Magic_Particle
+40103,472,100	// Geffen_Card_Album
