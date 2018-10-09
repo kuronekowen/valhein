@@ -6192,6 +6192,8 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						RE_LVL_DMOD(100);
 						break;
 					case LG_RAYOFGENESIS:
+						if(sc->data[SC_INSPIRATION])
+								skillratio += 1000;
 						skillratio += -100 + 200 * skill_lv;
 						skillratio = skillratio * ((sd) ? sd->status.job_level / 25 : 1);
 						RE_LVL_DMOD(100);

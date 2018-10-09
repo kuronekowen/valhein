@@ -4768,7 +4768,6 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case LG_BANISHINGPOINT:
 	case LG_SHIELDPRESS:
 	case LG_RAGEBURST:
-	case LG_RAYOFGENESIS:
 	case LG_HESPERUSLIT:
 	case LG_OVERBRAND:
 	case LG_OVERBRAND_BRANDISH:
@@ -5299,6 +5298,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 	case WZ_EARTHSPIKE:
 	case AL_HEAL:
 	case NPC_DARKTHUNDER:
+	case LG_RAYOFGENESIS:
 	case PR_ASPERSIO:
 	case MG_FROSTDIVER:
 	case WZ_SIGHTBLASTER:
