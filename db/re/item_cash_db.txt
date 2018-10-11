@@ -107,6 +107,7 @@
 0,15102,60  //,Hunter Mail
 0,28491,60  //,Hunting Knife
 0,32204,300  //,Immortal Dog Tag
+0,2168,400	//,Immune Shield
 0,18823,250  //,Imperial Feather
 0,28551,100  //,Imperial Glove
 0,2153,100  //,Imperial Guard
@@ -256,8 +257,8 @@
 1,7621,15
 
 // Egg
-3,12641,50
-3,40101,50
+3,12641,25
+3,40101,25
 
 //Other
 7,12920,90
