@@ -11952,6 +11952,18 @@
 27124,Jaguar_Card,Jaguar Card,6,20,,10,,,,,,,,769,,,,,{ .@val = 10; if (getrefine() >= 9) { .@val += 5; } bonus2 bMagicAddRace,RC_Brute,.@val; },{},{}
 27125,Headless_Mule_Card,Headless Mule Card,6,20,,10,,,,,,,,136,,,,,{ bonus2 bMagicAtkEle,Ele_Water,20; bonus2 bMagicAtkEle,Ele_Holy,20; },{},{}
 27126,Boitata_Card,Boitata Card,6,20,,10,,,,,,,,16,,,,,{ bonus2 bAddEle,Ele_Wind,40; bonus2 bAddEle,Ele_Earth,40; bonus2 bAddRace,RC_Brute,40; bonus2 bAddRace,RC_Insect,40; },{},{}
+27129,Justice_Card,Justice Card,6,20,,10,,,,,,,,1023,,,,,{ .@r = getrefine(); bonus2 bSkillAtk,"RK_HUNDREDSPEAR",5+.@r; if (.@r>=10) bonus2 bSkillAtk,"RK_HUNDREDSPEAR",5; },{},{}
+27130,The_Star_Card,The Star Card,6,20,,10,,,,,,,,1023,,,,,{ .@r = getrefine(); bonus2 bSkillAtk,"WL_SOULEXPANSION",5+.@r; if (.@r>=10) bonus2 bSkillAtk,"WL_SOULEXPANSION",5; },{},{}
+27131,Temperance_Card,Temperance Card,6,20,,10,,,,,,,,1023,,,,,{ .@r = getrefine(); bonus2 bSkillAtk,"RA_ARROWSTORM",5+.@r; if (.@r>=10) bonus2 bSkillAtk,"RA_ARROWSTORM",5; },{},{}
+27132,The_Chariot_Card,The Chariot Card,6,20,,10,,,,,,,,1023,,,,,{ .@r = getrefine(); bonus2 bSkillAtk,"NC_ARMSCANNON",5+.@r; if (.@r>=10) bonus2 bSkillAtk,"NC_ARMSCANNON",5; },{},{}
+27133,Death_Card,Death Card,6,20,,10,,,,,,,,1023,,,,,{ .@r = getrefine(); bonus2 bSkillAtk,"GC_ROLLINGCUTTER",5+.@r; if (.@r>=10) bonus2 bSkillAtk,"GC_ROLLINGCUTTER",5; },{},{}
+27134,The_Hermit_Card,The Hermit Card,6,20,,10,,,,,,,,1023,,,,,{ .@r = getrefine(); bonus2 bSkillAtk,"AB_ADORAMUS",5+.@r; if (.@r>=10) bonus2 bSkillAtk,"AB_ADORAMUS",5; },{},{}
+27135,The_Emperor_Card,The Emperor Card,6,20,,10,,,,,,,,1023,,,,,{ .@r = getrefine(); bonus2 bSkillAtk,"LG_OVERBRAND_PLUSATK",5+.@r; bonus2 bSkillAtk,"LG_OVERBRAND_BRANDISH",5+.@r; if (.@r>=10) { bonus2 bSkillAtk,"LG_OVERBRAND_PLUSATK",5; bonus2 bSkillAtk,"LG_OVERBRAND_BRANDISH",5; } },{},{}
+27136,The_Moon_Card,The Moon Card,6,20,,10,,,,,,,,1023,,,,,{ .@r = getrefine(); bonus2 bSkillAtk,"SO_DIAMONDDUST",5+.@r; if (.@r>=10) bonus2 bSkillAtk,"SO_DIAMONDDUST",5; },{},{}
+27137,The_Lovers_Card,The Lovers Card,6,20,,10,,,,,,,,1023,,,,,{ .@r = getrefine(); bonus2 bSkillAtk,"WM_SEVERE_RAINSTORM",5+.@r; if (.@r>=10) bonus2 bSkillAtk,"WM_SEVERE_RAINSTORM",5; },{},{}
+27138,The_Hierophant_Card,The Hierophant Card,6,20,,10,,,,,,,,1023,,,,,{ .@r = getrefine(); bonus2 bSkillAtk,"GN_CART_TORNADO",5+.@r; if (.@r>=10) bonus2 bSkillAtk,"GN_CART_TORNADO",5; },{},{}
+27139,The_Devil_Card,The Devil Card,6,20,,10,,,,,,,,1023,,,,,{ .@r = getrefine(); bonus2 bSkillAtk,"SC_FEINTBOMB",5+.@r; if (.@r>=10) bonus2 bSkillAtk,"SC_FEINTBOMB",5; },{},{}
+27140,Strength_Card,Strength Card,6,20,,10,,,,,,,,1023,,,,,{ .@r = getrefine(); bonus2 bSkillAtk,"SR_SKYNETBLOW",5+.@r; if (.@r>=10) bonus2 bSkillAtk,"SR_SKYNETBLOW",5; },{},{}
 27147,Humanoid_Chimera_Card,Humanoid Chimera Card,6,20,,10,,,,,,,,136,,,,,{ bonus bHit,(BaseLevel >= 90 ? 15 : 5); },{},{}
 27148,Material_Chimera_Card,Material Chimera Card,6,20,,10,,,,,,,,136,,,,,{ bonus bFlee,(BaseLevel >= 90 ? 20 : 10); },{},{}
 27149,Heart_Hunter_Card,Heart Hunter Card,6,20,,10,,,,,,,,2,,,,,{ .@type = getiteminfo(getequipid(EQI_COMPOUND_ON),11); .@r = getrefine(); if(.@type == 17 || .@type == 18 || .@type == 21){ bonus bLongAtkRate,5+.@r+(.@r >= 10 ? 5 : 0); } },{},{}
