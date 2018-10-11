@@ -2,26 +2,20 @@ function	script	Abyss Egg	{
 set .@rare,0;
 	set .@t,rand(1,100);
 	if(.@t <= 75) { // 75% to get Tier 1
-		mes "ท่านได้รางวัลระดับ Common";
 		setarray .@item[0],40100; // Saltz
-		close2; 
 	}					   
 	else if(.@t > 75 && .@t <= 97) { // 23% to get Tier 2
-		mes "ท่านได้รางวัลระดับ Rare";
 		setarray .@item[0],12412, // HE Bubble Gum
 						   12412, // HE Bubble Gum
 						   12921, // Enrich Ori 10 box
 						   12921, // Enrich Ori 10 box
 						   12920, // Enrich Elu 10 box
 						   12920; // Enrich Elu 10 box
-		close2; 
 	}				   
 	else if(.@t > 97) { // 3% to get Tier 3
-		mes "ท่านได้รางวัลระดับ Ultra Rare";
 		setarray .@item[0],40001, // New Battle Surcoat
 						   28594, // Temporal Ring
 						   15204; // Abyss Dress
-		set .@rare,1;
 		close2; 
 	}
 
