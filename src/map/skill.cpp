@@ -12358,7 +12358,7 @@ int skill_castend_pos2(struct block_list* src, int x, int y, uint16 skill_id, ui
 		break;
 
 	case LG_RAYOFGENESIS:
-		if( status_charge(src,status_get_max_hp(src)*3*skill_lv / 100,0) ) {
+		if( status_charge(src,status_get_max_hp(src)*3*(skill_lv+1) / 200,0) ) {
 			i = skill_get_splash(skill_id,skill_lv);
 			map_foreachinarea(skill_area_sub,src->m,x-i,y-i,x+i,y+i,BL_CHAR|BL_SKILL,
 				src,skill_id,skill_lv,tick,flag|BCT_ENEMY|1,skill_castend_damage_id);
