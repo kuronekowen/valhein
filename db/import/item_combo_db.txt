@@ -216,6 +216,16 @@
 2935:2387:2440,{ bonus bVariableCastrate,-5; bonus bDelayRate,-5; }
 2935:2440,{ bonus bMaxSPrate,3; if (getequiprefinerycnt(EQI_SHOES)>=7) { bonus bMaxHPrate,2; } }
 2935:2744,{ bonus bVariableCastrate,-4; bonus bDelayRate,-4; }
+2984:4151,{ bonus2 bExpAddRace,RC_Plant,5; bonus2 bSubRace,RC_Plant,-10; }
+2984:4164,{ bonus2 bExpAddRace,RC_Fish,5; bonus2 bSubRace,RC_Fish,-10; }
+2984:4204,{ bonus2 bExpAddRace,RC_Brute,5; bonus2 bSubRace,RC_Brute,-10; }
+2984:4221,{ bonus2 bExpAddRace,RC_Insect,5; bonus2 bSubRace,RC_Insect,-10; }
+2984:4235,{ bonus2 bExpAddRace,RC_Angel,5; bonus2 bSubRace,RC_Angel,-10; }
+2984:4239,{ bonus2 bExpAddRace,RC_Formless,5; bonus2 bSubRace,RC_Formless,-10; }
+2984:4245,{ bonus2 bExpAddRace,RC_Demihuman,5; bonus2 bSubRace,RC_Demihuman,-10; }
+2984:4249,{ bonus2 bExpAddRace,RC_Demon,5; bonus2 bSubRace,RC_Demon,-10; }
+2984:4267,{ bonus2 bExpAddRace,RC_Dragon,5; bonus2 bSubRace,RC_Dragon,-10; }
+2984:4275,{ bonus2 bExpAddRace,RC_Undead,5; bonus2 bSubRace,RC_Undead,-10; }
 32203:18997,{ bonus bAspdRate,10; bonus bAtkRate,10; bonus bMatkRate,10; bonus2 bIgnoreDefRaceRate,RC_All,30; bonus2 bIgnoreMdefRaceRate,RC_All,30; }
 32204:2027,{ .@r = getequiprefinerycnt(EQI_HAND_R); bonus bInt,2*.@r; bonus2 bSkillAtk,"WL_CRIMSONROCK",.@r; if (.@r>=9) { bonus bMagicHPGainValue,500; bonus bHPGainValue,500; autobonus "{ bonus2 bMagicAtkEle,Ele_Fire,50; }",10,10000,BF_MAGIC,"{ specialeffect2 255; }"; } }
 32204:21018,{ .@r = getequiprefinerycnt(EQI_HAND_R); bonus bCritAtkRate,3*.@r; if (.@r>=9) { bonus bCritical,50; bonus2 bAddClass,Class_Boss,25; } }

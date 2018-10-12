@@ -83,6 +83,7 @@
 0,28386,60  //,Fallen Monk Rosary
 0,15125,100  //,Female Diver's Suit
 0,20726,60  //,Fire Dragon's Coat
+0,5967,150	//,Flying Galapago
 0,5901,60  //,Focus Beret
 0,15175,250  //,Flame Dragon Armor
 0,5937,60  //,Flying Helmet
@@ -94,6 +95,7 @@
 0,18787,60  //,Goal Tender Mask
 0,5475,60  //,Gozarian hat
 0,22172,150  //,Gray Wing Boots
+0,19095,250	//,Happy Balloon
 0,19269,50  //,Happy Flapping Angel Wings
 0,28929,60  //,Happy Shield
 0,19306,60  //,heart card
