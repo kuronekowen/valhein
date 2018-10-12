@@ -5,7 +5,7 @@ set .@rare,0;
 		setarray .@item[0],40100; // Saltz
 	}					   
 	else if(.@t > 75 && .@t <= 97) { // 23% to get Tier 2
-		setarray .@item[0],12412, // HE Bubble Gum
+		setarray .@item[0],
 						   12412, // HE Bubble Gum
 						   12921, // Enrich Ori 10 box
 						   12921, // Enrich Ori 10 box
