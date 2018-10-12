@@ -3932,7 +3932,3 @@
 31140,403,100	// C_Cowboy_Hat_
 31141,403,100	// C_Rose_Corsage_
 31143,403,100	// Costume_Krathong_Crown
-40100,9,100	// Saltz
-40101,473,100	// Magic_Tournament_Egg
-40102,9,100	// Magic_Particle
-40103,472,100	// Geffen_Card_Album

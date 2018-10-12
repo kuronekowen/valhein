@@ -12835,7 +12835,3 @@
 31623,Costume_Poporing_Muffler,Costume Poporing Muffler,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1797,{},{},{}
 31624,Costume_Bikeman_Helmet,Costume Bikeman Helmet,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1798,{},{},{}
 32005,Illusion_Pole_Axe,Illusion Pole Axe,5,0,,1500,190,,3,2,0x00004082,63,2,2,4,120,1,4,{ .@r = getrefine(); bonus bStr,3; bonus bInt,2; bonus bDex,2; if (.@r >= 13) { .@val = -2000; } else if (.@r >= 9) { .@val = -1000; } bonus2 bSkillCooldown,"RK_HUNDREDSPEAR",.@val; },{},{}
-40100,Saltz,Saltz,3,20,,0,,,,,,,,,,,,,{},{},{}
-40101,Magic_Tournament_Egg,Magic Tournament Egg,2,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ callfunc "Magic Egg"; },{},{}
-40102,Magic_Particle,Magic Particle,3,20,,0,,,,,,,,,,,,,{},{},{}
-40103,Geffen_Card_Album,Geffen Card Album,2,10,,100,,,,0,0xFFFFFFFF,63,2,,,1,,,{ getitem callfunc("F_Rand",27249,27250,27251,27252,27253,27254,27255,27256,27257,27258,27259,27260,27261,27262,27263),1; },{},{}
