@@ -8643,7 +8643,16 @@ static const struct _battle_data {
 	{ "homunculus_exp_gain",                &battle_config.homunculus_exp_gain,             10,     0,      100,            },
 	{ "rental_transaction",                 &battle_config.rental_transaction,              1,      0,      1,              },
 	{ "feature.equipswitch",                &battle_config.feature_equipswitch,             1,      0,      1,              },
-
+	/**
+	* Extended Vending system [Lilith]
+	**/
+	{ "extended_vending",					&battle_config.extended_vending,				1,		0,		1,				},
+	{ "show_broadcas_info",					&battle_config.show_broadcas_info,				1,		0,		1,				},
+	{ "show_item_vending",					&battle_config.show_item_vending,				1,		0,		1,				},
+	{ "ex_vending_info",					&battle_config.ex_vending_info,					1,		0,		1,				},
+	{ "ex_vending_report",					&battle_config.ex_vending_report,				1,		0,		1,				}, // [Easycore]
+	{ "item_zeny",							&battle_config.item_zeny,						0,		0,		MAX_ITEMID,		},
+	{ "item_cash",							&battle_config.item_cash,						0,		0,		MAX_ITEMID,		},
 #include "../custom/battle_config_init.inc"
 };
 
