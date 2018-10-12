@@ -2124,5 +2124,3 @@
 27326  // Morocc's_Minion_Card
 27327  // Grim_Reaper_Ankou_Card
 27328  // Corrupted_Life_Card
-40100  // Saltz
-40102  // Magic_Particle

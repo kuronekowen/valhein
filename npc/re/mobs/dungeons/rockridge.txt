@@ -7,6 +7,7 @@
 // Rock Ridge Mine
 rockmi1,0,0	monster	Thief Bug	1051,3
 rockmi1,0,0	monster	Gaster	3740,18
+
 rockmi1,0,0	monster	Elite Buffalo Bandit	3747,20
 rockmi1,0,0	monster	Elite Buffalo Bandit	3748,20
 rockmi1,0,0	monster	Elite Buffalo Bandit	3749,20

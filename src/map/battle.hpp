@@ -663,6 +663,16 @@ struct Battle_Config
 	int homunculus_exp_gain;
 	int rental_transaction;
 	int feature_equipswitch;
+	/**
+	* Extended Vending system [Lilith]
+	**/
+	int extended_vending;
+	int show_broadcas_info;
+	int show_item_vending;
+	int ex_vending_info;
+	int ex_vending_report;
+	int item_zeny;
+	int item_cash;
 
 #include "../custom/battle_config_struct.inc"
 };

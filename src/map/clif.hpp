@@ -1125,4 +1125,10 @@ void clif_equipswitch_add( struct map_session_data* sd,uint16 index, uint32 pos,
 void clif_equipswitch_remove( struct map_session_data* sd, uint16 index, uint32 pos, bool failed );
 void clif_equipswitch_reply( struct map_session_data* sd, bool failed );
 
+void clif_guild_storage_log( struct map_session_data* sd, std::vector<struct guild_log_entry>& log, enum e_guild_storage_log result );
+
+/// Extended Vending [Lilith]
+int clif_vend(struct map_session_data *sd, int skill_lv);
+
 #endif /* CLIF_HPP */
+
