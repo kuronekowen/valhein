@@ -308,7 +308,7 @@ void initChangeTables(void)
 	set_sc( SM_AUTOBERSERK		, SC_AUTOBERSERK	, EFST_AUTOBERSERK	, SCB_NONE );
 	add_sc( TF_SPRINKLESAND		, SC_BLIND		);
 	add_sc( TF_THROWSTONE		, SC_STUN		);
-	set_sc( MC_LOUD			, SC_LOUD		, EFST_SHOUT, SCB_STR );
+	set_sc( MC_LOUD			, SC_LOUD		, EFST_SHOUT, SCB_STR|SCB_BATK );
 	set_sc( MG_ENERGYCOAT		, SC_ENERGYCOAT		, EFST_ENERGYCOAT		, SCB_NONE );
 	set_sc( NPC_EMOTION		, SC_MODECHANGE		, EFST_BLANK		, SCB_MODE );
 	add_sc( NPC_EMOTION_ON		, SC_MODECHANGE		);
@@ -5481,7 +5481,7 @@ static unsigned short status_calc_str(struct block_list *bl, struct status_chang
 		str += 5;
 	if(sc->data[SC_LEADERSHIP])
 		str += sc->data[SC_LEADERSHIP]->val1;
-	if(sc->data[SC_LOUD])
+	if(sc->data[SC_LOUD]) 
 		str += 4;
 	if(sc->data[SC_TRUESIGHT])
 		str += 5;
@@ -5925,6 +5925,8 @@ static unsigned short status_calc_batk(struct block_list *bl, struct status_chan
 	if (sc->data[SC_ANGRIFFS_MODUS])
 		batk += sc->data[SC_ANGRIFFS_MODUS]->val2;
 	if(sc->data[SC_2011RWC_SCROLL])
+		batk += 30;
+	if(sc->data[SC_LOUD])
 		batk += 30;
 	if(sc->data[SC_INCATKRATE])
 		batk += batk * sc->data[SC_INCATKRATE]->val1/100;

@@ -6716,7 +6716,6 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case CR_REFLECTSHIELD:
 	case MS_REFLECTSHIELD:
 	case AS_POISONREACT:
-	case MC_LOUD:
 	case MG_ENERGYCOAT:
 	case MO_EXPLOSIONSPIRITS:
 	case MO_STEELBODY:
@@ -7239,6 +7238,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case CASH_INCAGI:
 	case CASH_ASSUMPTIO:
 	case WM_FRIGG_SONG:
+	case MC_LOUD:
 		if( sd == NULL || sd->status.party_id == 0 || (flag & 1) )
 			clif_skill_nodamage(bl, bl, skill_id, skill_lv, sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		else if( sd )

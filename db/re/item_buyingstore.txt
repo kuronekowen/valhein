@@ -2115,7 +2115,7 @@
 27177  // Marsh_Arclouse_Card
 27178  // Gaster_Card
 27179  // Coyote_Card
-27180  // Spider_Chariot_Card
+27180  // Mechaspider_Card
 27321  // Despair_God_Morocc_Card
 27322  // Demon_God's_Apostle_Ahat_Card
 27323  // Demon_God's_Apostle_Shnaim_Card
