@@ -11999,7 +11999,7 @@
 27177,Marsh_Arclouse_Card,Marsh Arclouse Card,6,20,,10,,,,,,,,4,,,,,{ .@int = readparam(bInt); .@bonus = 3*(.@int/10); if (.@int>=120) { .@bonus += 40; } bonus bMatk,.@bonus; bonus bAspdRate,(.@int/10); },{},{}
 27178,Gaster_Card,Gaster Card,6,20,,10,,,,,,,,32,,,,,{ bonus2 bSubClass,Class_Normal,25; bonus2 bSubClass,Class_Boss,-50; },{},{}
 27179,Coyote_Card,Coyote Card,6,20,,10,,,,,,,,64,,,,,{ bonus bNoCastCancel; .@hp = -12; .@sp = -6; if (getrefine() >= 10) { .@hp += 6; .@sp += 3; } bonus bMaxHPrate,.@hp; bonus bMaxSPrate,.@sp; },{},{}
-27180,Mechaspider_Card,Mechaspider Card,6,20,,10,,,,,,,,128,,,,,{ bonus bBreakWeaponRate,500; bonus bBreakArmorRate,500; },{},{}
+27180,Mechaspider_Card,Mechaspider Card,6,20,,10,,,,,,,,128,,,,,{ bonus bBreakWeaponRate,1000; bonus bBreakArmorRate,700; },{},{}
 27181,Airship_Raid_Card,Airship Raid Card,6,20,,10,,,,,,,,2,,,,,{ .@r = getrefine(); bonus bLongAtkRate,1 + .@r/2; bonus bCritical,.@r/2; },{},{}
 27182,Captain_Felock_Card,Captain Felock Card,6,20,,10,,,,,,,,2,,,,,{ bonus bAtk,30; .@r = getrefine(); bonus2 bSkillAtk,"RL_AM_BLAST",.@r >= 10 ? 60 : 30; bonus2 bSkillAtk,"RL_HAMMER_OF_GOD",.@r >= 10 ? 60 : 30; },{},{}
 27183,Gigantes_Card,Gigantes Card,6,20,,10,,,,,,,,128,,,,,{ bonus bAtk,20; if(readparam(bStr) >= 120) { bonus bAtk,20; bonus bAspdRate,-3; } },{},{}

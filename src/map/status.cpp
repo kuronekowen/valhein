@@ -257,11 +257,11 @@ void initChangeTables(void)
 	add_sc( MG_STONECURSE		, SC_STONE		);
 	add_sc( AL_RUWACH		, SC_RUWACH		);
 	add_sc( AL_PNEUMA		, SC_PNEUMA		);
-	set_sc( AL_INCAGI		, SC_INCREASEAGI	, EFST_INC_AGI, SCB_AGI|SCB_SPEED );
+	set_sc( AL_INCAGI		, SC_INCREASEAGI	, EFST_INC_AGI, SCB_AGI|SCB_SPEED|SCB_ASPD );
 	set_sc( AL_DECAGI		, SC_DECREASEAGI	, EFST_DEC_AGI, SCB_AGI|SCB_SPEED );
 	set_sc( AL_CRUCIS		, SC_SIGNUMCRUCIS	, EFST_CRUCIS, SCB_DEF );
 	set_sc( AL_ANGELUS		, SC_ANGELUS		, EFST_ANGELUS		, SCB_DEF2 );
-	set_sc( AL_BLESSING		, SC_BLESSING		, EFST_BLESSING		, SCB_STR|SCB_INT|SCB_DEX );
+	set_sc( AL_BLESSING		, SC_BLESSING		, EFST_BLESSING		, SCB_STR|SCB_INT|SCB_DEX|SCB_HIT );
 	set_sc( AC_CONCENTRATION	, SC_CONCENTRATE	, EFST_CONCENTRATION, SCB_AGI|SCB_DEX );
 	set_sc( TF_HIDING		, SC_HIDING		, EFST_HIDING		, SCB_SPEED );
 	add_sc( TF_POISON		, SC_POISON		);
@@ -308,7 +308,7 @@ void initChangeTables(void)
 	set_sc( SM_AUTOBERSERK		, SC_AUTOBERSERK	, EFST_AUTOBERSERK	, SCB_NONE );
 	add_sc( TF_SPRINKLESAND		, SC_BLIND		);
 	add_sc( TF_THROWSTONE		, SC_STUN		);
-	set_sc( MC_LOUD			, SC_LOUD		, EFST_SHOUT, SCB_STR );
+	set_sc( MC_LOUD			, SC_LOUD		, EFST_SHOUT, SCB_STR|SCB_BATK );
 	set_sc( MG_ENERGYCOAT		, SC_ENERGYCOAT		, EFST_ENERGYCOAT		, SCB_NONE );
 	set_sc( NPC_EMOTION		, SC_MODECHANGE		, EFST_BLANK		, SCB_MODE );
 	add_sc( NPC_EMOTION_ON		, SC_MODECHANGE		);
@@ -5481,7 +5481,7 @@ static unsigned short status_calc_str(struct block_list *bl, struct status_chang
 		str += 5;
 	if(sc->data[SC_LEADERSHIP])
 		str += sc->data[SC_LEADERSHIP]->val1;
-	if(sc->data[SC_LOUD])
+	if(sc->data[SC_LOUD]) 
 		str += 4;
 	if(sc->data[SC_TRUESIGHT])
 		str += 5;
@@ -5926,6 +5926,8 @@ static unsigned short status_calc_batk(struct block_list *bl, struct status_chan
 		batk += sc->data[SC_ANGRIFFS_MODUS]->val2;
 	if(sc->data[SC_2011RWC_SCROLL])
 		batk += 30;
+	if(sc->data[SC_LOUD])
+		batk += 30;
 	if(sc->data[SC_INCATKRATE])
 		batk += batk * sc->data[SC_INCATKRATE]->val1/100;
 	if(sc->data[SC_PROVOKE])
@@ -6273,6 +6275,12 @@ static signed short status_calc_hit(struct block_list *bl, struct status_change 
 		hit -= sc->data[SC_ILLUSIONDOPING]->val2;
 	if (sc->data[SC_MTF_ASPD])
 		hit += sc->data[SC_MTF_ASPD]->val2;
+	if(sc->data[SC_BLESSING]) {
+		if(sc->data[SC_BLESSING]->val2)
+			hit += sc->data[SC_BLESSING]->val1 * 2;
+		else
+			hit >>= 1;
+	}
 
 	return (short)cap_value(hit,1,SHRT_MAX);
 }
@@ -7017,6 +7025,8 @@ static short status_calc_fix_aspd(struct block_list *bl, struct status_change *s
 		aspd -= sc->data[SC_MTF_ASPD]->val1;
 	if (sc->data[SC_MTF_ASPD2])
 		aspd -= sc->data[SC_MTF_ASPD2]->val1;
+	if(sc->data[SC_INCREASEAGI])
+		aspd -= 10;
 
 	return cap_value(aspd, 0, 2000); // Will be recap for proper bl anyway
 }
