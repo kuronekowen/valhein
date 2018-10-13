@@ -264,9 +264,9 @@
 27013:27012,{ bonus bNoMadoFuel; }
 27015:27016,{ bonus bCritAtkRate,10; }
 27018:27019,{ autobonus "{ bonus bAspd,5; }",30,5000; }
-27170:27171,{ bonus bStr,3; bonus bAtkRate,3; }
-27170:27172,{ bonus2 bAddSize,Size_Small,15; bonus2 bMagicAddSize,Size_Small,15; }
-27170:27173,{ bonus2 bSkillAtk,"GS_SPREADATTACK",50; }
+
+
+
 27174:27171,{ bonus2 bSkillAtk,"GS_RAPIDSHOWER",50; }
 27175:27172,{ bonus2 bAddSize,Size_Small,10; bonus2 bMagicAddSize,Size_Small,10; }
 2720:2772,{ bonus2 bAddClass,Class_All,5; bonus bMatkRate,3; bonus bHealPower,5; }
@@ -288,8 +288,8 @@
 2725:2774,{ bonus2 bAddClass,Class_All,5; bonus bMatkRate,3; bonus bHealPower,5; }
 2726:2727,{ bonus bUseSPrate,-25; }
 27264:27265,{ bonus2 bAddEle,Ele_Dark,15; bonus2 bAddEle,Ele_Undead,15; bonus2 bMagicAddEle,Ele_Dark,15; bonus2 bMagicAddEle,Ele_Undead,15; bonus2 bSubEle,Ele_Dark,15; bonus2 bSubEle,Ele_Undead,15; }
-27322:27323,{ bonus bMaxHPrate,5; bonus bMaxSPrate,5; }
-27324:27325,{ bonus2 bMagicAtkEle,Ele_Water,10; bonus2 bSubDefEle,Ele_Fire,10; }
+
+
 27326:27321,{ bonus bMaxHPrate,50; }
 27328:4020,{ bonus bBaseAtk,15; bonus2 bAtkEle,Ele_Dark,20; }
 27328:4023,{ bonus bInt,3; bonus bMaxSP,100; bonus bMatkRate,5; }
@@ -508,7 +508,7 @@
 5548:5766,{ .@r = getequiprefinerycnt(EQI_HEAD_TOP); bonus bBaseAtk,min(.@r,10); bonus bMatk,min(.@r,10); }
 5917:1525,{ bonus bLongAtkDef,10; }
 5920:18542,{ bonus bHealPower,2*getequiprefinerycnt(EQI_HEAD_TOP); }
-5967:28321,{ bonus2 bSubSkill,"HT_BLITZBEAT",200; }
+5967:28321,{ bonus2 bSkillatk,"HT_BLITZBEAT",-200; }
 5918:19306,{ .@aspd = 1; .@crit_dmg = 2 + 2 * (readparam(bDex) / 10); .@sub_demi = 2; .@luk = readparam(bLuk); if (.@luk > 107) { .@aspd += 1; .@crit_dmg += 2; .@sub_demi += 2; } if (.@luk > 119) { .@aspd += 2; .@crit_dmg += 4; .@sub_demi += 4; bonus bSplashRange,1; } bonus bAspd,.@aspd; bonus bCritAtkRate,.@crit_dmg; bonus2 bSubRace,RC_DemiHuman,.@sub_demi; bonus2 bSubSkill,"NPC_CRITICALSLASH",100; }
 //9024:18832,{ bonus3 bAutoSpell,"BS_ADRENALINE",2,(GetPetRelationship >= 3)?15:10; }
 13027:15044,{ .@r = max(getequiprefinerycnt(EQI_ARMOR),1); bonus3 bAddMonsterDropItem,929,RC_DemiHuman,70*.@r; bonus3 bAddMonsterDropItem,970,RC_DemiHuman,50*.@r; bonus3 bAddMonsterDropItem,929,RC_Brute,70*.@r; bonus3 bAddMonsterDropItem,970,RC_Brute,50*.@r; }

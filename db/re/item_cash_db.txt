@@ -43,6 +43,7 @@
 0,28531,200  //,Blacksmith's Gloves
 0,19326,60  //,Book of Soyga
 0,28618,100  //,Book of the Sun God
+0,19163,200  //,Catherina Von Blood
 0,18666,60  //,CD in mouth
 0,19079,60  //,Celestial Woman's Flower
 0,28513,250  //,Celine's Brooch
@@ -100,6 +101,7 @@
 0,28929,60  //,Happy Shield
 0,19306,60  //,heart card
 0,18563,150  //,heart wing hairband
+0,32222,150  //,Hero Brooch
 0,20783,60  //,Hero Cape
 0,18676,100  //,Hexagon Spectacles
 0,28437,100  //,Hibram's Gloves
@@ -145,6 +147,7 @@
 0,18795,60  //,Night Sparrow hat
 0,5938,100  //,Octopus Hat
 0,20932,100  //,Old Morroc Shawl
+0,18959,80  //,Old Pink Poo Hat
 0,5906,60  //,Oni Horn
 0,15142,60  //,Orca Clothes
 0,18794,60  //,Ordinary Black Magician Hat
@@ -165,10 +168,12 @@
 0,20778,60  //,Red Lotus Stole
 0,19115,200  //,Republic Hat
 0,5208,40	//,Rideword Hat
+0,15384,100	//,Ritual Robe
 0,15166,100  //,Rosary Necklace
 0,2192,100  //,Rose of Eden
 0,19246,100	// Royal guard kneclace
 0,28900,200  //,Royal Guard Shield
+0,2984,60  //,Saehrimnir Gloves
 0,2347,60  //,Saphien's Armor of Ocean
 0,28410,100  //,Sapphire Wrist
 0,28903,100	//,Scutum
@@ -225,6 +230,8 @@
 0,18856,80  //,White king tiger
 0,18656,60  //,Witch Pumpkin
 0,19407,200	//,Work Cap
+0,28560,100	//,Yin Yang talishman
+0,5975,100	//,Zherlthsh Doll
 
 // Consumable
 6,14160,20
