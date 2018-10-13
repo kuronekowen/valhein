@@ -3454,6 +3454,11 @@ static struct Damage battle_calc_multi_attack(struct Damage wd, struct block_lis
 			//if( tsc && (tsc->data[SC_BITE] || tsc->data[SC_ANKLE] || tsc->data[SC_ELECTRICSHOCKER]) )
 			wd.div_ = tstatus->size + 2 + ( (rnd()%100 < 50-tstatus->size*10) ? 1 : 0 );
 			break;
+		case KN_BOWLINGBASH:
+			if (sd && sd->status.weapon == W_2HSWORD)
+				wd.div_ = 4;
+			else wd.div_ = 2;
+			break;
 		case RL_QD_SHOT:
 			wd.div_ = 1 + (sd ? sd->status.job_level : 1) / 20 + (tsc && tsc->data[SC_C_MARKER] ? 2 : 0);
 			break;
@@ -3578,7 +3583,7 @@ static int battle_calc_attack_skill_ratio(struct Damage wd, struct block_list *s
 			break;
 		case KN_BRANDISHSPEAR:
 		case ML_BRANDISH: {
-				int ratio = 100 + 20 * skill_lv;
+				int ratio = 400 + 100 * skill_lv + sstatus->str;
 
 				skillratio += -100 + ratio;
 				if(skill_lv > 3 && wd.miscflag == 0)

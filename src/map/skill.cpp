@@ -5224,7 +5224,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 				// If target cell is a wall then break
 				if(map_getcell(bl->m,tx,ty,CELL_CHKWALL))
 					break;
-				skill_blown(src,bl,1,dir,BLOWN_NONE);
+				skill_blown(src,bl,skill_get_blewcount(skill_id,skill_lv),dir,BLOWN_NONE);
 				// Splash around target cell, but only cells inside area; we first have to check the area is not negative
 				if((max(min_x,tx-1) <= min(max_x,tx+1)) &&
 					(max(min_y,ty-1) <= min(max_y,ty+1)) &&
@@ -5236,9 +5236,11 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 						skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,(flag&0xFFF)>0?SD_ANIMATION:0);
 					break;
 				}
+				else skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,(flag&0xFFF)>0?SD_ANIMATION:0);
+			
 			}
 			// Original hit or chain hit depending on flag
-			skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,(flag&0xFFF)>0?SD_ANIMATION:0);
+			
 		}
 		break;
 

@@ -260,7 +260,7 @@ void initChangeTables(void)
 	set_sc( AL_INCAGI		, SC_INCREASEAGI	, EFST_INC_AGI, SCB_AGI|SCB_SPEED|SCB_ASPD );
 	set_sc( AL_DECAGI		, SC_DECREASEAGI	, EFST_DEC_AGI, SCB_AGI|SCB_SPEED );
 	set_sc( AL_CRUCIS		, SC_SIGNUMCRUCIS	, EFST_CRUCIS, SCB_DEF );
-	set_sc( AL_ANGELUS		, SC_ANGELUS		, EFST_ANGELUS		, SCB_DEF2 );
+	set_sc( AL_ANGELUS		, SC_ANGELUS		, EFST_ANGELUS		, SCB_DEF2|SCB_MAXHP );
 	set_sc( AL_BLESSING		, SC_BLESSING		, EFST_BLESSING		, SCB_STR|SCB_INT|SCB_DEX|SCB_HIT );
 	set_sc( AC_CONCENTRATION	, SC_CONCENTRATE	, EFST_CONCENTRATION, SCB_AGI|SCB_DEX );
 	set_sc( TF_HIDING		, SC_HIDING		, EFST_HIDING		, SCB_SPEED );
@@ -3030,6 +3030,8 @@ static int status_get_hpbonus(struct block_list *bl, enum e_status_bonus type) {
 				bonus += 30;
 			if(sc->data[SC_CROSSBOWCLAN])
 				bonus += 30;
+			if(sc->data[SC_ANGELUS])
+				bonus += sc->data[SC_ANGELUS]->val1 * 50;
 			if(sc->data[SC_GLASTHEIM_HPSP])
 				bonus += sc->data[SC_GLASTHEIM_HPSP]->val1;
 		}
@@ -6995,6 +6997,8 @@ static short status_calc_aspd(struct block_list *bl, struct status_change *sc, b
 			bonus += 3 * sc->data[SC_STAR_COMFORT]->val1;
 		if (sc->data[SC_WIND_INSIGNIA] && sc->data[SC_WIND_INSIGNIA]->val1 == 2)
 			bonus += 10;
+		if(sc->data[SC_INCREASEAGI])
+			bonus += sc->data[SC_INCREASEAGI]->val1;
 	}
 
 	return bonus;
@@ -7025,8 +7029,6 @@ static short status_calc_fix_aspd(struct block_list *bl, struct status_change *s
 		aspd -= sc->data[SC_MTF_ASPD]->val1;
 	if (sc->data[SC_MTF_ASPD2])
 		aspd -= sc->data[SC_MTF_ASPD2]->val1;
-	if(sc->data[SC_INCREASEAGI])
-		aspd -= 10;
 
 	return cap_value(aspd, 0, 2000); // Will be recap for proper bl anyway
 }
