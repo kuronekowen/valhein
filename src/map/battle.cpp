@@ -6623,7 +6623,7 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 				//Blitz-beat Damage
 				if(!sd || !(skill = pc_checkskill(sd,HT_STEELCROW)))
 					skill = 0;
-				md.damage = (sstatus->dex / 5 + sstatus->agi / 2 + skill * 3 + 40) * 2;
+				md.damage = (sstatus->dex / 2 + sstatus->agi / 2 + skill * 3 + 40) * 2;
 				//if(mflag > 1) //Autocasted Blitz
 					//nk |= NK_SPLASHSPLIT;
 				if (skill_id == SN_FALCONASSAULT) {
