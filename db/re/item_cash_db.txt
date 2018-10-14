@@ -162,6 +162,7 @@
 0,32206,60  //,Prontera Militia Glove
 0,19024,60  //,Protect Feather
 0,15165,100  //,Pure White Marching Hat
+0,5969,150	//,Queen Ann Revenge
 0,28484,200  //,Rebel Scarf
 0,2936,100  //,Recovery Ring
 0,19116,100  //,Red baby dragon
