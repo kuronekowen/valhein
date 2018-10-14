@@ -3454,6 +3454,11 @@ static struct Damage battle_calc_multi_attack(struct Damage wd, struct block_lis
 			//if( tsc && (tsc->data[SC_BITE] || tsc->data[SC_ANKLE] || tsc->data[SC_ELECTRICSHOCKER]) )
 			wd.div_ = tstatus->size + 2 + ( (rnd()%100 < 50-tstatus->size*10) ? 1 : 0 );
 			break;
+		case KN_BOWLINGBASH:
+			if (sd && sd->status.weapon == W_2HSWORD)
+				wd.div_ = 4;
+			else wd.div_ = 2;
+			break;
 		case RL_QD_SHOT:
 			wd.div_ = 1 + (sd ? sd->status.job_level : 1) / 20 + (tsc && tsc->data[SC_C_MARKER] ? 2 : 0);
 			break;
@@ -3578,7 +3583,7 @@ static int battle_calc_attack_skill_ratio(struct Damage wd, struct block_list *s
 			break;
 		case KN_BRANDISHSPEAR:
 		case ML_BRANDISH: {
-				int ratio = 100 + 20 * skill_lv;
+				int ratio = 400 + 100 * skill_lv + sstatus->str;
 
 				skillratio += -100 + ratio;
 				if(skill_lv > 3 && wd.miscflag == 0)
@@ -3607,6 +3612,8 @@ static int battle_calc_attack_skill_ratio(struct Damage wd, struct block_list *s
 			break;
 		case AS_SONICBLOW:
 			skillratio += 300 + 40 * skill_lv;
+			if (status_get_hp(target) < status_get_max_hp(target) >> 1)
+				skillratio *= 15 / 10;
 			break;
 		case TF_SPRINKLESAND:
 			skillratio += 30;
@@ -3741,7 +3748,7 @@ static int battle_calc_attack_skill_ratio(struct Damage wd, struct block_list *s
 			skillratio += 100 + 100 * skill_lv;
 			break;
 		case AS_SPLASHER:
-			skillratio += 400 + 50 * skill_lv;
+			skillratio += -100 + 400 + 100 * skill_lv;
 			if(sd)
 				skillratio += 20 * pc_checkskill(sd,AS_POISONREACT);
 			break;
@@ -6078,9 +6085,10 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						break;
 					case WZ_VERMILION:
 						if(sd) {
-							int per = 0;
+							/*int per = 0;
 							while ((++per) < skill_lv)
-								skillratio += per * 5; //100% 105% 115% 130% 150% 175% 205% 240% 280% 325%
+								skillratio += per * 5;*/ //100% 105% 115% 130% 150% 175% 205% 240% 280% 325%
+							skillratio += -100 + 400 + 100 * skill_lv;
 						} else {
 							skillratio += 20 * skill_lv - 20; //Monsters use old formula
 						}

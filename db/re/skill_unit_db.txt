@@ -41,7 +41,7 @@
  79,0x84,    , -1, 1,3000,enemy, 0x8018	//PR_MAGNUS
  80,0x87,0x88,  0, 1,2000,enemy, 0x006	//WZ_FIREPILLAR
  83,0x86,    ,  0, 3,1000,enemy, 0x010	//WZ_METEOR
- 85,0x86,    ,  5:5:5:5:5:5:5:5:5:5:7, 1,1250,enemy,0x018	//WZ_VERMILION
+ 85,0x86,    ,  5:5:5:5:5:5:5:5:5:5:7, 1,4000,enemy,0x018	//WZ_VERMILION
  86,0x86,    ,  0:1:1:2:2:2:2:2:2:2, 0,-1,noone, 0x010	//WZ_WATERBALL
  87,0x8d,    , -1, 0,  -1,all,   0x9010	//WZ_ICEWALL
  89,0x86,    ,  4, 1, 450,enemy, 0x018	//WZ_STORMGUST

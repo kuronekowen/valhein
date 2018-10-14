@@ -260,12 +260,12 @@ void initChangeTables(void)
 	set_sc( AL_INCAGI		, SC_INCREASEAGI	, EFST_INC_AGI, SCB_AGI|SCB_SPEED|SCB_ASPD );
 	set_sc( AL_DECAGI		, SC_DECREASEAGI	, EFST_DEC_AGI, SCB_AGI|SCB_SPEED );
 	set_sc( AL_CRUCIS		, SC_SIGNUMCRUCIS	, EFST_CRUCIS, SCB_DEF );
-	set_sc( AL_ANGELUS		, SC_ANGELUS		, EFST_ANGELUS		, SCB_DEF2 );
+	set_sc( AL_ANGELUS		, SC_ANGELUS		, EFST_ANGELUS		, SCB_DEF2|SCB_MAXHP );
 	set_sc( AL_BLESSING		, SC_BLESSING		, EFST_BLESSING		, SCB_STR|SCB_INT|SCB_DEX|SCB_HIT );
 	set_sc( AC_CONCENTRATION	, SC_CONCENTRATE	, EFST_CONCENTRATION, SCB_AGI|SCB_DEX );
 	set_sc( TF_HIDING		, SC_HIDING		, EFST_HIDING		, SCB_SPEED );
 	add_sc( TF_POISON		, SC_POISON		);
-	set_sc( KN_TWOHANDQUICKEN	, SC_TWOHANDQUICKEN	, EFST_TWOHANDQUICKEN	, SCB_ASPD );
+	set_sc( KN_TWOHANDQUICKEN	, SC_TWOHANDQUICKEN	, EFST_TWOHANDQUICKEN	, SCB_ASPD|SCB_CRI|SCB_HIT );
 	set_sc( KN_AUTOCOUNTER		, SC_AUTOCOUNTER	, EFST_AUTOCOUNTER	, SCB_NONE );
 	set_sc( PR_IMPOSITIO		, SC_IMPOSITIO		, EFST_IMPOSITIO		,
 #ifndef RENEWAL
@@ -289,7 +289,7 @@ void initChangeTables(void)
 	add_sc( WZ_STORMGUST		, SC_FREEZE		);
 	set_sc( WZ_QUAGMIRE		, SC_QUAGMIRE		, EFST_QUAGMIRE		, SCB_AGI|SCB_DEX|SCB_ASPD|SCB_SPEED );
 	add_sc( BS_HAMMERFALL		, SC_STUN		);
-	set_sc( BS_ADRENALINE		, SC_ADRENALINE		, EFST_ADRENALINE		, SCB_ASPD );
+	set_sc( BS_ADRENALINE		, SC_ADRENALINE		, EFST_ADRENALINE		, SCB_ASPD|SCB_HIT );
 	set_sc( BS_WEAPONPERFECT	, SC_WEAPONPERFECTION	, EFST_WEAPONPERFECT, SCB_NONE );
 	set_sc( BS_OVERTHRUST		, SC_OVERTHRUST		, EFST_OVERTHRUST		, SCB_NONE );
 	set_sc( BS_MAXIMIZE		, SC_MAXIMIZEPOWER	, EFST_MAXIMIZE, SCB_REGEN );
@@ -3030,6 +3030,8 @@ static int status_get_hpbonus(struct block_list *bl, enum e_status_bonus type) {
 				bonus += 30;
 			if(sc->data[SC_CROSSBOWCLAN])
 				bonus += 30;
+			if(sc->data[SC_ANGELUS])
+				bonus += sc->data[SC_ANGELUS]->val1 * 50;
 			if(sc->data[SC_GLASTHEIM_HPSP])
 				bonus += sc->data[SC_GLASTHEIM_HPSP]->val1;
 		}
@@ -6214,6 +6216,8 @@ static signed short status_calc_critical(struct block_list *bl, struct status_ch
 #ifdef RENEWAL
 	if (sc->data[SC_SPEARQUICKEN])
 		critical += 3*sc->data[SC_SPEARQUICKEN]->val1*10;
+	if (sc->data[SC_TWOHANDQUICKEN])
+		critical += sc->data[SC_TWOHANDQUICKEN]->val1 + 2;
 #endif
 	if (sc->data[SC__INVISIBILITY])
 		critical += sc->data[SC__INVISIBILITY]->val3 * 10;
@@ -6275,6 +6279,10 @@ static signed short status_calc_hit(struct block_list *bl, struct status_change 
 		hit -= sc->data[SC_ILLUSIONDOPING]->val2;
 	if (sc->data[SC_MTF_ASPD])
 		hit += sc->data[SC_MTF_ASPD]->val2;
+	if(sc->data[SC_TWOHANDQUICKEN])
+		hit += sc->data[SC_TWOHANDQUICKEN]->val1 * 2;
+	if(sc->data[SC_ADRENALINE])
+		hit += 5 + sc->data[SC_ADRENALINE]->val1 * 2;
 	if(sc->data[SC_BLESSING]) {
 		if(sc->data[SC_BLESSING]->val2)
 			hit += sc->data[SC_BLESSING]->val1 * 2;
@@ -6897,9 +6905,9 @@ static short status_calc_aspd(struct block_list *bl, struct status_change *sc, b
 
 		if (!sc->data[SC_QUAGMIRE]) {
 			if (bonus < 7 && (sc->data[SC_TWOHANDQUICKEN] || sc->data[SC_ONEHAND] || sc->data[SC_MERC_QUICKEN] || sc->data[SC_ADRENALINE] || sc->data[SC_SPEARQUICKEN]))
-				bonus = 7;
+				bonus = 3;
 			else if (bonus < 6 && sc->data[SC_ADRENALINE2])
-				bonus = 6;
+				bonus = 3;
 			else if (bonus < 5 && sc->data[SC_FLEET])
 				bonus = 5;
 		}
@@ -6995,6 +7003,8 @@ static short status_calc_aspd(struct block_list *bl, struct status_change *sc, b
 			bonus += 3 * sc->data[SC_STAR_COMFORT]->val1;
 		if (sc->data[SC_WIND_INSIGNIA] && sc->data[SC_WIND_INSIGNIA]->val1 == 2)
 			bonus += 10;
+		if(sc->data[SC_INCREASEAGI])
+			bonus += sc->data[SC_INCREASEAGI]->val1;
 	}
 
 	return bonus;
@@ -7025,8 +7035,6 @@ static short status_calc_fix_aspd(struct block_list *bl, struct status_change *s
 		aspd -= sc->data[SC_MTF_ASPD]->val1;
 	if (sc->data[SC_MTF_ASPD2])
 		aspd -= sc->data[SC_MTF_ASPD2]->val1;
-	if(sc->data[SC_INCREASEAGI])
-		aspd -= 10;
 
 	return cap_value(aspd, 0, 2000); // Will be recap for proper bl anyway
 }
