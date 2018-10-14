@@ -265,13 +265,13 @@ void initChangeTables(void)
 	set_sc( AC_CONCENTRATION	, SC_CONCENTRATE	, EFST_CONCENTRATION, SCB_AGI|SCB_DEX );
 	set_sc( TF_HIDING		, SC_HIDING		, EFST_HIDING		, SCB_SPEED );
 	add_sc( TF_POISON		, SC_POISON		);
-	set_sc( KN_TWOHANDQUICKEN	, SC_TWOHANDQUICKEN	, EFST_TWOHANDQUICKEN	, SCB_ASPD|SCB_CRI|SCB_HIT );
+	set_sc( KN_TWOHANDQUICKEN	, SC_TWOHANDQUICKEN	, EFST_TWOHANDQUICKEN	, SCB_ASPD||SCB_HIT );
 	set_sc( KN_AUTOCOUNTER		, SC_AUTOCOUNTER	, EFST_AUTOCOUNTER	, SCB_NONE );
 	set_sc( PR_IMPOSITIO		, SC_IMPOSITIO		, EFST_IMPOSITIO		,
 #ifndef RENEWAL
 		SCB_WATK );
 #else
-		SCB_NONE );
+		SCB_MATK );
 #endif
 	set_sc( PR_SUFFRAGIUM		, SC_SUFFRAGIUM		, EFST_SUFFRAGIUM		, SCB_NONE );
 	set_sc( PR_ASPERSIO		, SC_ASPERSIO		, EFST_ASPERSIO		, SCB_ATK_ELE );
@@ -2643,7 +2643,7 @@ void status_calc_misc(struct block_list *bl, struct status_data *status, int lev
 	//Critical
 	if( bl->type&battle_config.enable_critical ) {
 		stat = status->cri;
-		stat += 10 + (status->luk*10/3); // (every 1 luk = +0.3 critical)
+		stat += 10 + (status->luk*10/3) + (pc_checkskill(sd,PR_MACEMASTERY) * 10); // (every 1 luk = +0.3 critical)
 		status->cri = cap_value(stat, 1, SHRT_MAX);
 	} else
 		status->cri = 0;
@@ -6098,6 +6098,8 @@ static unsigned short status_calc_ematk(struct block_list *bl, struct status_cha
 		matk += 50;
 	if(sc->data[SC_ODINS_POWER])
 		matk += 40 + 30 * sc->data[SC_ODINS_POWER]->val1; // 70 lvl1, 100lvl2
+	if(sc->data[SC_IMPOSITIO])
+		matk += 5 * sc->data[SC_IMPOSITIO]->val1;
 	if(sc->data[SC_MOONLITSERENADE])
 		matk += sc->data[SC_MOONLITSERENADE]->val3;
 	if(sc->data[SC_IZAYOI])
@@ -10284,7 +10286,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val2 = val1*10; // Actual boost (since 100% = 1000)
 			break;
 		case SC_SUFFRAGIUM:
-			val2 = 15 * val1; // Speed cast decrease
+			val2 = 5 + 5 * val1; // Speed cast decrease
 			break;
 		case SC_INCHEALRATE:
 			if (val1 < 1)

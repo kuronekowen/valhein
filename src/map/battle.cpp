@@ -6083,6 +6083,9 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 					case WZ_METEOR:
 						skillratio += 25;
 						break;
+					case WZ_EARTHSPIKE:
+						skillratio *= 2; 
+						break;
 					case WZ_VERMILION:
 						if(sd) {
 							/*int per = 0;
@@ -6103,6 +6106,10 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						if (skill_lv == 5)
 							skillratio += 170;
 						RE_LVL_DMOD(100);
+						break;
+					case PR_MAGNUS:
+						if (battle_check_undead(tstatus->race,tstatus->def_ele) || tstatus->race==RC_DEMON || tstatus->def_ele==ELE_DARK)
+						skillratio *= 13 / 10;
 						break;
 					case AB_ADORAMUS:
 						skillratio += 230 + 70 * skill_lv;
@@ -6617,8 +6624,8 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 				if(!sd || !(skill = pc_checkskill(sd,HT_STEELCROW)))
 					skill = 0;
 				md.damage = (sstatus->dex / 5 + sstatus->agi / 2 + skill * 3 + 40) * 2;
-				if(mflag > 1) //Autocasted Blitz
-					nk |= NK_SPLASHSPLIT;
+				//if(mflag > 1) //Autocasted Blitz
+					//nk |= NK_SPLASHSPLIT;
 				if (skill_id == SN_FALCONASSAULT) {
 					//Div fix of Blitzbeat
 					DAMAGE_DIV_FIX2(md.damage, skill_get_num(HT_BLITZBEAT, 5));

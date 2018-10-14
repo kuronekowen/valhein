@@ -6706,9 +6706,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			break;
 		}
 	case PR_SLOWPOISON:
-	case PR_IMPOSITIO:
 	case PR_LEXAETERNA:
-	case PR_SUFFRAGIUM:
 	case LK_BERSERK:
 	case MS_BERSERK:
 	case KN_TWOHANDQUICKEN:
@@ -7241,6 +7239,8 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case CASH_ASSUMPTIO:
 	case WM_FRIGG_SONG:
 	case MC_LOUD:
+	case PR_SUFFRAGIUM:
+	case PR_IMPOSITIO:
 		if( sd == NULL || sd->status.party_id == 0 || (flag & 1) )
 			clif_skill_nodamage(bl, bl, skill_id, skill_lv, sc_start(src,bl,type,100,skill_lv,skill_get_time(skill_id,skill_lv)));
 		else if( sd )
@@ -16662,12 +16662,12 @@ int skill_castfix_sc(struct block_list *bl, double time, uint8 flag)
 			if (sc->data[SC_IZAYOI])
 				time -= time * 50 / 100;
 		}
-		if (sc->data[SC_SUFFRAGIUM]) {
+		/*if (sc->data[SC_SUFFRAGIUM]) {
 			if(!(flag&2))
 				time -= time * sc->data[SC_SUFFRAGIUM]->val2 / 100;
 			//Suffragium ends even if the skill is not affected by it
 			status_change_end(bl, SC_SUFFRAGIUM, INVALID_TIMER);
-		}
+		}*/
 	}
 
 	time = max(time, 0);
