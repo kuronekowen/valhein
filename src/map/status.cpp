@@ -2643,7 +2643,7 @@ void status_calc_misc(struct block_list *bl, struct status_data *status, int lev
 	//Critical
 	if( bl->type&battle_config.enable_critical ) {
 		stat = status->cri;
-		stat += 10 + (status->luk*10/3) + (pc_checkskill(sd,PR_MACEMASTERY) * 10); // (every 1 luk = +0.3 critical)
+		stat += 10 + (status->luk*10/3); // (every 1 luk = +0.3 critical)
 		status->cri = cap_value(stat, 1, SHRT_MAX);
 	} else
 		status->cri = 0;
@@ -3947,7 +3947,8 @@ int status_calc_pc_sub(struct map_session_data* sd, enum e_status_calc_opt opt)
 		base_status->cri = cap_value(base_status->cri * sd->critical_rate/100,SHRT_MIN,SHRT_MAX);
 	if (pc_checkskill(sd, SU_POWEROFLIFE) > 0)
 		base_status->cri += 200;
-
+	if (pc_checkskill(sd, PR_MACEMASTERY) > 0)
+		base_status->cri += pc_checkskill(sd, PR_MACEMASTERY) * 10;
 	if(sd->flee2_rate < 0)
 		sd->flee2_rate = 0;
 	if(sd->flee2_rate != 100)
