@@ -3612,6 +3612,8 @@ static int battle_calc_attack_skill_ratio(struct Damage wd, struct block_list *s
 			break;
 		case AS_SONICBLOW:
 			skillratio += 300 + 40 * skill_lv;
+			if (status_get_hp(target) < status_get_max_hp(target) >> 1)
+				skillratio *= 15 / 10;
 			break;
 		case TF_SPRINKLESAND:
 			skillratio += 30;
@@ -3746,7 +3748,7 @@ static int battle_calc_attack_skill_ratio(struct Damage wd, struct block_list *s
 			skillratio += 100 + 100 * skill_lv;
 			break;
 		case AS_SPLASHER:
-			skillratio += 400 + 50 * skill_lv;
+			skillratio += -100 + 400 + 100 * skill_lv;
 			if(sd)
 				skillratio += 20 * pc_checkskill(sd,AS_POISONREACT);
 			break;
@@ -6083,9 +6085,10 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						break;
 					case WZ_VERMILION:
 						if(sd) {
-							int per = 0;
+							/*int per = 0;
 							while ((++per) < skill_lv)
-								skillratio += per * 5; //100% 105% 115% 130% 150% 175% 205% 240% 280% 325%
+								skillratio += per * 5;*/ //100% 105% 115% 130% 150% 175% 205% 240% 280% 325%
+							skillratio += -100 + 400 + 100 * skill_lv;
 						} else {
 							skillratio += 20 * skill_lv - 20; //Monsters use old formula
 						}
