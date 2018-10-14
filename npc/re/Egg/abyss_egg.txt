@@ -8,9 +8,9 @@ set .@rare,0;
 		setarray .@item[0],
 						   12412, // HE Bubble Gum
 						   12921, // Enrich Ori 10 box
-						   12921, // Enrich Ori 10 box
+						   16260, // HD Bradium 10 box
 						   12920, // Enrich Elu 10 box
-						   12920; // Enrich Elu 10 box
+						   16261; // HD Carnium 10 box
 	}				   
 	else if(.@t > 97) { // 3% to get Tier 3
 		setarray .@item[0],40001, // New Battle Surcoat
